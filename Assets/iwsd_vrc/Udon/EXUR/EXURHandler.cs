@@ -149,6 +149,7 @@ namespace Iwsd.EXUR {
             switch (lastState) {
                 case STATE_WAITING_OWNER_RESPONCE:
                     lastState = STATE_USED_BY_OTHERS;
+                    SendCallback("InitializedToUsing");
                     break;
 
                 case STATE_IDLE_NOT_MINE:
@@ -163,6 +164,8 @@ namespace Iwsd.EXUR {
                     break;
 
                 case STATE_OWN_AND_IDLE:
+                    // Locally initiated STATE_OWN_AND_USING => STATE_OWN_AND_IDLE is done before calling here.
+                    // If it falls into this case, it's incoming unexpected message.
                     assert(false, "!!!!!!!! set_using_true on STATE_OWN_AND_IDLE !!!!!!!!");
                     break;
                     
@@ -181,13 +184,14 @@ namespace Iwsd.EXUR {
                     break;
 
                 case STATE_USED_BY_OTHERS:
+                    // This is for bystanders.
+                    // Locally initiated STATE_USED_BY_OTHERS => STATE_OWN_AND_IDLE must be done before calling here.
                     lastState = STATE_IDLE_NOT_MINE;
                     SendCallback("StoppedUsingByOthers");
                     break;
 
                 default:
                     // empty
-                    // (STATE_OWN_AND_USING => STATE_OWN_AND_IDLE is done before calling here)
                     break;
             }
         }
@@ -236,7 +240,7 @@ namespace Iwsd.EXUR {
                     }
                     else
                     {
-                        // We choose synced-variable free. So new joiner needs to be tell from owner.
+                        // We choose synced-variable free. So new joiner needs to be told from owner.
                         SendStateQueryToOwner();
                         lastState = STATE_WAITING_OWNER_RESPONCE;
                     }
@@ -252,7 +256,7 @@ namespace Iwsd.EXUR {
                         if (Networking.IsMaster)
                         {
                             // Previous owner left from the world instance. So master shelters it.
-                            lastState = STATE_OWN_AND_IDLE;
+                            lastState = STATE_OWN_AND_IDLE; // This state change must be before SetSyncedUsing
                             SetSyncedUsing(false);
                             SendCallback("RetrievedAfterOwnerLeftWhileUsing");
                         }
@@ -400,7 +404,7 @@ namespace Iwsd.EXUR {
             if (lastState == STATE_OWN_AND_USING)
             {
                 // continue to keep ownership
-                lastState = STATE_OWN_AND_IDLE;
+                lastState = STATE_OWN_AND_IDLE; // This state change must be before SetSyncedUsing
                 SetSyncedUsing(false);
                 SendCallback("ExitUsingByRequest");
             }
