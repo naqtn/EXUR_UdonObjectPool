@@ -15,50 +15,83 @@ namespace Iwsd.EXUR {
         {
             if (DebugText)
             {
-                DebugText.text += "\n USR:" + transform.parent.name + ":" + s;
+                DebugText.text += "\nUSR:" + transform.parent.name + ":" + s;
             }
         }
 
     
-        public void InitializedAsMaster()
+        // public void ()
+        // {
+        //     log("");
+        // }
+
+        // Result of initialization
+        public void InitializedToOwn()
         {
-            log("InitializedAsMaster");
+            log("InitializedToOwn");
         }
-        public void InitializedAsNotMine()
+        public void InitializedToIdle()
         {
-            log("InitializedAsNotMine");
+            log("InitializedToIdle");
         }
-        public void ExitUsingByPlayerLeft()
+        public void InitializedToUsing()
         {
-            log("ExitUsingByPlayerLeft");
+            log("InitializedToUsing");
         }
-        public void OwnedByMaster()
+
+        // start-stop while not owned
+        public void StartedToUseByOthers()
         {
-            log("OwnedByMaster");
+            log("StartedToUseByOthers");
+        }
+        public void StoppedUsingByOthers()
+        {
+            log("StoppedUsingByOthers");
+        }
+
+        // Result of start
+        public void FailedToUseByTimeout()
+        {
+            log("FailedToUseByTimeout");
+        }
+        public void FailedToUseByRaceCondition()
+        {
+            log("FailedToUseByRaceCondition");
         }
         public void EnterUsingFromWaiting()
         {
             log("EnterUsingFromWaiting");
         }
-        public void FailedToStartUsing()
-        {
-            log("FailedToStartUsing");
-        }
-        public void LostOwnershipOnUsing()
-        {
-            log("LostOwnershipOnUsing");
-        }
-        public void LostOwnershipOnUnusing()
-        {
-            log("LostOwnershipOnUnusing");
-        }
         public void EnterUsingFromOwn()
         {
             log("EnterUsingFromOwn");
         }
+
+        // Result of stop
         public void ExitUsingByRequest()
         {
             log("ExitUsingByRequest");
         }
+
+        // Lost ownership
+        public void LostOwnershipOnUsing()
+        {
+            log("LostOwnershipOnUsing");
+        }
+        public void LostOwnershipOnIdle()
+        {
+            log("LostOwnershipOnIdle");
+        }
+
+        // Retrieve by Master (see also InitializedToOwn)
+        public void RetrievedAfterOwnerLeftWhileUsing()
+        {
+            log("RetrievedAfterOwnerLeftWhileUsing");
+        }
+        public void RetrievedAfterOwnerLeftWhileIdle()
+        {
+            log("RetrievedAfterOwnerLeftWhileIdle");
+        }
+
     }
 }

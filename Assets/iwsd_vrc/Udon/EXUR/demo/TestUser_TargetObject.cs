@@ -27,9 +27,11 @@ namespace Iwsd.EXUR {
         [SerializeField]
         UnityEngine.UI.Image DispImage;
 
-        public Color ActiveColor = new Color(1.0f, 0.02f, 0.02f, 0.5f);
-        public Color InactiveColor = new Color(0.5f, 0.5f, 0.8f, 0.5f);
-
+        public Color MineActiveColor = new Color(1.0f, 0.02f, 0.02f, 0.5f);
+        public Color MineInactiveColor = new Color(0.8f, 0.5f, 0.5f, 0.5f);
+        public Color WarningColor = new Color(0.9f, 0.9f, 0.3f, 0.5f);
+        public Color OthersActiveColor = new Color(0.02f, 1.0f, 0.02f, 0.5f);
+        public Color OthersInactiveColor = new Color(0.5f, 0.8f, 0.5f, 0.5f);
 
         [SerializeField]
         UnityEngine.UI.Text DebugText;
@@ -43,49 +45,86 @@ namespace Iwsd.EXUR {
         }
 
 
-        public void InitializedAsMaster()
+        // Result of initialization
+        public void InitializedToOwn()
         {
-            log("InitializedAsMaster");
+            DispImage.color = MineInactiveColor;
+            log("InitializedToOwn");
         }
-        public void InitializedAsNotMine()
+        public void InitializedToIdle()
         {
-            log("InitializedAsNotMine");
+            DispImage.color = OthersInactiveColor;
+            log("InitializedToIdle");
         }
-        public void ExitUsingByPlayerLeft()
+        public void InitializedToUsing()
         {
-            log("ExitUsingByPlayerLeft");
+            DispImage.color = OthersActiveColor;
+            log("InitializedToUsing");
         }
-        public void OwnedByMaster()
+
+        // start-stop while not owned
+        public void StartedToUseByOthers()
         {
-            log("OwnedByMaster");
+            DispImage.color = OthersActiveColor;
+            log("StartedToUseByOthers");
+        }
+        public void StoppedUsingByOthers()
+        {
+            DispImage.color = OthersInactiveColor;
+            log("StoppedUsingByOthers");
+        }
+
+        // Result of start
+        public void FailedToUseByTimeout()
+        {
+            DispImage.color = WarningColor;
+            log("FailedToUseByTimeout");
+        }
+        public void FailedToUseByRaceCondition()
+        {
+            DispImage.color = WarningColor;
+            log("FailedToUseByRaceCondition");
         }
         public void EnterUsingFromWaiting()
         {
+            DispImage.color = MineActiveColor;
             log("EnterUsingFromWaiting");
-            DispImage.color = ActiveColor;
-        }
-        public void FailedToStartUsing()
-        {
-            log("FailedToStartUsing");
-        }
-        public void LostOwnershipOnUsing()
-        {
-            log("LostOwnershipOnUsing");
-        }
-        public void LostOwnershipOnUnusing()
-        {
-            log("LostOwnershipOnUnusing");
         }
         public void EnterUsingFromOwn()
         {
+            DispImage.color = MineActiveColor;
             log("EnterUsingFromOwn");
-            DispImage.color = ActiveColor;
-        }
-        public void ExitUsingByRequest()
-        {
-            log("ExitUsingByRequest");
-            DispImage.color = InactiveColor;
         }
 
+        // Result of stop
+        public void ExitUsingByRequest()
+        {
+            DispImage.color = MineInactiveColor;
+            log("ExitUsingByRequest");
+        }
+
+        // Lost ownership
+        public void LostOwnershipOnUsing()
+        {
+            DispImage.color = OthersActiveColor;
+            log("LostOwnershipOnUsing");
+        }
+        public void LostOwnershipOnIdle()
+        {
+            DispImage.color = OthersInactiveColor;
+            log("LostOwnershipOnIdle");
+        }
+
+        // Retrieve by Master (see also InitializedToOwn)
+        public void RetrievedAfterOwnerLeftWhileUsing()
+        {
+            DispImage.color = MineInactiveColor;
+            log("RetrievedAfterOwnerLeftWhileUsing");
+        }
+        public void RetrievedAfterOwnerLeftWhileIdle()
+        {
+            DispImage.color = MineInactiveColor;
+            log("RetrievedAfterOwnerLeftWhileIdle");
+        }
     }
 }

@@ -8,9 +8,13 @@ using VRC.Udon;
 //  Exclusive use and reusing objects with Udon  => EXUR?
 //  ex. EXUR_ExitUsingByRequest
 
+
+// TODO Simplified event (?). {start,stop}-{local,remote}
+
 // TODO check SDK limitation with latest SDK.
 
-// TODO split STATE_NOT_MINE state to ILDE and USED BY OTHERS (?)
+// TODO consider inactivating unused target object. (optionally, and only child object??)
+
 
 namespace Iwsd.EXUR {
 
@@ -21,18 +25,15 @@ namespace Iwsd.EXUR {
         const int STATE_UNDEFINED = 0;
         const int STATE_ERROR = 1;
         const int STATE_INITIAL = 2;
-        const int STATE_NOT_MINE = 3;
-        const int STATE_WAITING_OWNERSHIP = 4;
-        const int STATE_USING = 5;
-        const int STATE_NOT_USING = 6;
+        const int STATE_WAITING_OWNER_RESPONCE = 3;
+        const int STATE_USED_BY_OTHERS = 4;
+        const int STATE_IDLE_NOT_MINE = 5;
+        const int STATE_WAITING_OWNERSHIP = 6;
+        const int STATE_OWN_AND_USING = 7;
+        const int STATE_OWN_AND_IDLE = 8;
 
         // This state variable is local. This means what state this object is in from this player view.
         int lastState = STATE_INITIAL;
-
-        // NOTE: This is local variable.
-        // Instead of synced variable, use CustomNetworkEvent to reduce network ussage.
-        bool syncedUsing = false;
-
 
         [SerializeField]
         bool IncludeChildrenToSendEvent = false;
@@ -47,7 +48,7 @@ namespace Iwsd.EXUR {
         int ownershipTimeout;
         const int OWNERSHIP_TIMEOUT_DURATION = 20;
 
-        // TODO remove ownershipDelay.
+        // TODO test and remove ownershipDelay.
         // It is no more needed because we replaced sync variable with network event.
         int ownershipDelay;
         const int OWNERSHIP_DELAY_DURATION = 0;
@@ -145,14 +146,68 @@ namespace Iwsd.EXUR {
 
         public void set_using_true()
         {
-            syncedUsing = true;
+            switch (lastState) {
+                case STATE_WAITING_OWNER_RESPONCE:
+                    lastState = STATE_USED_BY_OTHERS;
+                    break;
+
+                case STATE_IDLE_NOT_MINE:
+                    lastState = STATE_USED_BY_OTHERS;
+                    SendCallback("StartedToUseByOthers");
+                    break;
+
+                case STATE_WAITING_OWNERSHIP:
+                    // Failed to start to use. Maybe it was race condition.
+                    lastState = STATE_USED_BY_OTHERS;
+                    SendCallback("FailedToUseByRaceCondition");
+                    break;
+
+                case STATE_OWN_AND_IDLE:
+                    assert(false, "!!!!!!!! set_using_true on STATE_OWN_AND_IDLE !!!!!!!!");
+                    break;
+                    
+                default:
+                    // empty
+                    break;
+            }
         }
+
         public void set_using_false()
         {
-            syncedUsing = false;
+            switch (lastState) {
+                case STATE_WAITING_OWNER_RESPONCE:
+                    lastState = STATE_IDLE_NOT_MINE;
+                    SendCallback("InitializedToIdle");
+                    break;
+
+                case STATE_USED_BY_OTHERS:
+                    lastState = STATE_IDLE_NOT_MINE;
+                    SendCallback("StoppedUsingByOthers");
+                    break;
+
+                default:
+                    // empty
+                    // (STATE_OWN_AND_USING => STATE_OWN_AND_IDLE is done before calling here)
+                    break;
+            }
         }
 
 
+        void SendStateQueryToOwner()
+        {
+            this.SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.Owner, "query_state");
+        }
+
+        public void query_state()
+        {
+            if (Networking.IsOwner(this.gameObject))
+            {
+                assert((lastState == STATE_OWN_AND_USING) || (lastState == STATE_OWN_AND_IDLE), "query_state: Illegal state. " + lastState);
+                SetSyncedUsing(lastState == STATE_OWN_AND_USING);
+            }
+        }
+
+        
         void CheckImplicitTransition()
         {
             switch (lastState)
@@ -171,8 +226,8 @@ namespace Iwsd.EXUR {
                         if (Networking.IsOwner(this.gameObject))
                         {
                             SetSyncedUsing(false);
-                            lastState = STATE_NOT_USING;
-                            SendCallback("InitializedAsMaster");
+                            lastState = STATE_OWN_AND_IDLE;
+                            SendCallback("InitializedToOwn");
                         }
                         else
                         {
@@ -181,33 +236,45 @@ namespace Iwsd.EXUR {
                     }
                     else
                     {
-                        lastState = STATE_NOT_MINE;
-                        SendCallback("InitializedAsNotMine");
+                        // We choose synced-variable free. So new joiner needs to be tell from owner.
+                        SendStateQueryToOwner();
+                        lastState = STATE_WAITING_OWNER_RESPONCE;
                     }
                     break;
 
-                case STATE_NOT_MINE:
+                case STATE_WAITING_OWNER_RESPONCE:
+                    // TODO timeout and retry (?)
+                    break;
+
+                case STATE_USED_BY_OTHERS:
                     if (Networking.IsOwner(this.gameObject))
                     {
                         if (Networking.IsMaster)
                         {
-                            // Previous user left from the world instance. So master shelters it.
-                            lastState = STATE_NOT_USING;
-
-                            if (syncedUsing)
-                            {
-                                // This assignment will be overwritten because of delay issue
-                                SetSyncedUsing(false);
-                                SendCallback("ExitUsingByPlayerLeft");
-                            }
-                            else
-                            {
-                                SendCallback("OwnedByMaster");
-                            }
+                            // Previous owner left from the world instance. So master shelters it.
+                            lastState = STATE_OWN_AND_IDLE;
+                            SetSyncedUsing(false);
+                            SendCallback("RetrievedAfterOwnerLeftWhileUsing");
                         }
                         else
                         {
-                            assert(false, "non-master gains ownership while NOT_MINE");
+                            assert(false, "non-master gains ownership while USED_BY_OTHERS");
+                        }
+                    }
+                    break;
+
+                case STATE_IDLE_NOT_MINE:
+                    // See also STATE_USED_BY_OTHERS case. This similar to that.
+                    if (Networking.IsOwner(this.gameObject))
+                    {
+                        if (Networking.IsMaster)
+                        {
+                            lastState = STATE_OWN_AND_IDLE;
+                            SendCallback("RetrievedAfterOwnerLeftWhileIdle");
+                        }
+                        else
+                        {
+                            assert(false, "non-master gains ownership while IDLE_NOT_MINE");
                         }
                     }
                     break;
@@ -217,9 +284,8 @@ namespace Iwsd.EXUR {
                     {
                         if (--ownershipDelay < 0)
                         {
-                            assert(!syncedUsing, "gain ownership on syncedUsing");
                             SetSyncedUsing(true);
-                            lastState = STATE_USING;
+                            lastState = STATE_OWN_AND_USING;
                             SendCallback("EnterUsingFromWaiting");
                         }
                     }
@@ -229,37 +295,27 @@ namespace Iwsd.EXUR {
                         if (--ownershipTimeout < 0)
                         {
                             // timeout when lose in getting ownership when race condition.
-                            lastState = STATE_NOT_MINE;
-                            SendCallback("FailedToStartUsing");
+                            lastState = STATE_IDLE_NOT_MINE;
+                            SendCallback("FailedToUseByTimeout");
                         }
                     }
                     break;
 
-                case STATE_USING:
+                case STATE_OWN_AND_USING:
                     if (!Networking.IsOwner(this.gameObject))
                     {
                         // Theft by others.
-                        lastState = STATE_NOT_MINE;
+                        lastState = STATE_USED_BY_OTHERS;
                         SendCallback("LostOwnershipOnUsing");
                     }
                     break;
 
-                case STATE_NOT_USING:
+                case STATE_OWN_AND_IDLE:
                     if (!Networking.IsOwner(this.gameObject))
                     {
                         // Other player started to use
-                        lastState = STATE_NOT_MINE;
-                        SendCallback("LostOwnershipOnUnusing");
-                    }
-                    else
-                    {
-                        // This assert might fail because of delay issue.
-                        // assert(!syncedUsing, "SyncedUsing while STATE_NOT_USING");
-                        // so do workaround.
-                        if (syncedUsing)
-                        {
-                            SetSyncedUsing(false);
-                        }
+                        lastState = STATE_IDLE_NOT_MINE;
+                        SendCallback("LostOwnershipOnIdle");
                     }
                     break;
 
@@ -281,19 +337,22 @@ namespace Iwsd.EXUR {
         {
             debug("TryToUse");
 
-            assert(!syncedUsing, "TryToUse on syncedUsing"); // TODO add allow theft option?
+            // TODO add option to allow theft.
+            assert((lastState == STATE_IDLE_NOT_MINE) || (lastState == STATE_OWN_AND_IDLE),
+                   "TryToUse: Illegal state. " + lastState); 
 
             if (Networking.IsOwner(this.gameObject))
             {
-                assert(lastState == STATE_NOT_USING, "Tried to use already using by myself. " + lastState);
+                assert(lastState == STATE_OWN_AND_IDLE, "TryToUse: Ownership mismatched with state=" + lastState);
 
+                lastState = STATE_OWN_AND_USING;
                 SetSyncedUsing(true);
-                lastState = STATE_USING;
                 SendCallback("EnterUsingFromOwn");
             }
             else
             {
-                assert(lastState == STATE_NOT_MINE, "Tried to use while illegal state. " + lastState);
+                // We prefer assert to runtime error because this is module private interface.
+                assert(lastState == STATE_IDLE_NOT_MINE, "Tried to use while illegal state=" + lastState);
 
                 Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
                 ownershipTimeout = OWNERSHIP_TIMEOUT_DURATION;
@@ -304,12 +363,12 @@ namespace Iwsd.EXUR {
 
         public bool IsFreeOwned()
         {
-            return lastState == STATE_NOT_USING;
+            return lastState == STATE_OWN_AND_IDLE;
         }
 
         public bool IsFreeNotOwned()
         {
-            return (lastState == STATE_NOT_MINE) && !syncedUsing;
+            return lastState == STATE_IDLE_NOT_MINE;
         }
 
         #endregion
@@ -338,18 +397,17 @@ namespace Iwsd.EXUR {
         {
             log("StopUsing called");
 
-            if (lastState == STATE_USING)
+            if (lastState == STATE_OWN_AND_USING)
             {
                 // continue to keep ownership
-                assert(syncedUsing, "STATE_USING but not syncedUsing");
-                lastState = STATE_NOT_USING;
+                lastState = STATE_OWN_AND_IDLE;
                 SetSyncedUsing(false);
                 SendCallback("ExitUsingByRequest");
             }
             else
             {
-                warn("StopUsing on not STATE_USING. ignore");
-                SendCallback("Error");  // TODO How to tell error detail. public error variable?
+                warn("StopUsing on not STATE_OWN_AND_USING. ignore");
+                // SendCallback("Error");  // TODO How to tell error detail. public error variable?
             }
         }
 
