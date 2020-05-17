@@ -27,11 +27,11 @@ namespace Iwsd.EXUR {
         [SerializeField]
         UnityEngine.UI.Image DispImage;
 
-        public Color MineActiveColor = new Color(1.0f, 0.02f, 0.02f, 0.5f);
-        public Color MineInactiveColor = new Color(0.8f, 0.5f, 0.5f, 0.5f);
+        public Color MineActiveColor = new Color(1.0f, 0.02f, 0.02f, 0.6f);
+        public Color MineInactiveColor = new Color(0.8f, 0.5f, 0.5f, 0.3f);
         public Color WarningColor = new Color(0.9f, 0.9f, 0.3f, 0.5f);
-        public Color OthersActiveColor = new Color(0.02f, 1.0f, 0.02f, 0.5f);
-        public Color OthersInactiveColor = new Color(0.5f, 0.8f, 0.5f, 0.5f);
+        public Color OthersActiveColor = new Color(0.02f, 1.0f, 0.02f, 0.6f);
+        public Color OthersInactiveColor = new Color(0.5f, 0.8f, 0.5f, 0.3f);
 
         [SerializeField]
         UnityEngine.UI.Text DebugText;

@@ -109,11 +109,11 @@ MonoBehaviour:
     \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
     \        # [SerializeField]\r\n        \r\n         # UnityEngine.UI.Image DispImage;\r\n
     \       \r\n         # public Color MineActiveColor = new Color(1.0f, 0.02f, 0.02f,
-    0.5f);\r\n        \r\n         # public Color MineInactiveColor = new Color(0.8f,
-    0.5f, 0.5f, 0.5f);\r\n        \r\n         # public Color WarningColor = new Color(0.9f,
+    0.6f);\r\n        \r\n         # public Color MineInactiveColor = new Color(0.8f,
+    0.5f, 0.5f, 0.3f);\r\n        \r\n         # public Color WarningColor = new Color(0.9f,
     0.9f, 0.3f, 0.5f);\r\n        \r\n         # public Color OthersActiveColor =
-    new Color(0.02f, 1.0f, 0.02f, 0.5f);\r\n        \r\n         # public Color OthersInactiveColor
-    = new Color(0.5f, 0.8f, 0.5f, 0.5f);\r\n        \r\n         # [SerializeField]\r\n
+    new Color(0.02f, 1.0f, 0.02f, 0.6f);\r\n        \r\n         # public Color OthersInactiveColor
+    = new Color(0.5f, 0.8f, 0.5f, 0.3f);\r\n        \r\n         # [SerializeField]\r\n
     \       \r\n         # UnityEngine.UI.Text DebugText;\r\n        \r\n         #
     void log(string s)\r\n    log:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
     \       \r\n         # {\r\n        \r\n         # if (DebugText)\r\n        PUSH,
@@ -635,7 +635,7 @@ MonoBehaviour:
       endSourceChar: 603
       line: 29
       lineChar: 15
-      spanCodeSection: "Color MineActiveColor = new Color(1.0f, 0.02f, 0.02f, 0.5f);\r\n
+      spanCodeSection: "Color MineActiveColor = new Color(1.0f, 0.02f, 0.02f, 0.6f);\r\n
         \       "
     - startInstruction: 608
       endInstruction: 607
@@ -657,7 +657,7 @@ MonoBehaviour:
       endSourceChar: 680
       line: 30
       lineChar: 15
-      spanCodeSection: "Color MineInactiveColor = new Color(0.8f, 0.5f, 0.5f, 0.5f);\r\n
+      spanCodeSection: "Color MineInactiveColor = new Color(0.8f, 0.5f, 0.5f, 0.3f);\r\n
         \       "
     - startInstruction: 608
       endInstruction: 607
@@ -701,7 +701,7 @@ MonoBehaviour:
       endSourceChar: 831
       line: 32
       lineChar: 15
-      spanCodeSection: "Color OthersActiveColor = new Color(0.02f, 1.0f, 0.02f, 0.5f);\r\n
+      spanCodeSection: "Color OthersActiveColor = new Color(0.02f, 1.0f, 0.02f, 0.6f);\r\n
         \       "
     - startInstruction: 608
       endInstruction: 607
@@ -723,7 +723,7 @@ MonoBehaviour:
       endSourceChar: 912
       line: 33
       lineChar: 15
-      spanCodeSection: "Color OthersInactiveColor = new Color(0.5f, 0.8f, 0.5f, 0.5f);\r\n\r\n
+      spanCodeSection: "Color OthersInactiveColor = new Color(0.5f, 0.8f, 0.5f, 0.3f);\r\n\r\n
         \       "
     - startInstruction: 608
       endInstruction: 607
