@@ -1,0 +1,4 @@
+dejima-fonts are downloaded from https://code.google.com/archive/p/dejima-fonts/
+I (naqtn) added README and LICENSE files that are extraced from source archive.
+
+See also: http://www.sodan.org/~penny/blosxom.cgi/2007/06/04/

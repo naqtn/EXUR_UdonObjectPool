@@ -1,0 +1,30 @@
+This package contains fonts derived from Tsukiji Mincho.
+
+Kanji characters under tsukiji directory are from 同文新字典 and Kana
+characters are from 築地活版製造所 活版見本.
+
+http://kindai.ndl.go.jp/BIImgFrame.php?JP_NUM=40078326&VOL_NUM=00000&KOMA=1&ITYPE=0
+http://kindai.ndl.go.jp/BIImgFrame.php?JP_NUM=40072448&VOL_NUM=00000&KOMA=15&ITYPE=0
+
+Characters in mincho directory are modified by myself.  Note this fonts does not
+necessarily follow JIS or Unicode unification rule.
+
+To create TrueType font, substituting not yet available characters
+from Sazanami fonts, you need to get Sazanami fonts and create fontorge
+SFD files from individual files first.
+
+Sazanmi font is available from http://sourceforge.jp/projects/efont/
+
+To create Dejima Mincho SFD file from individual data, run the following from the
+command line:
+
+% (cd mincho; ../merge.rb > dejima-mincho.sfd)
+
+Then place sazanami-mincho.ttf in this directory and run the followng:
+
+% fontforge -script tt.pe
+
+If you don't have fontforge installed, please see
+http://fontforge.sourceforge.net/ and install it.
+
+The font is licensed under MIT license.  See LICENSE file for the detail.
