@@ -330,7 +330,7 @@ MonoBehaviour:
     \       PUSH, __17_const_intnl_SystemString\r\n        PUSH, __4_message_String\r\n
     \       COPY\r\n        PUSH, __7_const_intnl_exitJumpLoc_UInt32\r\n        JUMP,
     0x00000220\r\n        JUMP, 0x00000C60\r\n        \r\n         # else\r\n        \r\n
-    \        # {\r\n        \r\n         # debug(\"recieveEvent. \" + EXUR_EventName
+    \        # {\r\n        \r\n         # debug(\"EXUR_RecieveEvent. \" + EXUR_EventName
     + \" from \" + EXUR_EventSource.gameObject.name);\r\n        PUSH, __18_const_intnl_SystemString\r\n
     \       PUSH, EXUR_EventName\r\n        PUSH, __7_intnl_SystemString\r\n        EXTERN,
     \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n        PUSH,
@@ -2555,183 +2555,183 @@ MonoBehaviour:
     - startInstruction: 2912
       endInstruction: 2911
       startSourceChar: 3997
-      endSourceChar: 4016
+      endSourceChar: 4021
       line: 147
       lineChar: 22
-      spanCodeSection: '"recieveEvent. " + '
+      spanCodeSection: '"EXUR_RecieveEvent. " + '
     - startInstruction: 2912
       endInstruction: 2943
-      startSourceChar: 4016
-      endSourceChar: 4033
+      startSourceChar: 4021
+      endSourceChar: 4038
       line: 147
-      lineChar: 41
+      lineChar: 46
       spanCodeSection: 'EXUR_EventName + '
     - startInstruction: 2944
       endInstruction: 2975
-      startSourceChar: 4033
-      endSourceChar: 4044
+      startSourceChar: 4038
+      endSourceChar: 4049
       line: 147
-      lineChar: 58
+      lineChar: 63
       spanCodeSection: '" from " + '
     - startInstruction: 2976
       endInstruction: 2975
-      startSourceChar: 4044
-      endSourceChar: 4044
+      startSourceChar: 4049
+      endSourceChar: 4049
       line: 147
-      lineChar: 69
+      lineChar: 74
       spanCodeSection: 
     - startInstruction: 2976
       endInstruction: 2975
-      startSourceChar: 4044
-      endSourceChar: 4044
+      startSourceChar: 4049
+      endSourceChar: 4049
       line: 147
-      lineChar: 69
+      lineChar: 74
       spanCodeSection: 
     - startInstruction: 2976
       endInstruction: 2975
-      startSourceChar: 4044
-      endSourceChar: 4061
+      startSourceChar: 4049
+      endSourceChar: 4066
       line: 147
-      lineChar: 69
+      lineChar: 74
       spanCodeSection: EXUR_EventSource.
     - startInstruction: 2976
       endInstruction: 2975
-      startSourceChar: 4061
-      endSourceChar: 4072
+      startSourceChar: 4066
+      endSourceChar: 4077
       line: 147
-      lineChar: 86
+      lineChar: 91
       spanCodeSection: gameObject.
     - startInstruction: 2976
       endInstruction: 3071
-      startSourceChar: 4072
-      endSourceChar: 4096
+      startSourceChar: 4077
+      endSourceChar: 4101
       line: 147
-      lineChar: 97
+      lineChar: 102
       spanCodeSection: "name);\r\n                "
     - startInstruction: 3072
       endInstruction: 3071
-      startSourceChar: 4096
-      endSourceChar: 4096
+      startSourceChar: 4101
+      endSourceChar: 4101
       line: 148
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 3072
       endInstruction: 3071
-      startSourceChar: 4096
-      endSourceChar: 4096
+      startSourceChar: 4101
+      endSourceChar: 4101
       line: 148
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 3072
       endInstruction: 3071
-      startSourceChar: 4096
-      endSourceChar: 4111
+      startSourceChar: 4101
+      endSourceChar: 4116
       line: 148
       lineChar: 16
       spanCodeSection: PropagateEvent(
     - startInstruction: 3072
       endInstruction: 3071
-      startSourceChar: 4111
-      endSourceChar: 4129
+      startSourceChar: 4116
+      endSourceChar: 4134
       line: 148
       lineChar: 31
       spanCodeSection: 'EXUR_EventSource, '
     - startInstruction: 3072
       endInstruction: 3167
-      startSourceChar: 4129
-      endSourceChar: 4174
+      startSourceChar: 4134
+      endSourceChar: 4179
       line: 148
       lineChar: 49
       spanCodeSection: "EXUR_EventName);\r\n            }\r\n            "
     - startInstruction: 3168
       endInstruction: 3167
-      startSourceChar: 4174
-      endSourceChar: 4174
+      startSourceChar: 4179
+      endSourceChar: 4179
       line: 150
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 3168
       endInstruction: 3167
-      startSourceChar: 4174
-      endSourceChar: 4174
+      startSourceChar: 4179
+      endSourceChar: 4179
       line: 150
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 3168
       endInstruction: 3167
-      startSourceChar: 4174
-      endSourceChar: 4193
+      startSourceChar: 4179
+      endSourceChar: 4198
       line: 150
       lineChar: 12
       spanCodeSection: 'EXUR_EventSource = '
     - startInstruction: 3168
       endInstruction: 3187
-      startSourceChar: 4193
-      endSourceChar: 4212
+      startSourceChar: 4198
+      endSourceChar: 4217
       line: 150
       lineChar: 31
       spanCodeSection: "null;\r\n            "
     - startInstruction: 3188
       endInstruction: 3187
-      startSourceChar: 4212
-      endSourceChar: 4212
+      startSourceChar: 4217
+      endSourceChar: 4217
       line: 151
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 3188
       endInstruction: 3187
-      startSourceChar: 4212
-      endSourceChar: 4212
+      startSourceChar: 4217
+      endSourceChar: 4217
       line: 151
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 3188
       endInstruction: 3187
-      startSourceChar: 4212
-      endSourceChar: 4229
+      startSourceChar: 4217
+      endSourceChar: 4234
       line: 151
       lineChar: 12
       spanCodeSection: 'EXUR_EventName = '
     - startInstruction: 3188
       endInstruction: 3227
-      startSourceChar: 4229
-      endSourceChar: 4363
+      startSourceChar: 4234
+      endSourceChar: 4368
       line: 151
       lineChar: 29
       spanCodeSection: "null;\r\n        }\r\n\r\n        #endregion\r\n\r\n\r\n        //////////////////////////////\r\n
         \       #region Drive by system events\r\n\r\n        "
     - startInstruction: 3228
       endInstruction: 3235
-      startSourceChar: 4363
-      endSourceChar: 4385
+      startSourceChar: 4368
+      endSourceChar: 4390
       line: 160
       lineChar: 8
       spanCodeSection: "void Start()\r\n        "
     - startInstruction: 3236
       endInstruction: 3235
-      startSourceChar: 4385
-      endSourceChar: 4400
+      startSourceChar: 4390
+      endSourceChar: 4405
       line: 161
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 3236
       endInstruction: 3235
-      startSourceChar: 4400
-      endSourceChar: 4400
+      startSourceChar: 4405
+      endSourceChar: 4405
       line: 162
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 3236
       endInstruction: 3235
-      startSourceChar: 4400
-      endSourceChar: 4400
+      startSourceChar: 4405
+      endSourceChar: 4405
       line: 162
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 3236
       endInstruction: 3271
-      startSourceChar: 4400
-      endSourceChar: 4539
+      startSourceChar: 4405
+      endSourceChar: 4544
       line: 162
       lineChar: 12
       spanCodeSection: "GatherObjects();\r\n        }\r\n\r\n        #endregion\r\n\r\n\r\n
@@ -2739,304 +2739,304 @@ MonoBehaviour:
         \       "
     - startInstruction: 3272
       endInstruction: 3279
-      startSourceChar: 4539
-      endSourceChar: 4572
+      startSourceChar: 4544
+      endSourceChar: 4577
       line: 171
       lineChar: 8
       spanCodeSection: 'public void EXUR_AcquireObject() '
     - startInstruction: 3280
       endInstruction: 3279
-      startSourceChar: 4572
-      endSourceChar: 4587
+      startSourceChar: 4577
+      endSourceChar: 4592
       line: 171
       lineChar: 41
       spanCodeSection: "{\r\n            "
     - startInstruction: 3280
       endInstruction: 3279
-      startSourceChar: 4587
-      endSourceChar: 4587
+      startSourceChar: 4592
+      endSourceChar: 4592
       line: 172
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 3280
       endInstruction: 3279
-      startSourceChar: 4587
-      endSourceChar: 4587
+      startSourceChar: 4592
+      endSourceChar: 4592
       line: 172
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 3280
       endInstruction: 3279
-      startSourceChar: 4587
-      endSourceChar: 4587
+      startSourceChar: 4592
+      endSourceChar: 4592
       line: 172
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 3280
       endInstruction: 3279
-      startSourceChar: 4587
-      endSourceChar: 4609
+      startSourceChar: 4592
+      endSourceChar: 4614
       line: 172
       lineChar: 12
       spanCodeSection: 'Handler targetHandler '
     - startInstruction: 3280
       endInstruction: 3279
-      startSourceChar: 4609
-      endSourceChar: 4611
+      startSourceChar: 4614
+      endSourceChar: 4616
       line: 172
       lineChar: 34
       spanCodeSection: '= '
     - startInstruction: 3280
       endInstruction: 3279
-      startSourceChar: 4611
-      endSourceChar: 4611
+      startSourceChar: 4616
+      endSourceChar: 4616
       line: 172
       lineChar: 36
       spanCodeSection: 
     - startInstruction: 3280
       endInstruction: 3315
-      startSourceChar: 4611
-      endSourceChar: 4641
+      startSourceChar: 4616
+      endSourceChar: 4646
       line: 172
       lineChar: 36
       spanCodeSection: "FindFreeOwned();\r\n            "
     - startInstruction: 3316
       endInstruction: 3315
-      startSourceChar: 4641
-      endSourceChar: 4645
+      startSourceChar: 4646
+      endSourceChar: 4650
       line: 173
       lineChar: 12
       spanCodeSection: if (
     - startInstruction: 3316
       endInstruction: 3315
-      startSourceChar: 4645
-      endSourceChar: 4646
+      startSourceChar: 4650
+      endSourceChar: 4651
       line: 173
       lineChar: 16
       spanCodeSection: '!'
     - startInstruction: 3316
       endInstruction: 3379
-      startSourceChar: 4646
-      endSourceChar: 4674
+      startSourceChar: 4651
+      endSourceChar: 4679
       line: 173
       lineChar: 17
       spanCodeSection: "targetHandler)\r\n            "
     - startInstruction: 3380
       endInstruction: 3379
-      startSourceChar: 4674
-      endSourceChar: 4693
+      startSourceChar: 4679
+      endSourceChar: 4698
       line: 174
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 3380
       endInstruction: 3379
-      startSourceChar: 4693
-      endSourceChar: 4693
+      startSourceChar: 4698
+      endSourceChar: 4698
       line: 175
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 3380
       endInstruction: 3379
-      startSourceChar: 4693
-      endSourceChar: 4693
+      startSourceChar: 4698
+      endSourceChar: 4698
       line: 175
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 3380
       endInstruction: 3379
-      startSourceChar: 4693
-      endSourceChar: 4709
+      startSourceChar: 4698
+      endSourceChar: 4714
       line: 175
       lineChar: 16
       spanCodeSection: 'targetHandler = '
     - startInstruction: 3380
       endInstruction: 3379
-      startSourceChar: 4709
-      endSourceChar: 4709
+      startSourceChar: 4714
+      endSourceChar: 4714
       line: 175
       lineChar: 32
       spanCodeSection: 
     - startInstruction: 3380
       endInstruction: 3415
-      startSourceChar: 4709
-      endSourceChar: 4759
+      startSourceChar: 4714
+      endSourceChar: 4764
       line: 175
       lineChar: 32
       spanCodeSection: "FindFreeNotOwned();\r\n            }\r\n\r\n            "
     - startInstruction: 3416
       endInstruction: 3415
-      startSourceChar: 4759
-      endSourceChar: 4763
+      startSourceChar: 4764
+      endSourceChar: 4768
       line: 178
       lineChar: 12
       spanCodeSection: if (
     - startInstruction: 3416
       endInstruction: 3415
-      startSourceChar: 4763
-      endSourceChar: 4764
+      startSourceChar: 4768
+      endSourceChar: 4769
       line: 178
       lineChar: 16
       spanCodeSection: '!'
     - startInstruction: 3416
       endInstruction: 3479
-      startSourceChar: 4764
-      endSourceChar: 4792
+      startSourceChar: 4769
+      endSourceChar: 4797
       line: 178
       lineChar: 17
       spanCodeSection: "targetHandler)\r\n            "
     - startInstruction: 3480
       endInstruction: 3479
-      startSourceChar: 4792
-      endSourceChar: 4898
+      startSourceChar: 4797
+      endSourceChar: 4903
       line: 179
       lineChar: 12
       spanCodeSection: "{\r\n                // TODO Returning error. (What interface
         is good for UdonGraph user?)\r\n                "
     - startInstruction: 3480
       endInstruction: 3479
-      startSourceChar: 4898
-      endSourceChar: 4898
+      startSourceChar: 4903
+      endSourceChar: 4903
       line: 181
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 3480
       endInstruction: 3479
-      startSourceChar: 4898
-      endSourceChar: 4898
+      startSourceChar: 4903
+      endSourceChar: 4903
       line: 181
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 3480
       endInstruction: 3479
-      startSourceChar: 4898
-      endSourceChar: 4902
+      startSourceChar: 4903
+      endSourceChar: 4907
       line: 181
       lineChar: 16
       spanCodeSection: log(
     - startInstruction: 3480
       endInstruction: 3523
-      startSourceChar: 4902
-      endSourceChar: 4969
+      startSourceChar: 4907
+      endSourceChar: 4974
       line: 181
       lineChar: 20
       spanCodeSection: "\"EXUR_AcquireObject: No free object\");\r\n            }\r\n
         \           "
     - startInstruction: 3524
       endInstruction: 3523
-      startSourceChar: 4969
-      endSourceChar: 4987
+      startSourceChar: 4974
+      endSourceChar: 4992
       line: 183
       lineChar: 12
       spanCodeSection: "else\r\n            "
     - startInstruction: 3524
       endInstruction: 3523
-      startSourceChar: 4987
-      endSourceChar: 5006
+      startSourceChar: 4992
+      endSourceChar: 5011
       line: 184
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 3524
       endInstruction: 3523
-      startSourceChar: 5006
-      endSourceChar: 5006
+      startSourceChar: 5011
+      endSourceChar: 5011
       line: 185
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 3524
       endInstruction: 3523
-      startSourceChar: 5006
-      endSourceChar: 5006
+      startSourceChar: 5011
+      endSourceChar: 5011
       line: 185
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 3524
       endInstruction: 3523
-      startSourceChar: 5006
-      endSourceChar: 5012
+      startSourceChar: 5011
+      endSourceChar: 5017
       line: 185
       lineChar: 16
       spanCodeSection: debug(
     - startInstruction: 3524
       endInstruction: 3523
-      startSourceChar: 5012
-      endSourceChar: 5012
+      startSourceChar: 5017
+      endSourceChar: 5017
       line: 185
       lineChar: 22
       spanCodeSection: 
     - startInstruction: 3524
       endInstruction: 3523
-      startSourceChar: 5012
-      endSourceChar: 5053
+      startSourceChar: 5017
+      endSourceChar: 5058
       line: 185
       lineChar: 22
       spanCodeSection: '"EXUR_AcquireObject: selected target=" + '
     - startInstruction: 3524
       endInstruction: 3523
-      startSourceChar: 5053
-      endSourceChar: 5053
+      startSourceChar: 5058
+      endSourceChar: 5058
       line: 185
       lineChar: 63
       spanCodeSection: 
     - startInstruction: 3524
       endInstruction: 3523
-      startSourceChar: 5053
-      endSourceChar: 5053
+      startSourceChar: 5058
+      endSourceChar: 5058
       line: 185
       lineChar: 63
       spanCodeSection: 
     - startInstruction: 3524
       endInstruction: 3523
-      startSourceChar: 5053
-      endSourceChar: 5067
+      startSourceChar: 5058
+      endSourceChar: 5072
       line: 185
       lineChar: 63
       spanCodeSection: targetHandler.
     - startInstruction: 3524
       endInstruction: 3523
-      startSourceChar: 5067
-      endSourceChar: 5078
+      startSourceChar: 5072
+      endSourceChar: 5083
       line: 185
       lineChar: 77
       spanCodeSection: gameObject.
     - startInstruction: 3524
       endInstruction: 3619
-      startSourceChar: 5078
-      endSourceChar: 5102
+      startSourceChar: 5083
+      endSourceChar: 5107
       line: 185
       lineChar: 88
       spanCodeSection: "name);\r\n                "
     - startInstruction: 3620
       endInstruction: 3619
-      startSourceChar: 5102
-      endSourceChar: 5102
+      startSourceChar: 5107
+      endSourceChar: 5107
       line: 186
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 3620
       endInstruction: 3619
-      startSourceChar: 5102
-      endSourceChar: 5102
+      startSourceChar: 5107
+      endSourceChar: 5107
       line: 186
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 3620
       endInstruction: 3619
-      startSourceChar: 5102
-      endSourceChar: 5102
+      startSourceChar: 5107
+      endSourceChar: 5107
       line: 186
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 3620
       endInstruction: 3619
-      startSourceChar: 5102
-      endSourceChar: 5116
+      startSourceChar: 5107
+      endSourceChar: 5121
       line: 186
       lineChar: 16
       spanCodeSection: targetHandler.
     - startInstruction: 3620
       endInstruction: 3620
-      startSourceChar: 5116
-      endSourceChar: 5116
+      startSourceChar: 5121
+      endSourceChar: 5121
       line: 186
       lineChar: 30
       spanCodeSection: 
