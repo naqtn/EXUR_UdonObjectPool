@@ -16,34 +16,41 @@ MonoBehaviour:
     type: 2}
   udonAssembly: ".data_start\r\n\r\n    .export DebugText\r\n\r\n    __refl_const_intnl_udonTypeID:
     %SystemInt64, null\r\n    __refl_const_intnl_udonTypeName: %SystemString, null\r\n
-    \   DebugText: %UnityEngineUIText, null\r\n    __0_this_intnl_UnityEngineTransform:
-    %UnityEngineTransform, this\r\n    __0_s_String: %SystemString, null\r\n    __0_const_intnl_SystemString:
+    \   DebugText: %UnityEngineUIText, null\r\n    __0_this_intnl_UnityEngineGameObject:
+    %UnityEngineGameObject, this\r\n    __0_this_intnl_UnityEngineTransform: %UnityEngineTransform,
+    this\r\n    __0_s_String: %SystemString, null\r\n    __0_const_intnl_SystemString:
     %SystemString, null\r\n    __1_const_intnl_SystemString: %SystemString, null\r\n
     \   __10_const_intnl_SystemString: %SystemString, null\r\n    __11_const_intnl_SystemString:
     %SystemString, null\r\n    __12_const_intnl_SystemString: %SystemString, null\r\n
     \   __13_const_intnl_SystemString: %SystemString, null\r\n    __14_const_intnl_SystemString:
     %SystemString, null\r\n    __15_const_intnl_SystemString: %SystemString, null\r\n
-    \   __2_const_intnl_SystemString: %SystemString, null\r\n    __3_const_intnl_SystemString:
-    %SystemString, null\r\n    __4_const_intnl_SystemString: %SystemString, null\r\n
-    \   __5_const_intnl_SystemString: %SystemString, null\r\n    __6_const_intnl_SystemString:
-    %SystemString, null\r\n    __7_const_intnl_SystemString: %SystemString, null\r\n
-    \   __8_const_intnl_SystemString: %SystemString, null\r\n    __9_const_intnl_SystemString:
-    %SystemString, null\r\n    __0_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __0_const_intnl_SystemUInt32: %SystemUInt32, null\r\n    __1_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __10_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __11_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __12_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __13_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __2_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __3_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __4_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __5_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __6_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __7_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __8_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __9_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __0_intnl_SystemBoolean: %SystemBoolean, null\r\n    __0_intnl_SystemString:
-    %SystemString, null\r\n    __1_intnl_SystemString: %SystemString, null\r\n    __2_intnl_SystemString:
-    %SystemString, null\r\n    __3_intnl_SystemString: %SystemString, null\r\n    __4_intnl_SystemString:
-    %SystemString, null\r\n    __5_intnl_SystemString: %SystemString, null\r\n    __6_intnl_SystemString:
-    %SystemString, null\r\n    __0_intnl_UnityEngineTransform: %UnityEngineTransform,
-    null\r\n    __0_intnl_returnTarget_UInt32: %SystemUInt32, null\r\n\r\n.data_end\r\n\r\n
+    \   __16_const_intnl_SystemString: %SystemString, null\r\n    __17_const_intnl_SystemString:
+    %SystemString, null\r\n    __18_const_intnl_SystemString: %SystemString, null\r\n
+    \   __19_const_intnl_SystemString: %SystemString, null\r\n    __2_const_intnl_SystemString:
+    %SystemString, null\r\n    __3_const_intnl_SystemString: %SystemString, null\r\n
+    \   __4_const_intnl_SystemString: %SystemString, null\r\n    __5_const_intnl_SystemString:
+    %SystemString, null\r\n    __6_const_intnl_SystemString: %SystemString, null\r\n
+    \   __7_const_intnl_SystemString: %SystemString, null\r\n    __8_const_intnl_SystemString:
+    %SystemString, null\r\n    __9_const_intnl_SystemString: %SystemString, null\r\n
+    \   __0_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __0_const_intnl_SystemUInt32:
+    %SystemUInt32, null\r\n    __1_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __10_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __11_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __12_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __13_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __14_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __15_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __16_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __17_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __2_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __3_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __4_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __5_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __6_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __7_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __8_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __9_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __0_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __1_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __0_intnl_SystemString: %SystemString, null\r\n    __1_intnl_SystemString:
+    %SystemString, null\r\n    __2_intnl_SystemString: %SystemString, null\r\n    __3_intnl_SystemString:
+    %SystemString, null\r\n    __4_intnl_SystemString: %SystemString, null\r\n    __5_intnl_SystemString:
+    %SystemString, null\r\n    __6_intnl_SystemString: %SystemString, null\r\n    __7_intnl_SystemString:
+    %SystemString, null\r\n    __0_intnl_returnTarget_UInt32: %SystemUInt32, null\r\n\r\n.data_end\r\n\r\n
     \       \r\n         # using UdonSharp;\r\n        \r\n         # using UnityEngine;\r\n
     \       \r\n         # using VRC.SDKBase;\r\n        \r\n         # using VRC.Udon;\r\n
     \       \r\n         # namespace Iwsd.EXUR {\r\n        \r\n         # public
@@ -53,14 +60,12 @@ MonoBehaviour:
     __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n         #
     if (DebugText)\r\n        PUSH, DebugText\r\n        PUSH, __0_intnl_SystemBoolean\r\n
     \       EXTERN, \"UnityEngineObject.__op_Implicit__UnityEngineObject__SystemBoolean\"\r\n
-    \       PUSH, __0_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000128\r\n
+    \       PUSH, __0_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000110\r\n
     \       \r\n         # {\r\n        \r\n         # DebugText.text += \"\\nUSR:\"
-    + transform.parent.name + \":\" + s;\r\n        PUSH, __0_this_intnl_UnityEngineTransform\r\n
-    \       PUSH, __0_intnl_UnityEngineTransform\r\n        EXTERN, \"UnityEngineTransform.__get_parent__UnityEngineTransform\"\r\n
-    \       PUSH, __0_intnl_UnityEngineTransform\r\n        PUSH, __0_intnl_SystemString\r\n
-    \       EXTERN, \"UnityEngineTransform.__get_name__SystemString\"\r\n        PUSH,
-    __0_const_intnl_SystemString\r\n        PUSH, __0_intnl_SystemString\r\n        PUSH,
-    __1_intnl_SystemString\r\n        EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
+    + transform.name + \":\" + s;\r\n        PUSH, __0_this_intnl_UnityEngineTransform\r\n
+    \       PUSH, __0_intnl_SystemString\r\n        EXTERN, \"UnityEngineTransform.__get_name__SystemString\"\r\n
+    \       PUSH, __0_const_intnl_SystemString\r\n        PUSH, __0_intnl_SystemString\r\n
+    \       PUSH, __1_intnl_SystemString\r\n        EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
     \       PUSH, __1_intnl_SystemString\r\n        PUSH, __1_const_intnl_SystemString\r\n
     \       PUSH, __2_intnl_SystemString\r\n        EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
     \       PUSH, __2_intnl_SystemString\r\n        PUSH, __0_s_String\r\n        PUSH,
@@ -173,7 +178,35 @@ MonoBehaviour:
     \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __13_const_intnl_exitJumpLoc_UInt32\r\n
     \       JUMP, 0x00000008\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n.code_end\r\n"
+    \       \r\n        \r\n         # public void EXUR_Reinitialize()\r\n    .export
+    EXUR_Reinitialize\r\n        \r\n    EXUR_Reinitialize:\r\n        \r\n        PUSH,
+    __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n         #
+    log(\"EXUR_Reinitialize\");\r\n        PUSH, __16_const_intnl_SystemString\r\n
+    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __14_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000008\r\n        \r\n         # log(\" IsOwner=\" + Networking.IsOwner(this.gameObject));
+    \ // for test TODO remove me\r\n        PUSH, __0_this_intnl_UnityEngineGameObject\r\n
+    \       PUSH, __1_intnl_SystemBoolean\r\n        EXTERN, \"VRCSDKBaseNetworking.__IsOwner__UnityEngineGameObject__SystemBoolean\"\r\n
+    \       PUSH, __1_intnl_SystemBoolean\r\n        PUSH, __7_intnl_SystemString\r\n
+    \       EXTERN, \"SystemBoolean.__ToString__SystemString\"\r\n        PUSH, __17_const_intnl_SystemString\r\n
+    \       PUSH, __7_intnl_SystemString\r\n        PUSH, __0_s_String\r\n        EXTERN,
+    \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n        PUSH,
+    __15_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x00000008\r\n        PUSH,
+    __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT,
+    __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n         # public void
+    EXUR_Finalize()\r\n    .export EXUR_Finalize\r\n        \r\n    EXUR_Finalize:\r\n
+    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
+    {\r\n        \r\n         # log(\"EXUR_Finalize\");\r\n        PUSH, __18_const_intnl_SystemString\r\n
+    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __16_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000008\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public void EXUR_ReleaseObject()\r\n    .export
+    EXUR_ReleaseObject\r\n        \r\n    EXUR_ReleaseObject:\r\n        \r\n        PUSH,
+    __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n         #
+    log(\"EXUR_ReleaseObject :!!!!!!! You got worng instance !!!!!\"); // for test\r\n
+    \       PUSH, __19_const_intnl_SystemString\r\n        PUSH, __0_s_String\r\n
+    \       COPY\r\n        PUSH, __17_const_intnl_exitJumpLoc_UInt32\r\n        JUMP,
+    0x00000008\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n
+    \       COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n.code_end\r\n"
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: 46c31f5e905294949bd54af0cd1e927b, type: 3}
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
@@ -484,638 +517,836 @@ MonoBehaviour:
     - startInstruction: 48
       endInstruction: 47
       startSourceChar: 365
-      endSourceChar: 365
-      line: 17
-      lineChar: 45
-      spanCodeSection: 
-    - startInstruction: 48
-      endInstruction: 47
-      startSourceChar: 365
       endSourceChar: 375
       line: 17
       lineChar: 45
       spanCodeSection: transform.
     - startInstruction: 48
-      endInstruction: 47
+      endInstruction: 103
       startSourceChar: 375
       endSourceChar: 382
       line: 17
       lineChar: 55
-      spanCodeSection: parent.
-    - startInstruction: 48
-      endInstruction: 127
+      spanCodeSection: 'name + '
+    - startInstruction: 104
+      endInstruction: 135
       startSourceChar: 382
-      endSourceChar: 389
+      endSourceChar: 388
       line: 17
       lineChar: 62
-      spanCodeSection: 'name + '
-    - startInstruction: 128
-      endInstruction: 159
-      startSourceChar: 389
-      endSourceChar: 395
-      line: 17
-      lineChar: 69
       spanCodeSection: '":" + '
-    - startInstruction: 160
-      endInstruction: 315
-      startSourceChar: 395
-      endSourceChar: 560
+    - startInstruction: 136
+      endInstruction: 291
+      startSourceChar: 388
+      endSourceChar: 553
       line: 17
-      lineChar: 75
+      lineChar: 68
       spanCodeSection: "s;\r\n            }\r\n        }\r\n\r\n    \r\n        //
         public void ()\r\n        // {\r\n        //     log(\"\");\r\n        //
         }\r\n\r\n        // Result of initialization\r\n        "
-    - startInstruction: 316
-      endInstruction: 323
-      startSourceChar: 560
-      endSourceChar: 600
+    - startInstruction: 292
+      endInstruction: 299
+      startSourceChar: 553
+      endSourceChar: 593
       line: 28
       lineChar: 8
       spanCodeSection: "public void InitializedToOwn()\r\n        "
-    - startInstruction: 324
-      endInstruction: 323
-      startSourceChar: 600
-      endSourceChar: 615
+    - startInstruction: 300
+      endInstruction: 299
+      startSourceChar: 593
+      endSourceChar: 608
       line: 29
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 324
-      endInstruction: 323
-      startSourceChar: 615
-      endSourceChar: 615
+    - startInstruction: 300
+      endInstruction: 299
+      startSourceChar: 608
+      endSourceChar: 608
       line: 30
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 324
-      endInstruction: 323
-      startSourceChar: 615
-      endSourceChar: 615
+    - startInstruction: 300
+      endInstruction: 299
+      startSourceChar: 608
+      endSourceChar: 608
       line: 30
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 324
-      endInstruction: 323
-      startSourceChar: 615
-      endSourceChar: 619
+    - startInstruction: 300
+      endInstruction: 299
+      startSourceChar: 608
+      endSourceChar: 612
       line: 30
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 324
-      endInstruction: 379
-      startSourceChar: 619
-      endSourceChar: 660
+    - startInstruction: 300
+      endInstruction: 355
+      startSourceChar: 612
+      endSourceChar: 653
       line: 30
       lineChar: 16
       spanCodeSection: "\"InitializedToOwn\");\r\n        }\r\n        "
-    - startInstruction: 380
-      endInstruction: 387
-      startSourceChar: 660
-      endSourceChar: 701
+    - startInstruction: 356
+      endInstruction: 363
+      startSourceChar: 653
+      endSourceChar: 694
       line: 32
       lineChar: 8
       spanCodeSection: "public void InitializedToIdle()\r\n        "
-    - startInstruction: 388
-      endInstruction: 387
-      startSourceChar: 701
-      endSourceChar: 716
+    - startInstruction: 364
+      endInstruction: 363
+      startSourceChar: 694
+      endSourceChar: 709
       line: 33
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 388
-      endInstruction: 387
-      startSourceChar: 716
-      endSourceChar: 716
+    - startInstruction: 364
+      endInstruction: 363
+      startSourceChar: 709
+      endSourceChar: 709
       line: 34
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 388
-      endInstruction: 387
-      startSourceChar: 716
-      endSourceChar: 716
+    - startInstruction: 364
+      endInstruction: 363
+      startSourceChar: 709
+      endSourceChar: 709
       line: 34
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 388
-      endInstruction: 387
-      startSourceChar: 716
-      endSourceChar: 720
+    - startInstruction: 364
+      endInstruction: 363
+      startSourceChar: 709
+      endSourceChar: 713
       line: 34
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 388
-      endInstruction: 443
-      startSourceChar: 720
-      endSourceChar: 762
+    - startInstruction: 364
+      endInstruction: 419
+      startSourceChar: 713
+      endSourceChar: 755
       line: 34
       lineChar: 16
       spanCodeSection: "\"InitializedToIdle\");\r\n        }\r\n        "
-    - startInstruction: 444
-      endInstruction: 451
-      startSourceChar: 762
-      endSourceChar: 804
+    - startInstruction: 420
+      endInstruction: 427
+      startSourceChar: 755
+      endSourceChar: 797
       line: 36
       lineChar: 8
       spanCodeSection: "public void InitializedToUsing()\r\n        "
-    - startInstruction: 452
-      endInstruction: 451
-      startSourceChar: 804
-      endSourceChar: 819
+    - startInstruction: 428
+      endInstruction: 427
+      startSourceChar: 797
+      endSourceChar: 812
       line: 37
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 452
-      endInstruction: 451
-      startSourceChar: 819
-      endSourceChar: 819
+    - startInstruction: 428
+      endInstruction: 427
+      startSourceChar: 812
+      endSourceChar: 812
       line: 38
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 452
-      endInstruction: 451
-      startSourceChar: 819
-      endSourceChar: 819
+    - startInstruction: 428
+      endInstruction: 427
+      startSourceChar: 812
+      endSourceChar: 812
       line: 38
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 452
-      endInstruction: 451
-      startSourceChar: 819
-      endSourceChar: 823
+    - startInstruction: 428
+      endInstruction: 427
+      startSourceChar: 812
+      endSourceChar: 816
       line: 38
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 452
-      endInstruction: 507
-      startSourceChar: 823
-      endSourceChar: 907
+    - startInstruction: 428
+      endInstruction: 483
+      startSourceChar: 816
+      endSourceChar: 900
       line: 38
       lineChar: 16
       spanCodeSection: "\"InitializedToUsing\");\r\n        }\r\n\r\n        // start-stop
         while not owned\r\n        "
-    - startInstruction: 508
-      endInstruction: 515
-      startSourceChar: 907
-      endSourceChar: 951
+    - startInstruction: 484
+      endInstruction: 491
+      startSourceChar: 900
+      endSourceChar: 944
       line: 42
       lineChar: 8
       spanCodeSection: "public void StartedToUseByOthers()\r\n        "
-    - startInstruction: 516
-      endInstruction: 515
-      startSourceChar: 951
-      endSourceChar: 966
+    - startInstruction: 492
+      endInstruction: 491
+      startSourceChar: 944
+      endSourceChar: 959
       line: 43
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 516
-      endInstruction: 515
-      startSourceChar: 966
-      endSourceChar: 966
+    - startInstruction: 492
+      endInstruction: 491
+      startSourceChar: 959
+      endSourceChar: 959
       line: 44
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 516
-      endInstruction: 515
-      startSourceChar: 966
-      endSourceChar: 966
+    - startInstruction: 492
+      endInstruction: 491
+      startSourceChar: 959
+      endSourceChar: 959
       line: 44
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 516
-      endInstruction: 515
-      startSourceChar: 966
-      endSourceChar: 970
+    - startInstruction: 492
+      endInstruction: 491
+      startSourceChar: 959
+      endSourceChar: 963
       line: 44
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 516
-      endInstruction: 571
-      startSourceChar: 970
-      endSourceChar: 1015
+    - startInstruction: 492
+      endInstruction: 547
+      startSourceChar: 963
+      endSourceChar: 1008
       line: 44
       lineChar: 16
       spanCodeSection: "\"StartedToUseByOthers\");\r\n        }\r\n        "
-    - startInstruction: 572
-      endInstruction: 579
-      startSourceChar: 1015
-      endSourceChar: 1059
+    - startInstruction: 548
+      endInstruction: 555
+      startSourceChar: 1008
+      endSourceChar: 1052
       line: 46
       lineChar: 8
       spanCodeSection: "public void StoppedUsingByOthers()\r\n        "
-    - startInstruction: 580
-      endInstruction: 579
-      startSourceChar: 1059
-      endSourceChar: 1074
+    - startInstruction: 556
+      endInstruction: 555
+      startSourceChar: 1052
+      endSourceChar: 1067
       line: 47
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 580
-      endInstruction: 579
-      startSourceChar: 1074
-      endSourceChar: 1074
+    - startInstruction: 556
+      endInstruction: 555
+      startSourceChar: 1067
+      endSourceChar: 1067
       line: 48
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 580
-      endInstruction: 579
-      startSourceChar: 1074
-      endSourceChar: 1074
+    - startInstruction: 556
+      endInstruction: 555
+      startSourceChar: 1067
+      endSourceChar: 1067
       line: 48
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 580
-      endInstruction: 579
-      startSourceChar: 1074
-      endSourceChar: 1078
+    - startInstruction: 556
+      endInstruction: 555
+      startSourceChar: 1067
+      endSourceChar: 1071
       line: 48
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 580
-      endInstruction: 635
-      startSourceChar: 1078
-      endSourceChar: 1153
+    - startInstruction: 556
+      endInstruction: 611
+      startSourceChar: 1071
+      endSourceChar: 1146
       line: 48
       lineChar: 16
       spanCodeSection: "\"StoppedUsingByOthers\");\r\n        }\r\n\r\n        //
         Result of start\r\n        "
-    - startInstruction: 636
-      endInstruction: 643
-      startSourceChar: 1153
-      endSourceChar: 1197
+    - startInstruction: 612
+      endInstruction: 619
+      startSourceChar: 1146
+      endSourceChar: 1190
       line: 52
       lineChar: 8
       spanCodeSection: "public void FailedToUseByTimeout()\r\n        "
-    - startInstruction: 644
-      endInstruction: 643
-      startSourceChar: 1197
-      endSourceChar: 1212
+    - startInstruction: 620
+      endInstruction: 619
+      startSourceChar: 1190
+      endSourceChar: 1205
       line: 53
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 644
-      endInstruction: 643
-      startSourceChar: 1212
-      endSourceChar: 1212
+    - startInstruction: 620
+      endInstruction: 619
+      startSourceChar: 1205
+      endSourceChar: 1205
       line: 54
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 644
-      endInstruction: 643
-      startSourceChar: 1212
-      endSourceChar: 1212
+    - startInstruction: 620
+      endInstruction: 619
+      startSourceChar: 1205
+      endSourceChar: 1205
       line: 54
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 644
-      endInstruction: 643
-      startSourceChar: 1212
-      endSourceChar: 1216
+    - startInstruction: 620
+      endInstruction: 619
+      startSourceChar: 1205
+      endSourceChar: 1209
       line: 54
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 644
-      endInstruction: 699
-      startSourceChar: 1216
-      endSourceChar: 1261
+    - startInstruction: 620
+      endInstruction: 675
+      startSourceChar: 1209
+      endSourceChar: 1254
       line: 54
       lineChar: 16
       spanCodeSection: "\"FailedToUseByTimeout\");\r\n        }\r\n        "
-    - startInstruction: 700
-      endInstruction: 707
-      startSourceChar: 1261
-      endSourceChar: 1311
+    - startInstruction: 676
+      endInstruction: 683
+      startSourceChar: 1254
+      endSourceChar: 1304
       line: 56
       lineChar: 8
       spanCodeSection: "public void FailedToUseByRaceCondition()\r\n        "
-    - startInstruction: 708
-      endInstruction: 707
-      startSourceChar: 1311
-      endSourceChar: 1326
+    - startInstruction: 684
+      endInstruction: 683
+      startSourceChar: 1304
+      endSourceChar: 1319
       line: 57
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 708
-      endInstruction: 707
-      startSourceChar: 1326
-      endSourceChar: 1326
+    - startInstruction: 684
+      endInstruction: 683
+      startSourceChar: 1319
+      endSourceChar: 1319
       line: 58
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 708
-      endInstruction: 707
-      startSourceChar: 1326
-      endSourceChar: 1326
+    - startInstruction: 684
+      endInstruction: 683
+      startSourceChar: 1319
+      endSourceChar: 1319
       line: 58
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 708
-      endInstruction: 707
-      startSourceChar: 1326
-      endSourceChar: 1330
+    - startInstruction: 684
+      endInstruction: 683
+      startSourceChar: 1319
+      endSourceChar: 1323
       line: 58
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 708
-      endInstruction: 763
-      startSourceChar: 1330
-      endSourceChar: 1381
+    - startInstruction: 684
+      endInstruction: 739
+      startSourceChar: 1323
+      endSourceChar: 1374
       line: 58
       lineChar: 16
       spanCodeSection: "\"FailedToUseByRaceCondition\");\r\n        }\r\n        "
-    - startInstruction: 764
-      endInstruction: 771
-      startSourceChar: 1381
-      endSourceChar: 1426
+    - startInstruction: 740
+      endInstruction: 747
+      startSourceChar: 1374
+      endSourceChar: 1419
       line: 60
       lineChar: 8
       spanCodeSection: "public void EnterUsingFromWaiting()\r\n        "
-    - startInstruction: 772
-      endInstruction: 771
-      startSourceChar: 1426
-      endSourceChar: 1441
+    - startInstruction: 748
+      endInstruction: 747
+      startSourceChar: 1419
+      endSourceChar: 1434
       line: 61
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 772
-      endInstruction: 771
-      startSourceChar: 1441
-      endSourceChar: 1441
+    - startInstruction: 748
+      endInstruction: 747
+      startSourceChar: 1434
+      endSourceChar: 1434
       line: 62
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 772
-      endInstruction: 771
-      startSourceChar: 1441
-      endSourceChar: 1441
+    - startInstruction: 748
+      endInstruction: 747
+      startSourceChar: 1434
+      endSourceChar: 1434
       line: 62
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 772
-      endInstruction: 771
-      startSourceChar: 1441
-      endSourceChar: 1445
+    - startInstruction: 748
+      endInstruction: 747
+      startSourceChar: 1434
+      endSourceChar: 1438
       line: 62
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 772
-      endInstruction: 827
-      startSourceChar: 1445
-      endSourceChar: 1491
+    - startInstruction: 748
+      endInstruction: 803
+      startSourceChar: 1438
+      endSourceChar: 1484
       line: 62
       lineChar: 16
       spanCodeSection: "\"EnterUsingFromWaiting\");\r\n        }\r\n        "
-    - startInstruction: 828
-      endInstruction: 835
-      startSourceChar: 1491
-      endSourceChar: 1532
+    - startInstruction: 804
+      endInstruction: 811
+      startSourceChar: 1484
+      endSourceChar: 1525
       line: 64
       lineChar: 8
       spanCodeSection: "public void EnterUsingFromOwn()\r\n        "
-    - startInstruction: 836
-      endInstruction: 835
-      startSourceChar: 1532
-      endSourceChar: 1547
+    - startInstruction: 812
+      endInstruction: 811
+      startSourceChar: 1525
+      endSourceChar: 1540
       line: 65
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 836
-      endInstruction: 835
-      startSourceChar: 1547
-      endSourceChar: 1547
+    - startInstruction: 812
+      endInstruction: 811
+      startSourceChar: 1540
+      endSourceChar: 1540
       line: 66
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 836
-      endInstruction: 835
-      startSourceChar: 1547
-      endSourceChar: 1547
+    - startInstruction: 812
+      endInstruction: 811
+      startSourceChar: 1540
+      endSourceChar: 1540
       line: 66
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 836
-      endInstruction: 835
-      startSourceChar: 1547
-      endSourceChar: 1551
+    - startInstruction: 812
+      endInstruction: 811
+      startSourceChar: 1540
+      endSourceChar: 1544
       line: 66
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 836
-      endInstruction: 891
-      startSourceChar: 1551
-      endSourceChar: 1622
+    - startInstruction: 812
+      endInstruction: 867
+      startSourceChar: 1544
+      endSourceChar: 1615
       line: 66
       lineChar: 16
       spanCodeSection: "\"EnterUsingFromOwn\");\r\n        }\r\n\r\n        // Result
         of stop\r\n        "
-    - startInstruction: 892
-      endInstruction: 899
-      startSourceChar: 1622
-      endSourceChar: 1664
+    - startInstruction: 868
+      endInstruction: 875
+      startSourceChar: 1615
+      endSourceChar: 1657
       line: 70
       lineChar: 8
       spanCodeSection: "public void ExitUsingByRequest()\r\n        "
-    - startInstruction: 900
-      endInstruction: 899
-      startSourceChar: 1664
-      endSourceChar: 1679
+    - startInstruction: 876
+      endInstruction: 875
+      startSourceChar: 1657
+      endSourceChar: 1672
       line: 71
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 900
-      endInstruction: 899
-      startSourceChar: 1679
-      endSourceChar: 1679
+    - startInstruction: 876
+      endInstruction: 875
+      startSourceChar: 1672
+      endSourceChar: 1672
       line: 72
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 900
-      endInstruction: 899
-      startSourceChar: 1679
-      endSourceChar: 1679
+    - startInstruction: 876
+      endInstruction: 875
+      startSourceChar: 1672
+      endSourceChar: 1672
       line: 72
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 900
-      endInstruction: 899
-      startSourceChar: 1679
-      endSourceChar: 1683
+    - startInstruction: 876
+      endInstruction: 875
+      startSourceChar: 1672
+      endSourceChar: 1676
       line: 72
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 900
-      endInstruction: 955
-      startSourceChar: 1683
-      endSourceChar: 1755
+    - startInstruction: 876
+      endInstruction: 931
+      startSourceChar: 1676
+      endSourceChar: 1748
       line: 72
       lineChar: 16
       spanCodeSection: "\"ExitUsingByRequest\");\r\n        }\r\n\r\n        // Lost
         ownership\r\n        "
-    - startInstruction: 956
-      endInstruction: 963
-      startSourceChar: 1755
-      endSourceChar: 1799
+    - startInstruction: 932
+      endInstruction: 939
+      startSourceChar: 1748
+      endSourceChar: 1792
       line: 76
       lineChar: 8
       spanCodeSection: "public void LostOwnershipOnUsing()\r\n        "
-    - startInstruction: 964
-      endInstruction: 963
-      startSourceChar: 1799
-      endSourceChar: 1814
+    - startInstruction: 940
+      endInstruction: 939
+      startSourceChar: 1792
+      endSourceChar: 1807
       line: 77
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 964
-      endInstruction: 963
-      startSourceChar: 1814
-      endSourceChar: 1814
+    - startInstruction: 940
+      endInstruction: 939
+      startSourceChar: 1807
+      endSourceChar: 1807
       line: 78
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 964
-      endInstruction: 963
-      startSourceChar: 1814
-      endSourceChar: 1814
+    - startInstruction: 940
+      endInstruction: 939
+      startSourceChar: 1807
+      endSourceChar: 1807
       line: 78
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 964
-      endInstruction: 963
-      startSourceChar: 1814
-      endSourceChar: 1818
+    - startInstruction: 940
+      endInstruction: 939
+      startSourceChar: 1807
+      endSourceChar: 1811
       line: 78
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 964
-      endInstruction: 1019
-      startSourceChar: 1818
-      endSourceChar: 1863
+    - startInstruction: 940
+      endInstruction: 995
+      startSourceChar: 1811
+      endSourceChar: 1856
       line: 78
       lineChar: 16
       spanCodeSection: "\"LostOwnershipOnUsing\");\r\n        }\r\n        "
-    - startInstruction: 1020
-      endInstruction: 1027
-      startSourceChar: 1863
-      endSourceChar: 1906
+    - startInstruction: 996
+      endInstruction: 1003
+      startSourceChar: 1856
+      endSourceChar: 1899
       line: 80
       lineChar: 8
       spanCodeSection: "public void LostOwnershipOnIdle()\r\n        "
-    - startInstruction: 1028
-      endInstruction: 1027
-      startSourceChar: 1906
-      endSourceChar: 1921
+    - startInstruction: 1004
+      endInstruction: 1003
+      startSourceChar: 1899
+      endSourceChar: 1914
       line: 81
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 1028
-      endInstruction: 1027
-      startSourceChar: 1921
-      endSourceChar: 1921
+    - startInstruction: 1004
+      endInstruction: 1003
+      startSourceChar: 1914
+      endSourceChar: 1914
       line: 82
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 1028
-      endInstruction: 1027
-      startSourceChar: 1921
-      endSourceChar: 1921
+    - startInstruction: 1004
+      endInstruction: 1003
+      startSourceChar: 1914
+      endSourceChar: 1914
       line: 82
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 1028
-      endInstruction: 1027
-      startSourceChar: 1921
-      endSourceChar: 1925
+    - startInstruction: 1004
+      endInstruction: 1003
+      startSourceChar: 1914
+      endSourceChar: 1918
       line: 82
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 1028
-      endInstruction: 1083
-      startSourceChar: 1925
-      endSourceChar: 2030
+    - startInstruction: 1004
+      endInstruction: 1059
+      startSourceChar: 1918
+      endSourceChar: 2023
       line: 82
       lineChar: 16
       spanCodeSection: "\"LostOwnershipOnIdle\");\r\n        }\r\n\r\n        // Retrieve
         by Master (see also InitializedToOwn)\r\n        "
-    - startInstruction: 1084
-      endInstruction: 1091
-      startSourceChar: 2030
-      endSourceChar: 2087
+    - startInstruction: 1060
+      endInstruction: 1067
+      startSourceChar: 2023
+      endSourceChar: 2080
       line: 86
       lineChar: 8
       spanCodeSection: "public void RetrievedAfterOwnerLeftWhileUsing()\r\n        "
-    - startInstruction: 1092
-      endInstruction: 1091
-      startSourceChar: 2087
-      endSourceChar: 2102
+    - startInstruction: 1068
+      endInstruction: 1067
+      startSourceChar: 2080
+      endSourceChar: 2095
       line: 87
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 1092
-      endInstruction: 1091
-      startSourceChar: 2102
-      endSourceChar: 2102
+    - startInstruction: 1068
+      endInstruction: 1067
+      startSourceChar: 2095
+      endSourceChar: 2095
       line: 88
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 1092
-      endInstruction: 1091
-      startSourceChar: 2102
-      endSourceChar: 2102
+    - startInstruction: 1068
+      endInstruction: 1067
+      startSourceChar: 2095
+      endSourceChar: 2095
       line: 88
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 1092
-      endInstruction: 1091
-      startSourceChar: 2102
-      endSourceChar: 2106
+    - startInstruction: 1068
+      endInstruction: 1067
+      startSourceChar: 2095
+      endSourceChar: 2099
       line: 88
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 1092
-      endInstruction: 1147
-      startSourceChar: 2106
-      endSourceChar: 2164
+    - startInstruction: 1068
+      endInstruction: 1123
+      startSourceChar: 2099
+      endSourceChar: 2157
       line: 88
       lineChar: 16
       spanCodeSection: "\"RetrievedAfterOwnerLeftWhileUsing\");\r\n        }\r\n        "
-    - startInstruction: 1148
-      endInstruction: 1155
-      startSourceChar: 2164
-      endSourceChar: 2220
+    - startInstruction: 1124
+      endInstruction: 1131
+      startSourceChar: 2157
+      endSourceChar: 2213
       line: 90
       lineChar: 8
       spanCodeSection: "public void RetrievedAfterOwnerLeftWhileIdle()\r\n        "
-    - startInstruction: 1156
-      endInstruction: 1155
-      startSourceChar: 2220
-      endSourceChar: 2235
+    - startInstruction: 1132
+      endInstruction: 1131
+      startSourceChar: 2213
+      endSourceChar: 2228
       line: 91
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 1156
-      endInstruction: 1155
-      startSourceChar: 2235
-      endSourceChar: 2235
+    - startInstruction: 1132
+      endInstruction: 1131
+      startSourceChar: 2228
+      endSourceChar: 2228
       line: 92
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 1156
-      endInstruction: 1155
-      startSourceChar: 2235
-      endSourceChar: 2235
+    - startInstruction: 1132
+      endInstruction: 1131
+      startSourceChar: 2228
+      endSourceChar: 2228
       line: 92
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 1156
-      endInstruction: 1155
-      startSourceChar: 2235
-      endSourceChar: 2239
+    - startInstruction: 1132
+      endInstruction: 1131
+      startSourceChar: 2228
+      endSourceChar: 2232
       line: 92
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 1156
-      endInstruction: 1156
-      startSourceChar: 2239
-      endSourceChar: 2239
+    - startInstruction: 1132
+      endInstruction: 1187
+      startSourceChar: 2232
+      endSourceChar: 2329
       line: 92
+      lineChar: 16
+      spanCodeSection: "\"RetrievedAfterOwnerLeftWhileIdle\");\r\n        }\r\n\r\n
+        \       // high level simplified API\r\n        "
+    - startInstruction: 1188
+      endInstruction: 1195
+      startSourceChar: 2329
+      endSourceChar: 2370
+      line: 96
+      lineChar: 8
+      spanCodeSection: "public void EXUR_Reinitialize()\r\n        "
+    - startInstruction: 1196
+      endInstruction: 1195
+      startSourceChar: 2370
+      endSourceChar: 2385
+      line: 97
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 1196
+      endInstruction: 1195
+      startSourceChar: 2385
+      endSourceChar: 2385
+      line: 98
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1196
+      endInstruction: 1195
+      startSourceChar: 2385
+      endSourceChar: 2385
+      line: 98
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1196
+      endInstruction: 1195
+      startSourceChar: 2385
+      endSourceChar: 2389
+      line: 98
+      lineChar: 12
+      spanCodeSection: log(
+    - startInstruction: 1196
+      endInstruction: 1231
+      startSourceChar: 2389
+      endSourceChar: 2426
+      line: 98
+      lineChar: 16
+      spanCodeSection: "\"EXUR_Reinitialize\");\r\n\r\n            "
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2426
+      endSourceChar: 2426
+      line: 100
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2426
+      endSourceChar: 2426
+      line: 100
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2426
+      endSourceChar: 2430
+      line: 100
+      lineChar: 12
+      spanCodeSection: log(
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2430
+      endSourceChar: 2430
+      line: 100
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2430
+      endSourceChar: 2444
+      line: 100
+      lineChar: 16
+      spanCodeSection: '" IsOwner=" + '
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2444
+      endSourceChar: 2444
+      line: 100
+      lineChar: 30
+      spanCodeSection: 
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2444
+      endSourceChar: 2444
+      line: 100
+      lineChar: 30
+      spanCodeSection: 
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2444
+      endSourceChar: 2455
+      line: 100
+      lineChar: 30
+      spanCodeSection: Networking.
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2455
+      endSourceChar: 2463
+      line: 100
+      lineChar: 41
+      spanCodeSection: IsOwner(
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2463
+      endSourceChar: 2463
+      line: 100
+      lineChar: 49
+      spanCodeSection: 
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2463
+      endSourceChar: 2468
+      line: 100
+      lineChar: 49
+      spanCodeSection: this.
+    - startInstruction: 1232
+      endInstruction: 1347
+      startSourceChar: 2468
+      endSourceChar: 2538
+      line: 100
+      lineChar: 54
+      spanCodeSection: "gameObject));  // for test TODO remove me\r\n        }        \r\n
+        \       "
+    - startInstruction: 1348
+      endInstruction: 1355
+      startSourceChar: 2538
+      endSourceChar: 2575
+      line: 102
+      lineChar: 8
+      spanCodeSection: "public void EXUR_Finalize()\r\n        "
+    - startInstruction: 1356
+      endInstruction: 1355
+      startSourceChar: 2575
+      endSourceChar: 2590
+      line: 103
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 1356
+      endInstruction: 1355
+      startSourceChar: 2590
+      endSourceChar: 2590
+      line: 104
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1356
+      endInstruction: 1355
+      startSourceChar: 2590
+      endSourceChar: 2590
+      line: 104
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1356
+      endInstruction: 1355
+      startSourceChar: 2590
+      endSourceChar: 2594
+      line: 104
+      lineChar: 12
+      spanCodeSection: log(
+    - startInstruction: 1356
+      endInstruction: 1411
+      startSourceChar: 2594
+      endSourceChar: 2642
+      line: 104
+      lineChar: 16
+      spanCodeSection: "\"EXUR_Finalize\");\r\n        }        \r\n\r\n        "
+    - startInstruction: 1412
+      endInstruction: 1419
+      startSourceChar: 2642
+      endSourceChar: 2684
+      line: 107
+      lineChar: 8
+      spanCodeSection: "public void EXUR_ReleaseObject()\r\n        "
+    - startInstruction: 1420
+      endInstruction: 1419
+      startSourceChar: 2684
+      endSourceChar: 2699
+      line: 108
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 1420
+      endInstruction: 1419
+      startSourceChar: 2699
+      endSourceChar: 2699
+      line: 109
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1420
+      endInstruction: 1419
+      startSourceChar: 2699
+      endSourceChar: 2699
+      line: 109
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1420
+      endInstruction: 1419
+      startSourceChar: 2699
+      endSourceChar: 2703
+      line: 109
+      lineChar: 12
+      spanCodeSection: log(
+    - startInstruction: 1420
+      endInstruction: 1420
+      startSourceChar: 2703
+      endSourceChar: 2703
+      line: 109
       lineChar: 16
       spanCodeSection: 
   hasInteractEvent: 0

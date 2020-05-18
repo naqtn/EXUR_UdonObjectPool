@@ -1,15 +1,29 @@
+/*
+ * EXUR (EXclusive Use and Reusing objects) Manager
+ */
 
 using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
 
+
+// TODO idea. add "pooling object child depth level".
+// An integer that specifies where to find pooling object.
+// If there are so many pooling objects, that will be too long child list in Hierarchy view.
+// So it will be useful if it's possible to bundle them in sub groups.
+
+// TODO count used/unsed/total objects. and serves it to user.
+
 namespace Iwsd.EXUR {
 
-    public class EXURManager : UdonSharpBehaviour
+    public class Manager : UdonSharpBehaviour
     {
-        EXURHandler[] objects;
+        Handler[] objects;
 
+        [SerializeField]
+        UdonBehaviour EventListener;
+        
         //////////////////////////////
         #region Development support
 
@@ -55,70 +69,87 @@ namespace Iwsd.EXUR {
 
         void GatherObjects()
         {
-            objects = new EXURHandler[transform.childCount];
+            objects = new Handler[transform.childCount];
 
             for (int i = 0; i < transform.childCount; i++) {
                 Transform child = transform.GetChild(i);
-                objects[i] = child.GetComponent<EXURHandler>();
+                objects[i] = child.GetComponent<Handler>();
                 debug("GetComponent i=" + i);
                 debug("  handler=" + objects[i].gameObject.name);
             }
 
-            // TODO check one EXURHandler for each child.
+            // TODO check one Handler for each child.
         }
 
-        EXURHandler FindFreeOwned()
+        Handler FindFreeOwned()
         {
-            for (int i = 0; i < objects.Length; i++) {
-                if (objects[i].IsFreeOwned())
+            var n = objects.Length;
+            for (int i = 0; i < n; i++) {
+                var obj = objects[i];
+                if (obj.IsFreeOwned())
                 {
-                    return objects[i];
+                    return obj;
                 }
             }
             return null;
         }
 
-        EXURHandler FindFreeNotOwned()
+        Handler FindFreeNotOwned()
         {
-            // TODO better assignment to avoid race condition
-            for (int i = 0; i < objects.Length; i++) {
-                if (objects[i].IsFreeNotOwned())
+            // Random for better assignment to avoid race condition
+            var n = objects.Length;
+            int randOffset = Random.Range(0, n);
+            
+            for (int i = 0; i < n; i++) {
+                var obj = objects[(i + randOffset) % n];
+                if (obj.IsFreeNotOwned())
                 {
-                    return objects[i];
+                    return obj;
                 }
             }
             return null;
         }
 
+
+        void PropagateEvent(Handler eventSource, string eventName)
+        {
+            if (EventListener)
+            {
+                EventListener.SetProgramVariable("EXUR_EventSource", eventSource);
+                EventListener.SetProgramVariable("EXUR_EventName", eventName);
+                EventListener.SendCustomEvent("EXUR_RecieveEvent");
+            }
+        }
+        
         #endregion
 
 
         //////////////////////////////
         #region Module private interface
 
-        // TODO count used/unsed/tocal objects. and serves it user.
         // TODO reconsider interface design. (event type as method name or method parameter??)
 
-        public EXURHandler eventSource;
-        public string eventName;
+        public Handler EXUR_EventSource;
+        public string EXUR_EventName;
 
-        public void recieveEvent()
+        public void EXUR_RecieveEvent()
         {
             // TODO propagate to user
-            if (!eventSource)
+            if (!EXUR_EventSource)
             {
-                warn("null eventSource");
+                warn("null EXUR_EventSource");
             }
-            else if (eventName == null)
+            else if (EXUR_EventName == null)
             {
-                warn("null eventName");
+                warn("null EXUR_EventName");
             }
             else
             {
-                log("recieveEvent. " + eventName + " from " + eventSource.gameObject.name);
+                debug("EXUR_RecieveEvent. " + EXUR_EventName + " from " + EXUR_EventSource.gameObject.name);
+                PropagateEvent(EXUR_EventSource, EXUR_EventName);
             }
-            eventSource = null;
-            eventName = null;
+            EXUR_EventSource = null;
+            EXUR_EventName = null;
         }
 
         #endregion
@@ -138,8 +169,8 @@ namespace Iwsd.EXUR {
         //////////////////////////////
         #region Public interface
 
-        public void TryToGetOne() {
-            EXURHandler targetHandler = FindFreeOwned();
+        public void EXUR_AcquireObject() {
+            Handler targetHandler = FindFreeOwned();
             if (!targetHandler)
             {
                 targetHandler = FindFreeNotOwned();
@@ -148,11 +179,11 @@ namespace Iwsd.EXUR {
             if (!targetHandler)
             {
                 // TODO Returning error. (What interface is good for UdonGraph user?)
-                log("TryToGetOne: No free object");
+                log("EXUR_AcquireObject: No free object");
             }
             else
             {
-                debug("TryToGetOne: selected target=" + targetHandler.gameObject.name);
+                debug("EXUR_AcquireObject: selected target=" + targetHandler.gameObject.name);
                 targetHandler.TryToUse();
             }
         }

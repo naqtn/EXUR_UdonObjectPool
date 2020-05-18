@@ -15,7 +15,7 @@ namespace Iwsd.EXUR {
         {
             if (DebugText)
             {
-                DebugText.text += "\nUSR:" + transform.parent.name + ":" + s;
+                DebugText.text += "\nUSR:" + transform.name + ":" + s;
             }
         }
 
@@ -93,5 +93,21 @@ namespace Iwsd.EXUR {
             log("RetrievedAfterOwnerLeftWhileIdle");
         }
 
+        // high level simplified API
+        public void EXUR_Reinitialize()
+        {
+            log("EXUR_Reinitialize");
+
+            log(" IsOwner=" + Networking.IsOwner(this.gameObject));  // for test TODO remove me
+        }        
+        public void EXUR_Finalize()
+        {
+            log("EXUR_Finalize");
+        }        
+
+        public void EXUR_ReleaseObject()
+        {
+            log("EXUR_ReleaseObject :!!!!!!! You got worng instance !!!!!"); // for test
+        }        
     }
 }

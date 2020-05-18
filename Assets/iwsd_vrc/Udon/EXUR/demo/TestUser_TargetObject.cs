@@ -8,17 +8,17 @@ namespace Iwsd.EXUR {
 
     public class TestUser_TargetObject : UdonSharpBehaviour
     {
-        EXURHandler handler;
+        Iwsd.EXUR.Handler handler;
 
         void Start()
         {
-            handler = transform.parent.GetComponent<EXURHandler>();
+            handler = transform.parent.GetComponent<Iwsd.EXUR.Handler>();
         }
 
 
         void Interact()
         {
-            handler.StopUsing();
+            handler.EXUR_ReleaseObject();
         }
 
 

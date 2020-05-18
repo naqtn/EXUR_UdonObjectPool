@@ -8,8 +8,7 @@ namespace Iwsd.EXUR.Demo {
 
     public class PlayerFollower : UdonSharpBehaviour
     {
-        [SerializeField]
-        UdonBehaviour EXU_Handler;
+        UdonBehaviour EXUR_Handler;
 
         [SerializeField]
         Transform ControlTarget;
@@ -26,6 +25,10 @@ namespace Iwsd.EXUR.Demo {
         
         void Start()
         {
+            // NOTE: Generics version GetComponentInParent<UdonBehaviour>(); can't be used because unexposed.
+            // (SDK limitation of VRCSDK3-UDON-2020.05.12.10.33)
+            EXUR_Handler = (UdonBehaviour)transform.parent.GetComponentInParent(typeof(UdonBehaviour));
+            
             ControlOrgPos = ControlTarget.position;
             OffsetVector = ControlTarget.localPosition;
 
@@ -48,12 +51,12 @@ namespace Iwsd.EXUR.Demo {
                     ParkingTimer -= Time.deltaTime;
                     if (ParkingTimer <= 0)
                     {
-                        // Go back to original position and stop.
-                        EXU_Handler.SendCustomEvent("StopUsing");
+                        // Stop working when ParkingTimer expired.
+                        EXUR_Handler.SendCustomEvent("EXUR_ReleaseObject");
                     }
                     else if (ParkingTimer <= ParkingDuration * 0.1f)
                     {
-                        // At end of ParkingDuration
+                        // At end of ParkingDuration, go back to original position
                         ConstraintSrc.position = ConstraintSrcOrgPos;
                     }
                 }
@@ -72,28 +75,25 @@ namespace Iwsd.EXUR.Demo {
             }
         }
 
-        public void EnterUsingFromWaiting()
+
+        //////////////////////////////
+        // Methods that will be called from EXUR library
+        
+        public void EXUR_Reinitialize()
         {
+            Working = true;
+
             // Call SetOwner on this game object to be workable for "synchronize position".
             Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
-
             ParkingTimer = 0.0f;
-            Working = true;
             Constraint.enabled = true;
         }
-        public void EnterUsingFromOwn()
-        {
-            EnterUsingFromWaiting();
-        }
 
-        public void ExitUsingByRequest()
+        public void EXUR_Finalize()
         {
-            Working = false;
             Constraint.enabled = false;
-        }
-        public void LostOwnershipOnUsing()
-        {
-            ExitUsingByRequest();
+
+            Working = false;
         }
     }
 }

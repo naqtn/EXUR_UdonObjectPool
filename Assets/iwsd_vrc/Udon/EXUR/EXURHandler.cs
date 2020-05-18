@@ -1,3 +1,7 @@
+/*
+ * EXUR (EXclusive Use and Reusing objects) Handler
+ */
+
 using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
@@ -14,11 +18,11 @@ using VRC.Udon;
 // TODO check SDK limitation with latest SDK.
 
 // TODO consider inactivating unused target object. (optionally, and only child object??)
-
+// TODO consider "continue to use when previous owner left" option. To be able to do finalize operation, for instance. 
 
 namespace Iwsd.EXUR {
 
-    public class EXURHandler : UdonSharpBehaviour
+    public class Handler : UdonSharpBehaviour
     {
         // enum State
         // NOTE: U# doesn't support enum. instead, using const.
@@ -43,6 +47,8 @@ namespace Iwsd.EXUR {
         // (VRCSDK3-UDON-2020.04.25.13.00)
         Component[] eventListeners;
 
+        // Though this is intend for EXUR.Manager,
+        // we treat it as an plain UdonBehaviour to avoid circular dependency.
         UdonBehaviour aggregatedListener;
 
         int ownershipTimeout;
@@ -114,34 +120,33 @@ namespace Iwsd.EXUR {
             aggregatedListener = (UdonBehaviour)transform.parent.GetComponent(typeof(UdonBehaviour));
         }
 
-        void SendCallback(string message)
+        void SendCallback(string eventName)
         {
-            debug("SendCallback " + message);
+            debug("SendCallback " + eventName);
 
             for (int i = 0; i < eventListeners.Length; i++)
             {
                 var l = (UdonBehaviour)eventListeners[i];
                 if (l != this)
                 {
-                    l.SendCustomEvent(message);
+                    l.SendCustomEvent(eventName);
                 }
             }
 
             if (aggregatedListener)
             {
-                // Access as an plain UdonBehaviour to avoid circular dependency.
                 // NOTE: currently CustomEvent doesn't have argument. (VRCSDK3-UDON-2020.04.25.13.00)
-                aggregatedListener.SetProgramVariable("eventSource", this);
-                aggregatedListener.SetProgramVariable("eventName", message);
-                aggregatedListener.SendCustomEvent("recieveEvent");
+                aggregatedListener.SetProgramVariable("EXUR_EventSource", this);
+                aggregatedListener.SetProgramVariable("EXUR_EventName", eventName);
+                aggregatedListener.SendCustomEvent("EXUR_RecieveEvent");
             }
         }
 
 
         void SetSyncedUsing(bool b)
         {
-            var message = b? "set_using_true": "set_using_false";
-            this.SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, message);
+            var eventName = b? "set_using_true": "set_using_false";
+            this.SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, eventName);
         }
 
         public void set_using_true()
@@ -211,7 +216,7 @@ namespace Iwsd.EXUR {
             }
         }
 
-        
+
         void CheckImplicitTransition()
         {
             switch (lastState)
@@ -291,6 +296,7 @@ namespace Iwsd.EXUR {
                             SetSyncedUsing(true);
                             lastState = STATE_OWN_AND_USING;
                             SendCallback("EnterUsingFromWaiting");
+                            SendCallback("EXUR_Reinitialize");
                         }
                     }
                     else
@@ -311,6 +317,7 @@ namespace Iwsd.EXUR {
                         // Theft by others.
                         lastState = STATE_USED_BY_OTHERS;
                         SendCallback("LostOwnershipOnUsing");
+                        SendCallback("EXUR_Finalize");
                     }
                     break;
 
@@ -352,6 +359,7 @@ namespace Iwsd.EXUR {
                 lastState = STATE_OWN_AND_USING;
                 SetSyncedUsing(true);
                 SendCallback("EnterUsingFromOwn");
+                SendCallback("EXUR_Reinitialize");
             }
             else
             {
@@ -397,9 +405,9 @@ namespace Iwsd.EXUR {
         //////////////////////////////
         #region Public interface
 
-        public void StopUsing()
+        public void EXUR_ReleaseObject()
         {
-            log("StopUsing called");
+            log("EXUR_ReleaseObject called");
 
             if (lastState == STATE_OWN_AND_USING)
             {
@@ -407,10 +415,11 @@ namespace Iwsd.EXUR {
                 lastState = STATE_OWN_AND_IDLE; // This state change must be before SetSyncedUsing
                 SetSyncedUsing(false);
                 SendCallback("ExitUsingByRequest");
+                SendCallback("EXUR_Finalize");
             }
             else
             {
-                warn("StopUsing on not STATE_OWN_AND_USING. ignore");
+                warn("EXUR_ReleaseObject on not STATE_OWN_AND_USING. ignore");
                 // SendCallback("Error");  // TODO How to tell error detail. public error variable?
             }
         }
