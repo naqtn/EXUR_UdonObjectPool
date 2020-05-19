@@ -9,16 +9,10 @@ using VRC.Udon;
 
 
 // TODO Rename event name (callback messages) to ease to understand. and add prefix to avoid conflict.
-//  Exclusive use and reusing objects with Udon  => EXUR?
-//  ex. EXUR_ExitUsingByRequest
-
-
-// TODO Simplified event (?). {start,stop}-{local,remote}
 
 // TODO check SDK limitation with latest SDK.
 
-// TODO consider inactivating unused target object. (optionally, and only child object??)
-// TODO consider "continue to use when previous owner left" option. To be able to do finalize operation, for instance. 
+// TODO consider "continue to use when previous owner left" option. To be able to do finalize operation, for example. 
 
 namespace Iwsd.EXUR {
 
@@ -35,13 +29,17 @@ namespace Iwsd.EXUR {
         const int STATE_WAITING_OWNERSHIP = 6;
         const int STATE_OWN_AND_USING = 7;
         const int STATE_OWN_AND_IDLE = 8;
+        const int STATE_TEMPORARY = 9;
 
         // This state variable is local. This means what state this object is in from this player view.
         int lastState = STATE_INITIAL;
 
         [SerializeField]
         bool IncludeChildrenToSendEvent = false;
-        
+
+        [SerializeField]
+        bool DeavtivateWhenIdle = false;
+
         // NOTE: Use Component[] instead of UdonUdonBehaviour[] because of the limitation
         // "Type referenced by 'VRCUdonUdonBehaviourArray' could not be resolved."
         // (VRCSDK3-UDON-2020.04.25.13.00)
@@ -143,6 +141,27 @@ namespace Iwsd.EXUR {
         }
 
 
+        void SetActiveObject(bool b)
+        {
+            set_active_true(); // For the present, force active because SendCustomNetworkEvent doesn't work when inactive
+
+            var eventName = b? "set_active_true": "set_active_false";
+            this.SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, eventName);
+        }
+
+        public void set_active_true()
+        {
+            debug("recieve set_active_true.");
+            this.gameObject.SetActive(true);
+        }
+        
+        public void set_active_false()
+        {
+            debug("recieve set_active_false.");
+            this.gameObject.SetActive(false);
+        }
+        
+        
         void SetSyncedUsing(bool b)
         {
             var eventName = b? "set_using_true": "set_using_false";
@@ -169,9 +188,27 @@ namespace Iwsd.EXUR {
                     break;
 
                 case STATE_OWN_AND_IDLE:
-                    // Locally initiated STATE_OWN_AND_USING => STATE_OWN_AND_IDLE is done before calling here.
-                    // If it falls into this case, it's incoming unexpected message.
-                    assert(false, "!!!!!!!! set_using_true on STATE_OWN_AND_IDLE !!!!!!!!");
+                    // For DeavtivateWhenIdle usecase, if set_active_true and set_using_true are incoming successively,
+                    // detecting to-lost-ownership transition in Update is not done yet. So do it here.
+                    if (DeavtivateWhenIdle && !Networking.IsOwner(gameObject))
+                    {
+                        lastState = STATE_IDLE_NOT_MINE;
+                        SendCallback("LostOwnershipOnIdle");
+                        lastState = STATE_USED_BY_OTHERS;
+                        SendCallback("StartedToUseByOthers");
+                    }
+                    else
+                    {
+                        // Locally initiated STATE_OWN_AND_IDLE => STATE_OWN_AND_USING is done before calling here.
+                        
+                        // If it falls into here, it's an incoming unexpected set_using_true message.
+                        // Maybe it means receiving set_using_true before lost-ownership comes
+                        // when other player is switching to use.
+                        // If so, it is communication message ordering issue between SetOwner and SendCustomNetworkEvent.
+                        // It's weired but not actual problem. Probably we can resolve it in a way introduce new waiting state.
+                        // But we are not sure if it really happens. So, we put assert here to investigae for now.
+                        assert(false, "!!!!!!!! set_using_true on STATE_OWN_AND_IDLE !!!!!!!!");
+                    }
                     break;
                     
                 default:
@@ -209,10 +246,32 @@ namespace Iwsd.EXUR {
 
         public void query_state()
         {
+            // It needs to be temporary active to work Networking.IsOwner properly.
+            bool temporaryActivated = false;
+            if (DeavtivateWhenIdle && !gameObject.activeSelf)
+            {
+                gameObject.SetActive(true);
+                temporaryActivated = true;
+            }
+
             if (Networking.IsOwner(this.gameObject))
             {
-                assert((lastState == STATE_OWN_AND_USING) || (lastState == STATE_OWN_AND_IDLE), "query_state: Illegal state. " + lastState);
+                assert((lastState == STATE_OWN_AND_USING) || (lastState == STATE_OWN_AND_IDLE),
+                       "query_state: Illegal state. " + lastState);
+
+                if (temporaryActivated) // when gameObject was inactive
+                {
+                    // Respond "it's inactive". It sends only when inactive because initial state is active.
+                    // Call SetActiveObject before calling SetSyncedUsing for user script 
+                    // to know inactive state when InitializedToIdle event.
+                    SetActiveObject(false); 
+                }
                 SetSyncedUsing(lastState == STATE_OWN_AND_USING);
+            }
+
+            if (temporaryActivated)
+            {
+                gameObject.SetActive(false); // restore
             }
         }
 
@@ -236,6 +295,11 @@ namespace Iwsd.EXUR {
                         {
                             SetSyncedUsing(false);
                             lastState = STATE_OWN_AND_IDLE;
+                            if (DeavtivateWhenIdle)
+                            {
+                                // Do this before callback InitializedToOwn for user program to be able to know inactive.
+                                SetActiveObject(false);
+                            }
                             SendCallback("InitializedToOwn");
                         }
                         else
@@ -264,6 +328,11 @@ namespace Iwsd.EXUR {
                             lastState = STATE_OWN_AND_IDLE; // This state change must be before SetSyncedUsing
                             SetSyncedUsing(false);
                             SendCallback("RetrievedAfterOwnerLeftWhileUsing");
+
+                            if (DeavtivateWhenIdle)
+                            {
+                                SetActiveObject(false);
+                            }
                         }
                         else
                         {
@@ -280,6 +349,11 @@ namespace Iwsd.EXUR {
                         {
                             lastState = STATE_OWN_AND_IDLE;
                             SendCallback("RetrievedAfterOwnerLeftWhileIdle");
+
+                            if (DeavtivateWhenIdle)
+                            {
+                                SetActiveObject(false);
+                            }
                         }
                         else
                         {
@@ -293,7 +367,11 @@ namespace Iwsd.EXUR {
                     {
                         if (--ownershipDelay < 0)
                         {
+                            // To skip set_using_true sent by myself
+                            // NOTE: There's no option like NetworkEventTarget.Other for SendCustomNetworkEvent.
+                            lastState = STATE_TEMPORARY;
                             SetSyncedUsing(true);
+
                             lastState = STATE_OWN_AND_USING;
                             SendCallback("EnterUsingFromWaiting");
                             SendCallback("EXUR_Reinitialize");
@@ -346,12 +424,17 @@ namespace Iwsd.EXUR {
         // The method caller must check status before call this method.
         public void TryToUse()
         {
-            debug("TryToUse");
+            log("TryToUse: state=" + lastState);
 
             // TODO add option to allow theft.
             assert((lastState == STATE_IDLE_NOT_MINE) || (lastState == STATE_OWN_AND_IDLE),
                    "TryToUse: Illegal state. " + lastState); 
 
+            if (DeavtivateWhenIdle)
+            {
+                SetActiveObject(true); // This must be before calling IsOwner
+            }
+            
             if (Networking.IsOwner(this.gameObject))
             {
                 assert(lastState == STATE_OWN_AND_IDLE, "TryToUse: Ownership mismatched with state=" + lastState);
@@ -416,6 +499,11 @@ namespace Iwsd.EXUR {
                 SetSyncedUsing(false);
                 SendCallback("ExitUsingByRequest");
                 SendCallback("EXUR_Finalize");
+
+                if (DeavtivateWhenIdle)
+                {
+                    SetActiveObject(false);
+                }
             }
             else
             {

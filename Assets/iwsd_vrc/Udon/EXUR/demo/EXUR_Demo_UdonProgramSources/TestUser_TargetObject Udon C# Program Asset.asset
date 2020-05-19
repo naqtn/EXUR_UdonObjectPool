@@ -2147,7 +2147,7 @@ MonoBehaviour:
       Data: 4|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Iwsd.EXUR.Handler, Assembly-CSharp
+      Data: Iwsd.EXUR.Handler, EXUR
     - Name: 
       Entry: 8
       Data: 

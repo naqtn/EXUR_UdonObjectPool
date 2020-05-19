@@ -95,5 +95,11 @@ namespace Iwsd.EXUR.Demo {
 
             Working = false;
         }
+
+        public void RetrievedAfterOwnerLeftWhileUsing()
+        {
+            transform.position = ConstraintSrcOrgPos;
+        }
+
     }
 }
