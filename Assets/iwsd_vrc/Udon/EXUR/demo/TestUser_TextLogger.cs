@@ -105,9 +105,9 @@ namespace Iwsd.EXUR {
             log("EXUR_Finalize");
         }        
 
-        public void EXUR_ReleaseObject()
+        public void ReleaseObject()
         {
-            log("EXUR_ReleaseObject :!!!!!!! You got worng instance !!!!!"); // for test
+            log("ReleaseObject :!!!!!!! You got worng instance !!!!!"); // for test
         }        
     }
 }

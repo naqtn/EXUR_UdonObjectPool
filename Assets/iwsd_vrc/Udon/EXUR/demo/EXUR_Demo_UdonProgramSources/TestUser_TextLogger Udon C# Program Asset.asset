@@ -199,14 +199,14 @@ MonoBehaviour:
     \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __16_const_intnl_exitJumpLoc_UInt32\r\n
     \       JUMP, 0x00000008\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public void EXUR_ReleaseObject()\r\n    .export
-    EXUR_ReleaseObject\r\n        \r\n    EXUR_ReleaseObject:\r\n        \r\n        PUSH,
-    __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n         #
-    log(\"EXUR_ReleaseObject :!!!!!!! You got worng instance !!!!!\"); // for test\r\n
-    \       PUSH, __19_const_intnl_SystemString\r\n        PUSH, __0_s_String\r\n
-    \       COPY\r\n        PUSH, __17_const_intnl_exitJumpLoc_UInt32\r\n        JUMP,
-    0x00000008\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n
-    \       COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n.code_end\r\n"
+    \       \r\n        \r\n         # public void ReleaseObject()\r\n    .export
+    ReleaseObject\r\n        \r\n    ReleaseObject:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       \r\n         # {\r\n        \r\n         # log(\"ReleaseObject :!!!!!!!
+    You got worng instance !!!!!\"); // for test\r\n        PUSH, __19_const_intnl_SystemString\r\n
+    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __17_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000008\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n.code_end\r\n"
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: 46c31f5e905294949bd54af0cd1e927b, type: 3}
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
@@ -1310,42 +1310,42 @@ MonoBehaviour:
     - startInstruction: 1412
       endInstruction: 1419
       startSourceChar: 2642
-      endSourceChar: 2684
+      endSourceChar: 2679
       line: 107
       lineChar: 8
-      spanCodeSection: "public void EXUR_ReleaseObject()\r\n        "
+      spanCodeSection: "public void ReleaseObject()\r\n        "
     - startInstruction: 1420
       endInstruction: 1419
-      startSourceChar: 2684
-      endSourceChar: 2699
+      startSourceChar: 2679
+      endSourceChar: 2694
       line: 108
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 1420
       endInstruction: 1419
-      startSourceChar: 2699
-      endSourceChar: 2699
+      startSourceChar: 2694
+      endSourceChar: 2694
       line: 109
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1420
       endInstruction: 1419
-      startSourceChar: 2699
-      endSourceChar: 2699
+      startSourceChar: 2694
+      endSourceChar: 2694
       line: 109
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1420
       endInstruction: 1419
-      startSourceChar: 2699
-      endSourceChar: 2703
+      startSourceChar: 2694
+      endSourceChar: 2698
       line: 109
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 1420
       endInstruction: 1420
-      startSourceChar: 2703
-      endSourceChar: 2703
+      startSourceChar: 2698
+      endSourceChar: 2698
       line: 109
       lineChar: 16
       spanCodeSection: 

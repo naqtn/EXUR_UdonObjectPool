@@ -18,7 +18,7 @@ namespace Iwsd.EXUR {
 
         void Interact()
         {
-            handler.EXUR_ReleaseObject();
+            handler.ReleaseObject();
         }
 
 

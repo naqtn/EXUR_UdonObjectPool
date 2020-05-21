@@ -199,7 +199,7 @@ namespace Iwsd.EXUR {
         //////////////////////////////
         #region Public interface
 
-        public void EXUR_AcquireObject() {
+        public void AcquireObject() {
             Handler targetHandler = FindFreeOwned();
             if (!targetHandler)
             {
@@ -209,11 +209,11 @@ namespace Iwsd.EXUR {
             if (!targetHandler)
             {
                 // TODO Returning error. (What interface is good for UdonGraph user?)
-                log("EXUR_AcquireObject: No free object");
+                log("AcquireObject: No free object");
             }
             else
             {
-                debug("EXUR_AcquireObject: selected target=" + targetHandler.gameObject.name);
+                debug("AcquireObject: selected target=" + targetHandler.gameObject.name);
                 targetHandler.TryToUse();
             }
         }

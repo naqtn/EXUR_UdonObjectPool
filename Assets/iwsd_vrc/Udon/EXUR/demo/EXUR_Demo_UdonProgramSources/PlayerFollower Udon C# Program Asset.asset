@@ -107,7 +107,7 @@ MonoBehaviour:
     \       PUSH, ParkingTimer\r\n        PUSH, __3_intnl_SystemSingle\r\n        PUSH,
     __1_intnl_SystemBoolean\r\n        EXTERN, \"SystemSingle.__op_LessThanOrEqual__SystemSingle_SystemSingle__SystemBoolean\"\r\n
     \       PUSH, __1_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000290\r\n
-    \       \r\n         # {\r\n        \r\n         # EXUR_Handler.SendCustomEvent(\"EXUR_ReleaseObject\");\r\n
+    \       \r\n         # {\r\n        \r\n         # EXUR_Handler.SendCustomEvent(\"ReleaseObject\");\r\n
     \       PUSH, EXUR_Handler\r\n        PUSH, __0_const_intnl_SystemString\r\n        EXTERN,
     \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
     \       JUMP, 0x000002F8\r\n        \r\n         # else if (ParkingTimer <= ParkingDuration
@@ -1252,585 +1252,585 @@ MonoBehaviour:
     - startInstruction: 624
       endInstruction: 655
       startSourceChar: 1859
-      endSourceChar: 1926
+      endSourceChar: 1921
       line: 54
       lineChar: 53
-      spanCodeSection: "\"EXUR_ReleaseObject\");\r\n                    }\r\n                    "
+      spanCodeSection: "\"ReleaseObject\");\r\n                    }\r\n                    "
     - startInstruction: 656
       endInstruction: 655
-      startSourceChar: 1926
-      endSourceChar: 1931
+      startSourceChar: 1921
+      endSourceChar: 1926
       line: 56
       lineChar: 20
       spanCodeSection: 'else '
     - startInstruction: 656
       endInstruction: 655
-      startSourceChar: 1931
-      endSourceChar: 1935
+      startSourceChar: 1926
+      endSourceChar: 1930
       line: 56
       lineChar: 25
       spanCodeSection: if (
     - startInstruction: 656
       endInstruction: 655
-      startSourceChar: 1935
-      endSourceChar: 1935
+      startSourceChar: 1930
+      endSourceChar: 1930
       line: 56
       lineChar: 29
       spanCodeSection: 
     - startInstruction: 656
       endInstruction: 655
-      startSourceChar: 1935
-      endSourceChar: 1951
+      startSourceChar: 1930
+      endSourceChar: 1946
       line: 56
       lineChar: 29
       spanCodeSection: 'ParkingTimer <= '
     - startInstruction: 656
       endInstruction: 655
-      startSourceChar: 1951
-      endSourceChar: 1951
+      startSourceChar: 1946
+      endSourceChar: 1946
       line: 56
       lineChar: 45
       spanCodeSection: 
     - startInstruction: 656
       endInstruction: 655
-      startSourceChar: 1951
-      endSourceChar: 1969
+      startSourceChar: 1946
+      endSourceChar: 1964
       line: 56
       lineChar: 45
       spanCodeSection: 'ParkingDuration * '
     - startInstruction: 656
       endInstruction: 735
-      startSourceChar: 1969
-      endSourceChar: 1996
+      startSourceChar: 1964
+      endSourceChar: 1991
       line: 56
       lineChar: 63
       spanCodeSection: "0.1f)\r\n                    "
     - startInstruction: 736
       endInstruction: 735
-      startSourceChar: 1996
-      endSourceChar: 2107
+      startSourceChar: 1991
+      endSourceChar: 2102
       line: 57
       lineChar: 20
       spanCodeSection: "{\r\n                        // At end of ParkingDuration,
         go back to original position\r\n                        "
     - startInstruction: 736
       endInstruction: 735
-      startSourceChar: 2107
-      endSourceChar: 2107
+      startSourceChar: 2102
+      endSourceChar: 2102
       line: 59
       lineChar: 24
       spanCodeSection: 
     - startInstruction: 736
       endInstruction: 735
-      startSourceChar: 2107
-      endSourceChar: 2107
+      startSourceChar: 2102
+      endSourceChar: 2102
       line: 59
       lineChar: 24
       spanCodeSection: 
     - startInstruction: 736
       endInstruction: 735
-      startSourceChar: 2107
-      endSourceChar: 2107
+      startSourceChar: 2102
+      endSourceChar: 2102
       line: 59
       lineChar: 24
       spanCodeSection: 
     - startInstruction: 736
       endInstruction: 735
-      startSourceChar: 2107
-      endSourceChar: 2121
+      startSourceChar: 2102
+      endSourceChar: 2116
       line: 59
       lineChar: 24
       spanCodeSection: ConstraintSrc.
     - startInstruction: 736
       endInstruction: 735
-      startSourceChar: 2121
-      endSourceChar: 2132
+      startSourceChar: 2116
+      endSourceChar: 2127
       line: 59
       lineChar: 38
       spanCodeSection: 'position = '
     - startInstruction: 736
       endInstruction: 779
-      startSourceChar: 2132
-      endSourceChar: 2236
+      startSourceChar: 2127
+      endSourceChar: 2231
       line: 59
       lineChar: 49
       spanCodeSection: "ConstraintSrcOrgPos;\r\n                    }\r\n                }\r\n\r\n
         \           }\r\n\r\n        }\r\n\r\n        "
     - startInstruction: 780
       endInstruction: 787
-      startSourceChar: 2236
-      endSourceChar: 2261
+      startSourceChar: 2231
+      endSourceChar: 2256
       line: 67
       lineChar: 8
       spanCodeSection: "void Interact()\r\n        "
     - startInstruction: 788
       endInstruction: 787
-      startSourceChar: 2261
-      endSourceChar: 2276
+      startSourceChar: 2256
+      endSourceChar: 2271
       line: 68
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 788
       endInstruction: 787
-      startSourceChar: 2276
-      endSourceChar: 2280
+      startSourceChar: 2271
+      endSourceChar: 2275
       line: 69
       lineChar: 12
       spanCodeSection: if (
     - startInstruction: 788
       endInstruction: 787
-      startSourceChar: 2280
-      endSourceChar: 2280
+      startSourceChar: 2275
+      endSourceChar: 2275
       line: 69
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 788
       endInstruction: 787
-      startSourceChar: 2280
-      endSourceChar: 2280
+      startSourceChar: 2275
+      endSourceChar: 2275
       line: 69
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 788
       endInstruction: 787
-      startSourceChar: 2280
-      endSourceChar: 2291
+      startSourceChar: 2275
+      endSourceChar: 2286
       line: 69
       lineChar: 16
       spanCodeSection: Networking.
     - startInstruction: 788
       endInstruction: 787
-      startSourceChar: 2291
-      endSourceChar: 2299
+      startSourceChar: 2286
+      endSourceChar: 2294
       line: 69
       lineChar: 27
       spanCodeSection: IsOwner(
     - startInstruction: 788
       endInstruction: 787
-      startSourceChar: 2299
-      endSourceChar: 2299
+      startSourceChar: 2294
+      endSourceChar: 2294
       line: 69
       lineChar: 35
       spanCodeSection: 
     - startInstruction: 788
       endInstruction: 787
-      startSourceChar: 2299
-      endSourceChar: 2304
+      startSourceChar: 2294
+      endSourceChar: 2299
       line: 69
       lineChar: 35
       spanCodeSection: this.
     - startInstruction: 788
       endInstruction: 827
-      startSourceChar: 2304
-      endSourceChar: 2330
+      startSourceChar: 2299
+      endSourceChar: 2325
       line: 69
       lineChar: 40
       spanCodeSection: "gameObject))\r\n            "
     - startInstruction: 828
       endInstruction: 827
-      startSourceChar: 2330
-      endSourceChar: 2387
+      startSourceChar: 2325
+      endSourceChar: 2382
       line: 70
       lineChar: 12
       spanCodeSection: "{\r\n                // Into parking mode\r\n                "
     - startInstruction: 828
       endInstruction: 827
-      startSourceChar: 2387
-      endSourceChar: 2387
+      startSourceChar: 2382
+      endSourceChar: 2382
       line: 72
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 828
       endInstruction: 827
-      startSourceChar: 2387
-      endSourceChar: 2387
+      startSourceChar: 2382
+      endSourceChar: 2382
       line: 72
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 828
       endInstruction: 827
-      startSourceChar: 2387
-      endSourceChar: 2402
+      startSourceChar: 2382
+      endSourceChar: 2397
       line: 72
       lineChar: 16
       spanCodeSection: 'ParkingTimer = '
     - startInstruction: 828
       endInstruction: 847
-      startSourceChar: 2402
-      endSourceChar: 2436
+      startSourceChar: 2397
+      endSourceChar: 2431
       line: 72
       lineChar: 31
       spanCodeSection: "ParkingDuration;\r\n                "
     - startInstruction: 848
       endInstruction: 847
-      startSourceChar: 2436
-      endSourceChar: 2436
+      startSourceChar: 2431
+      endSourceChar: 2431
       line: 73
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 848
       endInstruction: 847
-      startSourceChar: 2436
-      endSourceChar: 2436
+      startSourceChar: 2431
+      endSourceChar: 2431
       line: 73
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 848
       endInstruction: 847
-      startSourceChar: 2436
-      endSourceChar: 2436
+      startSourceChar: 2431
+      endSourceChar: 2431
       line: 73
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 848
       endInstruction: 847
-      startSourceChar: 2436
-      endSourceChar: 2450
+      startSourceChar: 2431
+      endSourceChar: 2445
       line: 73
       lineChar: 16
       spanCodeSection: ControlTarget.
     - startInstruction: 848
       endInstruction: 847
-      startSourceChar: 2450
-      endSourceChar: 2461
+      startSourceChar: 2445
+      endSourceChar: 2456
       line: 73
       lineChar: 30
       spanCodeSection: 'position = '
     - startInstruction: 848
       endInstruction: 891
-      startSourceChar: 2461
-      endSourceChar: 2623
+      startSourceChar: 2456
+      endSourceChar: 2618
       line: 73
       lineChar: 41
       spanCodeSection: "ControlOrgPos;\r\n            }\r\n        }\r\n\r\n\r\n        //////////////////////////////\r\n
         \       // Methods that will be called from EXUR library\r\n        \r\n        "
     - startInstruction: 892
       endInstruction: 899
-      startSourceChar: 2623
-      endSourceChar: 2664
+      startSourceChar: 2618
+      endSourceChar: 2659
       line: 81
       lineChar: 8
       spanCodeSection: "public void EXUR_Reinitialize()\r\n        "
     - startInstruction: 900
       endInstruction: 899
-      startSourceChar: 2664
-      endSourceChar: 2679
+      startSourceChar: 2659
+      endSourceChar: 2674
       line: 82
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 900
       endInstruction: 899
-      startSourceChar: 2679
-      endSourceChar: 2679
+      startSourceChar: 2674
+      endSourceChar: 2674
       line: 83
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 900
       endInstruction: 899
-      startSourceChar: 2679
-      endSourceChar: 2679
+      startSourceChar: 2674
+      endSourceChar: 2674
       line: 83
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 900
       endInstruction: 899
-      startSourceChar: 2679
-      endSourceChar: 2689
+      startSourceChar: 2674
+      endSourceChar: 2684
       line: 83
       lineChar: 12
       spanCodeSection: 'Working = '
     - startInstruction: 900
       endInstruction: 919
-      startSourceChar: 2689
-      endSourceChar: 2803
+      startSourceChar: 2684
+      endSourceChar: 2798
       line: 83
       lineChar: 22
       spanCodeSection: "true;\r\n\r\n            // Call SetOwner on this game object
         to be workable for \"synchronize position\".\r\n            "
     - startInstruction: 920
       endInstruction: 919
-      startSourceChar: 2803
-      endSourceChar: 2803
+      startSourceChar: 2798
+      endSourceChar: 2798
       line: 86
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 920
       endInstruction: 919
-      startSourceChar: 2803
-      endSourceChar: 2803
+      startSourceChar: 2798
+      endSourceChar: 2798
       line: 86
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 920
       endInstruction: 919
-      startSourceChar: 2803
-      endSourceChar: 2803
+      startSourceChar: 2798
+      endSourceChar: 2798
       line: 86
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 920
       endInstruction: 919
-      startSourceChar: 2803
-      endSourceChar: 2814
+      startSourceChar: 2798
+      endSourceChar: 2809
       line: 86
       lineChar: 12
       spanCodeSection: Networking.
     - startInstruction: 920
       endInstruction: 919
-      startSourceChar: 2814
-      endSourceChar: 2823
+      startSourceChar: 2809
+      endSourceChar: 2818
       line: 86
       lineChar: 23
       spanCodeSection: SetOwner(
     - startInstruction: 920
       endInstruction: 919
-      startSourceChar: 2823
-      endSourceChar: 2823
+      startSourceChar: 2818
+      endSourceChar: 2818
       line: 86
       lineChar: 32
       spanCodeSection: 
     - startInstruction: 920
       endInstruction: 919
-      startSourceChar: 2823
-      endSourceChar: 2834
+      startSourceChar: 2818
+      endSourceChar: 2829
       line: 86
       lineChar: 32
       spanCodeSection: Networking.
     - startInstruction: 920
       endInstruction: 935
-      startSourceChar: 2834
-      endSourceChar: 2847
+      startSourceChar: 2829
+      endSourceChar: 2842
       line: 86
       lineChar: 43
       spanCodeSection: 'LocalPlayer, '
     - startInstruction: 936
       endInstruction: 935
-      startSourceChar: 2847
-      endSourceChar: 2847
+      startSourceChar: 2842
+      endSourceChar: 2842
       line: 86
       lineChar: 56
       spanCodeSection: 
     - startInstruction: 936
       endInstruction: 935
-      startSourceChar: 2847
-      endSourceChar: 2852
+      startSourceChar: 2842
+      endSourceChar: 2847
       line: 86
       lineChar: 56
       spanCodeSection: this.
     - startInstruction: 936
       endInstruction: 959
-      startSourceChar: 2852
-      endSourceChar: 2878
+      startSourceChar: 2847
+      endSourceChar: 2873
       line: 86
       lineChar: 61
       spanCodeSection: "gameObject);\r\n            "
     - startInstruction: 960
       endInstruction: 959
-      startSourceChar: 2878
-      endSourceChar: 2878
+      startSourceChar: 2873
+      endSourceChar: 2873
       line: 87
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 960
       endInstruction: 959
-      startSourceChar: 2878
-      endSourceChar: 2878
+      startSourceChar: 2873
+      endSourceChar: 2873
       line: 87
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 960
       endInstruction: 959
-      startSourceChar: 2878
-      endSourceChar: 2893
+      startSourceChar: 2873
+      endSourceChar: 2888
       line: 87
       lineChar: 12
       spanCodeSection: 'ParkingTimer = '
     - startInstruction: 960
       endInstruction: 979
-      startSourceChar: 2893
-      endSourceChar: 2912
+      startSourceChar: 2888
+      endSourceChar: 2907
       line: 87
       lineChar: 27
       spanCodeSection: "0.0f;\r\n            "
     - startInstruction: 980
       endInstruction: 979
-      startSourceChar: 2912
-      endSourceChar: 2912
+      startSourceChar: 2907
+      endSourceChar: 2907
       line: 88
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 980
       endInstruction: 979
-      startSourceChar: 2912
-      endSourceChar: 2912
+      startSourceChar: 2907
+      endSourceChar: 2907
       line: 88
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 980
       endInstruction: 979
-      startSourceChar: 2912
-      endSourceChar: 2912
+      startSourceChar: 2907
+      endSourceChar: 2907
       line: 88
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 980
       endInstruction: 979
-      startSourceChar: 2912
-      endSourceChar: 2923
+      startSourceChar: 2907
+      endSourceChar: 2918
       line: 88
       lineChar: 12
       spanCodeSection: Constraint.
     - startInstruction: 980
       endInstruction: 979
-      startSourceChar: 2923
-      endSourceChar: 2933
+      startSourceChar: 2918
+      endSourceChar: 2928
       line: 88
       lineChar: 23
       spanCodeSection: 'enabled = '
     - startInstruction: 980
       endInstruction: 1023
-      startSourceChar: 2933
-      endSourceChar: 2961
+      startSourceChar: 2928
+      endSourceChar: 2956
       line: 88
       lineChar: 33
       spanCodeSection: "true;\r\n        }\r\n\r\n        "
     - startInstruction: 1024
       endInstruction: 1031
-      startSourceChar: 2961
-      endSourceChar: 2998
+      startSourceChar: 2956
+      endSourceChar: 2993
       line: 91
       lineChar: 8
       spanCodeSection: "public void EXUR_Finalize()\r\n        "
     - startInstruction: 1032
       endInstruction: 1031
-      startSourceChar: 2998
-      endSourceChar: 3013
+      startSourceChar: 2993
+      endSourceChar: 3008
       line: 92
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 1032
       endInstruction: 1031
-      startSourceChar: 3013
-      endSourceChar: 3013
+      startSourceChar: 3008
+      endSourceChar: 3008
       line: 93
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1032
       endInstruction: 1031
-      startSourceChar: 3013
-      endSourceChar: 3013
+      startSourceChar: 3008
+      endSourceChar: 3008
       line: 93
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1032
       endInstruction: 1031
-      startSourceChar: 3013
-      endSourceChar: 3013
+      startSourceChar: 3008
+      endSourceChar: 3008
       line: 93
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1032
       endInstruction: 1031
-      startSourceChar: 3013
-      endSourceChar: 3024
+      startSourceChar: 3008
+      endSourceChar: 3019
       line: 93
       lineChar: 12
       spanCodeSection: Constraint.
     - startInstruction: 1032
       endInstruction: 1031
-      startSourceChar: 3024
-      endSourceChar: 3034
+      startSourceChar: 3019
+      endSourceChar: 3029
       line: 93
       lineChar: 23
       spanCodeSection: 'enabled = '
     - startInstruction: 1032
       endInstruction: 1055
-      startSourceChar: 3034
-      endSourceChar: 3056
+      startSourceChar: 3029
+      endSourceChar: 3051
       line: 93
       lineChar: 33
       spanCodeSection: "false;\r\n\r\n            "
     - startInstruction: 1056
       endInstruction: 1055
-      startSourceChar: 3056
-      endSourceChar: 3056
+      startSourceChar: 3051
+      endSourceChar: 3051
       line: 95
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1056
       endInstruction: 1055
-      startSourceChar: 3056
-      endSourceChar: 3056
+      startSourceChar: 3051
+      endSourceChar: 3051
       line: 95
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1056
       endInstruction: 1055
-      startSourceChar: 3056
-      endSourceChar: 3066
+      startSourceChar: 3051
+      endSourceChar: 3061
       line: 95
       lineChar: 12
       spanCodeSection: 'Working = '
     - startInstruction: 1056
       endInstruction: 1095
-      startSourceChar: 3066
-      endSourceChar: 3095
+      startSourceChar: 3061
+      endSourceChar: 3090
       line: 95
       lineChar: 22
       spanCodeSection: "false;\r\n        }\r\n\r\n        "
     - startInstruction: 1096
       endInstruction: 1103
-      startSourceChar: 3095
-      endSourceChar: 3152
+      startSourceChar: 3090
+      endSourceChar: 3147
       line: 98
       lineChar: 8
       spanCodeSection: "public void RetrievedAfterOwnerLeftWhileUsing()\r\n        "
     - startInstruction: 1104
       endInstruction: 1103
-      startSourceChar: 3152
-      endSourceChar: 3167
+      startSourceChar: 3147
+      endSourceChar: 3162
       line: 99
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 1104
       endInstruction: 1103
-      startSourceChar: 3167
-      endSourceChar: 3167
+      startSourceChar: 3162
+      endSourceChar: 3162
       line: 100
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1104
       endInstruction: 1103
-      startSourceChar: 3167
-      endSourceChar: 3167
+      startSourceChar: 3162
+      endSourceChar: 3162
       line: 100
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1104
       endInstruction: 1103
-      startSourceChar: 3167
-      endSourceChar: 3167
+      startSourceChar: 3162
+      endSourceChar: 3162
       line: 100
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1104
       endInstruction: 1103
-      startSourceChar: 3167
-      endSourceChar: 3177
+      startSourceChar: 3162
+      endSourceChar: 3172
       line: 100
       lineChar: 12
       spanCodeSection: transform.
     - startInstruction: 1104
       endInstruction: 1103
-      startSourceChar: 3177
-      endSourceChar: 3188
+      startSourceChar: 3172
+      endSourceChar: 3183
       line: 100
       lineChar: 22
       spanCodeSection: 'position = '
     - startInstruction: 1104
       endInstruction: 1104
-      startSourceChar: 3188
-      endSourceChar: 3188
+      startSourceChar: 3183
+      endSourceChar: 3183
       line: 100
       lineChar: 33
       spanCodeSection: 

@@ -497,9 +497,9 @@ namespace Iwsd.EXUR {
         //////////////////////////////
         #region Public interface
 
-        public void EXUR_ReleaseObject()
+        public void ReleaseObject()
         {
-            log("EXUR_ReleaseObject called");
+            log("ReleaseObject called");
 
             if (lastState == STATE_OWN_AND_USING)
             {
@@ -516,7 +516,7 @@ namespace Iwsd.EXUR {
             }
             else
             {
-                warn("EXUR_ReleaseObject on not STATE_OWN_AND_USING. ignore");
+                warn("ReleaseObject on not STATE_OWN_AND_USING. ignore");
                 // SendCallback("Error");  // TODO How to tell error detail. public error variable?
             }
         }

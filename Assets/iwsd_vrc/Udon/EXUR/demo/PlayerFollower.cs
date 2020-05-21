@@ -52,7 +52,7 @@ namespace Iwsd.EXUR.Demo {
                     if (ParkingTimer <= 0)
                     {
                         // Stop working when ParkingTimer expired.
-                        EXUR_Handler.SendCustomEvent("EXUR_ReleaseObject");
+                        EXUR_Handler.SendCustomEvent("ReleaseObject");
                     }
                     else if (ParkingTimer <= ParkingDuration * 0.1f)
                     {
