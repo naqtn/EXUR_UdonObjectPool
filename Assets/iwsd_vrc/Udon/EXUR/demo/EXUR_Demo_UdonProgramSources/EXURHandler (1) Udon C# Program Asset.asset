@@ -120,23 +120,27 @@ MonoBehaviour:
     %SystemBoolean, null\r\n    __15_intnl_SystemBoolean: %SystemBoolean, null\r\n
     \   __16_intnl_SystemBoolean: %SystemBoolean, null\r\n    __17_intnl_SystemBoolean:
     %SystemBoolean, null\r\n    __18_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __19_intnl_SystemBoolean: %SystemBoolean, null\r\n    __2_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __20_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __21_intnl_SystemBoolean: %SystemBoolean, null\r\n    __22_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __23_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __24_intnl_SystemBoolean: %SystemBoolean, null\r\n    __25_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __26_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __27_intnl_SystemBoolean: %SystemBoolean, null\r\n    __28_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __29_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __3_intnl_SystemBoolean: %SystemBoolean, null\r\n    __30_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __31_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __32_intnl_SystemBoolean: %SystemBoolean, null\r\n    __33_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __34_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __35_intnl_SystemBoolean: %SystemBoolean, null\r\n    __36_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __37_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __38_intnl_SystemBoolean: %SystemBoolean, null\r\n    __39_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __4_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __40_intnl_SystemBoolean: %SystemBoolean, null\r\n    __41_intnl_SystemBoolean:
+    \   __19_intnl_SystemBoolean: %SystemBoolean, null\r\n    __2_intnl_returnValSymbol_Boolean:
+    %SystemBoolean, null\r\n    __2_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __20_intnl_SystemBoolean: %SystemBoolean, null\r\n    __21_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __22_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __23_intnl_SystemBoolean: %SystemBoolean, null\r\n    __24_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __25_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __26_intnl_SystemBoolean: %SystemBoolean, null\r\n    __27_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __28_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __29_intnl_SystemBoolean: %SystemBoolean, null\r\n    __3_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __30_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __31_intnl_SystemBoolean: %SystemBoolean, null\r\n    __32_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __33_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __34_intnl_SystemBoolean: %SystemBoolean, null\r\n    __35_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __36_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __37_intnl_SystemBoolean: %SystemBoolean, null\r\n    __38_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __39_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __4_intnl_SystemBoolean: %SystemBoolean, null\r\n    __40_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __41_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __42_intnl_SystemBoolean: %SystemBoolean, null\r\n    __43_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __44_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __45_intnl_SystemBoolean: %SystemBoolean, null\r\n    __46_intnl_SystemBoolean:
     %SystemBoolean, null\r\n    __5_intnl_SystemBoolean: %SystemBoolean, null\r\n
     \   __6_intnl_SystemBoolean: %SystemBoolean, null\r\n    __7_intnl_SystemBoolean:
     %SystemBoolean, null\r\n    __8_intnl_SystemBoolean: %SystemBoolean, null\r\n
@@ -706,26 +710,45 @@ MonoBehaviour:
     __0_intnl_returnTarget_UInt32 #Explicit return sequence\r\n        COPY\r\n        JUMP_INDIRECT,
     __0_intnl_returnTarget_UInt32\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # void Start()\r\n    .export _start\r\n        \r\n
-    \   _start:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n
-    \        # {\r\n        \r\n         # SetupListeners();\r\n        PUSH, __48_const_intnl_exitJumpLoc_UInt32\r\n
-    \       JUMP, 0x00000288\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
-    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # void Update()\r\n    .export _update\r\n        \r\n
-    \   _update:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n
-    \        # {\r\n        \r\n         # CheckImplicitTransition();\r\n        PUSH,
-    __49_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x00000E4C\r\n        PUSH,
+    \       \r\n        \r\n         # public bool IsFree()\r\n    .export IsFree\r\n
+    \       \r\n    IsFree:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       \r\n         # {\r\n        \r\n         # return (lastState == STATE_OWN_AND_IDLE)
+    || (lastState == STATE_IDLE_NOT_MINE);\r\n        PUSH, lastState\r\n        PUSH,
+    STATE_OWN_AND_IDLE\r\n        PUSH, __42_intnl_SystemBoolean\r\n        EXTERN,
+    \"SystemInt32.__op_Equality__SystemInt32_SystemInt32__SystemBoolean\"\r\n        PUSH,
+    __42_intnl_SystemBoolean\r\n        PUSH, __41_intnl_SystemBoolean\r\n        COPY\r\n
+    \       PUSH, __41_intnl_SystemBoolean\r\n        PUSH, __43_intnl_SystemBoolean\r\n
+    \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\r\n
+    \       PUSH, __43_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001C24\r\n
+    \       PUSH, lastState\r\n        PUSH, STATE_IDLE_NOT_MINE\r\n        PUSH,
+    __44_intnl_SystemBoolean\r\n        EXTERN, \"SystemInt32.__op_Equality__SystemInt32_SystemInt32__SystemBoolean\"\r\n
+    \       PUSH, __41_intnl_SystemBoolean\r\n        PUSH, __44_intnl_SystemBoolean\r\n
+    \       PUSH, __45_intnl_SystemBoolean\r\n        EXTERN, \"SystemBoolean.__op_ConditionalOr__SystemBoolean_SystemBoolean__SystemBoolean\"\r\n
+    \       PUSH, __45_intnl_SystemBoolean\r\n        PUSH, __41_intnl_SystemBoolean\r\n
+    \       COPY\r\n        PUSH, __41_intnl_SystemBoolean\r\n        PUSH, __2_intnl_returnValSymbol_Boolean\r\n
+    \       COPY\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\r\n
+    \       COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        PUSH,
     __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT,
-    __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n         # public void
-    EXUR_ReleaseObject()\r\n    .export EXUR_ReleaseObject\r\n        \r\n    EXUR_ReleaseObject:\r\n
-    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
-    {\r\n        \r\n         # log(\"EXUR_ReleaseObject called\");\r\n        PUSH,
-    __42_const_intnl_SystemString\r\n        PUSH, __2_message_String\r\n        COPY\r\n
-    \       PUSH, __50_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x0000018C\r\n
-    \       \r\n         # if (lastState == STATE_OWN_AND_USING)\r\n        PUSH,
-    lastState\r\n        PUSH, STATE_OWN_AND_USING\r\n        PUSH, __41_intnl_SystemBoolean\r\n
-    \       EXTERN, \"SystemInt32.__op_Equality__SystemInt32_SystemInt32__SystemBoolean\"\r\n
-    \       PUSH, __41_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001CDC\r\n
+    __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n         # void Start()\r\n
+    \   .export _start\r\n        \r\n    _start:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       \r\n         # {\r\n        \r\n         # SetupListeners();\r\n        PUSH,
+    __48_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x00000288\r\n        PUSH,
+    __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT,
+    __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n         # void Update()\r\n
+    \   .export _update\r\n        \r\n    _update:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       \r\n         # {\r\n        \r\n         # CheckImplicitTransition();\r\n
+    \       PUSH, __49_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x00000E4C\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public void EXUR_ReleaseObject()\r\n    .export EXUR_ReleaseObject\r\n
+    \       \r\n    EXUR_ReleaseObject:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       \r\n         # {\r\n        \r\n         # log(\"EXUR_ReleaseObject called\");\r\n
+    \       PUSH, __42_const_intnl_SystemString\r\n        PUSH, __2_message_String\r\n
+    \       COPY\r\n        PUSH, __50_const_intnl_exitJumpLoc_UInt32\r\n        JUMP,
+    0x0000018C\r\n        \r\n         # if (lastState == STATE_OWN_AND_USING)\r\n
+    \       PUSH, lastState\r\n        PUSH, STATE_OWN_AND_USING\r\n        PUSH,
+    __46_intnl_SystemBoolean\r\n        EXTERN, \"SystemInt32.__op_Equality__SystemInt32_SystemInt32__SystemBoolean\"\r\n
+    \       PUSH, __46_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001DD0\r\n
     \       \r\n         # {\r\n        \r\n         # lastState = STATE_OWN_AND_IDLE;
     // This state change must be before SetSyncedUsing\r\n        PUSH, STATE_OWN_AND_IDLE\r\n
     \       PUSH, lastState\r\n        COPY\r\n        \r\n         # SetSyncedUsing(false);\r\n
@@ -738,10 +761,10 @@ MonoBehaviour:
     __35_const_intnl_SystemString\r\n        PUSH, __0_eventName_String\r\n        COPY\r\n
     \       PUSH, __53_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x00000350\r\n
     \       \r\n         # if (DeavtivateWhenIdle)\r\n        PUSH, DeavtivateWhenIdle\r\n
-    \       JUMP_IF_FALSE, 0x00001CD4\r\n        \r\n         # {\r\n        \r\n
+    \       JUMP_IF_FALSE, 0x00001DC8\r\n        \r\n         # {\r\n        \r\n
     \        # SetActiveObject(false);\r\n        PUSH, __0_const_intnl_SystemBoolean\r\n
     \       PUSH, __0_b_Boolean\r\n        COPY\r\n        PUSH, __54_const_intnl_exitJumpLoc_UInt32\r\n
-    \       JUMP, 0x00000544\r\n        JUMP, 0x00001D00\r\n        \r\n         #
+    \       JUMP, 0x00000544\r\n        JUMP, 0x00001DF4\r\n        \r\n         #
     else\r\n        \r\n         # {\r\n        \r\n         # warn(\"EXUR_ReleaseObject
     on not STATE_OWN_AND_USING. ignore\");\r\n        PUSH, __44_const_intnl_SystemString\r\n
     \       PUSH, __4_message_String\r\n        COPY\r\n        PUSH, __55_const_intnl_exitJumpLoc_UInt32\r\n
@@ -3926,81 +3949,85 @@ MonoBehaviour:
     - startInstruction: 3608
       endInstruction: 3651
       startSourceChar: 10085
-      endSourceChar: 10143
+      endSourceChar: 10476
       line: 273
       lineChar: 37
       spanCodeSection: "false); // restore\r\n            }\r\n        }\r\n\r\n\r\n
-        \       "
+        \       // NOTE: Instead of OnOwnershipTransfer, it uses Networking.IsOwner
+        to examine ownership.\r\n        // Because OnOwnershipTransfer fires only
+        for the previous owner. (VRCSDK3-UDON-2020.05.12.10.33)\r\n        // https://vrchat.canny.io/vrchat-udon-closed-alpha-feedback/p/request-change-onownershiptransfer-behaviour\r\n
+        \       \r\n        "
     - startInstruction: 3652
       endInstruction: 3659
-      startSourceChar: 10143
-      endSourceChar: 10183
-      line: 278
+      startSourceChar: 10476
+      endSourceChar: 10516
+      line: 282
       lineChar: 8
       spanCodeSection: "void CheckImplicitTransition()\r\n        "
     - startInstruction: 3660
       endInstruction: 3659
-      startSourceChar: 10183
-      endSourceChar: 10198
-      line: 279
+      startSourceChar: 10516
+      endSourceChar: 10531
+      line: 283
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 3660
       endInstruction: 3659
-      startSourceChar: 10198
-      endSourceChar: 10206
-      line: 280
+      startSourceChar: 10531
+      endSourceChar: 10539
+      line: 284
       lineChar: 12
       spanCodeSection: switch (
     - startInstruction: 3660
       endInstruction: 3659
-      startSourceChar: 10206
-      endSourceChar: 10249
-      line: 280
+      startSourceChar: 10539
+      endSourceChar: 10582
+      line: 284
       lineChar: 20
       spanCodeSection: "lastState)\r\n            {\r\n                "
     - startInstruction: 3660
       endInstruction: 3659
-      startSourceChar: 10249
-      endSourceChar: 10254
-      line: 282
+      startSourceChar: 10582
+      endSourceChar: 10587
+      line: 286
       lineChar: 16
       spanCodeSection: 'case '
     - startInstruction: 3660
       endInstruction: 3715
-      startSourceChar: 10254
-      endSourceChar: 10394
-      line: 282
+      startSourceChar: 10587
+      endSourceChar: 10738
+      line: 286
       lineChar: 21
-      spanCodeSection: "STATE_UNDEFINED:\r\n                    assert(false, \"transition
-        check for STATE_UNDEFINED\");\r\n                    break;\r\n\r\n                "
+      spanCodeSection: "STATE_UNDEFINED:\r\n                    assert(false, \"Unexpected
+        transition check for STATE_UNDEFINED\");\r\n                    break;\r\n\r\n
+        \               "
     - startInstruction: 3716
       endInstruction: 3715
-      startSourceChar: 10394
-      endSourceChar: 10399
-      line: 286
+      startSourceChar: 10738
+      endSourceChar: 10743
+      line: 290
       lineChar: 16
       spanCodeSection: 'case '
     - startInstruction: 3716
       endInstruction: 3771
-      startSourceChar: 10399
-      endSourceChar: 10494
-      line: 286
+      startSourceChar: 10743
+      endSourceChar: 10838
+      line: 290
       lineChar: 21
       spanCodeSection: "STATE_ERROR:\r\n                    // do nothing\r\n                    break;\r\n\r\n
         \               "
     - startInstruction: 3772
       endInstruction: 3771
-      startSourceChar: 10494
-      endSourceChar: 10499
-      line: 290
+      startSourceChar: 10838
+      endSourceChar: 10843
+      line: 294
       lineChar: 16
       spanCodeSection: 'case '
     - startInstruction: 3772
       endInstruction: 3827
-      startSourceChar: 10499
-      endSourceChar: 11711
-      line: 290
+      startSourceChar: 10843
+      endSourceChar: 12055
+      line: 294
       lineChar: 21
       spanCodeSection: "STATE_INITIAL:\r\n                    if (Networking.IsMaster)\r\n
         \                   {\r\n                        if (Networking.IsOwner(this.gameObject))\r\n
@@ -4019,31 +4046,31 @@ MonoBehaviour:
         \                   break;\r\n\r\n                "
     - startInstruction: 3828
       endInstruction: 3827
-      startSourceChar: 11711
-      endSourceChar: 11716
-      line: 317
+      startSourceChar: 12055
+      endSourceChar: 12060
+      line: 321
       lineChar: 16
       spanCodeSection: 'case '
     - startInstruction: 3828
       endInstruction: 3883
-      startSourceChar: 11716
-      endSourceChar: 11844
-      line: 317
+      startSourceChar: 12060
+      endSourceChar: 12188
+      line: 321
       lineChar: 21
       spanCodeSection: "STATE_WAITING_OWNER_RESPONCE:\r\n                    // TODO
         timeout and retry (?)\r\n                    break;\r\n\r\n                "
     - startInstruction: 3884
       endInstruction: 3883
-      startSourceChar: 11844
-      endSourceChar: 11849
-      line: 321
+      startSourceChar: 12188
+      endSourceChar: 12193
+      line: 325
       lineChar: 16
       spanCodeSection: 'case '
     - startInstruction: 3884
       endInstruction: 3939
-      startSourceChar: 11849
-      endSourceChar: 12827
-      line: 321
+      startSourceChar: 12193
+      endSourceChar: 13171
+      line: 325
       lineChar: 21
       spanCodeSection: "STATE_USED_BY_OTHERS:\r\n                    if (Networking.IsOwner(this.gameObject))\r\n
         \                   {\r\n                        if (Networking.IsMaster)\r\n
@@ -4059,16 +4086,16 @@ MonoBehaviour:
         \                   break;\r\n\r\n                "
     - startInstruction: 3940
       endInstruction: 3939
-      startSourceChar: 12827
-      endSourceChar: 12832
-      line: 343
+      startSourceChar: 13171
+      endSourceChar: 13176
+      line: 347
       lineChar: 16
       spanCodeSection: 'case '
     - startInstruction: 3940
       endInstruction: 3995
-      startSourceChar: 12832
-      endSourceChar: 13686
-      line: 343
+      startSourceChar: 13176
+      endSourceChar: 14030
+      line: 347
       lineChar: 21
       spanCodeSection: "STATE_IDLE_NOT_MINE:\r\n                    // See also STATE_USED_BY_OTHERS
         case. This similar to that.\r\n                    if (Networking.IsOwner(this.gameObject))\r\n
@@ -4083,16 +4110,16 @@ MonoBehaviour:
         \                   break;\r\n\r\n                "
     - startInstruction: 3996
       endInstruction: 3995
-      startSourceChar: 13686
-      endSourceChar: 13691
-      line: 364
+      startSourceChar: 14030
+      endSourceChar: 14035
+      line: 368
       lineChar: 16
       spanCodeSection: 'case '
     - startInstruction: 3996
       endInstruction: 4051
-      startSourceChar: 13691
-      endSourceChar: 14913
-      line: 364
+      startSourceChar: 14035
+      endSourceChar: 15257
+      line: 368
       lineChar: 21
       spanCodeSection: "STATE_WAITING_OWNERSHIP:\r\n                    if (Networking.IsOwner(this.gameObject))\r\n
         \                   {\r\n                        if (--ownershipDelay < 0)\r\n
@@ -4111,16 +4138,16 @@ MonoBehaviour:
         \               "
     - startInstruction: 4052
       endInstruction: 4051
-      startSourceChar: 14913
-      endSourceChar: 14918
-      line: 391
+      startSourceChar: 15257
+      endSourceChar: 15262
+      line: 395
       lineChar: 16
       spanCodeSection: 'case '
     - startInstruction: 4052
       endInstruction: 4107
-      startSourceChar: 14918
-      endSourceChar: 15318
-      line: 391
+      startSourceChar: 15262
+      endSourceChar: 15662
+      line: 395
       lineChar: 21
       spanCodeSection: "STATE_OWN_AND_USING:\r\n                    if (!Networking.IsOwner(this.gameObject))\r\n
         \                   {\r\n                        // Theft by others.\r\n                        lastState
@@ -4129,16 +4156,16 @@ MonoBehaviour:
         \                   break;\r\n\r\n                "
     - startInstruction: 4108
       endInstruction: 4107
-      startSourceChar: 15318
-      endSourceChar: 15323
-      line: 401
+      startSourceChar: 15662
+      endSourceChar: 15667
+      line: 405
       lineChar: 16
       spanCodeSection: 'case '
     - startInstruction: 4108
       endInstruction: 4163
-      startSourceChar: 15323
-      endSourceChar: 15675
-      line: 401
+      startSourceChar: 15667
+      endSourceChar: 16019
+      line: 405
       lineChar: 21
       spanCodeSection: "STATE_OWN_AND_IDLE:\r\n                    if (!Networking.IsOwner(this.gameObject))\r\n
         \                   {\r\n                        // Other player started to
@@ -4146,65 +4173,65 @@ MonoBehaviour:
         \                   }\r\n                    break;\r\n\r\n                "
     - startInstruction: 4164
       endInstruction: 5835
-      startSourceChar: 15675
-      endSourceChar: 15705
-      line: 410
+      startSourceChar: 16019
+      endSourceChar: 16049
+      line: 414
       lineChar: 16
       spanCodeSection: "default:\r\n                    "
     - startInstruction: 5836
       endInstruction: 5835
-      startSourceChar: 15705
-      endSourceChar: 15705
-      line: 411
+      startSourceChar: 16049
+      endSourceChar: 16049
+      line: 415
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 5836
       endInstruction: 5835
-      startSourceChar: 15705
-      endSourceChar: 15705
-      line: 411
+      startSourceChar: 16049
+      endSourceChar: 16049
+      line: 415
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 5836
       endInstruction: 5835
-      startSourceChar: 15705
-      endSourceChar: 15712
-      line: 411
+      startSourceChar: 16049
+      endSourceChar: 16056
+      line: 415
       lineChar: 20
       spanCodeSection: assert(
     - startInstruction: 5836
       endInstruction: 5835
-      startSourceChar: 15712
-      endSourceChar: 15719
-      line: 411
+      startSourceChar: 16056
+      endSourceChar: 16063
+      line: 415
       lineChar: 27
       spanCodeSection: 'false, '
     - startInstruction: 5836
       endInstruction: 5835
-      startSourceChar: 15719
-      endSourceChar: 15719
-      line: 411
+      startSourceChar: 16063
+      endSourceChar: 16063
+      line: 415
       lineChar: 34
       spanCodeSection: 
     - startInstruction: 5836
       endInstruction: 5835
-      startSourceChar: 15719
-      endSourceChar: 15742
-      line: 411
+      startSourceChar: 16063
+      endSourceChar: 16086
+      line: 415
       lineChar: 34
       spanCodeSection: '"Unknown lastState=" + '
     - startInstruction: 5836
       endInstruction: 5927
-      startSourceChar: 15742
-      endSourceChar: 15775
-      line: 411
+      startSourceChar: 16086
+      endSourceChar: 16119
+      line: 415
       lineChar: 57
       spanCodeSection: "lastState);\r\n                    "
     - startInstruction: 5928
       endInstruction: 5955
-      startSourceChar: 15775
-      endSourceChar: 16002
-      line: 412
+      startSourceChar: 16119
+      endSourceChar: 16346
+      line: 416
       lineChar: 20
       spanCodeSection: "break;\r\n\r\n            }\r\n        }\r\n\r\n        #endregion\r\n\r\n\r\n
         \       //////////////////////////////\r\n        #region Module private interface\r\n\r\n
@@ -4212,1131 +4239,1215 @@ MonoBehaviour:
         \       "
     - startInstruction: 5956
       endInstruction: 5963
-      startSourceChar: 16002
-      endSourceChar: 16034
-      line: 424
+      startSourceChar: 16346
+      endSourceChar: 16378
+      line: 428
       lineChar: 8
       spanCodeSection: "public void TryToUse()\r\n        "
     - startInstruction: 5964
       endInstruction: 5963
-      startSourceChar: 16034
-      endSourceChar: 16049
-      line: 425
+      startSourceChar: 16378
+      endSourceChar: 16393
+      line: 429
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 5964
       endInstruction: 5963
-      startSourceChar: 16049
-      endSourceChar: 16049
-      line: 426
+      startSourceChar: 16393
+      endSourceChar: 16393
+      line: 430
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 5964
       endInstruction: 5963
-      startSourceChar: 16049
-      endSourceChar: 16049
-      line: 426
+      startSourceChar: 16393
+      endSourceChar: 16393
+      line: 430
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 5964
       endInstruction: 5963
-      startSourceChar: 16049
-      endSourceChar: 16053
-      line: 426
+      startSourceChar: 16393
+      endSourceChar: 16397
+      line: 430
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 5964
       endInstruction: 5963
-      startSourceChar: 16053
-      endSourceChar: 16053
-      line: 426
+      startSourceChar: 16397
+      endSourceChar: 16397
+      line: 430
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 5964
       endInstruction: 5963
-      startSourceChar: 16053
-      endSourceChar: 16074
-      line: 426
+      startSourceChar: 16397
+      endSourceChar: 16418
+      line: 430
       lineChar: 16
       spanCodeSection: '"TryToUse: state=" + '
     - startInstruction: 5964
       endInstruction: 6035
-      startSourceChar: 16074
-      endSourceChar: 16149
-      line: 426
+      startSourceChar: 16418
+      endSourceChar: 16493
+      line: 430
       lineChar: 37
       spanCodeSection: "lastState);\r\n\r\n            // TODO add option to allow
         theft.\r\n            "
     - startInstruction: 6036
       endInstruction: 6035
-      startSourceChar: 16149
-      endSourceChar: 16149
-      line: 429
+      startSourceChar: 16493
+      endSourceChar: 16493
+      line: 433
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 6036
       endInstruction: 6035
-      startSourceChar: 16149
-      endSourceChar: 16149
-      line: 429
+      startSourceChar: 16493
+      endSourceChar: 16493
+      line: 433
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 6036
       endInstruction: 6035
-      startSourceChar: 16149
-      endSourceChar: 16156
-      line: 429
+      startSourceChar: 16493
+      endSourceChar: 16500
+      line: 433
       lineChar: 12
       spanCodeSection: assert(
     - startInstruction: 6036
       endInstruction: 6035
-      startSourceChar: 16156
-      endSourceChar: 16156
-      line: 429
+      startSourceChar: 16500
+      endSourceChar: 16500
+      line: 433
       lineChar: 19
       spanCodeSection: 
     - startInstruction: 6036
       endInstruction: 6035
-      startSourceChar: 16156
-      endSourceChar: 16157
-      line: 429
+      startSourceChar: 16500
+      endSourceChar: 16501
+      line: 433
       lineChar: 19
       spanCodeSection: (
     - startInstruction: 6036
       endInstruction: 6035
-      startSourceChar: 16157
-      endSourceChar: 16157
-      line: 429
+      startSourceChar: 16501
+      endSourceChar: 16501
+      line: 433
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 6036
       endInstruction: 6035
-      startSourceChar: 16157
-      endSourceChar: 16170
-      line: 429
+      startSourceChar: 16501
+      endSourceChar: 16514
+      line: 433
       lineChar: 20
       spanCodeSection: 'lastState == '
     - startInstruction: 6036
       endInstruction: 6127
-      startSourceChar: 16170
-      endSourceChar: 16194
-      line: 429
+      startSourceChar: 16514
+      endSourceChar: 16538
+      line: 433
       lineChar: 33
       spanCodeSection: 'STATE_IDLE_NOT_MINE) || '
     - startInstruction: 6128
       endInstruction: 6127
-      startSourceChar: 16194
-      endSourceChar: 16195
-      line: 429
+      startSourceChar: 16538
+      endSourceChar: 16539
+      line: 433
       lineChar: 57
       spanCodeSection: (
     - startInstruction: 6128
       endInstruction: 6127
-      startSourceChar: 16195
-      endSourceChar: 16195
-      line: 429
+      startSourceChar: 16539
+      endSourceChar: 16539
+      line: 433
       lineChar: 58
       spanCodeSection: 
     - startInstruction: 6128
       endInstruction: 6127
-      startSourceChar: 16195
-      endSourceChar: 16208
-      line: 429
+      startSourceChar: 16539
+      endSourceChar: 16552
+      line: 433
       lineChar: 58
       spanCodeSection: 'lastState == '
     - startInstruction: 6128
       endInstruction: 6211
-      startSourceChar: 16208
-      endSourceChar: 16249
-      line: 429
+      startSourceChar: 16552
+      endSourceChar: 16593
+      line: 433
       lineChar: 71
       spanCodeSection: "STATE_OWN_AND_IDLE),\r\n                   "
     - startInstruction: 6212
       endInstruction: 6211
-      startSourceChar: 16249
-      endSourceChar: 16249
-      line: 430
+      startSourceChar: 16593
+      endSourceChar: 16593
+      line: 434
       lineChar: 19
       spanCodeSection: 
     - startInstruction: 6212
       endInstruction: 6211
-      startSourceChar: 16249
-      endSourceChar: 16279
-      line: 430
+      startSourceChar: 16593
+      endSourceChar: 16623
+      line: 434
       lineChar: 19
       spanCodeSection: '"TryToUse: Illegal state. " + '
     - startInstruction: 6212
       endInstruction: 6303
-      startSourceChar: 16279
-      endSourceChar: 16307
-      line: 430
+      startSourceChar: 16623
+      endSourceChar: 16651
+      line: 434
       lineChar: 49
       spanCodeSection: "lastState); \r\n\r\n            "
     - startInstruction: 6304
       endInstruction: 6303
-      startSourceChar: 16307
-      endSourceChar: 16311
-      line: 432
+      startSourceChar: 16651
+      endSourceChar: 16655
+      line: 436
       lineChar: 12
       spanCodeSection: if (
     - startInstruction: 6304
       endInstruction: 6319
-      startSourceChar: 16311
-      endSourceChar: 16344
-      line: 432
+      startSourceChar: 16655
+      endSourceChar: 16688
+      line: 436
       lineChar: 16
       spanCodeSection: "DeavtivateWhenIdle)\r\n            "
     - startInstruction: 6320
       endInstruction: 6319
-      startSourceChar: 16344
-      endSourceChar: 16363
-      line: 433
+      startSourceChar: 16688
+      endSourceChar: 16707
+      line: 437
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 6320
       endInstruction: 6319
-      startSourceChar: 16363
-      endSourceChar: 16363
-      line: 434
+      startSourceChar: 16707
+      endSourceChar: 16707
+      line: 438
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6320
       endInstruction: 6319
-      startSourceChar: 16363
-      endSourceChar: 16363
-      line: 434
+      startSourceChar: 16707
+      endSourceChar: 16707
+      line: 438
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6320
       endInstruction: 6319
-      startSourceChar: 16363
-      endSourceChar: 16379
-      line: 434
+      startSourceChar: 16707
+      endSourceChar: 16723
+      line: 438
       lineChar: 16
       spanCodeSection: SetActiveObject(
     - startInstruction: 6320
       endInstruction: 6355
-      startSourceChar: 16379
-      endSourceChar: 16467
-      line: 434
+      startSourceChar: 16723
+      endSourceChar: 16811
+      line: 438
       lineChar: 32
       spanCodeSection: "true); // This must be before calling IsOwner\r\n            }\r\n
         \           \r\n            "
     - startInstruction: 6356
       endInstruction: 6355
-      startSourceChar: 16467
-      endSourceChar: 16471
-      line: 437
+      startSourceChar: 16811
+      endSourceChar: 16815
+      line: 441
       lineChar: 12
       spanCodeSection: if (
     - startInstruction: 6356
       endInstruction: 6355
-      startSourceChar: 16471
-      endSourceChar: 16471
-      line: 437
+      startSourceChar: 16815
+      endSourceChar: 16815
+      line: 441
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6356
       endInstruction: 6355
-      startSourceChar: 16471
-      endSourceChar: 16471
-      line: 437
+      startSourceChar: 16815
+      endSourceChar: 16815
+      line: 441
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6356
       endInstruction: 6355
-      startSourceChar: 16471
-      endSourceChar: 16482
-      line: 437
+      startSourceChar: 16815
+      endSourceChar: 16826
+      line: 441
       lineChar: 16
       spanCodeSection: Networking.
     - startInstruction: 6356
       endInstruction: 6355
-      startSourceChar: 16482
-      endSourceChar: 16490
-      line: 437
+      startSourceChar: 16826
+      endSourceChar: 16834
+      line: 441
       lineChar: 27
       spanCodeSection: IsOwner(
     - startInstruction: 6356
       endInstruction: 6355
-      startSourceChar: 16490
-      endSourceChar: 16490
-      line: 437
+      startSourceChar: 16834
+      endSourceChar: 16834
+      line: 441
       lineChar: 35
       spanCodeSection: 
     - startInstruction: 6356
       endInstruction: 6355
-      startSourceChar: 16490
-      endSourceChar: 16495
-      line: 437
+      startSourceChar: 16834
+      endSourceChar: 16839
+      line: 441
       lineChar: 35
       spanCodeSection: this.
     - startInstruction: 6356
       endInstruction: 6395
-      startSourceChar: 16495
-      endSourceChar: 16521
-      line: 437
+      startSourceChar: 16839
+      endSourceChar: 16865
+      line: 441
       lineChar: 40
       spanCodeSection: "gameObject))\r\n            "
     - startInstruction: 6396
       endInstruction: 6395
-      startSourceChar: 16521
-      endSourceChar: 16540
-      line: 438
+      startSourceChar: 16865
+      endSourceChar: 16884
+      line: 442
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 6396
       endInstruction: 6395
-      startSourceChar: 16540
-      endSourceChar: 16540
-      line: 439
+      startSourceChar: 16884
+      endSourceChar: 16884
+      line: 443
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6396
       endInstruction: 6395
-      startSourceChar: 16540
-      endSourceChar: 16540
-      line: 439
+      startSourceChar: 16884
+      endSourceChar: 16884
+      line: 443
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6396
       endInstruction: 6395
-      startSourceChar: 16540
-      endSourceChar: 16547
-      line: 439
+      startSourceChar: 16884
+      endSourceChar: 16891
+      line: 443
       lineChar: 16
       spanCodeSection: assert(
     - startInstruction: 6396
       endInstruction: 6395
-      startSourceChar: 16547
-      endSourceChar: 16547
-      line: 439
+      startSourceChar: 16891
+      endSourceChar: 16891
+      line: 443
       lineChar: 23
       spanCodeSection: 
     - startInstruction: 6396
       endInstruction: 6395
-      startSourceChar: 16547
-      endSourceChar: 16560
-      line: 439
+      startSourceChar: 16891
+      endSourceChar: 16904
+      line: 443
       lineChar: 23
       spanCodeSection: 'lastState == '
     - startInstruction: 6396
       endInstruction: 6427
-      startSourceChar: 16560
-      endSourceChar: 16580
-      line: 439
+      startSourceChar: 16904
+      endSourceChar: 16924
+      line: 443
       lineChar: 36
       spanCodeSection: 'STATE_OWN_AND_IDLE, '
     - startInstruction: 6428
       endInstruction: 6427
-      startSourceChar: 16580
-      endSourceChar: 16580
-      line: 439
+      startSourceChar: 16924
+      endSourceChar: 16924
+      line: 443
       lineChar: 56
       spanCodeSection: 
     - startInstruction: 6428
       endInstruction: 6427
-      startSourceChar: 16580
-      endSourceChar: 16627
-      line: 439
+      startSourceChar: 16924
+      endSourceChar: 16971
+      line: 443
       lineChar: 56
       spanCodeSection: '"TryToUse: Ownership mismatched with state=" + '
     - startInstruction: 6428
       endInstruction: 6499
-      startSourceChar: 16627
-      endSourceChar: 16658
-      line: 439
+      startSourceChar: 16971
+      endSourceChar: 17002
+      line: 443
       lineChar: 103
       spanCodeSection: "lastState);\r\n\r\n                "
     - startInstruction: 6500
       endInstruction: 6499
-      startSourceChar: 16658
-      endSourceChar: 16658
-      line: 441
+      startSourceChar: 17002
+      endSourceChar: 17002
+      line: 445
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6500
       endInstruction: 6499
-      startSourceChar: 16658
-      endSourceChar: 16658
-      line: 441
+      startSourceChar: 17002
+      endSourceChar: 17002
+      line: 445
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6500
       endInstruction: 6499
-      startSourceChar: 16658
-      endSourceChar: 16670
-      line: 441
+      startSourceChar: 17002
+      endSourceChar: 17014
+      line: 445
       lineChar: 16
       spanCodeSection: 'lastState = '
     - startInstruction: 6500
       endInstruction: 6519
-      startSourceChar: 16670
-      endSourceChar: 16708
-      line: 441
+      startSourceChar: 17014
+      endSourceChar: 17052
+      line: 445
       lineChar: 28
       spanCodeSection: "STATE_OWN_AND_USING;\r\n                "
     - startInstruction: 6520
       endInstruction: 6519
-      startSourceChar: 16708
-      endSourceChar: 16708
-      line: 442
+      startSourceChar: 17052
+      endSourceChar: 17052
+      line: 446
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6520
       endInstruction: 6519
-      startSourceChar: 16708
-      endSourceChar: 16708
-      line: 442
+      startSourceChar: 17052
+      endSourceChar: 17052
+      line: 446
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6520
       endInstruction: 6519
-      startSourceChar: 16708
-      endSourceChar: 16723
-      line: 442
+      startSourceChar: 17052
+      endSourceChar: 17067
+      line: 446
       lineChar: 16
       spanCodeSection: SetSyncedUsing(
     - startInstruction: 6520
       endInstruction: 6555
-      startSourceChar: 16723
-      endSourceChar: 16747
-      line: 442
+      startSourceChar: 17067
+      endSourceChar: 17091
+      line: 446
       lineChar: 31
       spanCodeSection: "true);\r\n                "
     - startInstruction: 6556
       endInstruction: 6555
-      startSourceChar: 16747
-      endSourceChar: 16747
-      line: 443
+      startSourceChar: 17091
+      endSourceChar: 17091
+      line: 447
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6556
       endInstruction: 6555
-      startSourceChar: 16747
-      endSourceChar: 16747
-      line: 443
+      startSourceChar: 17091
+      endSourceChar: 17091
+      line: 447
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6556
       endInstruction: 6555
-      startSourceChar: 16747
-      endSourceChar: 16760
-      line: 443
+      startSourceChar: 17091
+      endSourceChar: 17104
+      line: 447
       lineChar: 16
       spanCodeSection: SendCallback(
     - startInstruction: 6556
       endInstruction: 6591
-      startSourceChar: 16760
-      endSourceChar: 16799
-      line: 443
+      startSourceChar: 17104
+      endSourceChar: 17143
+      line: 447
       lineChar: 29
       spanCodeSection: "\"EnterUsingFromOwn\");\r\n                "
     - startInstruction: 6592
       endInstruction: 6591
-      startSourceChar: 16799
-      endSourceChar: 16799
-      line: 444
+      startSourceChar: 17143
+      endSourceChar: 17143
+      line: 448
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6592
       endInstruction: 6591
-      startSourceChar: 16799
-      endSourceChar: 16799
-      line: 444
+      startSourceChar: 17143
+      endSourceChar: 17143
+      line: 448
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6592
       endInstruction: 6591
-      startSourceChar: 16799
-      endSourceChar: 16812
-      line: 444
+      startSourceChar: 17143
+      endSourceChar: 17156
+      line: 448
       lineChar: 16
       spanCodeSection: SendCallback(
     - startInstruction: 6592
       endInstruction: 6635
-      startSourceChar: 16812
-      endSourceChar: 16862
-      line: 444
+      startSourceChar: 17156
+      endSourceChar: 17206
+      line: 448
       lineChar: 29
       spanCodeSection: "\"EXUR_Reinitialize\");\r\n            }\r\n            "
     - startInstruction: 6636
       endInstruction: 6635
-      startSourceChar: 16862
-      endSourceChar: 16880
-      line: 446
+      startSourceChar: 17206
+      endSourceChar: 17224
+      line: 450
       lineChar: 12
       spanCodeSection: "else\r\n            "
     - startInstruction: 6636
       endInstruction: 6635
-      startSourceChar: 16880
-      endSourceChar: 16995
-      line: 447
+      startSourceChar: 17224
+      endSourceChar: 17339
+      line: 451
       lineChar: 12
       spanCodeSection: "{\r\n                // We prefer assert to runtime error
         because this is module private interface.\r\n                "
     - startInstruction: 6636
       endInstruction: 6635
-      startSourceChar: 16995
-      endSourceChar: 16995
-      line: 449
+      startSourceChar: 17339
+      endSourceChar: 17339
+      line: 453
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6636
       endInstruction: 6635
-      startSourceChar: 16995
-      endSourceChar: 16995
-      line: 449
+      startSourceChar: 17339
+      endSourceChar: 17339
+      line: 453
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6636
       endInstruction: 6635
-      startSourceChar: 16995
-      endSourceChar: 17002
-      line: 449
+      startSourceChar: 17339
+      endSourceChar: 17346
+      line: 453
       lineChar: 16
       spanCodeSection: assert(
     - startInstruction: 6636
       endInstruction: 6635
-      startSourceChar: 17002
-      endSourceChar: 17002
-      line: 449
+      startSourceChar: 17346
+      endSourceChar: 17346
+      line: 453
       lineChar: 23
       spanCodeSection: 
     - startInstruction: 6636
       endInstruction: 6635
-      startSourceChar: 17002
-      endSourceChar: 17015
-      line: 449
+      startSourceChar: 17346
+      endSourceChar: 17359
+      line: 453
       lineChar: 23
       spanCodeSection: 'lastState == '
     - startInstruction: 6636
       endInstruction: 6667
-      startSourceChar: 17015
-      endSourceChar: 17036
-      line: 449
+      startSourceChar: 17359
+      endSourceChar: 17380
+      line: 453
       lineChar: 36
       spanCodeSection: 'STATE_IDLE_NOT_MINE, '
     - startInstruction: 6668
       endInstruction: 6667
-      startSourceChar: 17036
-      endSourceChar: 17036
-      line: 449
+      startSourceChar: 17380
+      endSourceChar: 17380
+      line: 453
       lineChar: 57
       spanCodeSection: 
     - startInstruction: 6668
       endInstruction: 6667
-      startSourceChar: 17036
-      endSourceChar: 17074
-      line: 449
+      startSourceChar: 17380
+      endSourceChar: 17418
+      line: 453
       lineChar: 57
       spanCodeSection: '"Tried to use while illegal state=" + '
     - startInstruction: 6668
       endInstruction: 6739
-      startSourceChar: 17074
-      endSourceChar: 17105
-      line: 449
+      startSourceChar: 17418
+      endSourceChar: 17449
+      line: 453
       lineChar: 95
       spanCodeSection: "lastState);\r\n\r\n                "
     - startInstruction: 6740
       endInstruction: 6739
-      startSourceChar: 17105
-      endSourceChar: 17105
-      line: 451
+      startSourceChar: 17449
+      endSourceChar: 17449
+      line: 455
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6740
       endInstruction: 6739
-      startSourceChar: 17105
-      endSourceChar: 17105
-      line: 451
+      startSourceChar: 17449
+      endSourceChar: 17449
+      line: 455
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6740
       endInstruction: 6739
-      startSourceChar: 17105
-      endSourceChar: 17105
-      line: 451
+      startSourceChar: 17449
+      endSourceChar: 17449
+      line: 455
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6740
       endInstruction: 6739
-      startSourceChar: 17105
-      endSourceChar: 17116
-      line: 451
+      startSourceChar: 17449
+      endSourceChar: 17460
+      line: 455
       lineChar: 16
       spanCodeSection: Networking.
     - startInstruction: 6740
       endInstruction: 6739
-      startSourceChar: 17116
-      endSourceChar: 17125
-      line: 451
+      startSourceChar: 17460
+      endSourceChar: 17469
+      line: 455
       lineChar: 27
       spanCodeSection: SetOwner(
     - startInstruction: 6740
       endInstruction: 6739
-      startSourceChar: 17125
-      endSourceChar: 17125
-      line: 451
+      startSourceChar: 17469
+      endSourceChar: 17469
+      line: 455
       lineChar: 36
       spanCodeSection: 
     - startInstruction: 6740
       endInstruction: 6739
-      startSourceChar: 17125
-      endSourceChar: 17136
-      line: 451
+      startSourceChar: 17469
+      endSourceChar: 17480
+      line: 455
       lineChar: 36
       spanCodeSection: Networking.
     - startInstruction: 6740
       endInstruction: 6755
-      startSourceChar: 17136
-      endSourceChar: 17149
-      line: 451
+      startSourceChar: 17480
+      endSourceChar: 17493
+      line: 455
       lineChar: 47
       spanCodeSection: 'LocalPlayer, '
     - startInstruction: 6756
       endInstruction: 6755
-      startSourceChar: 17149
-      endSourceChar: 17149
-      line: 451
+      startSourceChar: 17493
+      endSourceChar: 17493
+      line: 455
       lineChar: 60
       spanCodeSection: 
     - startInstruction: 6756
       endInstruction: 6755
-      startSourceChar: 17149
-      endSourceChar: 17154
-      line: 451
+      startSourceChar: 17493
+      endSourceChar: 17498
+      line: 455
       lineChar: 60
       spanCodeSection: this.
     - startInstruction: 6756
       endInstruction: 6779
-      startSourceChar: 17154
-      endSourceChar: 17184
-      line: 451
+      startSourceChar: 17498
+      endSourceChar: 17528
+      line: 455
       lineChar: 65
       spanCodeSection: "gameObject);\r\n                "
     - startInstruction: 6780
       endInstruction: 6779
-      startSourceChar: 17184
-      endSourceChar: 17184
-      line: 452
+      startSourceChar: 17528
+      endSourceChar: 17528
+      line: 456
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6780
       endInstruction: 6779
-      startSourceChar: 17184
-      endSourceChar: 17184
-      line: 452
+      startSourceChar: 17528
+      endSourceChar: 17528
+      line: 456
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6780
       endInstruction: 6779
-      startSourceChar: 17184
-      endSourceChar: 17203
-      line: 452
+      startSourceChar: 17528
+      endSourceChar: 17547
+      line: 456
       lineChar: 16
       spanCodeSection: 'ownershipTimeout = '
     - startInstruction: 6780
       endInstruction: 6799
-      startSourceChar: 17203
-      endSourceChar: 17248
-      line: 452
+      startSourceChar: 17547
+      endSourceChar: 17592
+      line: 456
       lineChar: 35
       spanCodeSection: "OWNERSHIP_TIMEOUT_DURATION;\r\n                "
     - startInstruction: 6800
       endInstruction: 6799
-      startSourceChar: 17248
-      endSourceChar: 17248
-      line: 453
+      startSourceChar: 17592
+      endSourceChar: 17592
+      line: 457
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6800
       endInstruction: 6799
-      startSourceChar: 17248
-      endSourceChar: 17248
-      line: 453
+      startSourceChar: 17592
+      endSourceChar: 17592
+      line: 457
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6800
       endInstruction: 6799
-      startSourceChar: 17248
-      endSourceChar: 17265
-      line: 453
+      startSourceChar: 17592
+      endSourceChar: 17609
+      line: 457
       lineChar: 16
       spanCodeSection: 'ownershipDelay = '
     - startInstruction: 6800
       endInstruction: 6819
-      startSourceChar: 17265
-      endSourceChar: 17308
-      line: 453
+      startSourceChar: 17609
+      endSourceChar: 17652
+      line: 457
       lineChar: 33
       spanCodeSection: "OWNERSHIP_DELAY_DURATION;\r\n                "
     - startInstruction: 6820
       endInstruction: 6819
-      startSourceChar: 17308
-      endSourceChar: 17308
-      line: 454
+      startSourceChar: 17652
+      endSourceChar: 17652
+      line: 458
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6820
       endInstruction: 6819
-      startSourceChar: 17308
-      endSourceChar: 17308
-      line: 454
+      startSourceChar: 17652
+      endSourceChar: 17652
+      line: 458
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 6820
       endInstruction: 6819
-      startSourceChar: 17308
-      endSourceChar: 17320
-      line: 454
+      startSourceChar: 17652
+      endSourceChar: 17664
+      line: 458
       lineChar: 16
       spanCodeSection: 'lastState = '
     - startInstruction: 6820
       endInstruction: 6859
-      startSourceChar: 17320
-      endSourceChar: 17382
-      line: 454
+      startSourceChar: 17664
+      endSourceChar: 17726
+      line: 458
       lineChar: 28
       spanCodeSection: "STATE_WAITING_OWNERSHIP;\r\n            }\r\n        }\r\n\r\n
         \       "
     - startInstruction: 6860
       endInstruction: 6867
-      startSourceChar: 17382
-      endSourceChar: 17417
-      line: 458
+      startSourceChar: 17726
+      endSourceChar: 17761
+      line: 462
       lineChar: 8
       spanCodeSection: "public bool IsFreeOwned()\r\n        "
     - startInstruction: 6868
       endInstruction: 6867
-      startSourceChar: 17417
-      endSourceChar: 17432
-      line: 459
+      startSourceChar: 17761
+      endSourceChar: 17776
+      line: 463
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 6868
       endInstruction: 6867
-      startSourceChar: 17432
-      endSourceChar: 17439
-      line: 460
+      startSourceChar: 17776
+      endSourceChar: 17783
+      line: 464
       lineChar: 12
       spanCodeSection: 'return '
     - startInstruction: 6868
       endInstruction: 6867
-      startSourceChar: 17439
-      endSourceChar: 17439
-      line: 460
+      startSourceChar: 17783
+      endSourceChar: 17783
+      line: 464
       lineChar: 19
       spanCodeSection: 
     - startInstruction: 6868
       endInstruction: 6867
-      startSourceChar: 17439
-      endSourceChar: 17452
-      line: 460
+      startSourceChar: 17783
+      endSourceChar: 17796
+      line: 464
       lineChar: 19
       spanCodeSection: 'lastState == '
     - startInstruction: 6868
       endInstruction: 6939
-      startSourceChar: 17452
-      endSourceChar: 17494
-      line: 460
+      startSourceChar: 17796
+      endSourceChar: 17838
+      line: 464
       lineChar: 32
       spanCodeSection: "STATE_OWN_AND_IDLE;\r\n        }\r\n\r\n        "
     - startInstruction: 6940
       endInstruction: 6947
-      startSourceChar: 17494
-      endSourceChar: 17532
-      line: 463
+      startSourceChar: 17838
+      endSourceChar: 17876
+      line: 467
       lineChar: 8
       spanCodeSection: "public bool IsFreeNotOwned()\r\n        "
     - startInstruction: 6948
       endInstruction: 6947
-      startSourceChar: 17532
-      endSourceChar: 17547
-      line: 464
+      startSourceChar: 17876
+      endSourceChar: 17891
+      line: 468
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 6948
       endInstruction: 6947
-      startSourceChar: 17547
-      endSourceChar: 17554
-      line: 465
+      startSourceChar: 17891
+      endSourceChar: 17898
+      line: 469
       lineChar: 12
       spanCodeSection: 'return '
     - startInstruction: 6948
       endInstruction: 6947
-      startSourceChar: 17554
-      endSourceChar: 17554
-      line: 465
+      startSourceChar: 17898
+      endSourceChar: 17898
+      line: 469
       lineChar: 19
       spanCodeSection: 
     - startInstruction: 6948
       endInstruction: 6947
-      startSourceChar: 17554
-      endSourceChar: 17567
-      line: 465
+      startSourceChar: 17898
+      endSourceChar: 17911
+      line: 469
       lineChar: 19
       spanCodeSection: 'lastState == '
     - startInstruction: 6948
       endInstruction: 7019
-      startSourceChar: 17567
-      endSourceChar: 17716
-      line: 465
+      startSourceChar: 17911
+      endSourceChar: 17954
+      line: 469
       lineChar: 32
-      spanCodeSection: "STATE_IDLE_NOT_MINE;\r\n        }\r\n\r\n        #endregion\r\n\r\n\r\n
-        \       //////////////////////////////\r\n        #region Drive by system
-        events\r\n\r\n        "
+      spanCodeSection: "STATE_IDLE_NOT_MINE;\r\n        }\r\n\r\n        "
     - startInstruction: 7020
       endInstruction: 7027
-      startSourceChar: 17716
-      endSourceChar: 17738
+      startSourceChar: 17954
+      endSourceChar: 17984
+      line: 472
+      lineChar: 8
+      spanCodeSection: "public bool IsFree()\r\n        "
+    - startInstruction: 7028
+      endInstruction: 7027
+      startSourceChar: 17984
+      endSourceChar: 17999
+      line: 473
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 7028
+      endInstruction: 7027
+      startSourceChar: 17999
+      endSourceChar: 18006
       line: 474
+      lineChar: 12
+      spanCodeSection: 'return '
+    - startInstruction: 7028
+      endInstruction: 7027
+      startSourceChar: 18006
+      endSourceChar: 18006
+      line: 474
+      lineChar: 19
+      spanCodeSection: 
+    - startInstruction: 7028
+      endInstruction: 7027
+      startSourceChar: 18006
+      endSourceChar: 18007
+      line: 474
+      lineChar: 19
+      spanCodeSection: (
+    - startInstruction: 7028
+      endInstruction: 7027
+      startSourceChar: 18007
+      endSourceChar: 18007
+      line: 474
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 7028
+      endInstruction: 7027
+      startSourceChar: 18007
+      endSourceChar: 18020
+      line: 474
+      lineChar: 20
+      spanCodeSection: 'lastState == '
+    - startInstruction: 7028
+      endInstruction: 7119
+      startSourceChar: 18020
+      endSourceChar: 18043
+      line: 474
+      lineChar: 33
+      spanCodeSection: 'STATE_OWN_AND_IDLE) || '
+    - startInstruction: 7120
+      endInstruction: 7119
+      startSourceChar: 18043
+      endSourceChar: 18044
+      line: 474
+      lineChar: 56
+      spanCodeSection: (
+    - startInstruction: 7120
+      endInstruction: 7119
+      startSourceChar: 18044
+      endSourceChar: 18044
+      line: 474
+      lineChar: 57
+      spanCodeSection: 
+    - startInstruction: 7120
+      endInstruction: 7119
+      startSourceChar: 18044
+      endSourceChar: 18057
+      line: 474
+      lineChar: 57
+      spanCodeSection: 'lastState == '
+    - startInstruction: 7120
+      endInstruction: 7263
+      startSourceChar: 18057
+      endSourceChar: 18207
+      line: 474
+      lineChar: 70
+      spanCodeSection: "STATE_IDLE_NOT_MINE);\r\n        }\r\n\r\n        #endregion\r\n\r\n\r\n
+        \       //////////////////////////////\r\n        #region Drive by system
+        events\r\n\r\n        "
+    - startInstruction: 7264
+      endInstruction: 7271
+      startSourceChar: 18207
+      endSourceChar: 18229
+      line: 483
       lineChar: 8
       spanCodeSection: "void Start()\r\n        "
-    - startInstruction: 7028
-      endInstruction: 7027
-      startSourceChar: 17738
-      endSourceChar: 17753
-      line: 475
+    - startInstruction: 7272
+      endInstruction: 7271
+      startSourceChar: 18229
+      endSourceChar: 18244
+      line: 484
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 7028
-      endInstruction: 7027
-      startSourceChar: 17753
-      endSourceChar: 17753
-      line: 476
+    - startInstruction: 7272
+      endInstruction: 7271
+      startSourceChar: 18244
+      endSourceChar: 18244
+      line: 485
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 7028
-      endInstruction: 7027
-      startSourceChar: 17753
-      endSourceChar: 17753
-      line: 476
+    - startInstruction: 7272
+      endInstruction: 7271
+      startSourceChar: 18244
+      endSourceChar: 18244
+      line: 485
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 7028
-      endInstruction: 7063
-      startSourceChar: 17753
-      endSourceChar: 17793
-      line: 476
+    - startInstruction: 7272
+      endInstruction: 7307
+      startSourceChar: 18244
+      endSourceChar: 18284
+      line: 485
       lineChar: 12
       spanCodeSection: "SetupListeners();\r\n        }\r\n\r\n        "
-    - startInstruction: 7064
-      endInstruction: 7071
-      startSourceChar: 17793
-      endSourceChar: 17816
-      line: 479
+    - startInstruction: 7308
+      endInstruction: 7315
+      startSourceChar: 18284
+      endSourceChar: 18307
+      line: 488
       lineChar: 8
       spanCodeSection: "void Update()\r\n        "
-    - startInstruction: 7072
-      endInstruction: 7071
-      startSourceChar: 17816
-      endSourceChar: 17831
-      line: 480
+    - startInstruction: 7316
+      endInstruction: 7315
+      startSourceChar: 18307
+      endSourceChar: 18322
+      line: 489
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 7072
-      endInstruction: 7071
-      startSourceChar: 17831
-      endSourceChar: 17831
-      line: 481
+    - startInstruction: 7316
+      endInstruction: 7315
+      startSourceChar: 18322
+      endSourceChar: 18322
+      line: 490
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 7072
-      endInstruction: 7071
-      startSourceChar: 17831
-      endSourceChar: 17831
-      line: 481
+    - startInstruction: 7316
+      endInstruction: 7315
+      startSourceChar: 18322
+      endSourceChar: 18322
+      line: 490
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 7072
-      endInstruction: 7107
-      startSourceChar: 17831
-      endSourceChar: 17980
-      line: 481
+    - startInstruction: 7316
+      endInstruction: 7351
+      startSourceChar: 18322
+      endSourceChar: 18471
+      line: 490
       lineChar: 12
       spanCodeSection: "CheckImplicitTransition();\r\n        }\r\n\r\n        #endregion\r\n\r\n\r\n
         \       //////////////////////////////\r\n        #region Public interface\r\n\r\n
         \       "
-    - startInstruction: 7108
-      endInstruction: 7115
-      startSourceChar: 17980
-      endSourceChar: 18022
-      line: 490
+    - startInstruction: 7352
+      endInstruction: 7359
+      startSourceChar: 18471
+      endSourceChar: 18513
+      line: 499
       lineChar: 8
       spanCodeSection: "public void EXUR_ReleaseObject()\r\n        "
-    - startInstruction: 7116
-      endInstruction: 7115
-      startSourceChar: 18022
-      endSourceChar: 18037
-      line: 491
+    - startInstruction: 7360
+      endInstruction: 7359
+      startSourceChar: 18513
+      endSourceChar: 18528
+      line: 500
       lineChar: 8
       spanCodeSection: "{\r\n            "
-    - startInstruction: 7116
-      endInstruction: 7115
-      startSourceChar: 18037
-      endSourceChar: 18037
-      line: 492
+    - startInstruction: 7360
+      endInstruction: 7359
+      startSourceChar: 18528
+      endSourceChar: 18528
+      line: 501
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 7116
-      endInstruction: 7115
-      startSourceChar: 18037
-      endSourceChar: 18037
-      line: 492
+    - startInstruction: 7360
+      endInstruction: 7359
+      startSourceChar: 18528
+      endSourceChar: 18528
+      line: 501
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 7116
-      endInstruction: 7115
-      startSourceChar: 18037
-      endSourceChar: 18041
-      line: 492
+    - startInstruction: 7360
+      endInstruction: 7359
+      startSourceChar: 18528
+      endSourceChar: 18532
+      line: 501
       lineChar: 12
       spanCodeSection: log(
-    - startInstruction: 7116
-      endInstruction: 7151
-      startSourceChar: 18041
-      endSourceChar: 18086
-      line: 492
+    - startInstruction: 7360
+      endInstruction: 7395
+      startSourceChar: 18532
+      endSourceChar: 18577
+      line: 501
       lineChar: 16
       spanCodeSection: "\"EXUR_ReleaseObject called\");\r\n\r\n            "
-    - startInstruction: 7152
-      endInstruction: 7151
-      startSourceChar: 18086
-      endSourceChar: 18090
-      line: 494
+    - startInstruction: 7396
+      endInstruction: 7395
+      startSourceChar: 18577
+      endSourceChar: 18581
+      line: 503
       lineChar: 12
       spanCodeSection: if (
-    - startInstruction: 7152
-      endInstruction: 7151
-      startSourceChar: 18090
-      endSourceChar: 18090
-      line: 494
+    - startInstruction: 7396
+      endInstruction: 7395
+      startSourceChar: 18581
+      endSourceChar: 18581
+      line: 503
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7152
-      endInstruction: 7151
-      startSourceChar: 18090
-      endSourceChar: 18103
-      line: 494
+    - startInstruction: 7396
+      endInstruction: 7395
+      startSourceChar: 18581
+      endSourceChar: 18594
+      line: 503
       lineChar: 16
       spanCodeSection: 'lastState == '
-    - startInstruction: 7152
-      endInstruction: 7199
-      startSourceChar: 18103
-      endSourceChar: 18137
-      line: 494
+    - startInstruction: 7396
+      endInstruction: 7443
+      startSourceChar: 18594
+      endSourceChar: 18628
+      line: 503
       lineChar: 29
       spanCodeSection: "STATE_OWN_AND_USING)\r\n            "
-    - startInstruction: 7200
-      endInstruction: 7199
-      startSourceChar: 18137
-      endSourceChar: 18203
-      line: 495
+    - startInstruction: 7444
+      endInstruction: 7443
+      startSourceChar: 18628
+      endSourceChar: 18694
+      line: 504
       lineChar: 12
       spanCodeSection: "{\r\n                // continue to keep ownership\r\n                "
-    - startInstruction: 7200
-      endInstruction: 7199
-      startSourceChar: 18203
-      endSourceChar: 18203
-      line: 497
+    - startInstruction: 7444
+      endInstruction: 7443
+      startSourceChar: 18694
+      endSourceChar: 18694
+      line: 506
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7200
-      endInstruction: 7199
-      startSourceChar: 18203
-      endSourceChar: 18203
-      line: 497
+    - startInstruction: 7444
+      endInstruction: 7443
+      startSourceChar: 18694
+      endSourceChar: 18694
+      line: 506
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7200
-      endInstruction: 7199
-      startSourceChar: 18203
-      endSourceChar: 18215
-      line: 497
+    - startInstruction: 7444
+      endInstruction: 7443
+      startSourceChar: 18694
+      endSourceChar: 18706
+      line: 506
       lineChar: 16
       spanCodeSection: 'lastState = '
-    - startInstruction: 7200
-      endInstruction: 7219
-      startSourceChar: 18215
-      endSourceChar: 18303
-      line: 497
+    - startInstruction: 7444
+      endInstruction: 7463
+      startSourceChar: 18706
+      endSourceChar: 18794
+      line: 506
       lineChar: 28
       spanCodeSection: "STATE_OWN_AND_IDLE; // This state change must be before SetSyncedUsing\r\n
         \               "
-    - startInstruction: 7220
-      endInstruction: 7219
-      startSourceChar: 18303
-      endSourceChar: 18303
-      line: 498
+    - startInstruction: 7464
+      endInstruction: 7463
+      startSourceChar: 18794
+      endSourceChar: 18794
+      line: 507
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7220
-      endInstruction: 7219
-      startSourceChar: 18303
-      endSourceChar: 18303
-      line: 498
+    - startInstruction: 7464
+      endInstruction: 7463
+      startSourceChar: 18794
+      endSourceChar: 18794
+      line: 507
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7220
-      endInstruction: 7219
-      startSourceChar: 18303
-      endSourceChar: 18318
-      line: 498
+    - startInstruction: 7464
+      endInstruction: 7463
+      startSourceChar: 18794
+      endSourceChar: 18809
+      line: 507
       lineChar: 16
       spanCodeSection: SetSyncedUsing(
-    - startInstruction: 7220
-      endInstruction: 7255
-      startSourceChar: 18318
-      endSourceChar: 18343
-      line: 498
+    - startInstruction: 7464
+      endInstruction: 7499
+      startSourceChar: 18809
+      endSourceChar: 18834
+      line: 507
       lineChar: 31
       spanCodeSection: "false);\r\n                "
-    - startInstruction: 7256
-      endInstruction: 7255
-      startSourceChar: 18343
-      endSourceChar: 18343
-      line: 499
+    - startInstruction: 7500
+      endInstruction: 7499
+      startSourceChar: 18834
+      endSourceChar: 18834
+      line: 508
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7256
-      endInstruction: 7255
-      startSourceChar: 18343
-      endSourceChar: 18343
-      line: 499
+    - startInstruction: 7500
+      endInstruction: 7499
+      startSourceChar: 18834
+      endSourceChar: 18834
+      line: 508
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7256
-      endInstruction: 7255
-      startSourceChar: 18343
-      endSourceChar: 18356
-      line: 499
+    - startInstruction: 7500
+      endInstruction: 7499
+      startSourceChar: 18834
+      endSourceChar: 18847
+      line: 508
       lineChar: 16
       spanCodeSection: SendCallback(
-    - startInstruction: 7256
-      endInstruction: 7291
-      startSourceChar: 18356
-      endSourceChar: 18396
-      line: 499
+    - startInstruction: 7500
+      endInstruction: 7535
+      startSourceChar: 18847
+      endSourceChar: 18887
+      line: 508
       lineChar: 29
       spanCodeSection: "\"ExitUsingByRequest\");\r\n                "
-    - startInstruction: 7292
-      endInstruction: 7291
-      startSourceChar: 18396
-      endSourceChar: 18396
-      line: 500
+    - startInstruction: 7536
+      endInstruction: 7535
+      startSourceChar: 18887
+      endSourceChar: 18887
+      line: 509
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7292
-      endInstruction: 7291
-      startSourceChar: 18396
-      endSourceChar: 18396
-      line: 500
+    - startInstruction: 7536
+      endInstruction: 7535
+      startSourceChar: 18887
+      endSourceChar: 18887
+      line: 509
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7292
-      endInstruction: 7291
-      startSourceChar: 18396
-      endSourceChar: 18409
-      line: 500
+    - startInstruction: 7536
+      endInstruction: 7535
+      startSourceChar: 18887
+      endSourceChar: 18900
+      line: 509
       lineChar: 16
       spanCodeSection: SendCallback(
-    - startInstruction: 7292
-      endInstruction: 7327
-      startSourceChar: 18409
-      endSourceChar: 18446
-      line: 500
+    - startInstruction: 7536
+      endInstruction: 7571
+      startSourceChar: 18900
+      endSourceChar: 18937
+      line: 509
       lineChar: 29
       spanCodeSection: "\"EXUR_Finalize\");\r\n\r\n                "
-    - startInstruction: 7328
-      endInstruction: 7327
-      startSourceChar: 18446
-      endSourceChar: 18450
-      line: 502
+    - startInstruction: 7572
+      endInstruction: 7571
+      startSourceChar: 18937
+      endSourceChar: 18941
+      line: 511
       lineChar: 16
       spanCodeSection: if (
-    - startInstruction: 7328
-      endInstruction: 7343
-      startSourceChar: 18450
-      endSourceChar: 18487
-      line: 502
+    - startInstruction: 7572
+      endInstruction: 7587
+      startSourceChar: 18941
+      endSourceChar: 18978
+      line: 511
       lineChar: 20
       spanCodeSection: "DeavtivateWhenIdle)\r\n                "
-    - startInstruction: 7344
-      endInstruction: 7343
-      startSourceChar: 18487
-      endSourceChar: 18510
-      line: 503
+    - startInstruction: 7588
+      endInstruction: 7587
+      startSourceChar: 18978
+      endSourceChar: 19001
+      line: 512
       lineChar: 16
       spanCodeSection: "{\r\n                    "
-    - startInstruction: 7344
-      endInstruction: 7343
-      startSourceChar: 18510
-      endSourceChar: 18510
-      line: 504
+    - startInstruction: 7588
+      endInstruction: 7587
+      startSourceChar: 19001
+      endSourceChar: 19001
+      line: 513
       lineChar: 20
       spanCodeSection: 
-    - startInstruction: 7344
-      endInstruction: 7343
-      startSourceChar: 18510
-      endSourceChar: 18510
-      line: 504
+    - startInstruction: 7588
+      endInstruction: 7587
+      startSourceChar: 19001
+      endSourceChar: 19001
+      line: 513
       lineChar: 20
       spanCodeSection: 
-    - startInstruction: 7344
-      endInstruction: 7343
-      startSourceChar: 18510
-      endSourceChar: 18526
-      line: 504
+    - startInstruction: 7588
+      endInstruction: 7587
+      startSourceChar: 19001
+      endSourceChar: 19017
+      line: 513
       lineChar: 20
       spanCodeSection: SetActiveObject(
-    - startInstruction: 7344
-      endInstruction: 7387
-      startSourceChar: 18526
-      endSourceChar: 18581
-      line: 504
+    - startInstruction: 7588
+      endInstruction: 7631
+      startSourceChar: 19017
+      endSourceChar: 19072
+      line: 513
       lineChar: 36
       spanCodeSection: "false);\r\n                }\r\n            }\r\n            "
-    - startInstruction: 7388
-      endInstruction: 7387
-      startSourceChar: 18581
-      endSourceChar: 18599
-      line: 507
+    - startInstruction: 7632
+      endInstruction: 7631
+      startSourceChar: 19072
+      endSourceChar: 19090
+      line: 516
       lineChar: 12
       spanCodeSection: "else\r\n            "
-    - startInstruction: 7388
-      endInstruction: 7387
-      startSourceChar: 18599
-      endSourceChar: 18618
-      line: 508
+    - startInstruction: 7632
+      endInstruction: 7631
+      startSourceChar: 19090
+      endSourceChar: 19109
+      line: 517
       lineChar: 12
       spanCodeSection: "{\r\n                "
-    - startInstruction: 7388
-      endInstruction: 7387
-      startSourceChar: 18618
-      endSourceChar: 18618
-      line: 509
+    - startInstruction: 7632
+      endInstruction: 7631
+      startSourceChar: 19109
+      endSourceChar: 19109
+      line: 518
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7388
-      endInstruction: 7387
-      startSourceChar: 18618
-      endSourceChar: 18618
-      line: 509
+    - startInstruction: 7632
+      endInstruction: 7631
+      startSourceChar: 19109
+      endSourceChar: 19109
+      line: 518
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7388
-      endInstruction: 7387
-      startSourceChar: 18618
-      endSourceChar: 18623
-      line: 509
+    - startInstruction: 7632
+      endInstruction: 7631
+      startSourceChar: 19109
+      endSourceChar: 19114
+      line: 518
       lineChar: 16
       spanCodeSection: warn(
-    - startInstruction: 7388
-      endInstruction: 7388
-      startSourceChar: 18623
-      endSourceChar: 18623
-      line: 509
+    - startInstruction: 7632
+      endInstruction: 7632
+      startSourceChar: 19114
+      endSourceChar: 19114
+      line: 518
       lineChar: 21
       spanCodeSection: 
   hasInteractEvent: 0

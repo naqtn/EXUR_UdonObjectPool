@@ -276,12 +276,16 @@ namespace Iwsd.EXUR {
         }
 
 
+        // NOTE: Instead of OnOwnershipTransfer, it uses Networking.IsOwner to examine ownership.
+        // Because OnOwnershipTransfer fires only for the previous owner. (VRCSDK3-UDON-2020.05.12.10.33)
+        // https://vrchat.canny.io/vrchat-udon-closed-alpha-feedback/p/request-change-onownershiptransfer-behaviour
+        
         void CheckImplicitTransition()
         {
             switch (lastState)
             {
                 case STATE_UNDEFINED:
-                    assert(false, "transition check for STATE_UNDEFINED");
+                    assert(false, "Unexpected transition check for STATE_UNDEFINED");
                     break;
 
                 case STATE_ERROR:
@@ -464,6 +468,11 @@ namespace Iwsd.EXUR {
         public bool IsFreeNotOwned()
         {
             return lastState == STATE_IDLE_NOT_MINE;
+        }
+
+        public bool IsFree()
+        {
+            return (lastState == STATE_OWN_AND_IDLE) || (lastState == STATE_IDLE_NOT_MINE);
         }
 
         #endregion

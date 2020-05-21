@@ -21,8 +21,12 @@ namespace Iwsd.EXUR {
     {
         Handler[] objects;
 
-        [SerializeField]
-        UdonBehaviour EventListener;
+        public UdonBehaviour EventListener;
+
+        // Intented to be readonly properties. (but there's no way to limit readonly aceess in Udon.)
+        public int TotalCount;
+        public int FreeCount;
+        
         
         //////////////////////////////
         #region Development support
@@ -79,6 +83,8 @@ namespace Iwsd.EXUR {
             }
 
             // TODO check one Handler for each child.
+
+            TotalCount = objects.Length;
         }
 
         Handler FindFreeOwned()
@@ -111,6 +117,28 @@ namespace Iwsd.EXUR {
         }
 
 
+        // This actually counts not using event
+        void UpdateCounts()
+        {
+            FreeCount = 0;
+
+            if (objects == null) // not initiated yet
+            {
+                TotalCount = -1;
+                return;
+            }
+            
+            var n = objects.Length;
+            for (int i = 0; i < n; i++) {
+                if (objects[i].IsFree())
+                {
+                    FreeCount++;
+                }
+            }
+
+            TotalCount = n;
+        }
+
         void PropagateEvent(Handler eventSource, string eventName)
         {
             if (EventListener)
@@ -120,7 +148,7 @@ namespace Iwsd.EXUR {
                 EventListener.SendCustomEvent("EXUR_RecieveEvent");
             }
         }
-        
+
         #endregion
 
 
@@ -145,6 +173,8 @@ namespace Iwsd.EXUR {
             }
             else
             {
+                UpdateCounts();
+
                 debug("EXUR_RecieveEvent. " + EXUR_EventName + " from " + EXUR_EventSource.gameObject.name);
                 PropagateEvent(EXUR_EventSource, EXUR_EventName);
             }
