@@ -847,12 +847,19 @@ MonoBehaviour:
       lineChar: 23
       spanCodeSection: "Text DebugText;\r\n\r\n        "
     - startInstruction: 608
-      endInstruction: 615
+      endInstruction: 607
       startSourceChar: 996
-      endSourceChar: 1024
+      endSourceChar: 1005
       line: 38
       lineChar: 8
-      spanCodeSection: "void log(string s)\r\n        "
+      spanCodeSection: void log(
+    - startInstruction: 608
+      endInstruction: 615
+      startSourceChar: 1005
+      endSourceChar: 1024
+      line: 38
+      lineChar: 17
+      spanCodeSection: "string s)\r\n        "
     - startInstruction: 616
       endInstruction: 615
       startSourceChar: 1024

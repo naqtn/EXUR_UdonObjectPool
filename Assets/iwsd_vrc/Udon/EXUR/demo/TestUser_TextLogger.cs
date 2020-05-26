@@ -73,6 +73,11 @@ namespace Iwsd.EXUR {
             log("ExitUsingByRequest");
         }
 
+        public void AttemptToReleaseNotOwnObjectError()
+        {
+            log("AttemptToReleaseNotOwnObjectError");
+        }
+
         // Lost ownership
         public void LostOwnershipOnUsing()
         {
@@ -105,6 +110,8 @@ namespace Iwsd.EXUR {
             log("EXUR_Finalize");
         }        
 
+
+        // for test. not part of callback API
         public void ReleaseObject()
         {
             log("ReleaseObject :!!!!!!! You got worng instance !!!!!"); // for test

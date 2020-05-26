@@ -64,8 +64,9 @@ namespace Iwsd.EXUR.Demo {
         }
         
         // implements listener interface
-        public UdonBehaviour EXUR_EventSource;
-        public string EXUR_EventName;
+        [HideInInspector] public UdonBehaviour EXUR_EventSource;
+        [HideInInspector] public string EXUR_EventName;
+        [HideInInspector] public string EXUR_EventAdditionalInfo;
         public void EXUR_RecieveEvent()
         {
             if (EXUR_EventName != null)
@@ -77,6 +78,11 @@ namespace Iwsd.EXUR.Demo {
                 else
                 {
                     log($"'{EXUR_EventName}'");
+                }
+                
+                if (EXUR_EventAdditionalInfo != null)
+                {
+                    log($"'{EXUR_EventAdditionalInfo}'");
                 }
             }
 

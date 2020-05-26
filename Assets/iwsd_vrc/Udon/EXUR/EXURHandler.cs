@@ -7,13 +7,6 @@ using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
 
-
-// TODO Rename event name (callback messages) to ease to understand. and add prefix to avoid conflict.
-
-// TODO check SDK limitation with latest SDK.
-
-// TODO consider "continue to use when previous owner left" option. To be able to do finalize operation, for example. 
-
 namespace Iwsd.EXUR {
 
     public class Handler : UdonSharpBehaviour
@@ -49,14 +42,14 @@ namespace Iwsd.EXUR {
         // we treat it as an plain UdonBehaviour to avoid circular dependency.
         UdonBehaviour aggregatedListener;
 
-        int ownershipTimeout;
-        const int OWNERSHIP_TIMEOUT_DURATION = 20;
+        float ownershipTimeout;
+        const float OWNERSHIP_TIMEOUT_DURATION = 0.1f;
 
-        // TODO test and remove ownershipDelay.
-        // It is no more needed because we replaced sync variable with network event.
-        int ownershipDelay;
-        const int OWNERSHIP_DELAY_DURATION = 0;
+        float ownershipDelay;
+        const float OWNERSHIP_DELAY_DURATION = 0.2f;
 
+        [HideInInspector]
+        public string localTagBuffer;
 
         //////////////////////////////
         #region Development support
@@ -136,6 +129,7 @@ namespace Iwsd.EXUR {
                 // NOTE: currently CustomEvent doesn't have argument. (VRCSDK3-UDON-2020.04.25.13.00)
                 aggregatedListener.SetProgramVariable("EXUR_EventSource", this);
                 aggregatedListener.SetProgramVariable("EXUR_EventName", eventName);
+                aggregatedListener.SetProgramVariable("EXUR_EventAdditionalInfo", null);
                 aggregatedListener.SendCustomEvent("EXUR_RecieveEvent");
             }
         }
@@ -276,7 +270,7 @@ namespace Iwsd.EXUR {
         }
 
 
-        // NOTE: Instead of OnOwnershipTransfer, it uses Networking.IsOwner to examine ownership.
+        // NOTE: Instead of OnOwnershipTransfer, we use Networking.IsOwner to examine ownership.
         // Because OnOwnershipTransfer fires only for the previous owner. (VRCSDK3-UDON-2020.05.12.10.33)
         // https://vrchat.canny.io/vrchat-udon-closed-alpha-feedback/p/request-change-onownershiptransfer-behaviour
         
@@ -369,7 +363,8 @@ namespace Iwsd.EXUR {
                 case STATE_WAITING_OWNERSHIP:
                     if (Networking.IsOwner(this.gameObject))
                     {
-                        if (--ownershipDelay < 0)
+                        ownershipDelay -= Time.deltaTime;
+                        if (ownershipDelay < 0)
                         {
                             // To skip set_using_true sent by myself
                             // NOTE: There's no option like NetworkEventTarget.Other for SendCustomNetworkEvent.
@@ -383,8 +378,8 @@ namespace Iwsd.EXUR {
                     }
                     else
                     {
-                        // TODO better timeout
-                        if (--ownershipTimeout < 0)
+                        ownershipTimeout -= Time.deltaTime;
+                        if (ownershipTimeout < 0)
                         {
                             // timeout when lose in getting ownership when race condition.
                             lastState = STATE_IDLE_NOT_MINE;
@@ -430,7 +425,6 @@ namespace Iwsd.EXUR {
         {
             log("TryToUse: state=" + lastState);
 
-            // TODO add option to allow theft.
             assert((lastState == STATE_IDLE_NOT_MINE) || (lastState == STATE_OWN_AND_IDLE),
                    "TryToUse: Illegal state. " + lastState); 
 
@@ -483,6 +477,7 @@ namespace Iwsd.EXUR {
 
         void Start()
         {
+            localTagBuffer = null;
             SetupListeners();
         }
 
@@ -517,7 +512,7 @@ namespace Iwsd.EXUR {
             else
             {
                 warn("ReleaseObject on not STATE_OWN_AND_USING. ignore");
-                // SendCallback("Error");  // TODO How to tell error detail. public error variable?
+                SendCallback("AttemptToReleaseNotOwnObjectError");
             }
         }
 

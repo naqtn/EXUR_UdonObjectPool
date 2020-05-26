@@ -7,14 +7,6 @@ using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
 
-
-// TODO idea. add "pooling object child depth level".
-// An integer that specifies where to find pooling object.
-// If there are so many pooling objects, that will be too long child list in Hierarchy view.
-// So it will be useful if it's possible to bundle them in sub groups.
-
-// TODO count used/unsed/total objects. and serves it to user.
-
 namespace Iwsd.EXUR {
 
     public class Manager : UdonSharpBehaviour
@@ -26,8 +18,16 @@ namespace Iwsd.EXUR {
         // Intented to be readonly properties. (but there's no way to limit readonly aceess in Udon.)
         public int TotalCount;
         public int FreeCount;
-        
-        
+
+
+        const string EVENT_NAME_IN_USE_BY_SELF = "InUseBySelf";
+        const string EVENT_NAME_IN_USE_BY_OTHERS = "InUseByOthers";
+        const string EVENT_NAME_NO_FREE_OBJECT = "NoFreeObject";
+        const string EVENT_NAME_MANAGER_FAILURE = "ManagerFailure";
+        const string FAILURE_INFO_HEAD_INTERNAL_ERROR = "InternalError";
+        const string FAILURE_INFO_HEAD_USER_PROGRAM_ERROR = "UserProgramError";
+
+
         //////////////////////////////
         #region Development support
 
@@ -65,6 +65,11 @@ namespace Iwsd.EXUR {
             debugLog("WRN", message);
         }
 
+        void error(string message)
+        {
+            debugLog("ERR", message);
+        }
+
         #endregion
 
 
@@ -74,25 +79,43 @@ namespace Iwsd.EXUR {
         void GatherObjects()
         {
             objects = new Handler[transform.childCount];
-
-            for (int i = 0; i < transform.childCount; i++) {
+            int n = 0;
+            for (int i = 0; i < transform.childCount; i++)
+            {
                 Transform child = transform.GetChild(i);
-                objects[i] = child.GetComponent<Handler>();
-                debug("GetComponent i=" + i);
-                debug("  handler=" + objects[i].gameObject.name);
+                var h = child.GetComponent<Handler>();
+                if (!h)
+                {
+                    ReportFailure($"{FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}: No Handler found on a child '{child.name}'");
+                }
+                else
+                {
+                    debug($"GetComponent i={i}, name='{h.gameObject.name}'");
+                    objects[n++] = h;
+                }
             }
-
-            // TODO check one Handler for each child.
-
+            
+            if (objects.Length != n)
+            {
+                var tmp = objects;
+                objects = new Handler[n];
+                for (int i = 0; i < n; i++) // NOTE Array.Copy not exposed
+                {
+                    objects[i] = tmp[i];
+                }
+            }
+            
             TotalCount = objects.Length;
         }
 
-        Handler FindFreeOwned()
+        Handler FindFreeOwned(bool checkEmptyTag)
         {
             var n = objects.Length;
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < n; i++)
+            {
                 var obj = objects[i];
-                if (obj.IsFreeOwned())
+                if (obj.IsFreeOwned()
+                    && (!checkEmptyTag || IsBrotherHavingValue(obj, "EXUR_Tag", "")))
                 {
                     return obj;
                 }
@@ -100,15 +123,17 @@ namespace Iwsd.EXUR {
             return null;
         }
 
-        Handler FindFreeNotOwned()
+        Handler FindFreeNotOwned(bool checkEmptyTag)
         {
             // Random for better assignment to avoid race condition
             var n = objects.Length;
             int randOffset = Random.Range(0, n);
-            
-            for (int i = 0; i < n; i++) {
+
+            for (int i = 0; i < n; i++)
+            {
                 var obj = objects[(i + randOffset) % n];
-                if (obj.IsFreeNotOwned())
+                if (obj.IsFreeNotOwned()
+                    && (!checkEmptyTag || IsBrotherHavingValue(obj, "EXUR_Tag", "")))
                 {
                     return obj;
                 }
@@ -117,7 +142,7 @@ namespace Iwsd.EXUR {
         }
 
 
-        // This actually counts not using event
+        // This actually counts. not using event
         void UpdateCounts()
         {
             FreeCount = 0;
@@ -127,9 +152,10 @@ namespace Iwsd.EXUR {
                 TotalCount = -1;
                 return;
             }
-            
+
             var n = objects.Length;
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < n; i++)
+            {
                 if (objects[i].IsFree())
                 {
                     FreeCount++;
@@ -139,13 +165,228 @@ namespace Iwsd.EXUR {
             TotalCount = n;
         }
 
-        void PropagateEvent(Handler eventSource, string eventName)
+        void SendEvent(Handler eventSource, string eventName, string eventInfo)
         {
             if (EventListener)
             {
                 EventListener.SetProgramVariable("EXUR_EventSource", eventSource);
                 EventListener.SetProgramVariable("EXUR_EventName", eventName);
+                EventListener.SetProgramVariable("EXUR_EventAdditionalInfo", eventInfo);
                 EventListener.SendCustomEvent("EXUR_RecieveEvent");
+
+                // TODO read variable to check variable exists in user program as kind debug mode (?)
+            }
+        }
+
+        void ReportFailure(string info)
+        {
+            warn("Failure occurred. info='{info}'");
+            SendEvent(null, EVENT_NAME_MANAGER_FAILURE, info);
+        }
+
+        UdonBehaviour GetBrotherBehavior(Handler handler)
+        {
+            var brothers = handler.transform.GetComponents(typeof(UdonBehaviour));
+            if (brothers.Length < 2)
+            {
+                ReportFailure($"{FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}: No brother UdonBehaviour on '{handler.gameObject.name}'");
+                return null;
+            }
+
+            return (UdonBehaviour)brothers[1];
+        }
+
+        bool IsBrotherHavingValue(Handler handler, string name, object value)
+        {
+            var brother = GetBrotherBehavior(handler);
+            if (brother)
+            {
+                var v = brother.GetProgramVariable(name);
+                return value.Equals(v);
+            }
+            return false;
+        }
+
+        void SetValueToBrother(Handler handler, string name, object value)
+        {
+            var brother = GetBrotherBehavior(handler);
+            if (brother)
+            {
+                brother.SetProgramVariable(name, value);
+            }
+        }
+
+        object GetValueFromBrother(Handler handler, string name)
+        {
+            var brother = GetBrotherBehavior(handler);
+            if (brother)
+            {
+                return brother.GetProgramVariable(name);
+            }
+            return null;
+        }
+
+        bool SaveTagToLocalBuffer(Handler handler, string newtag)
+        {
+            object t = handler.localTagBuffer;
+            // NOTE accessing null becomes string.Empty (U# v0.16.2)
+            // https://github.com/Merlin-san/UdonSharp/issues/32
+            // if (t != null)
+            if (!t.Equals(""))
+            {
+                ReportFailure($"{FAILURE_INFO_HEAD_INTERNAL_ERROR}: unclear localTagBuffer='{t}', tag='{newtag}'");
+                return false;
+            }
+            handler.localTagBuffer = newtag;
+            return true;
+        }
+
+        // Returns true if candidate object is found.
+        bool AcquireEmptyTaggedObject(string newtag)
+        {
+            Handler targetHandler = FindFreeOwned(true);
+            if (!targetHandler)
+            {
+                targetHandler = FindFreeNotOwned(true);
+            }
+            if (targetHandler)
+            {
+                if (SaveTagToLocalBuffer(targetHandler, newtag))
+                {
+                    debug($"Will call TryToUse empty tagged '{targetHandler.gameObject.name}'");
+                    targetHandler.TryToUse();
+                }
+                return true;
+            }
+            return false;
+        }
+        
+        // Select free object with Least recently used (LRU) algorithm.
+        // This expects 1st brother UdonBehaviour holds GetServerTimeInMilliseconds in a variable named EXUR_LastUsedTime.
+        // This returns error string. null for successful case.
+        // tag is optional.
+        void RecycleLeastRecentlyUsed(string newtag)
+        {
+            // Search least recently used object
+            Handler targetHandler = null;
+            int least = 0;
+            var n = objects.Length;
+            for (int i = 0; i < n; i++) {
+                var obj = objects[i];
+                if (obj.IsFree())
+                {
+                    var to = GetValueFromBrother(obj, "EXUR_LastUsedTime");
+                    if (to == null)
+                    {
+                        ReportFailure($"{FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}: Does not have EXUR_LastUsedTime variable");
+                        return;
+                    }
+                    var ti = (int)to;
+                    // ti could overflow and becomes negative while least is positive.
+                    // Even if so, diff is meaningful because underflow occurs
+                    int diff = ti - least;
+                    if ((targetHandler == null) // first one
+                        || (diff < 0))
+                    {
+                        least = ti;
+                        targetHandler = obj;
+                    }
+
+                    debug($" LRU: name='{obj.gameObject.name}', t={ti}");
+                }
+            }
+
+            if (targetHandler == null)
+            {
+                SendEvent(null, EVENT_NAME_NO_FREE_OBJECT, null);
+                return;
+            }
+            debug($" LRU: selected='{targetHandler.gameObject.name}'");
+
+            if (newtag != null)
+            {
+                if (!SaveTagToLocalBuffer(targetHandler, newtag))
+                {
+                    return;
+                }
+            }
+
+            targetHandler.TryToUse();
+        }
+
+
+        void AcquireObjectWithTagImpl(string tag)
+        {
+            // Search handlers having specified tag
+            int foundCount = 0;
+            Handler targetHandler = null;
+            var n = objects.Length;
+            for (int i = 0; i < n; i++) {
+                var obj = objects[i];
+                if (IsBrotherHavingValue(obj, "EXUR_Tag", tag))
+                {
+                    foundCount++;
+                    targetHandler = obj;
+                }
+            }
+            debug($" foundCount={foundCount}");
+
+            if (1 < foundCount)
+            {
+                ReportFailure($"{FAILURE_INFO_HEAD_INTERNAL_ERROR}: Multiple {foundCount} objects have identical tag='{tag}'");
+            }
+            else if (foundCount == 1)
+            {
+                if (targetHandler.IsFree())
+                {
+                    debug($"will call TryToUse");
+                    targetHandler.TryToUse();
+                }
+                else
+                {
+                    warn($"already in use. name='{targetHandler.gameObject.name}', tag='{tag}'");
+
+                    // TODO check targetHandler.lastState and assert (?)
+                    if (Networking.IsOwner(targetHandler.gameObject))
+                    {
+                        // Don't fire events on targetHandler because user can do same thing easily.
+                        SendEvent(targetHandler, EVENT_NAME_IN_USE_BY_SELF, null);
+                    }
+                    else
+                    {
+                        SendEvent(targetHandler, EVENT_NAME_IN_USE_BY_OTHERS, null);
+                    }
+                }
+            }
+            else // foundCount == 0
+            {
+                // try to find one with empty tag
+                if (!AcquireEmptyTaggedObject(tag))
+                {
+                    RecycleLeastRecentlyUsed(tag);
+                }
+            }
+        }
+
+
+        void ReactToEvent(Handler eventSource, string eventName)
+        {
+            if (eventName.Equals("EnterUsingFromWaiting") || eventName.Equals("EnterUsingFromOwn"))
+            {
+                var tag = eventSource.localTagBuffer;
+                // if (tag != null)
+                if (!tag.Equals(string.Empty))
+                {
+                    var brother = GetBrotherBehavior(eventSource);
+                    if (brother)
+                    {
+                        var time = Networking.GetServerTimeInMilliseconds();
+                        brother.SetProgramVariable("EXUR_Tag", tag);
+                        brother.SetProgramVariable("EXUR_LastUsedTime", time);
+                        debug($"set tag={tag}, time={time} name='{eventSource.gameObject.name}'");
+                    }
+                    eventSource.localTagBuffer = null;
+                }
             }
         }
 
@@ -155,14 +396,18 @@ namespace Iwsd.EXUR {
         //////////////////////////////
         #region Module private interface
 
-        // TODO reconsider interface design. (event type as method name or method parameter??)
-
+        // We use user callback interface also for Manager
+        // to avoid circular dependencies between Manager and Handler
+        
+        [HideInInspector] // Hide in inspector because this is public but only for API.
         public Handler EXUR_EventSource;
+        [HideInInspector]
         public string EXUR_EventName;
+        [HideInInspector]
+        public string EXUR_EventAdditionalInfo;
 
         public void EXUR_RecieveEvent()
         {
-            // TODO propagate to user
             if (!EXUR_EventSource)
             {
                 warn("null EXUR_EventSource");
@@ -173,13 +418,15 @@ namespace Iwsd.EXUR {
             }
             else
             {
-                UpdateCounts();
+                debug("EXUR_RecieveEvent. " + EXUR_EventName + " from '" + EXUR_EventSource.gameObject.name + "'");
 
-                debug("EXUR_RecieveEvent. " + EXUR_EventName + " from " + EXUR_EventSource.gameObject.name);
-                PropagateEvent(EXUR_EventSource, EXUR_EventName);
+                ReactToEvent(EXUR_EventSource, EXUR_EventName);
+                UpdateCounts();
+                SendEvent(EXUR_EventSource, EXUR_EventName, EXUR_EventAdditionalInfo); // propagate event
             }
             EXUR_EventSource = null;
             EXUR_EventName = null;
+            EXUR_EventAdditionalInfo = null;
         }
 
         #endregion
@@ -200,26 +447,54 @@ namespace Iwsd.EXUR {
         #region Public interface
 
         public void AcquireObject() {
-            Handler targetHandler = FindFreeOwned();
+            Handler targetHandler = FindFreeOwned(false);
             if (!targetHandler)
             {
-                targetHandler = FindFreeNotOwned();
+                targetHandler = FindFreeNotOwned(false);
             }
 
             if (!targetHandler)
             {
-                // TODO Returning error. (What interface is good for UdonGraph user?)
-                log("AcquireObject: No free object");
+                debug("AcquireObject: No free object");
+                SendEvent(null, EVENT_NAME_NO_FREE_OBJECT, null);
             }
             else
             {
-                debug("AcquireObject: selected target=" + targetHandler.gameObject.name);
+                log("AcquireObject: selected target='" + targetHandler.gameObject.name + "'");
                 targetHandler.TryToUse();
             }
+        }
+
+
+        [HideInInspector] // Hide in inspector because this is a part of API.
+        public string AcquireObjectWithTag_tag;
+
+        public void AcquireObjectWithTag()
+        {
+            string tag = AcquireObjectWithTag_tag;
+
+            if (tag == null)
+            {
+                ReportFailure($"{FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}: Specified tag was null");
+            }
+            else if (tag.Equals(string.Empty))
+            {
+                ReportFailure($"{FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}: Specified tag was empty string");
+            }
+            else
+            {
+                log($"AcquireObjectWithTag Tag='{tag}'");
+                AcquireObjectWithTagImpl(tag);
+            }
+        }
+
+        public void AcquireObjectForEachPlayer()
+        {
+            AcquireObjectWithTag_tag = Networking.LocalPlayer.displayName;
+            AcquireObjectWithTag();
         }
 
         #endregion
     }
 
 }
-

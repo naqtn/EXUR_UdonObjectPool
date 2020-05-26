@@ -15,61 +15,67 @@ MonoBehaviour:
   serializedUdonProgramAsset: {fileID: 11400000, guid: c8c6cb823d0e59d4cb8a8479a178b698,
     type: 2}
   udonAssembly: ".data_start\r\n\r\n    .export DebugText\r\n    .export StatusReport\r\n
-    \   .export MonitorTarget\r\n    .export EXUR_EventSource\r\n    .export EXUR_EventName\r\n\r\n
-    \   __refl_const_intnl_udonTypeID: %SystemInt64, null\r\n    __refl_const_intnl_udonTypeName:
-    %SystemString, null\r\n    EXUR_EventName: %SystemString, null\r\n    DebugText:
-    %UnityEngineUIText, null\r\n    StatusReport: %UnityEngineUIText, null\r\n    EXUR_EventSource:
-    %VRCUdonUdonBehaviour, null\r\n    MonitorTarget: %VRCUdonUdonBehaviour, null\r\n
-    \   LINES_COUNT: %SystemInt32, null\r\n    nextIdx: %SystemInt32, null\r\n    lines:
-    %SystemStringArray, null\r\n    __0_this_intnl_IwsdEXURDemoManagerMonitor: %VRCUdonUdonBehaviour,
-    this\r\n    __0_f_Int32: %SystemInt32, null\r\n    __0_i_Int32: %SystemInt32,
-    null\r\n    __0_t_Int32: %SystemInt32, null\r\n    __0_e_String: %SystemString,
-    null\r\n    __0_s_String: %SystemString, null\r\n    __0_t_String: %SystemString,
-    null\r\n    __1_s_String: %SystemString, null\r\n    __0_const_intnl_SystemInt32:
+    \   .export MonitorTarget\r\n    .export EXUR_EventSource\r\n    .export EXUR_EventName\r\n
+    \   .export EXUR_EventAdditionalInfo\r\n\r\n    __refl_const_intnl_udonTypeID:
+    %SystemInt64, null\r\n    __refl_const_intnl_udonTypeName: %SystemString, null\r\n
+    \   EXUR_EventAdditionalInfo: %SystemString, null\r\n    EXUR_EventName: %SystemString,
+    null\r\n    DebugText: %UnityEngineUIText, null\r\n    StatusReport: %UnityEngineUIText,
+    null\r\n    EXUR_EventSource: %VRCUdonUdonBehaviour, null\r\n    MonitorTarget:
+    %VRCUdonUdonBehaviour, null\r\n    LINES_COUNT: %SystemInt32, null\r\n    nextIdx:
+    %SystemInt32, null\r\n    lines: %SystemStringArray, null\r\n    __0_this_intnl_IwsdEXURDemoManagerMonitor:
+    %VRCUdonUdonBehaviour, this\r\n    __0_f_Int32: %SystemInt32, null\r\n    __0_i_Int32:
+    %SystemInt32, null\r\n    __0_t_Int32: %SystemInt32, null\r\n    __0_e_String:
+    %SystemString, null\r\n    __0_s_String: %SystemString, null\r\n    __0_t_String:
+    %SystemString, null\r\n    __1_s_String: %SystemString, null\r\n    __0_const_intnl_SystemInt32:
     %SystemInt32, null\r\n    __1_const_intnl_SystemInt32: %SystemInt32, null\r\n
     \   __0_const_intnl_SystemObject: %SystemObject, null\r\n    __0_const_intnl_SystemString:
     %SystemString, null\r\n    __1_const_intnl_SystemString: %SystemString, null\r\n
     \   __10_const_intnl_SystemString: %SystemString, null\r\n    __11_const_intnl_SystemString:
-    %SystemString, null\r\n    __2_const_intnl_SystemString: %SystemString, null\r\n
-    \   __3_const_intnl_SystemString: %SystemString, null\r\n    __4_const_intnl_SystemString:
-    %SystemString, null\r\n    __5_const_intnl_SystemString: %SystemString, null\r\n
-    \   __6_const_intnl_SystemString: %SystemString, null\r\n    __7_const_intnl_SystemString:
-    %SystemString, null\r\n    __8_const_intnl_SystemString: %SystemString, null\r\n
-    \   __9_const_intnl_SystemString: %SystemString, null\r\n    __0_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __0_const_intnl_SystemUInt32: %SystemUInt32, null\r\n
-    \   __1_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __2_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __3_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __4_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __0_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __1_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __2_intnl_SystemBoolean: %SystemBoolean, null\r\n    __3_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __4_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __5_intnl_SystemBoolean: %SystemBoolean, null\r\n    __0_intnl_UnityEngineGameObject:
-    %UnityEngineGameObject, null\r\n    __0_intnl_SystemInt32: %SystemInt32, null\r\n
-    \   __1_intnl_SystemInt32: %SystemInt32, null\r\n    __2_intnl_SystemInt32: %SystemInt32,
-    null\r\n    __3_intnl_SystemInt32: %SystemInt32, null\r\n    __4_intnl_SystemInt32:
-    %SystemInt32, null\r\n    __5_intnl_SystemInt32: %SystemInt32, null\r\n    __6_intnl_SystemInt32:
-    %SystemInt32, null\r\n    __7_intnl_SystemInt32: %SystemInt32, null\r\n    __0_intnl_SystemObject:
-    %SystemObject, null\r\n    __1_intnl_SystemObject: %SystemObject, null\r\n    __0_intnl_interpolatedStr_String:
-    %SystemString, null\r\n    __0_intnl_returnValSymbol_String: %SystemString, null\r\n
-    \   __0_intnl_SystemString: %SystemString, null\r\n    __1_intnl_SystemString:
-    %SystemString, null\r\n    __10_intnl_SystemString: %SystemString, null\r\n    __11_intnl_SystemString:
-    %SystemString, null\r\n    __12_intnl_SystemString: %SystemString, null\r\n    __2_intnl_SystemString:
-    %SystemString, null\r\n    __3_intnl_SystemString: %SystemString, null\r\n    __4_intnl_SystemString:
-    %SystemString, null\r\n    __5_intnl_SystemString: %SystemString, null\r\n    __6_intnl_SystemString:
-    %SystemString, null\r\n    __7_intnl_SystemString: %SystemString, null\r\n    __8_intnl_SystemString:
-    %SystemString, null\r\n    __9_intnl_SystemString: %SystemString, null\r\n    __0_intnl_returnTarget_UInt32:
-    %SystemUInt32, null\r\n\r\n.data_end\r\n\r\n        \r\n         # using UdonSharp;\r\n
-    \       \r\n         # using UnityEngine;\r\n        \r\n         # using VRC.SDKBase;\r\n
-    \       \r\n         # using VRC.Udon;\r\n        \r\n         # namespace Iwsd.EXUR.Demo
-    {\r\n        \r\n         # public class ManagerMonitor : UdonSharpBehaviour\r\n.code_start\r\n
-    \       \r\n         # const int LINES_COUNT = 5;\r\n        \r\n         # string[]
-    lines = new string[LINES_COUNT];\r\n        \r\n         # int nextIdx = 0;\r\n
-    \       \r\n         # string addLine(string s)\r\n    addLine:\r\n        \r\n
-    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
-    \        # lines[nextIdx] = s;\r\n        PUSH, lines\r\n        PUSH, nextIdx\r\n
-    \       PUSH, __0_s_String\r\n        EXTERN, \"SystemStringArray.__Set__SystemInt32_SystemString__SystemVoid\"\r\n
-    \       \r\n         # nextIdx = (nextIdx + 1) % LINES_COUNT;\r\n        PUSH,
-    nextIdx\r\n        PUSH, __0_const_intnl_SystemInt32\r\n        PUSH, __0_intnl_SystemInt32\r\n
+    %SystemString, null\r\n    __12_const_intnl_SystemString: %SystemString, null\r\n
+    \   __13_const_intnl_SystemString: %SystemString, null\r\n    __2_const_intnl_SystemString:
+    %SystemString, null\r\n    __3_const_intnl_SystemString: %SystemString, null\r\n
+    \   __4_const_intnl_SystemString: %SystemString, null\r\n    __5_const_intnl_SystemString:
+    %SystemString, null\r\n    __6_const_intnl_SystemString: %SystemString, null\r\n
+    \   __7_const_intnl_SystemString: %SystemString, null\r\n    __8_const_intnl_SystemString:
+    %SystemString, null\r\n    __9_const_intnl_SystemString: %SystemString, null\r\n
+    \   __0_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __0_const_intnl_SystemUInt32:
+    %SystemUInt32, null\r\n    __1_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __2_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __3_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __4_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __5_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __6_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __7_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __0_intnl_SystemBoolean: %SystemBoolean, null\r\n    __1_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __2_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __3_intnl_SystemBoolean: %SystemBoolean, null\r\n    __4_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __5_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __6_intnl_SystemBoolean: %SystemBoolean, null\r\n    __7_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __0_intnl_UnityEngineGameObject: %UnityEngineGameObject,
+    null\r\n    __0_intnl_SystemInt32: %SystemInt32, null\r\n    __1_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __2_intnl_SystemInt32: %SystemInt32, null\r\n    __3_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __4_intnl_SystemInt32: %SystemInt32, null\r\n    __5_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __6_intnl_SystemInt32: %SystemInt32, null\r\n    __7_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __0_intnl_SystemObject: %SystemObject, null\r\n    __1_intnl_SystemObject:
+    %SystemObject, null\r\n    __0_intnl_interpolatedStr_String: %SystemString, null\r\n
+    \   __0_intnl_returnValSymbol_String: %SystemString, null\r\n    __0_intnl_SystemString:
+    %SystemString, null\r\n    __1_intnl_SystemString: %SystemString, null\r\n    __10_intnl_SystemString:
+    %SystemString, null\r\n    __11_intnl_SystemString: %SystemString, null\r\n    __12_intnl_SystemString:
+    %SystemString, null\r\n    __2_intnl_SystemString: %SystemString, null\r\n    __3_intnl_SystemString:
+    %SystemString, null\r\n    __4_intnl_SystemString: %SystemString, null\r\n    __5_intnl_SystemString:
+    %SystemString, null\r\n    __6_intnl_SystemString: %SystemString, null\r\n    __7_intnl_SystemString:
+    %SystemString, null\r\n    __8_intnl_SystemString: %SystemString, null\r\n    __9_intnl_SystemString:
+    %SystemString, null\r\n    __0_intnl_returnTarget_UInt32: %SystemUInt32, null\r\n\r\n.data_end\r\n\r\n
+    \       \r\n         # using UdonSharp;\r\n        \r\n         # using UnityEngine;\r\n
+    \       \r\n         # using VRC.SDKBase;\r\n        \r\n         # using VRC.Udon;\r\n
+    \       \r\n         # namespace Iwsd.EXUR.Demo {\r\n        \r\n         # public
+    class ManagerMonitor : UdonSharpBehaviour\r\n.code_start\r\n        \r\n         #
+    const int LINES_COUNT = 5;\r\n        \r\n         # string[] lines = new string[LINES_COUNT];\r\n
+    \       \r\n         # int nextIdx = 0;\r\n        \r\n         # string addLine(string
+    s)\r\n    addLine:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       \r\n         # {\r\n        \r\n         # lines[nextIdx] = s;\r\n        PUSH,
+    lines\r\n        PUSH, nextIdx\r\n        PUSH, __0_s_String\r\n        EXTERN,
+    \"SystemStringArray.__Set__SystemInt32_SystemString__SystemVoid\"\r\n        \r\n
+    \        # nextIdx = (nextIdx + 1) % LINES_COUNT;\r\n        PUSH, nextIdx\r\n
+    \       PUSH, __0_const_intnl_SystemInt32\r\n        PUSH, __0_intnl_SystemInt32\r\n
     \       EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\r\n
     \       PUSH, __0_intnl_SystemInt32\r\n        PUSH, LINES_COUNT\r\n        PUSH,
     nextIdx\r\n        EXTERN, \"SystemInt32.__op_Remainder__SystemInt32_SystemInt32__SystemInt32\"\r\n
@@ -138,14 +144,15 @@ MonoBehaviour:
     \       PUSH, __1_s_String\r\n        COPY\r\n        PUSH, __2_const_intnl_exitJumpLoc_UInt32\r\n
     \       JUMP, 0x0000027C\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public UdonBehaviour EXUR_EventSource;\r\n
-    \       \r\n         # public string EXUR_EventName;\r\n        \r\n         #
-    public void EXUR_RecieveEvent()\r\n    .export EXUR_RecieveEvent\r\n        \r\n
-    \   EXUR_RecieveEvent:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       \r\n        \r\n         # [HideInInspector] public UdonBehaviour EXUR_EventSource;\r\n
+    \       \r\n         # [HideInInspector] public string EXUR_EventName;\r\n        \r\n
+    \        # [HideInInspector] public string EXUR_EventAdditionalInfo;\r\n        \r\n
+    \        # public void EXUR_RecieveEvent()\r\n    .export EXUR_RecieveEvent\r\n
+    \       \r\n    EXUR_RecieveEvent:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
     \       \r\n         # {\r\n        \r\n         # if (EXUR_EventName != null)\r\n
     \       PUSH, EXUR_EventName\r\n        PUSH, __1_const_intnl_SystemString\r\n
     \       PUSH, __4_intnl_SystemBoolean\r\n        EXTERN, \"SystemString.__op_Inequality__SystemString_SystemString__SystemBoolean\"\r\n
-    \       PUSH, __4_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x000005FC\r\n
+    \       PUSH, __4_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x000007B8\r\n
     \       \r\n         # {\r\n        \r\n         # if (EXUR_EventSource)\r\n        PUSH,
     EXUR_EventSource\r\n        PUSH, __5_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineObject.__op_Implicit__UnityEngineObject__SystemBoolean\"\r\n
     \       PUSH, __5_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000548\r\n
@@ -188,27 +195,61 @@ MonoBehaviour:
     \       COPY\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n        PUSH,
     __7_intnl_SystemString\r\n        COPY # Copy-on-write symbol value dirtied\r\n
     \       PUSH, __4_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x0000027C\r\n
+    \       \r\n         # if (EXUR_EventAdditionalInfo == null)\r\n        PUSH,
+    EXUR_EventAdditionalInfo\r\n        PUSH, __1_const_intnl_SystemString\r\n        PUSH,
+    __6_intnl_SystemBoolean\r\n        EXTERN, \"SystemString.__op_Equality__SystemString_SystemString__SystemBoolean\"\r\n
+    \       PUSH, __6_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000680\r\n
+    \       \r\n         # {\r\n        \r\n         # log($\"EXUR_EventAdditionalInfo
+    is null\");\r\n        PUSH, __7_const_intnl_SystemString\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n
+    \       COPY\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n        PUSH,
+    __1_s_String\r\n        COPY\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n
+    \       PUSH, __5_intnl_SystemString\r\n        COPY # Copy-on-write symbol value
+    dirtied\r\n        PUSH, __5_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x0000027C\r\n
+    \       JUMP, 0x000007B8\r\n        \r\n         # else if (EXUR_EventAdditionalInfo.Equals(\"\"))\r\n
+    \       PUSH, EXUR_EventAdditionalInfo\r\n        PUSH, __0_const_intnl_SystemString\r\n
+    \       PUSH, __7_intnl_SystemBoolean\r\n        EXTERN, \"SystemString.__Equals__SystemString__SystemBoolean\"\r\n
+    \       PUSH, __7_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000704\r\n
+    \       \r\n         # {\r\n        \r\n         # log($\"EXUR_EventAdditionalInfo
+    is Empty\");\r\n        PUSH, __8_const_intnl_SystemString\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n
+    \       COPY\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n        PUSH,
+    __1_s_String\r\n        COPY\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n
+    \       PUSH, __5_intnl_SystemString\r\n        COPY # Copy-on-write symbol value
+    dirtied\r\n        PUSH, __6_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x0000027C\r\n
+    \       JUMP, 0x000007B8\r\n        \r\n         # else\r\n        \r\n         #
+    {\r\n        \r\n         # log($\"'{EXUR_EventAdditionalInfo}'\");\r\n        PUSH,
+    __5_const_intnl_SystemString\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n
+    \       COPY\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n        PUSH,
+    EXUR_EventAdditionalInfo\r\n        PUSH, __5_intnl_SystemString\r\n        EXTERN,
+    \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n        PUSH,
+    __5_intnl_SystemString\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n        COPY\r\n
+    \       PUSH, __0_intnl_interpolatedStr_String\r\n        PUSH, __5_const_intnl_SystemString\r\n
+    \       PUSH, __6_intnl_SystemString\r\n        EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
+    \       PUSH, __6_intnl_SystemString\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n
+    \       COPY\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n        PUSH,
+    __1_s_String\r\n        COPY\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n
+    \       PUSH, __7_intnl_SystemString\r\n        COPY # Copy-on-write symbol value
+    dirtied\r\n        PUSH, __7_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x0000027C\r\n
     \       \r\n         # var t = MonitorTarget.TotalCount;\r\n        PUSH, MonitorTarget\r\n
-    \       PUSH, __7_const_intnl_SystemString\r\n        PUSH, __0_intnl_SystemObject\r\n
+    \       PUSH, __9_const_intnl_SystemString\r\n        PUSH, __0_intnl_SystemObject\r\n
     \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__GetProgramVariable__SystemString__SystemObject\"\r\n
     \       PUSH, __0_intnl_SystemObject\r\n        PUSH, __4_intnl_SystemInt32\r\n
     \       EXTERN, \"SystemConvert.__ToInt32__SystemObject__SystemInt32\"\r\n        PUSH,
     __4_intnl_SystemInt32\r\n        PUSH, __0_t_Int32\r\n        COPY\r\n        \r\n
     \        # var f = MonitorTarget.FreeCount;\r\n        PUSH, MonitorTarget\r\n
-    \       PUSH, __8_const_intnl_SystemString\r\n        PUSH, __1_intnl_SystemObject\r\n
+    \       PUSH, __10_const_intnl_SystemString\r\n        PUSH, __1_intnl_SystemObject\r\n
     \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__GetProgramVariable__SystemString__SystemObject\"\r\n
     \       PUSH, __1_intnl_SystemObject\r\n        PUSH, __6_intnl_SystemInt32\r\n
     \       EXTERN, \"SystemConvert.__ToInt32__SystemObject__SystemInt32\"\r\n        PUSH,
     __6_intnl_SystemInt32\r\n        PUSH, __0_f_Int32\r\n        COPY\r\n        \r\n
     \        # StatusReport.text = $\"Free {f}, Used {t - f}, Total {t}\";\r\n        PUSH,
-    __9_const_intnl_SystemString\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n
+    __11_const_intnl_SystemString\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n
     \       COPY\r\n        PUSH, __0_f_Int32\r\n        PUSH, __5_intnl_SystemString\r\n
     \       EXTERN, \"SystemInt32.__ToString__SystemString\"\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n
     \       PUSH, __5_intnl_SystemString\r\n        PUSH, __6_intnl_SystemString\r\n
     \       EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
     \       PUSH, __6_intnl_SystemString\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n
     \       COPY\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n        PUSH,
-    __10_const_intnl_SystemString\r\n        PUSH, __7_intnl_SystemString\r\n        EXTERN,
+    __12_const_intnl_SystemString\r\n        PUSH, __7_intnl_SystemString\r\n        EXTERN,
     \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n        PUSH,
     __7_intnl_SystemString\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n        COPY\r\n
     \       PUSH, __0_t_Int32\r\n        PUSH, __0_f_Int32\r\n        PUSH, __7_intnl_SystemInt32\r\n
@@ -219,7 +260,7 @@ MonoBehaviour:
     \       EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
     \       PUSH, __9_intnl_SystemString\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n
     \       COPY\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n        PUSH,
-    __11_const_intnl_SystemString\r\n        PUSH, __10_intnl_SystemString\r\n        EXTERN,
+    __13_const_intnl_SystemString\r\n        PUSH, __10_intnl_SystemString\r\n        EXTERN,
     \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n        PUSH,
     __10_intnl_SystemString\r\n        PUSH, __0_intnl_interpolatedStr_String\r\n
     \       COPY\r\n        PUSH, __0_t_Int32\r\n        PUSH, __11_intnl_SystemString\r\n
@@ -442,12 +483,19 @@ MonoBehaviour:
       lineChar: 8
       spanCodeSection: "int nextIdx = 0;\r\n        "
     - startInstruction: 0
-      endInstruction: 7
+      endInstruction: -1
       startSourceChar: 369
-      endSourceChar: 403
+      endSourceChar: 384
       line: 15
       lineChar: 8
-      spanCodeSection: "string addLine(string s)\r\n        "
+      spanCodeSection: string addLine(
+    - startInstruction: 0
+      endInstruction: 7
+      startSourceChar: 384
+      endSourceChar: 403
+      line: 15
+      lineChar: 23
+      spanCodeSection: "string s)\r\n        "
     - startInstruction: 8
       endInstruction: 7
       startSourceChar: 403
@@ -939,12 +987,19 @@ MonoBehaviour:
       lineChar: 23
       spanCodeSection: "Text DebugText;\r\n\r\n        "
     - startInstruction: 628
-      endInstruction: 635
+      endInstruction: 627
       startSourceChar: 914
-      endSourceChar: 942
+      endSourceChar: 923
       line: 36
       lineChar: 8
-      spanCodeSection: "void log(string s)\r\n        "
+      spanCodeSection: void log(
+    - startInstruction: 628
+      endInstruction: 635
+      startSourceChar: 923
+      endSourceChar: 942
+      line: 36
+      lineChar: 17
+      spanCodeSection: "string s)\r\n        "
     - startInstruction: 636
       endInstruction: 635
       startSourceChar: 942
@@ -1308,505 +1363,803 @@ MonoBehaviour:
     - startInstruction: 916
       endInstruction: 915
       startSourceChar: 1704
-      endSourceChar: 1711
+      endSourceChar: 1705
       line: 66
       lineChar: 8
-      spanCodeSection: 'public '
+      spanCodeSection: '['
     - startInstruction: 916
       endInstruction: 915
-      startSourceChar: 1711
-      endSourceChar: 1711
+      startSourceChar: 1705
+      endSourceChar: 1705
       line: 66
-      lineChar: 15
+      lineChar: 9
       spanCodeSection: 
     - startInstruction: 916
       endInstruction: 915
-      startSourceChar: 1711
-      endSourceChar: 1752
+      startSourceChar: 1705
+      endSourceChar: 1729
       line: 66
-      lineChar: 15
+      lineChar: 9
+      spanCodeSection: 'HideInInspector] public '
+    - startInstruction: 916
+      endInstruction: 915
+      startSourceChar: 1729
+      endSourceChar: 1729
+      line: 66
+      lineChar: 33
+      spanCodeSection: 
+    - startInstruction: 916
+      endInstruction: 915
+      startSourceChar: 1729
+      endSourceChar: 1770
+      line: 66
+      lineChar: 33
       spanCodeSection: "UdonBehaviour EXUR_EventSource;\r\n        "
     - startInstruction: 916
       endInstruction: 915
-      startSourceChar: 1752
-      endSourceChar: 1759
+      startSourceChar: 1770
+      endSourceChar: 1771
       line: 67
       lineChar: 8
-      spanCodeSection: 'public '
+      spanCodeSection: '['
     - startInstruction: 916
       endInstruction: 915
-      startSourceChar: 1759
-      endSourceChar: 1759
+      startSourceChar: 1771
+      endSourceChar: 1771
       line: 67
-      lineChar: 15
+      lineChar: 9
       spanCodeSection: 
     - startInstruction: 916
       endInstruction: 915
-      startSourceChar: 1759
-      endSourceChar: 1791
+      startSourceChar: 1771
+      endSourceChar: 1795
       line: 67
-      lineChar: 15
+      lineChar: 9
+      spanCodeSection: 'HideInInspector] public '
+    - startInstruction: 916
+      endInstruction: 915
+      startSourceChar: 1795
+      endSourceChar: 1795
+      line: 67
+      lineChar: 33
+      spanCodeSection: 
+    - startInstruction: 916
+      endInstruction: 915
+      startSourceChar: 1795
+      endSourceChar: 1827
+      line: 67
+      lineChar: 33
       spanCodeSection: "string EXUR_EventName;\r\n        "
     - startInstruction: 916
-      endInstruction: 923
-      startSourceChar: 1791
-      endSourceChar: 1832
+      endInstruction: 915
+      startSourceChar: 1827
+      endSourceChar: 1828
       line: 68
+      lineChar: 8
+      spanCodeSection: '['
+    - startInstruction: 916
+      endInstruction: 915
+      startSourceChar: 1828
+      endSourceChar: 1828
+      line: 68
+      lineChar: 9
+      spanCodeSection: 
+    - startInstruction: 916
+      endInstruction: 915
+      startSourceChar: 1828
+      endSourceChar: 1852
+      line: 68
+      lineChar: 9
+      spanCodeSection: 'HideInInspector] public '
+    - startInstruction: 916
+      endInstruction: 915
+      startSourceChar: 1852
+      endSourceChar: 1852
+      line: 68
+      lineChar: 33
+      spanCodeSection: 
+    - startInstruction: 916
+      endInstruction: 915
+      startSourceChar: 1852
+      endSourceChar: 1894
+      line: 68
+      lineChar: 33
+      spanCodeSection: "string EXUR_EventAdditionalInfo;\r\n        "
+    - startInstruction: 916
+      endInstruction: 923
+      startSourceChar: 1894
+      endSourceChar: 1935
+      line: 69
       lineChar: 8
       spanCodeSection: "public void EXUR_RecieveEvent()\r\n        "
     - startInstruction: 924
       endInstruction: 923
-      startSourceChar: 1832
-      endSourceChar: 1847
-      line: 69
+      startSourceChar: 1935
+      endSourceChar: 1950
+      line: 70
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 924
       endInstruction: 923
-      startSourceChar: 1847
-      endSourceChar: 1851
-      line: 70
+      startSourceChar: 1950
+      endSourceChar: 1954
+      line: 71
       lineChar: 12
       spanCodeSection: if (
     - startInstruction: 924
       endInstruction: 923
-      startSourceChar: 1851
-      endSourceChar: 1851
-      line: 70
+      startSourceChar: 1954
+      endSourceChar: 1954
+      line: 71
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 924
       endInstruction: 923
-      startSourceChar: 1851
-      endSourceChar: 1869
-      line: 70
+      startSourceChar: 1954
+      endSourceChar: 1972
+      line: 71
       lineChar: 16
       spanCodeSection: 'EXUR_EventName != '
     - startInstruction: 924
       endInstruction: 971
-      startSourceChar: 1869
-      endSourceChar: 1888
-      line: 70
+      startSourceChar: 1972
+      endSourceChar: 1991
+      line: 71
       lineChar: 34
       spanCodeSection: "null)\r\n            "
     - startInstruction: 972
       endInstruction: 971
-      startSourceChar: 1888
-      endSourceChar: 1907
-      line: 71
+      startSourceChar: 1991
+      endSourceChar: 2010
+      line: 72
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 972
       endInstruction: 971
-      startSourceChar: 1907
-      endSourceChar: 1911
-      line: 72
+      startSourceChar: 2010
+      endSourceChar: 2014
+      line: 73
       lineChar: 16
       spanCodeSection: if (
     - startInstruction: 972
       endInstruction: 1011
-      startSourceChar: 1911
-      endSourceChar: 1946
-      line: 72
+      startSourceChar: 2014
+      endSourceChar: 2049
+      line: 73
       lineChar: 20
       spanCodeSection: "EXUR_EventSource)\r\n                "
     - startInstruction: 1012
       endInstruction: 1011
-      startSourceChar: 1946
-      endSourceChar: 1969
-      line: 73
+      startSourceChar: 2049
+      endSourceChar: 2072
+      line: 74
       lineChar: 16
       spanCodeSection: "{\r\n                    "
     - startInstruction: 1012
       endInstruction: 1011
-      startSourceChar: 1969
-      endSourceChar: 1969
-      line: 74
+      startSourceChar: 2072
+      endSourceChar: 2072
+      line: 75
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 1012
       endInstruction: 1011
-      startSourceChar: 1969
-      endSourceChar: 1969
-      line: 74
+      startSourceChar: 2072
+      endSourceChar: 2072
+      line: 75
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 1012
       endInstruction: 1011
-      startSourceChar: 1969
-      endSourceChar: 1973
-      line: 74
+      startSourceChar: 2072
+      endSourceChar: 2076
+      line: 75
       lineChar: 20
       spanCodeSection: log(
     - startInstruction: 1012
       endInstruction: 1011
-      startSourceChar: 1973
-      endSourceChar: 1975
-      line: 74
+      startSourceChar: 2076
+      endSourceChar: 2078
+      line: 75
       lineChar: 24
       spanCodeSection: $"
     - startInstruction: 1012
       endInstruction: 1031
-      startSourceChar: 1975
-      endSourceChar: 1976
-      line: 74
+      startSourceChar: 2078
+      endSourceChar: 2079
+      line: 75
       lineChar: 26
       spanCodeSection: ''''
     - startInstruction: 1032
       endInstruction: 1031
-      startSourceChar: 1976
-      endSourceChar: 1977
-      line: 74
+      startSourceChar: 2079
+      endSourceChar: 2080
+      line: 75
       lineChar: 27
       spanCodeSection: '{'
     - startInstruction: 1032
       endInstruction: 1083
-      startSourceChar: 1977
-      endSourceChar: 1992
-      line: 74
+      startSourceChar: 2080
+      endSourceChar: 2095
+      line: 75
       lineChar: 28
       spanCodeSection: EXUR_EventName}
     - startInstruction: 1084
       endInstruction: 1135
-      startSourceChar: 1992
-      endSourceChar: 1998
-      line: 74
+      startSourceChar: 2095
+      endSourceChar: 2101
+      line: 75
       lineChar: 43
       spanCodeSection: ''' on '''
     - startInstruction: 1136
       endInstruction: 1135
-      startSourceChar: 1998
-      endSourceChar: 1999
-      line: 74
+      startSourceChar: 2101
+      endSourceChar: 2102
+      line: 75
       lineChar: 49
       spanCodeSection: '{'
     - startInstruction: 1136
       endInstruction: 1135
-      startSourceChar: 1999
-      endSourceChar: 1999
-      line: 74
+      startSourceChar: 2102
+      endSourceChar: 2102
+      line: 75
       lineChar: 50
       spanCodeSection: 
     - startInstruction: 1136
       endInstruction: 1135
-      startSourceChar: 1999
-      endSourceChar: 1999
-      line: 74
+      startSourceChar: 2102
+      endSourceChar: 2102
+      line: 75
       lineChar: 50
       spanCodeSection: 
     - startInstruction: 1136
       endInstruction: 1135
-      startSourceChar: 1999
-      endSourceChar: 2016
-      line: 74
+      startSourceChar: 2102
+      endSourceChar: 2119
+      line: 75
       lineChar: 50
       spanCodeSection: EXUR_EventSource.
     - startInstruction: 1136
       endInstruction: 1135
-      startSourceChar: 2016
-      endSourceChar: 2027
-      line: 74
+      startSourceChar: 2119
+      endSourceChar: 2130
+      line: 75
       lineChar: 67
       spanCodeSection: gameObject.
     - startInstruction: 1136
       endInstruction: 1235
-      startSourceChar: 2027
-      endSourceChar: 2032
-      line: 74
+      startSourceChar: 2130
+      endSourceChar: 2135
+      line: 75
       lineChar: 78
       spanCodeSection: name}
     - startInstruction: 1236
       endInstruction: 1351
-      startSourceChar: 2032
-      endSourceChar: 2073
-      line: 74
+      startSourceChar: 2135
+      endSourceChar: 2176
+      line: 75
       lineChar: 83
       spanCodeSection: "'\");\r\n                }\r\n                "
     - startInstruction: 1352
       endInstruction: 1351
-      startSourceChar: 2073
-      endSourceChar: 2095
-      line: 76
+      startSourceChar: 2176
+      endSourceChar: 2198
+      line: 77
       lineChar: 16
       spanCodeSection: "else\r\n                "
     - startInstruction: 1352
       endInstruction: 1351
-      startSourceChar: 2095
-      endSourceChar: 2118
-      line: 77
+      startSourceChar: 2198
+      endSourceChar: 2221
+      line: 78
       lineChar: 16
       spanCodeSection: "{\r\n                    "
     - startInstruction: 1352
       endInstruction: 1351
-      startSourceChar: 2118
-      endSourceChar: 2118
-      line: 78
+      startSourceChar: 2221
+      endSourceChar: 2221
+      line: 79
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 1352
       endInstruction: 1351
-      startSourceChar: 2118
-      endSourceChar: 2118
-      line: 78
+      startSourceChar: 2221
+      endSourceChar: 2221
+      line: 79
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 1352
       endInstruction: 1351
-      startSourceChar: 2118
-      endSourceChar: 2122
-      line: 78
+      startSourceChar: 2221
+      endSourceChar: 2225
+      line: 79
       lineChar: 20
       spanCodeSection: log(
     - startInstruction: 1352
       endInstruction: 1351
-      startSourceChar: 2122
-      endSourceChar: 2124
-      line: 78
+      startSourceChar: 2225
+      endSourceChar: 2227
+      line: 79
       lineChar: 24
       spanCodeSection: $"
     - startInstruction: 1352
       endInstruction: 1371
-      startSourceChar: 2124
-      endSourceChar: 2125
-      line: 78
+      startSourceChar: 2227
+      endSourceChar: 2228
+      line: 79
       lineChar: 26
       spanCodeSection: ''''
     - startInstruction: 1372
       endInstruction: 1371
-      startSourceChar: 2125
-      endSourceChar: 2126
-      line: 78
+      startSourceChar: 2228
+      endSourceChar: 2229
+      line: 79
       lineChar: 27
       spanCodeSection: '{'
     - startInstruction: 1372
       endInstruction: 1423
-      startSourceChar: 2126
-      endSourceChar: 2141
-      line: 78
+      startSourceChar: 2229
+      endSourceChar: 2244
+      line: 79
       lineChar: 28
       spanCodeSection: EXUR_EventName}
     - startInstruction: 1424
       endInstruction: 1531
-      startSourceChar: 2141
-      endSourceChar: 2195
-      line: 78
+      startSourceChar: 2244
+      endSourceChar: 2403
+      line: 79
       lineChar: 43
+      spanCodeSection: "'\");\r\n                }\r\n                \r\n                //
+        if ((EXUR_EventAdditionalInfo != null) && !EXUR_EventAdditionalInfo.Equals(\"\"))\r\n
+        \               "
+    - startInstruction: 1532
+      endInstruction: 1531
+      startSourceChar: 2403
+      endSourceChar: 2407
+      line: 83
+      lineChar: 16
+      spanCodeSection: if (
+    - startInstruction: 1532
+      endInstruction: 1531
+      startSourceChar: 2407
+      endSourceChar: 2407
+      line: 83
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 1532
+      endInstruction: 1531
+      startSourceChar: 2407
+      endSourceChar: 2435
+      line: 83
+      lineChar: 20
+      spanCodeSection: 'EXUR_EventAdditionalInfo == '
+    - startInstruction: 1532
+      endInstruction: 1579
+      startSourceChar: 2435
+      endSourceChar: 2458
+      line: 83
+      lineChar: 48
+      spanCodeSection: "null)\r\n                "
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2458
+      endSourceChar: 2481
+      line: 84
+      lineChar: 16
+      spanCodeSection: "{\r\n                    "
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2481
+      endSourceChar: 2481
+      line: 85
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2481
+      endSourceChar: 2481
+      line: 85
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2481
+      endSourceChar: 2485
+      line: 85
+      lineChar: 20
+      spanCodeSection: log(
+    - startInstruction: 1580
+      endInstruction: 1579
+      startSourceChar: 2485
+      endSourceChar: 2487
+      line: 85
+      lineChar: 24
+      spanCodeSection: $"
+    - startInstruction: 1580
+      endInstruction: 1663
+      startSourceChar: 2487
+      endSourceChar: 2559
+      line: 85
+      lineChar: 26
+      spanCodeSection: "EXUR_EventAdditionalInfo is null\");\r\n                }\r\n
+        \               "
+    - startInstruction: 1664
+      endInstruction: 1663
+      startSourceChar: 2559
+      endSourceChar: 2564
+      line: 87
+      lineChar: 16
+      spanCodeSection: 'else '
+    - startInstruction: 1664
+      endInstruction: 1663
+      startSourceChar: 2564
+      endSourceChar: 2568
+      line: 87
+      lineChar: 21
+      spanCodeSection: if (
+    - startInstruction: 1664
+      endInstruction: 1663
+      startSourceChar: 2568
+      endSourceChar: 2568
+      line: 87
+      lineChar: 25
+      spanCodeSection: 
+    - startInstruction: 1664
+      endInstruction: 1663
+      startSourceChar: 2568
+      endSourceChar: 2568
+      line: 87
+      lineChar: 25
+      spanCodeSection: 
+    - startInstruction: 1664
+      endInstruction: 1663
+      startSourceChar: 2568
+      endSourceChar: 2593
+      line: 87
+      lineChar: 25
+      spanCodeSection: EXUR_EventAdditionalInfo.
+    - startInstruction: 1664
+      endInstruction: 1663
+      startSourceChar: 2593
+      endSourceChar: 2600
+      line: 87
+      lineChar: 50
+      spanCodeSection: Equals(
+    - startInstruction: 1664
+      endInstruction: 1711
+      startSourceChar: 2600
+      endSourceChar: 2622
+      line: 87
+      lineChar: 57
+      spanCodeSection: "\"\"))\r\n                "
+    - startInstruction: 1712
+      endInstruction: 1711
+      startSourceChar: 2622
+      endSourceChar: 2645
+      line: 88
+      lineChar: 16
+      spanCodeSection: "{\r\n                    "
+    - startInstruction: 1712
+      endInstruction: 1711
+      startSourceChar: 2645
+      endSourceChar: 2645
+      line: 89
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 1712
+      endInstruction: 1711
+      startSourceChar: 2645
+      endSourceChar: 2645
+      line: 89
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 1712
+      endInstruction: 1711
+      startSourceChar: 2645
+      endSourceChar: 2649
+      line: 89
+      lineChar: 20
+      spanCodeSection: log(
+    - startInstruction: 1712
+      endInstruction: 1711
+      startSourceChar: 2649
+      endSourceChar: 2651
+      line: 89
+      lineChar: 24
+      spanCodeSection: $"
+    - startInstruction: 1712
+      endInstruction: 1795
+      startSourceChar: 2651
+      endSourceChar: 2724
+      line: 89
+      lineChar: 26
+      spanCodeSection: "EXUR_EventAdditionalInfo is Empty\");\r\n                }\r\n
+        \               "
+    - startInstruction: 1796
+      endInstruction: 1795
+      startSourceChar: 2724
+      endSourceChar: 2746
+      line: 91
+      lineChar: 16
+      spanCodeSection: "else\r\n                "
+    - startInstruction: 1796
+      endInstruction: 1795
+      startSourceChar: 2746
+      endSourceChar: 2769
+      line: 92
+      lineChar: 16
+      spanCodeSection: "{\r\n                    "
+    - startInstruction: 1796
+      endInstruction: 1795
+      startSourceChar: 2769
+      endSourceChar: 2769
+      line: 93
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 1796
+      endInstruction: 1795
+      startSourceChar: 2769
+      endSourceChar: 2769
+      line: 93
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 1796
+      endInstruction: 1795
+      startSourceChar: 2769
+      endSourceChar: 2773
+      line: 93
+      lineChar: 20
+      spanCodeSection: log(
+    - startInstruction: 1796
+      endInstruction: 1795
+      startSourceChar: 2773
+      endSourceChar: 2775
+      line: 93
+      lineChar: 24
+      spanCodeSection: $"
+    - startInstruction: 1796
+      endInstruction: 1815
+      startSourceChar: 2775
+      endSourceChar: 2776
+      line: 93
+      lineChar: 26
+      spanCodeSection: ''''
+    - startInstruction: 1816
+      endInstruction: 1815
+      startSourceChar: 2776
+      endSourceChar: 2777
+      line: 93
+      lineChar: 27
+      spanCodeSection: '{'
+    - startInstruction: 1816
+      endInstruction: 1867
+      startSourceChar: 2777
+      endSourceChar: 2802
+      line: 93
+      lineChar: 28
+      spanCodeSection: EXUR_EventAdditionalInfo}
+    - startInstruction: 1868
+      endInstruction: 1975
+      startSourceChar: 2802
+      endSourceChar: 2856
+      line: 93
+      lineChar: 53
       spanCodeSection: "'\");\r\n                }\r\n            }\r\n\r\n            "
-    - startInstruction: 1532
-      endInstruction: 1531
-      startSourceChar: 2195
-      endSourceChar: 2195
-      line: 82
+    - startInstruction: 1976
+      endInstruction: 1975
+      startSourceChar: 2856
+      endSourceChar: 2856
+      line: 97
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 1532
-      endInstruction: 1531
-      startSourceChar: 2195
-      endSourceChar: 2195
-      line: 82
+    - startInstruction: 1976
+      endInstruction: 1975
+      startSourceChar: 2856
+      endSourceChar: 2856
+      line: 97
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 1532
-      endInstruction: 1531
-      startSourceChar: 2195
-      endSourceChar: 2201
-      line: 82
+    - startInstruction: 1976
+      endInstruction: 1975
+      startSourceChar: 2856
+      endSourceChar: 2862
+      line: 97
       lineChar: 12
       spanCodeSection: 'var t '
-    - startInstruction: 1532
-      endInstruction: 1531
-      startSourceChar: 2201
-      endSourceChar: 2203
-      line: 82
+    - startInstruction: 1976
+      endInstruction: 1975
+      startSourceChar: 2862
+      endSourceChar: 2864
+      line: 97
       lineChar: 18
       spanCodeSection: '= '
-    - startInstruction: 1532
-      endInstruction: 1531
-      startSourceChar: 2203
-      endSourceChar: 2203
-      line: 82
+    - startInstruction: 1976
+      endInstruction: 1975
+      startSourceChar: 2864
+      endSourceChar: 2864
+      line: 97
       lineChar: 20
       spanCodeSection: 
-    - startInstruction: 1532
-      endInstruction: 1531
-      startSourceChar: 2203
-      endSourceChar: 2217
-      line: 82
+    - startInstruction: 1976
+      endInstruction: 1975
+      startSourceChar: 2864
+      endSourceChar: 2878
+      line: 97
       lineChar: 20
       spanCodeSection: MonitorTarget.
-    - startInstruction: 1532
-      endInstruction: 1607
-      startSourceChar: 2217
-      endSourceChar: 2242
-      line: 82
+    - startInstruction: 1976
+      endInstruction: 2051
+      startSourceChar: 2878
+      endSourceChar: 2903
+      line: 97
       lineChar: 34
       spanCodeSection: "TotalCount;\r\n            "
-    - startInstruction: 1608
-      endInstruction: 1607
-      startSourceChar: 2242
-      endSourceChar: 2242
-      line: 83
+    - startInstruction: 2052
+      endInstruction: 2051
+      startSourceChar: 2903
+      endSourceChar: 2903
+      line: 98
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 1608
-      endInstruction: 1607
-      startSourceChar: 2242
-      endSourceChar: 2242
-      line: 83
+    - startInstruction: 2052
+      endInstruction: 2051
+      startSourceChar: 2903
+      endSourceChar: 2903
+      line: 98
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 1608
-      endInstruction: 1607
-      startSourceChar: 2242
-      endSourceChar: 2248
-      line: 83
+    - startInstruction: 2052
+      endInstruction: 2051
+      startSourceChar: 2903
+      endSourceChar: 2909
+      line: 98
       lineChar: 12
       spanCodeSection: 'var f '
-    - startInstruction: 1608
-      endInstruction: 1607
-      startSourceChar: 2248
-      endSourceChar: 2250
-      line: 83
+    - startInstruction: 2052
+      endInstruction: 2051
+      startSourceChar: 2909
+      endSourceChar: 2911
+      line: 98
       lineChar: 18
       spanCodeSection: '= '
-    - startInstruction: 1608
-      endInstruction: 1607
-      startSourceChar: 2250
-      endSourceChar: 2250
-      line: 83
+    - startInstruction: 2052
+      endInstruction: 2051
+      startSourceChar: 2911
+      endSourceChar: 2911
+      line: 98
       lineChar: 20
       spanCodeSection: 
-    - startInstruction: 1608
-      endInstruction: 1607
-      startSourceChar: 2250
-      endSourceChar: 2264
-      line: 83
+    - startInstruction: 2052
+      endInstruction: 2051
+      startSourceChar: 2911
+      endSourceChar: 2925
+      line: 98
       lineChar: 20
       spanCodeSection: MonitorTarget.
-    - startInstruction: 1608
-      endInstruction: 1683
-      startSourceChar: 2264
-      endSourceChar: 2288
-      line: 83
+    - startInstruction: 2052
+      endInstruction: 2127
+      startSourceChar: 2925
+      endSourceChar: 2949
+      line: 98
       lineChar: 34
       spanCodeSection: "FreeCount;\r\n            "
-    - startInstruction: 1684
-      endInstruction: 1683
-      startSourceChar: 2288
-      endSourceChar: 2288
-      line: 84
+    - startInstruction: 2128
+      endInstruction: 2127
+      startSourceChar: 2949
+      endSourceChar: 2949
+      line: 99
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 1684
-      endInstruction: 1683
-      startSourceChar: 2288
-      endSourceChar: 2288
-      line: 84
+    - startInstruction: 2128
+      endInstruction: 2127
+      startSourceChar: 2949
+      endSourceChar: 2949
+      line: 99
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 1684
-      endInstruction: 1683
-      startSourceChar: 2288
-      endSourceChar: 2288
-      line: 84
+    - startInstruction: 2128
+      endInstruction: 2127
+      startSourceChar: 2949
+      endSourceChar: 2949
+      line: 99
       lineChar: 12
       spanCodeSection: 
-    - startInstruction: 1684
-      endInstruction: 1683
-      startSourceChar: 2288
-      endSourceChar: 2301
-      line: 84
+    - startInstruction: 2128
+      endInstruction: 2127
+      startSourceChar: 2949
+      endSourceChar: 2962
+      line: 99
       lineChar: 12
       spanCodeSection: StatusReport.
-    - startInstruction: 1684
-      endInstruction: 1683
-      startSourceChar: 2301
-      endSourceChar: 2308
-      line: 84
+    - startInstruction: 2128
+      endInstruction: 2127
+      startSourceChar: 2962
+      endSourceChar: 2969
+      line: 99
       lineChar: 25
       spanCodeSection: 'text = '
-    - startInstruction: 1684
-      endInstruction: 1683
-      startSourceChar: 2308
-      endSourceChar: 2310
-      line: 84
+    - startInstruction: 2128
+      endInstruction: 2127
+      startSourceChar: 2969
+      endSourceChar: 2971
+      line: 99
       lineChar: 32
       spanCodeSection: $"
-    - startInstruction: 1684
-      endInstruction: 1703
-      startSourceChar: 2310
-      endSourceChar: 2315
-      line: 84
+    - startInstruction: 2128
+      endInstruction: 2147
+      startSourceChar: 2971
+      endSourceChar: 2976
+      line: 99
       lineChar: 34
       spanCodeSection: 'Free '
-    - startInstruction: 1704
-      endInstruction: 1703
-      startSourceChar: 2315
-      endSourceChar: 2316
-      line: 84
+    - startInstruction: 2148
+      endInstruction: 2147
+      startSourceChar: 2976
+      endSourceChar: 2977
+      line: 99
       lineChar: 39
       spanCodeSection: '{'
-    - startInstruction: 1704
-      endInstruction: 1779
-      startSourceChar: 2316
-      endSourceChar: 2318
-      line: 84
+    - startInstruction: 2148
+      endInstruction: 2223
+      startSourceChar: 2977
+      endSourceChar: 2979
+      line: 99
       lineChar: 40
       spanCodeSection: f}
-    - startInstruction: 1780
-      endInstruction: 1831
-      startSourceChar: 2318
-      endSourceChar: 2325
-      line: 84
+    - startInstruction: 2224
+      endInstruction: 2275
+      startSourceChar: 2979
+      endSourceChar: 2986
+      line: 99
       lineChar: 42
       spanCodeSection: ', Used '
-    - startInstruction: 1832
-      endInstruction: 1831
-      startSourceChar: 2325
-      endSourceChar: 2326
-      line: 84
+    - startInstruction: 2276
+      endInstruction: 2275
+      startSourceChar: 2986
+      endSourceChar: 2987
+      line: 99
       lineChar: 49
       spanCodeSection: '{'
-    - startInstruction: 1832
-      endInstruction: 1831
-      startSourceChar: 2326
-      endSourceChar: 2326
-      line: 84
+    - startInstruction: 2276
+      endInstruction: 2275
+      startSourceChar: 2987
+      endSourceChar: 2987
+      line: 99
       lineChar: 50
       spanCodeSection: 
-    - startInstruction: 1832
-      endInstruction: 1831
-      startSourceChar: 2326
-      endSourceChar: 2330
-      line: 84
+    - startInstruction: 2276
+      endInstruction: 2275
+      startSourceChar: 2987
+      endSourceChar: 2991
+      line: 99
       lineChar: 50
       spanCodeSection: 't - '
-    - startInstruction: 1832
-      endInstruction: 1939
-      startSourceChar: 2330
-      endSourceChar: 2332
-      line: 84
+    - startInstruction: 2276
+      endInstruction: 2383
+      startSourceChar: 2991
+      endSourceChar: 2993
+      line: 99
       lineChar: 54
       spanCodeSection: f}
-    - startInstruction: 1940
-      endInstruction: 1991
-      startSourceChar: 2332
-      endSourceChar: 2340
-      line: 84
+    - startInstruction: 2384
+      endInstruction: 2435
+      startSourceChar: 2993
+      endSourceChar: 3001
+      line: 99
       lineChar: 56
       spanCodeSection: ', Total '
-    - startInstruction: 1992
-      endInstruction: 1991
-      startSourceChar: 2340
-      endSourceChar: 2341
-      line: 84
+    - startInstruction: 2436
+      endInstruction: 2435
+      startSourceChar: 3001
+      endSourceChar: 3002
+      line: 99
       lineChar: 64
       spanCodeSection: '{'
-    - startInstruction: 1992
-      endInstruction: 1992
-      startSourceChar: 2341
-      endSourceChar: 2341
-      line: 84
+    - startInstruction: 2436
+      endInstruction: 2436
+      startSourceChar: 3002
+      endSourceChar: 3002
+      line: 99
       lineChar: 65
       spanCodeSection: 
   hasInteractEvent: 0
@@ -1833,7 +2186,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 8
+      Data: 9
     - Name: 
       Entry: 7
       Data: 
@@ -2265,7 +2618,13 @@ MonoBehaviour:
       Data: 30|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 31|UnityEngine.HideInInspector, UnityEngine.CoreModule
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -2289,13 +2648,13 @@ MonoBehaviour:
       Data: EXUR_EventName
     - Name: $v
       Entry: 7
-      Data: 31|UdonSharp.FieldDefinition, UdonSharp.Editor
+      Data: 32|UdonSharp.FieldDefinition, UdonSharp.Editor
     - Name: fieldSymbol
       Entry: 7
-      Data: 32|UdonSharp.SymbolDefinition, UdonSharp.Editor
+      Data: 33|UdonSharp.SymbolDefinition, UdonSharp.Editor
     - Name: internalType
       Entry: 7
-      Data: 33|System.RuntimeType, mscorlib
+      Data: 34|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: System.String, mscorlib
@@ -2325,10 +2684,79 @@ MonoBehaviour:
       Data: 
     - Name: fieldAttributes
       Entry: 7
-      Data: 34|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+      Data: 35|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 36|UnityEngine.HideInInspector, UnityEngine.CoreModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: EXUR_EventAdditionalInfo
+    - Name: $v
+      Entry: 7
+      Data: 37|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 38|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 34
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
       Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemString
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: EXUR_EventAdditionalInfo
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: EXUR_EventAdditionalInfo
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 39|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 40|UnityEngine.HideInInspector, UnityEngine.CoreModule
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
