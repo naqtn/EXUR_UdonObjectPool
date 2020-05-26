@@ -25,7 +25,7 @@ So EXUR should accept both. (?)
 
 ### stress test
 * late join with many objects
-    * delay on initialization based on index amoung children
+    * delay on initialization based on transform.GetSiblingIndex()
 
 
 More samples
@@ -95,7 +95,7 @@ Manual:
     * tag is a string
     * tag is used to identify objects
     * string.Empty means "not used". it can not be used usual value. (null is also)
-    * brother UdonBehavior must have certain variables
+    * Sibling UdonBehavior must have certain variables
     * it try to preserve and use identical object if possible 
     * purge by Least recently used (LRU) algorithm
     * user can update EXUR_LastUsedTime

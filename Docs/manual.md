@@ -106,10 +106,10 @@ This is internal specification so it will be changed.
 |                    | Multiple objects have identical tag          |
 |                    | localTagBuffer is not clear though it's free |
 | UserProgramError:  |                                              |
-|                    | specified tag is null                        |
-|                    | specified tag is empty                       |
-|                    | No Brother UdonBehaviour                     |
-|                    | Does not have EXUR_Tag variable              |
+|                    | Specified tag is null                        |
+|                    | Specified tag is empty                       |
+|                    | No sibling UdonBehaviour (for Tag)           |
+|                    | Does not have EXUR_Tag variable variable     |
 |                    | Does not have EXUR_LastUsedTime variable     |
 
 

@@ -115,7 +115,7 @@ namespace Iwsd.EXUR {
             {
                 var obj = objects[i];
                 if (obj.IsFreeOwned()
-                    && (!checkEmptyTag || IsBrotherHavingValue(obj, "EXUR_Tag", "")))
+                    && (!checkEmptyTag || IsSiblingHavingValue(obj, "EXUR_Tag", "")))
                 {
                     return obj;
                 }
@@ -133,7 +133,7 @@ namespace Iwsd.EXUR {
             {
                 var obj = objects[(i + randOffset) % n];
                 if (obj.IsFreeNotOwned()
-                    && (!checkEmptyTag || IsBrotherHavingValue(obj, "EXUR_Tag", "")))
+                    && (!checkEmptyTag || IsSiblingHavingValue(obj, "EXUR_Tag", "")))
                 {
                     return obj;
                 }
@@ -184,44 +184,44 @@ namespace Iwsd.EXUR {
             SendEvent(null, EVENT_NAME_MANAGER_FAILURE, info);
         }
 
-        UdonBehaviour GetBrotherBehavior(Handler handler)
+        UdonBehaviour GetSiblingBehavior(Handler handler)
         {
-            var brothers = handler.transform.GetComponents(typeof(UdonBehaviour));
-            if (brothers.Length < 2)
+            var siblings = handler.transform.GetComponents(typeof(UdonBehaviour));
+            if (siblings.Length < 2)
             {
-                ReportFailure($"{FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}: No brother UdonBehaviour on '{handler.gameObject.name}'");
+                ReportFailure($"{FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}: No sibling UdonBehaviour on '{handler.gameObject.name}'");
                 return null;
             }
 
-            return (UdonBehaviour)brothers[1];
+            return (UdonBehaviour)siblings[1];
         }
 
-        bool IsBrotherHavingValue(Handler handler, string name, object value)
+        bool IsSiblingHavingValue(Handler handler, string name, object value)
         {
-            var brother = GetBrotherBehavior(handler);
-            if (brother)
+            var sibling = GetSiblingBehavior(handler);
+            if (sibling)
             {
-                var v = brother.GetProgramVariable(name);
+                var v = sibling.GetProgramVariable(name);
                 return value.Equals(v);
             }
             return false;
         }
 
-        void SetValueToBrother(Handler handler, string name, object value)
+        void SetValueToSibling(Handler handler, string name, object value)
         {
-            var brother = GetBrotherBehavior(handler);
-            if (brother)
+            var sibling = GetSiblingBehavior(handler);
+            if (sibling)
             {
-                brother.SetProgramVariable(name, value);
+                sibling.SetProgramVariable(name, value);
             }
         }
 
-        object GetValueFromBrother(Handler handler, string name)
+        object GetValueFromSibling(Handler handler, string name)
         {
-            var brother = GetBrotherBehavior(handler);
-            if (brother)
+            var sibling = GetSiblingBehavior(handler);
+            if (sibling)
             {
-                return brother.GetProgramVariable(name);
+                return sibling.GetProgramVariable(name);
             }
             return null;
         }
@@ -262,7 +262,7 @@ namespace Iwsd.EXUR {
         }
         
         // Select free object with Least recently used (LRU) algorithm.
-        // This expects 1st brother UdonBehaviour holds GetServerTimeInMilliseconds in a variable named EXUR_LastUsedTime.
+        // This expects 1st sibling UdonBehaviour holds GetServerTimeInMilliseconds in a variable named EXUR_LastUsedTime.
         // This returns error string. null for successful case.
         // tag is optional.
         void RecycleLeastRecentlyUsed(string newtag)
@@ -275,7 +275,7 @@ namespace Iwsd.EXUR {
                 var obj = objects[i];
                 if (obj.IsFree())
                 {
-                    var to = GetValueFromBrother(obj, "EXUR_LastUsedTime");
+                    var to = GetValueFromSibling(obj, "EXUR_LastUsedTime");
                     if (to == null)
                     {
                         ReportFailure($"{FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}: Does not have EXUR_LastUsedTime variable");
@@ -323,7 +323,7 @@ namespace Iwsd.EXUR {
             var n = objects.Length;
             for (int i = 0; i < n; i++) {
                 var obj = objects[i];
-                if (IsBrotherHavingValue(obj, "EXUR_Tag", tag))
+                if (IsSiblingHavingValue(obj, "EXUR_Tag", tag))
                 {
                     foundCount++;
                     targetHandler = obj;
@@ -377,12 +377,12 @@ namespace Iwsd.EXUR {
                 // if (tag != null)
                 if (!tag.Equals(string.Empty))
                 {
-                    var brother = GetBrotherBehavior(eventSource);
-                    if (brother)
+                    var sibling = GetSiblingBehavior(eventSource);
+                    if (sibling)
                     {
                         var time = Networking.GetServerTimeInMilliseconds();
-                        brother.SetProgramVariable("EXUR_Tag", tag);
-                        brother.SetProgramVariable("EXUR_LastUsedTime", time);
+                        sibling.SetProgramVariable("EXUR_Tag", tag);
+                        sibling.SetProgramVariable("EXUR_LastUsedTime", time);
                         debug($"set tag={tag}, time={time} name='{eventSource.gameObject.name}'");
                     }
                     eventSource.localTagBuffer = null;
