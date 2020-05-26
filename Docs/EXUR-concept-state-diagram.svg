@@ -10,7 +10,7 @@
    inkscape:export-ydpi="200"
    inkscape:export-xdpi="200"
    inkscape:export-filename="D:\prj\VRChat\work\EXUR_UdonObjectPool\EXUR_UdonObjectPool\Docs\g33522.png"
-   sodipodi:docname="EXUR-concept-state-diagram-recreated.svg"
+   sodipodi:docname="EXUR-concept-state-diagram.svg"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    id="svg23106"
    version="1.1"
@@ -19,6 +19,157 @@
    width="210mm">
   <defs
      id="defs23100">
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5486"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path5484" />
+    </marker>
+    <marker
+       inkscape:collect="always"
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker4916"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4914"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="EmptyDiamondS"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="EmptyDiamondS">
+      <path
+         transform="scale(0.2)"
+         style="fill-rule:evenodd;fill:#ffffff;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,-7.0710768 L -7.0710894,0 L 0,7.0710589 L 7.0710462,0 L 0,-7.0710768 z "
+         id="path2382" />
+    </marker>
+    <marker
+       inkscape:collect="always"
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker3800"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path3798" />
+    </marker>
+    <marker
+       inkscape:stockid="EmptyDiamondLend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker3790"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path3788"
+         d="M 0,-7.0710768 L -7.0710894,0 L 0,7.0710589 L 7.0710462,0 L 0,-7.0710768 z "
+         style="fill-rule:evenodd;fill:#ffffff;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.8) translate(-7,0)" />
+    </marker>
+    <marker
+       inkscape:collect="always"
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="EmptyDiamondLend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="EmptyDiamondLend">
+      <path
+         transform="scale(0.8) translate(-7,0)"
+         style="fill-rule:evenodd;fill:#ffffff;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,-7.0710768 L -7.0710894,0 L 0,7.0710589 L 7.0710462,0 L 0,-7.0710768 z "
+         id="path2394" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="EmptyDiamondMend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="EmptyDiamondMend">
+      <path
+         transform="scale(0.4) translate(-6.5,0)"
+         style="fill-rule:evenodd;fill:#ffffff;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,-7.0710768 L -7.0710894,0 L 0,7.0710589 L 7.0710462,0 L 0,-7.0710768 z "
+         id="path2397" />
+    </marker>
+    <marker
+       inkscape:collect="always"
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1847"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1845"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:collect="always"
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker3041"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path3039" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker2517"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path2515" />
+    </marker>
     <marker
        inkscape:stockid="Arrow2Lend"
        orient="auto"
@@ -858,8 +1009,40 @@
          transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
          inkscape:connector-curvature="0" />
     </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker6775-5-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path6773-7-4" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1686-64"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path1684-6"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
   </defs>
   <sodipodi:namedview
+     inkscape:snap-grids="true"
      inkscape:snap-global="false"
      inkscape:window-maximized="1"
      inkscape:window-y="-8"
@@ -870,15 +1053,19 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="-586.6691"
-     inkscape:cx="1573.4155"
-     inkscape:zoom="0.35"
+     inkscape:cy="-669.22645"
+     inkscape:cx="1705.1472"
+     inkscape:zoom="0.49497474"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
      bordercolor="#666666"
      pagecolor="#ffffff"
-     id="base" />
+     id="base">
+    <inkscape:grid
+       id="grid3580"
+       type="xygrid" />
+  </sodipodi:namedview>
   <metadata
      id="metadata23103">
     <rdf:RDF>
@@ -2309,46 +2496,6 @@
          id="tspan26237"
          sodipodi:role="line">StoppedUsingByOthers</tspan></text>
     <path
-       sodipodi:type="star"
-       style="fill:#00b3c1;fill-opacity:0.791165;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
-       id="path26256"
-       sodipodi:sides="5"
-       sodipodi:cx="521.76935"
-       sodipodi:cy="-106.7553"
-       sodipodi:r1="7.1015277"
-       sodipodi:r2="2.9901266"
-       sodipodi:arg1="0.34555558"
-       sodipodi:arg2="0.97387411"
-       inkscape:flatsided="false"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 528.45109,-104.34988 -5.00099,0.0676 -1.90368,4.624985 -1.6097,-4.735325 -4.98689,-0.38131 4.00615,-2.99421 -1.1784,-4.86064 4.08563,2.8848 4.2586,-2.62274 -1.48108,4.77712 z"
-       inkscape:transform-center-x="0.049601545"
-       inkscape:transform-center-y="0.41603127"
-       transform="matrix(0.72004359,0,0,0.67947093,131.22803,-272.87315)" />
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:0.632815;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
-       id="rect26258"
-       width="124.99895"
-       height="13.207361"
-       x="510.05869"
-       y="-349.22305"
-       inkscape:export-xdpi="200"
-       inkscape:export-ydpi="200" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="514.29999"
-       y="-340.82397"
-       id="text26262"
-       inkscape:export-xdpi="200"
-       inkscape:export-ydpi="200"><tspan
-         sodipodi:role="line"
-         id="tspan26260"
-         x="514.29999"
-         y="-340.82397"
-         style="stroke-width:0.264583">Should be refined (rename etc.)</tspan></text>
-    <path
        inkscape:connector-curvature="3"
        inkscape:connector-type="orthogonal"
        id="path26957"
@@ -2439,7 +2586,7 @@
        inkscape:export-ydpi="200"
        inkscape:export-xdpi="200"
        id="g33522"
-       transform="translate(19.243409,7.4835466)">
+       transform="translate(-264.06229,6.4144685)">
       <rect
          style="fill:#fdfded;fill-opacity:1;stroke-width:2.35728;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
          id="rect4097-9"
@@ -2786,5 +2933,505 @@
            inkscape:connector-curvature="3" />
       </g>
     </g>
+    <g
+       id="g487"
+       transform="translate(73.76639,31.922304)">
+      <rect
+         style="fill:#dde9af;stroke-width:0.696943;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect1530-3"
+         width="71.895493"
+         height="24.856064"
+         x="767.46448"
+         y="-89.936203" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="781.32159"
+         y="-74.535309"
+         id="text1536-1"><tspan
+           y="-74.535309"
+           x="781.32159"
+           id="tspan3140-6"
+           sodipodi:role="line">Using: true</tspan><tspan
+           y="-69.243645"
+           x="781.32159"
+           id="tspan3142-7"
+           sodipodi:role="line">Has Ownership: true</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="783.94965"
+         y="-82.079742"
+         id="text1540-1"><tspan
+           y="-82.079742"
+           x="783.94965"
+           id="tspan1538-0"
+           sodipodi:role="line">You can use it</tspan></text>
+    </g>
+    <g
+       id="g602"
+       transform="translate(73.76639,9.6217039)">
+      <rect
+         y="-148.20096"
+         x="766.92993"
+         height="24.856064"
+         width="71.895493"
+         id="rect447"
+         style="fill:#dde9af;stroke-width:0.696943;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         id="text453"
+         y="-132.80006"
+         x="773.48932"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           sodipodi:role="line"
+           id="tspan449"
+           x="773.48932"
+           y="-132.80006">Using: yes and no</tspan><tspan
+           sodipodi:role="line"
+           id="tspan451"
+           x="773.48932"
+           y="-127.5084">Has Ownership: yes and no</tspan></text>
+      <text
+         id="text457"
+         y="-140.3445"
+         x="785.0321"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           sodipodi:role="line"
+           id="tspan455"
+           x="785.0321"
+           y="-140.3445">Do not touch</tspan></text>
+    </g>
+    <circle
+       inkscape:export-ydpi="200"
+       inkscape:export-xdpi="200"
+       style="vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.176519;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       id="circle531"
+       cx="124.77456"
+       cy="817.60571"
+       r="2.4117405"
+       transform="rotate(-90)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="811.64319"
+       y="-131.17885"
+       id="text9880-6"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         x="811.64319"
+         y="-131.17885"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         id="tspan9882-7">Initial</tspan></text>
+    <text
+       inkscape:export-ydpi="200"
+       inkscape:export-xdpi="200"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="733.146"
+       y="-173.52031"
+       id="text588"><tspan
+         y="-173.52031"
+         x="733.146"
+         id="tspan586"
+         sodipodi:role="line"
+         style="stroke-width:0.264583">Simplified diagram</tspan></text>
+    <path
+       inkscape:export-ydpi="200"
+       inkscape:export-xdpi="200"
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.57467;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker1686-64);stop-color:#000000;stop-opacity:1"
+       d="m 866.21348,-109.81216 v 44.811724"
+       id="path1552-7"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="3" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#f800fa;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       x="444.10568"
+       y="-79.359238"
+       id="text21226-9"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"
+       transform="translate(340.9003,5.6370239)"><tspan
+         sodipodi:role="line"
+         id="tspan21224-8"
+         x="444.10568"
+         y="-79.359238"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#f800fa;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"><tspan
+   style="fill:#000000"
+   id="tspan3535">then, your </tspan>EXUR_Reinitialize</tspan><tspan
+         sodipodi:role="line"
+         x="444.10568"
+         y="-73.185623"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+         id="tspan3537">is called if succeeded</tspan></text>
+    <text
+       transform="translate(461.85268,5.6370239)"
+       inkscape:export-ydpi="200"
+       inkscape:export-xdpi="200"
+       id="text2505"
+       y="-79.359238"
+       x="444.10568"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#f800fa;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#f800fa;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+         y="-79.359238"
+         x="444.10568"
+         id="tspan2503"
+         sodipodi:role="line"><tspan
+   style="fill:#000000"
+   id="tspan3543">then, your </tspan>EXUR_Finalize</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+         y="-73.185623"
+         x="444.10568"
+         sodipodi:role="line"
+         id="tspan3541">will be called</tspan></text>
+    <text
+       inkscape:export-ydpi="200"
+       inkscape:export-xdpi="200"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="783.66876"
+       y="-98.947998"
+       id="text3003"><tspan
+         y="-98.947998"
+         x="783.66876"
+         id="tspan3001"
+         sodipodi:role="line"
+         style="stroke-width:0.264583">SendCustomEvent</tspan><tspan
+         y="-91.892441"
+         x="783.66876"
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         id="tspan3009"> &quot;EXUR_AcquireObject&quot;</tspan><tspan
+         y="-84.836899"
+         x="783.66876"
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         id="tspan3533">to EXUR Manager</tspan></text>
+    <text
+       id="text3007"
+       y="-98.759026"
+       x="905.43286"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         style="stroke-width:0.264583"
+         sodipodi:role="line"
+         id="tspan3005"
+         x="905.43286"
+         y="-98.759026">SendCustomEvent</tspan><tspan
+         style="stroke-width:0.264583"
+         sodipodi:role="line"
+         x="905.43286"
+         y="-91.703476"
+         id="tspan3011"> &quot;EXUR_ReleaseObject&quot;</tspan><tspan
+         style="stroke-width:0.264583"
+         sodipodi:role="line"
+         x="905.43286"
+         y="-84.647919"
+         id="tspan3539">to EXUR Handler</tspan></text>
+    <path
+       inkscape:connector-curvature="3"
+       inkscape:connector-type="polyline"
+       id="path3037"
+       d="M 893.04979,-64.039766 V -108.85148"
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.57467;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker3041);stop-color:#000000;stop-opacity:1"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <g
+       id="g1691"
+       transform="translate(89.802561,-186.16964)">
+      <rect
+         y="-89.936203"
+         x="767.46448"
+         height="38.486809"
+         width="71.895493"
+         id="rect1637"
+         style="fill:#dde9af;stroke-width:0.867235;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         id="text1643"
+         y="-64.379066"
+         x="785.06335"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           id="tspan1655"
+           sodipodi:role="line"
+           x="785.06335"
+           y="-64.379066">EXUR.Manager</tspan><tspan
+           id="tspan1683"
+           sodipodi:role="line"
+           x="785.06335"
+           y="-59.087402">  UdonBehaviour</tspan></text>
+      <text
+         id="text1647"
+         y="-81.277931"
+         x="769.24982"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           id="tspan1651"
+           sodipodi:role="line"
+           x="769.24982"
+           y="-81.277931">Object pool GameObject</tspan></text>
+    </g>
+    <text
+       id="text588-0"
+       y="-298.58286"
+       x="729.26697"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         style="stroke-width:0.264583"
+         sodipodi:role="line"
+         id="tspan586-0"
+         x="729.26697"
+         y="-298.58286">Basic Structure</tspan></text>
+    <g
+       transform="translate(121.37836,-183.89717)"
+       id="g1801">
+      <rect
+         style="fill:#dde9af;stroke:#2f7345;stroke-width:0.956037;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect1763"
+         width="71.895493"
+         height="46.772163"
+         x="895.21936"
+         y="-71.37738" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="912.55096"
+         y="-51.165634"
+         id="text1769"><tspan
+           y="-51.165634"
+           x="912.55096"
+           id="tspan1765"
+           sodipodi:role="line">EXUR.Handler</tspan><tspan
+           y="-45.87397"
+           x="912.55096"
+           sodipodi:role="line"
+           id="tspan1767"> UdonBehaviour</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="903.95374"
+         y="-62.719112"
+         id="text1773"><tspan
+           y="-62.719112"
+           x="903.95374"
+           sodipodi:role="line"
+           id="tspan1771">Pooled GameObject</tspan></text>
+      <text
+         id="text1779"
+         y="-35.931271"
+         x="915.22363"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           sodipodi:role="line"
+           id="tspan1775"
+           x="915.22363"
+           y="-35.931271">user program</tspan><tspan
+           id="tspan1777"
+           sodipodi:role="line"
+           x="915.22363"
+           y="-30.639608"> UdonBehaviour</tspan></text>
+    </g>
+    <g
+       transform="translate(106.9458,-197.26065)"
+       id="g1821">
+      <rect
+         y="-71.37738"
+         x="895.21936"
+         height="46.772163"
+         width="71.895493"
+         id="rect1803"
+         style="fill:#dde9af;stroke:#2f7345;stroke-width:0.956037;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text1809"
+         y="-51.165634"
+         x="912.55096"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           sodipodi:role="line"
+           id="tspan1805"
+           x="912.55096"
+           y="-51.165634">EXUR.Handler</tspan><tspan
+           id="tspan1807"
+           sodipodi:role="line"
+           x="912.55096"
+           y="-45.87397"> UdonBehaviour</tspan></text>
+      <text
+         id="text1813"
+         y="-62.719112"
+         x="903.95374"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           id="tspan1811"
+           sodipodi:role="line"
+           x="903.95374"
+           y="-62.719112">Pooled GameObject</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="915.22363"
+         y="-35.931271"
+         id="text1819"><tspan
+           y="-35.931271"
+           x="915.22363"
+           id="tspan1815"
+           sodipodi:role="line">user program</tspan><tspan
+           y="-30.639608"
+           x="915.22363"
+           sodipodi:role="line"
+           id="tspan1817"> UdonBehaviour</tspan></text>
+    </g>
+    <g
+       id="g1841"
+       transform="translate(2.7106832,-204.7442)">
+      <g
+         transform="translate(-17.10525,48.643055)"
+         id="g3414">
+        <rect
+           y="-125.90036"
+           x="1003.7308"
+           height="46.772163"
+           width="71.895493"
+           id="rect1823"
+           style="fill:#dde9af;stroke:#2f7345;stroke-width:0.956037;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text1829"
+           y="-107.82677"
+           x="1022.7596"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             sodipodi:role="line"
+             id="tspan1825"
+             x="1022.7596"
+             y="-107.82677">EXUR.Handler</tspan><tspan
+             id="tspan1827"
+             sodipodi:role="line"
+             x="1022.7596"
+             y="-102.5351"> UdonBehaviour</tspan></text>
+        <text
+           id="text1833"
+           y="-117.2421"
+           x="1012.3048"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             id="tspan1831"
+             sodipodi:role="line"
+             x="1012.3048"
+             y="-117.2421">Pooled GameObject</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="1022.7596"
+           y="-94.73056"
+           id="text1839"><tspan
+             sodipodi:role="line"
+             id="tspan3346"
+             x="1022.7596"
+             y="-94.73056">User Program</tspan><tspan
+             sodipodi:role="line"
+             x="1022.7596"
+             y="-89.438896"
+             id="tspan3402"> for each object</tspan><tspan
+             sodipodi:role="line"
+             id="tspan3348"
+             x="1022.7596"
+             y="-84.147232"> UdonBehaviour</tspan></text>
+      </g>
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       inkscape:connector-type="polyline"
+       id="path1843"
+       d="M 938.56274,-257.11059 H 978.5364"
+       style="display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#EmptyDiamondLend);marker-end:url(#marker1847)" />
+    <g
+       transform="translate(-20.312486,-185.10056)"
+       id="g3398">
+      <rect
+         style="fill:#dde9af;stroke-width:0.867235;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect3386"
+         width="71.895493"
+         height="38.486809"
+         x="767.46448"
+         y="-89.936203" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="785.06335"
+         y="-64.379066"
+         id="text3392"><tspan
+           y="-64.379066"
+           x="785.06335"
+           sodipodi:role="line"
+           id="tspan3388">EXUR.Manager</tspan><tspan
+           y="-59.087402"
+           x="785.06335"
+           sodipodi:role="line"
+           id="tspan3390">  UdonBehaviour</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="777.26788"
+         y="-81.277931"
+         id="text3396"><tspan
+           y="-81.277931"
+           x="777.26788"
+           sodipodi:role="line"
+           id="tspan3394">User GameObject</tspan><tspan
+           id="tspan3400"
+           y="-75.104317"
+           x="777.26788"
+           sodipodi:role="line"> handling a pool</tspan></text>
+    </g>
+    <text
+       id="text3428"
+       y="-246.42252"
+       x="938.65063"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.264583"
+         y="-246.42252"
+         x="938.65063"
+         id="tspan3426"
+         sodipodi:role="line">Child Objects</tspan></text>
+    <path
+       style="display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.5, 1;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker3800)"
+       d="M 855.47993,-246.2003 H 815.50627"
+       id="path3786"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       inkscape:connector-type="polyline"
+       id="path4912"
+       d="m 815.0484,-261.31935 h 39.97366"
+       style="display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4916)" />
+    <path
+       style="display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.35186;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5486)"
+       d="m 819.49335,-124.83706 h 19.79588"
+       id="path5482"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <text
+       transform="translate(95.415219,-215.95379)"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#f800fa;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       x="444.10568"
+       y="-79.359238"
+       id="text6200"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan6198"
+         x="444.10568"
+         y="-79.359238"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#f800fa;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1">AttemptToReleaseNotOwnObjectError</tspan></text>
   </g>
 </svg>
