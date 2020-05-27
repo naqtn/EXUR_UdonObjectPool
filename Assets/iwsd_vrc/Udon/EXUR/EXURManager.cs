@@ -115,7 +115,7 @@ namespace Iwsd.EXUR {
             {
                 var obj = objects[i];
                 if (obj.IsFreeOwned()
-                    && (!checkEmptyTag || IsSiblingHavingValue(obj, "EXUR_Tag", "")))
+                    && (!checkEmptyTag || IsSiblingHavingInvalidStringValue(obj, "EXUR_Tag")))
                 {
                     return obj;
                 }
@@ -133,7 +133,7 @@ namespace Iwsd.EXUR {
             {
                 var obj = objects[(i + randOffset) % n];
                 if (obj.IsFreeNotOwned()
-                    && (!checkEmptyTag || IsSiblingHavingValue(obj, "EXUR_Tag", "")))
+                    && (!checkEmptyTag || IsSiblingHavingInvalidStringValue(obj, "EXUR_Tag")))
                 {
                     return obj;
                 }
@@ -207,6 +207,28 @@ namespace Iwsd.EXUR {
             return false;
         }
 
+
+        // Accessing null variable of other UdonBehaviour becomes string.Empty on U# v0.16.2
+        // https://github.com/Merlin-san/UdonSharp/issues/32
+        // This issues/32 is fixed on v0.17.0
+        // 
+        // This is used for tag value.
+        // We should (must?) depend on user program for initial value of tag.
+        // And we allow both null and empty because we suppose "strict" rule will not work well.
+        // So we avoid to use both null and "" as usual tag value.
+        //
+        // (Current implementation use "" as explicit-not-used mark for writing.)
+        bool IsSiblingHavingInvalidStringValue(Handler handler, string name)
+        {
+            var sibling = GetSiblingBehavior(handler);
+            if (sibling)
+            {
+                var v = sibling.GetProgramVariable(name);
+                return (v == null) || v.Equals("");
+            }
+            return false;
+        }
+
         void SetValueToSibling(Handler handler, string name, object value)
         {
             var sibling = GetSiblingBehavior(handler);
@@ -229,10 +251,7 @@ namespace Iwsd.EXUR {
         bool SaveTagToLocalBuffer(Handler handler, string newtag)
         {
             object t = handler.localTagBuffer;
-            // NOTE accessing null becomes string.Empty (U# v0.16.2)
-            // https://github.com/Merlin-san/UdonSharp/issues/32
-            // if (t != null)
-            if (!t.Equals(""))
+            if ((t != null) && !t.Equals(""))
             {
                 ReportFailure($"{FAILURE_INFO_HEAD_INTERNAL_ERROR}: unclear localTagBuffer='{t}', tag='{newtag}'");
                 return false;
@@ -374,8 +393,7 @@ namespace Iwsd.EXUR {
             if (eventName.Equals("EnterUsingFromWaiting") || eventName.Equals("EnterUsingFromOwn"))
             {
                 var tag = eventSource.localTagBuffer;
-                // if (tag != null)
-                if (!tag.Equals(string.Empty))
+                if ((tag != null) && !tag.Equals(""))
                 {
                     var sibling = GetSiblingBehavior(eventSource);
                     if (sibling)
@@ -473,11 +491,12 @@ namespace Iwsd.EXUR {
         {
             string tag = AcquireObjectWithTag_tag;
 
+            // Usual tag value must not be null nor "".
             if (tag == null)
             {
                 ReportFailure($"{FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}: Specified tag was null");
             }
-            else if (tag.Equals(string.Empty))
+            else if (tag.Equals(""))
             {
                 ReportFailure($"{FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}: Specified tag was empty string");
             }
