@@ -168,17 +168,20 @@ namespace Iwsd.EXUR {
                 case STATE_WAITING_OWNER_RESPONCE:
                     lastState = STATE_USED_BY_OTHERS;
                     SendCallback("InitializedToUsing");
+                    SendCallback("EXUR_OtherPlayerAcquired");
                     break;
 
                 case STATE_IDLE_NOT_MINE:
                     lastState = STATE_USED_BY_OTHERS;
                     SendCallback("StartedToUseByOthers");
+                    SendCallback("EXUR_OtherPlayerAcquired");
                     break;
 
                 case STATE_WAITING_OWNERSHIP:
                     // Failed to start to use. Maybe it was race condition.
                     lastState = STATE_USED_BY_OTHERS;
                     SendCallback("FailedToUseByRaceCondition");
+                    SendCallback("EXUR_OtherPlayerAcquired");
                     break;
 
                 case STATE_OWN_AND_IDLE:
@@ -224,6 +227,7 @@ namespace Iwsd.EXUR {
                     // Locally initiated STATE_USED_BY_OTHERS => STATE_OWN_AND_IDLE must be done before calling here.
                     lastState = STATE_IDLE_NOT_MINE;
                     SendCallback("StoppedUsingByOthers");
+                    SendCallback("EXUR_OtherPlayerReleased");
                     break;
 
                 default:
@@ -395,6 +399,7 @@ namespace Iwsd.EXUR {
                         lastState = STATE_USED_BY_OTHERS;
                         SendCallback("LostOwnershipOnUsing");
                         SendCallback("EXUR_Finalize");
+                        SendCallback("EXUR_OtherPlayerAcquired");
                     }
                     break;
 

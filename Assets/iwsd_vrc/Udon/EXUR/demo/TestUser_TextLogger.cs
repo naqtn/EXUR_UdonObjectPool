@@ -19,7 +19,7 @@ namespace Iwsd.EXUR {
             }
         }
 
-    
+
         // public void ()
         // {
         //     log("");
@@ -104,17 +104,26 @@ namespace Iwsd.EXUR {
             log("EXUR_Reinitialize");
 
             log(" IsOwner=" + Networking.IsOwner(this.gameObject));  // for test TODO remove me
-        }        
+        }
         public void EXUR_Finalize()
         {
             log("EXUR_Finalize");
-        }        
+        }
+
+        public void EXUR_OtherPlayerAcquired()
+        {
+            log("EXUR_OtherPlayerAcquired");
+        }
+        public void EXUR_OtherPlayerReleased()
+        {
+            log("EXUR_OtherPlayerReleased");
+        }
 
 
         // for test. not part of callback API
         public void ReleaseObject()
         {
             log("ReleaseObject :!!!!!!! You got worng instance !!!!!"); // for test
-        }        
+        }
     }
 }
