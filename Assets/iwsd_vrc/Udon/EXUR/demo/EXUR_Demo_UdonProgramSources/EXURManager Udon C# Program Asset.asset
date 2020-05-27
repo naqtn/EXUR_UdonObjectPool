@@ -31,7 +31,7 @@ MonoBehaviour:
     %UnityEngineGameObject, this\r\n    __0_this_intnl_UnityEngineTransform: %UnityEngineTransform,
     this\r\n    __0_checkEmptyTag_Boolean: %SystemBoolean, null\r\n    __0_test_Boolean:
     %SystemBoolean, null\r\n    __1_checkEmptyTag_Boolean: %SystemBoolean, null\r\n
-    \   __0_brothers_ComponentArray: %UnityEngineComponentArray, null\r\n    __0_tmp_HandlerArray:
+    \   __0_siblings_ComponentArray: %UnityEngineComponentArray, null\r\n    __0_tmp_HandlerArray:
     %UnityEngineComponentArray, null\r\n    __0_diff_Int32: %SystemInt32, null\r\n
     \   __0_foundCount_Int32: %SystemInt32, null\r\n    __0_i_Int32: %SystemInt32,
     null\r\n    __0_least_Int32: %SystemInt32, null\r\n    __0_n_Int32: %SystemInt32,
@@ -55,148 +55,149 @@ MonoBehaviour:
     %SystemString, null\r\n    __2_tag_String: %SystemString, null\r\n    __3_message_String:
     %SystemString, null\r\n    __4_message_String: %SystemString, null\r\n    __5_message_String:
     %SystemString, null\r\n    __0_child_Transform: %UnityEngineTransform, null\r\n
-    \   __0_brother_UdonBehaviour: %VRCUdonUdonBehaviour, null\r\n    __0_eventSource_Handler:
-    %VRCUdonUdonBehaviour, null\r\n    __0_h_Handler: %VRCUdonUdonBehaviour, null\r\n
-    \   __0_handler_Handler: %VRCUdonUdonBehaviour, null\r\n    __0_obj_Handler: %VRCUdonUdonBehaviour,
-    null\r\n    __0_targetHandler_Handler: %VRCUdonUdonBehaviour, null\r\n    __1_brother_UdonBehaviour:
-    %VRCUdonUdonBehaviour, null\r\n    __1_eventSource_Handler: %VRCUdonUdonBehaviour,
-    null\r\n    __1_handler_Handler: %VRCUdonUdonBehaviour, null\r\n    __1_obj_Handler:
-    %VRCUdonUdonBehaviour, null\r\n    __1_targetHandler_Handler: %VRCUdonUdonBehaviour,
-    null\r\n    __2_brother_UdonBehaviour: %VRCUdonUdonBehaviour, null\r\n    __2_handler_Handler:
-    %VRCUdonUdonBehaviour, null\r\n    __2_obj_Handler: %VRCUdonUdonBehaviour, null\r\n
-    \   __2_targetHandler_Handler: %VRCUdonUdonBehaviour, null\r\n    __3_brother_UdonBehaviour:
-    %VRCUdonUdonBehaviour, null\r\n    __3_handler_Handler: %VRCUdonUdonBehaviour,
-    null\r\n    __3_obj_Handler: %VRCUdonUdonBehaviour, null\r\n    __3_targetHandler_Handler:
-    %VRCUdonUdonBehaviour, null\r\n    __4_handler_Handler: %VRCUdonUdonBehaviour,
-    null\r\n    __0_const_intnl_SystemBoolean: %SystemBoolean, null\r\n    __1_const_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __0_const_intnl_UnityEngineComponentArray: %UnityEngineComponentArray,
-    null\r\n    __0_const_intnl_SystemInt32: %SystemInt32, null\r\n    __1_const_intnl_SystemInt32:
-    %SystemInt32, null\r\n    __2_const_intnl_SystemInt32: %SystemInt32, null\r\n
-    \   __0_const_intnl_SystemInt64: %SystemInt64, null\r\n    __1_const_intnl_SystemInt64:
-    %SystemInt64, null\r\n    __0_const_intnl_SystemObject: %SystemObject, null\r\n
-    \   __0_const_intnl_SystemString: %SystemString, null\r\n    __1_const_intnl_SystemString:
-    %SystemString, null\r\n    __10_const_intnl_SystemString: %SystemString, null\r\n
-    \   __11_const_intnl_SystemString: %SystemString, null\r\n    __12_const_intnl_SystemString:
-    %SystemString, null\r\n    __13_const_intnl_SystemString: %SystemString, null\r\n
-    \   __14_const_intnl_SystemString: %SystemString, null\r\n    __15_const_intnl_SystemString:
-    %SystemString, null\r\n    __16_const_intnl_SystemString: %SystemString, null\r\n
-    \   __17_const_intnl_SystemString: %SystemString, null\r\n    __18_const_intnl_SystemString:
-    %SystemString, null\r\n    __19_const_intnl_SystemString: %SystemString, null\r\n
-    \   __2_const_intnl_SystemString: %SystemString, null\r\n    __20_const_intnl_SystemString:
-    %SystemString, null\r\n    __21_const_intnl_SystemString: %SystemString, null\r\n
-    \   __22_const_intnl_SystemString: %SystemString, null\r\n    __23_const_intnl_SystemString:
-    %SystemString, null\r\n    __24_const_intnl_SystemString: %SystemString, null\r\n
-    \   __25_const_intnl_SystemString: %SystemString, null\r\n    __26_const_intnl_SystemString:
-    %SystemString, null\r\n    __27_const_intnl_SystemString: %SystemString, null\r\n
-    \   __28_const_intnl_SystemString: %SystemString, null\r\n    __29_const_intnl_SystemString:
-    %SystemString, null\r\n    __3_const_intnl_SystemString: %SystemString, null\r\n
-    \   __30_const_intnl_SystemString: %SystemString, null\r\n    __31_const_intnl_SystemString:
-    %SystemString, null\r\n    __32_const_intnl_SystemString: %SystemString, null\r\n
-    \   __33_const_intnl_SystemString: %SystemString, null\r\n    __34_const_intnl_SystemString:
-    %SystemString, null\r\n    __35_const_intnl_SystemString: %SystemString, null\r\n
-    \   __36_const_intnl_SystemString: %SystemString, null\r\n    __37_const_intnl_SystemString:
-    %SystemString, null\r\n    __38_const_intnl_SystemString: %SystemString, null\r\n
-    \   __39_const_intnl_SystemString: %SystemString, null\r\n    __4_const_intnl_SystemString:
-    %SystemString, null\r\n    __40_const_intnl_SystemString: %SystemString, null\r\n
-    \   __41_const_intnl_SystemString: %SystemString, null\r\n    __42_const_intnl_SystemString:
-    %SystemString, null\r\n    __43_const_intnl_SystemString: %SystemString, null\r\n
-    \   __44_const_intnl_SystemString: %SystemString, null\r\n    __45_const_intnl_SystemString:
-    %SystemString, null\r\n    __46_const_intnl_SystemString: %SystemString, null\r\n
-    \   __47_const_intnl_SystemString: %SystemString, null\r\n    __48_const_intnl_SystemString:
-    %SystemString, null\r\n    __49_const_intnl_SystemString: %SystemString, null\r\n
-    \   __5_const_intnl_SystemString: %SystemString, null\r\n    __50_const_intnl_SystemString:
-    %SystemString, null\r\n    __51_const_intnl_SystemString: %SystemString, null\r\n
-    \   __52_const_intnl_SystemString: %SystemString, null\r\n    __53_const_intnl_SystemString:
-    %SystemString, null\r\n    __54_const_intnl_SystemString: %SystemString, null\r\n
-    \   __6_const_intnl_SystemString: %SystemString, null\r\n    __7_const_intnl_SystemString:
-    %SystemString, null\r\n    __8_const_intnl_SystemString: %SystemString, null\r\n
-    \   __9_const_intnl_SystemString: %SystemString, null\r\n    __0_const_intnl_SystemType:
-    %SystemType, null\r\n    __0_const_intnl_IwsdEXURHandler: %VRCUdonUdonBehaviour,
-    null\r\n    __0_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __0_const_intnl_SystemUInt32:
-    %SystemUInt32, null\r\n    __1_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __10_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __11_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __12_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __13_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __14_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __15_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __16_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __17_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __18_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __19_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __2_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __20_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __21_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __22_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __23_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __24_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __25_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __26_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __27_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __28_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __29_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __3_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __30_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __31_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __32_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __33_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __34_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __35_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __36_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __37_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __38_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __39_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __4_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __40_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __41_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __42_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __43_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __44_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __45_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __46_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __47_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __48_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __49_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __5_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __50_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __51_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __52_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __53_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __6_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __7_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __8_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __9_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __0_intnl_returnValSymbol_Boolean:
-    %SystemBoolean, null\r\n    __0_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __1_intnl_returnValSymbol_Boolean: %SystemBoolean, null\r\n    __1_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __10_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __11_intnl_SystemBoolean: %SystemBoolean, null\r\n    __12_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __13_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __14_intnl_SystemBoolean: %SystemBoolean, null\r\n    __15_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __16_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __17_intnl_SystemBoolean: %SystemBoolean, null\r\n    __18_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __19_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __2_intnl_returnValSymbol_Boolean: %SystemBoolean, null\r\n    __2_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __20_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __21_intnl_SystemBoolean: %SystemBoolean, null\r\n    __22_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __23_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __24_intnl_SystemBoolean: %SystemBoolean, null\r\n    __25_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __26_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __27_intnl_SystemBoolean: %SystemBoolean, null\r\n    __28_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __29_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __3_intnl_SystemBoolean: %SystemBoolean, null\r\n    __30_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __31_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __32_intnl_SystemBoolean: %SystemBoolean, null\r\n    __33_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __34_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __35_intnl_SystemBoolean: %SystemBoolean, null\r\n    __36_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __37_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __38_intnl_SystemBoolean: %SystemBoolean, null\r\n    __39_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __4_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __40_intnl_SystemBoolean: %SystemBoolean, null\r\n    __41_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __42_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __43_intnl_SystemBoolean: %SystemBoolean, null\r\n    __44_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __45_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __46_intnl_SystemBoolean: %SystemBoolean, null\r\n    __47_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __48_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __49_intnl_SystemBoolean: %SystemBoolean, null\r\n    __5_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __50_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __51_intnl_SystemBoolean: %SystemBoolean, null\r\n    __52_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __53_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __54_intnl_SystemBoolean: %SystemBoolean, null\r\n    __55_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __56_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __57_intnl_SystemBoolean: %SystemBoolean, null\r\n    __58_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __59_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __6_intnl_SystemBoolean: %SystemBoolean, null\r\n    __60_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __61_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __62_intnl_SystemBoolean: %SystemBoolean, null\r\n    __63_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __7_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __8_intnl_SystemBoolean: %SystemBoolean, null\r\n    __9_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __0_intnl_UnityEngineComponent: %UnityEngineComponent,
-    null\r\n    __1_intnl_UnityEngineComponent: %UnityEngineComponent, null\r\n    __0_intnl_IwsdEXURHandlerArray:
-    %UnityEngineComponentArray, null\r\n    __0_intnl_UnityEngineComponentArray: %UnityEngineComponentArray,
-    null\r\n    __1_intnl_UnityEngineComponentArray: %UnityEngineComponentArray, null\r\n
+    \   __0_eventSource_Handler: %VRCUdonUdonBehaviour, null\r\n    __0_h_Handler:
+    %VRCUdonUdonBehaviour, null\r\n    __0_handler_Handler: %VRCUdonUdonBehaviour,
+    null\r\n    __0_obj_Handler: %VRCUdonUdonBehaviour, null\r\n    __0_sibling_UdonBehaviour:
+    %VRCUdonUdonBehaviour, null\r\n    __0_targetHandler_Handler: %VRCUdonUdonBehaviour,
+    null\r\n    __1_eventSource_Handler: %VRCUdonUdonBehaviour, null\r\n    __1_handler_Handler:
+    %VRCUdonUdonBehaviour, null\r\n    __1_obj_Handler: %VRCUdonUdonBehaviour, null\r\n
+    \   __1_sibling_UdonBehaviour: %VRCUdonUdonBehaviour, null\r\n    __1_targetHandler_Handler:
+    %VRCUdonUdonBehaviour, null\r\n    __2_handler_Handler: %VRCUdonUdonBehaviour,
+    null\r\n    __2_obj_Handler: %VRCUdonUdonBehaviour, null\r\n    __2_sibling_UdonBehaviour:
+    %VRCUdonUdonBehaviour, null\r\n    __2_targetHandler_Handler: %VRCUdonUdonBehaviour,
+    null\r\n    __3_handler_Handler: %VRCUdonUdonBehaviour, null\r\n    __3_obj_Handler:
+    %VRCUdonUdonBehaviour, null\r\n    __3_sibling_UdonBehaviour: %VRCUdonUdonBehaviour,
+    null\r\n    __3_targetHandler_Handler: %VRCUdonUdonBehaviour, null\r\n    __4_handler_Handler:
+    %VRCUdonUdonBehaviour, null\r\n    __0_const_intnl_SystemBoolean: %SystemBoolean,
+    null\r\n    __1_const_intnl_SystemBoolean: %SystemBoolean, null\r\n    __0_const_intnl_UnityEngineComponentArray:
+    %UnityEngineComponentArray, null\r\n    __0_const_intnl_SystemInt32: %SystemInt32,
+    null\r\n    __1_const_intnl_SystemInt32: %SystemInt32, null\r\n    __2_const_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __0_const_intnl_SystemInt64: %SystemInt64, null\r\n
+    \   __1_const_intnl_SystemInt64: %SystemInt64, null\r\n    __0_const_intnl_SystemObject:
+    %SystemObject, null\r\n    __0_const_intnl_SystemString: %SystemString, null\r\n
+    \   __1_const_intnl_SystemString: %SystemString, null\r\n    __10_const_intnl_SystemString:
+    %SystemString, null\r\n    __11_const_intnl_SystemString: %SystemString, null\r\n
+    \   __12_const_intnl_SystemString: %SystemString, null\r\n    __13_const_intnl_SystemString:
+    %SystemString, null\r\n    __14_const_intnl_SystemString: %SystemString, null\r\n
+    \   __15_const_intnl_SystemString: %SystemString, null\r\n    __16_const_intnl_SystemString:
+    %SystemString, null\r\n    __17_const_intnl_SystemString: %SystemString, null\r\n
+    \   __18_const_intnl_SystemString: %SystemString, null\r\n    __19_const_intnl_SystemString:
+    %SystemString, null\r\n    __2_const_intnl_SystemString: %SystemString, null\r\n
+    \   __20_const_intnl_SystemString: %SystemString, null\r\n    __21_const_intnl_SystemString:
+    %SystemString, null\r\n    __22_const_intnl_SystemString: %SystemString, null\r\n
+    \   __23_const_intnl_SystemString: %SystemString, null\r\n    __24_const_intnl_SystemString:
+    %SystemString, null\r\n    __25_const_intnl_SystemString: %SystemString, null\r\n
+    \   __26_const_intnl_SystemString: %SystemString, null\r\n    __27_const_intnl_SystemString:
+    %SystemString, null\r\n    __28_const_intnl_SystemString: %SystemString, null\r\n
+    \   __29_const_intnl_SystemString: %SystemString, null\r\n    __3_const_intnl_SystemString:
+    %SystemString, null\r\n    __30_const_intnl_SystemString: %SystemString, null\r\n
+    \   __31_const_intnl_SystemString: %SystemString, null\r\n    __32_const_intnl_SystemString:
+    %SystemString, null\r\n    __33_const_intnl_SystemString: %SystemString, null\r\n
+    \   __34_const_intnl_SystemString: %SystemString, null\r\n    __35_const_intnl_SystemString:
+    %SystemString, null\r\n    __36_const_intnl_SystemString: %SystemString, null\r\n
+    \   __37_const_intnl_SystemString: %SystemString, null\r\n    __38_const_intnl_SystemString:
+    %SystemString, null\r\n    __39_const_intnl_SystemString: %SystemString, null\r\n
+    \   __4_const_intnl_SystemString: %SystemString, null\r\n    __40_const_intnl_SystemString:
+    %SystemString, null\r\n    __41_const_intnl_SystemString: %SystemString, null\r\n
+    \   __42_const_intnl_SystemString: %SystemString, null\r\n    __43_const_intnl_SystemString:
+    %SystemString, null\r\n    __44_const_intnl_SystemString: %SystemString, null\r\n
+    \   __45_const_intnl_SystemString: %SystemString, null\r\n    __46_const_intnl_SystemString:
+    %SystemString, null\r\n    __47_const_intnl_SystemString: %SystemString, null\r\n
+    \   __48_const_intnl_SystemString: %SystemString, null\r\n    __49_const_intnl_SystemString:
+    %SystemString, null\r\n    __5_const_intnl_SystemString: %SystemString, null\r\n
+    \   __50_const_intnl_SystemString: %SystemString, null\r\n    __51_const_intnl_SystemString:
+    %SystemString, null\r\n    __52_const_intnl_SystemString: %SystemString, null\r\n
+    \   __53_const_intnl_SystemString: %SystemString, null\r\n    __54_const_intnl_SystemString:
+    %SystemString, null\r\n    __6_const_intnl_SystemString: %SystemString, null\r\n
+    \   __7_const_intnl_SystemString: %SystemString, null\r\n    __8_const_intnl_SystemString:
+    %SystemString, null\r\n    __9_const_intnl_SystemString: %SystemString, null\r\n
+    \   __0_const_intnl_SystemType: %SystemType, null\r\n    __0_const_intnl_IwsdEXURHandler:
+    %VRCUdonUdonBehaviour, null\r\n    __0_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __0_const_intnl_SystemUInt32: %SystemUInt32, null\r\n    __1_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __10_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __11_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __12_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __13_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __14_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __15_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __16_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __17_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __18_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __19_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __2_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __20_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __21_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __22_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __23_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __24_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __25_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __26_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __27_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __28_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __29_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __3_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __30_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __31_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __32_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __33_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __34_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __35_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __36_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __37_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __38_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __39_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __4_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __40_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __41_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __42_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __43_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __44_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __45_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __46_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __47_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __48_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __49_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __5_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __50_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __51_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __52_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __53_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __6_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __7_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __8_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __9_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __0_intnl_returnValSymbol_Boolean: %SystemBoolean, null\r\n    __0_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __1_intnl_returnValSymbol_Boolean: %SystemBoolean,
+    null\r\n    __1_intnl_SystemBoolean: %SystemBoolean, null\r\n    __10_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __11_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __12_intnl_SystemBoolean: %SystemBoolean, null\r\n    __13_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __14_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __15_intnl_SystemBoolean: %SystemBoolean, null\r\n    __16_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __17_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __18_intnl_SystemBoolean: %SystemBoolean, null\r\n    __19_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __2_intnl_returnValSymbol_Boolean: %SystemBoolean,
+    null\r\n    __2_intnl_SystemBoolean: %SystemBoolean, null\r\n    __20_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __21_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __22_intnl_SystemBoolean: %SystemBoolean, null\r\n    __23_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __24_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __25_intnl_SystemBoolean: %SystemBoolean, null\r\n    __26_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __27_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __28_intnl_SystemBoolean: %SystemBoolean, null\r\n    __29_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __3_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __30_intnl_SystemBoolean: %SystemBoolean, null\r\n    __31_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __32_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __33_intnl_SystemBoolean: %SystemBoolean, null\r\n    __34_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __35_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __36_intnl_SystemBoolean: %SystemBoolean, null\r\n    __37_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __38_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __39_intnl_SystemBoolean: %SystemBoolean, null\r\n    __4_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __40_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __41_intnl_SystemBoolean: %SystemBoolean, null\r\n    __42_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __43_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __44_intnl_SystemBoolean: %SystemBoolean, null\r\n    __45_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __46_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __47_intnl_SystemBoolean: %SystemBoolean, null\r\n    __48_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __49_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __5_intnl_SystemBoolean: %SystemBoolean, null\r\n    __50_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __51_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __52_intnl_SystemBoolean: %SystemBoolean, null\r\n    __53_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __54_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __55_intnl_SystemBoolean: %SystemBoolean, null\r\n    __56_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __57_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __58_intnl_SystemBoolean: %SystemBoolean, null\r\n    __59_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __6_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __60_intnl_SystemBoolean: %SystemBoolean, null\r\n    __61_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __62_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __63_intnl_SystemBoolean: %SystemBoolean, null\r\n    __7_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __8_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __9_intnl_SystemBoolean: %SystemBoolean, null\r\n    __0_intnl_UnityEngineComponent:
+    %UnityEngineComponent, null\r\n    __1_intnl_UnityEngineComponent: %UnityEngineComponent,
+    null\r\n    __0_intnl_IwsdEXURHandlerArray: %UnityEngineComponentArray, null\r\n
+    \   __0_intnl_UnityEngineComponentArray: %UnityEngineComponentArray, null\r\n
+    \   __1_intnl_UnityEngineComponentArray: %UnityEngineComponentArray, null\r\n
     \   __0_intnl_UnityEngineGameObject: %UnityEngineGameObject, null\r\n    __1_intnl_UnityEngineGameObject:
     %UnityEngineGameObject, null\r\n    __2_intnl_UnityEngineGameObject: %UnityEngineGameObject,
     null\r\n    __3_intnl_UnityEngineGameObject: %UnityEngineGameObject, null\r\n
@@ -496,7 +497,7 @@ MonoBehaviour:
     \       EXTERN, \"SystemConvert.__ToBoolean__SystemObject__SystemBoolean\"\r\n
     \       PUSH, __8_intnl_SystemBoolean\r\n        PUSH, __7_intnl_SystemBoolean\r\n
     \       COPY\r\n        PUSH, __7_intnl_SystemBoolean\r\n        JUMP_IF_FALSE,
-    0x00000C44\r\n        \r\n         # && (!checkEmptyTag || IsBrotherHavingValue(obj,
+    0x00000C44\r\n        \r\n         # && (!checkEmptyTag || IsSiblingHavingValue(obj,
     \"EXUR_Tag\", \"\")))\r\n        PUSH, __0_checkEmptyTag_Boolean\r\n        PUSH,
     __10_intnl_SystemBoolean\r\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\r\n
     \       PUSH, __10_intnl_SystemBoolean\r\n        PUSH, __9_intnl_SystemBoolean\r\n
@@ -554,7 +555,7 @@ MonoBehaviour:
     \       EXTERN, \"SystemConvert.__ToBoolean__SystemObject__SystemBoolean\"\r\n
     \       PUSH, __16_intnl_SystemBoolean\r\n        PUSH, __15_intnl_SystemBoolean\r\n
     \       COPY\r\n        PUSH, __15_intnl_SystemBoolean\r\n        JUMP_IF_FALSE,
-    0x00000F7C\r\n        \r\n         # && (!checkEmptyTag || IsBrotherHavingValue(obj,
+    0x00000F7C\r\n        \r\n         # && (!checkEmptyTag || IsSiblingHavingValue(obj,
     \"EXUR_Tag\", \"\")))\r\n        PUSH, __1_checkEmptyTag_Boolean\r\n        PUSH,
     __18_intnl_SystemBoolean\r\n        EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\r\n
     \       PUSH, __18_intnl_SystemBoolean\r\n        PUSH, __17_intnl_SystemBoolean\r\n
@@ -638,7 +639,7 @@ MonoBehaviour:
     \       \r\n         # EventListener.SetProgramVariable(\"EXUR_EventAdditionalInfo\",
     eventInfo);\r\n        PUSH, EventListener\r\n        PUSH, __21_const_intnl_SystemString\r\n
     \       PUSH, __0_eventInfo_String\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\r\n
-    \       \r\n         # EventListener.SendCustomEvent(\"EXUR_RecieveEvent\");\r\n
+    \       \r\n         # EventListener.SendCustomEvent(\"EXUR_ReceiveEvent\");\r\n
     \       PUSH, EventListener\r\n        PUSH, __22_const_intnl_SystemString\r\n
     \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
     \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
@@ -655,22 +656,22 @@ MonoBehaviour:
     \       COPY # Copy-on-write symbol value dirtied\r\n        PUSH, __10_const_intnl_exitJumpLoc_UInt32\r\n
     \       JUMP, 0x00001248\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # UdonBehaviour GetBrotherBehavior(Handler handler)\r\n
-    \   GetBrotherBehavior:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
-    \       \r\n         # {\r\n        \r\n         # var brothers = handler.transform.GetComponents(typeof(UdonBehaviour));\r\n
+    \       \r\n        \r\n         # UdonBehaviour GetSiblingBehavior(Handler handler)\r\n
+    \   GetSiblingBehavior:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       \r\n         # {\r\n        \r\n         # var siblings = handler.transform.GetComponents(typeof(UdonBehaviour));\r\n
     \       PUSH, __0_handler_Handler\r\n        PUSH, __0_intnl_UnityEngineTransform\r\n
     \       EXTERN, \"UnityEngineComponent.__get_transform__UnityEngineTransform\"\r\n
     \       PUSH, __0_intnl_UnityEngineTransform\r\n        PUSH, __0_const_intnl_SystemType\r\n
     \       PUSH, __1_intnl_UnityEngineComponentArray\r\n        EXTERN, \"UnityEngineTransform.__GetComponents__SystemType__UnityEngineComponentArray\"\r\n
-    \       PUSH, __1_intnl_UnityEngineComponentArray\r\n        PUSH, __0_brothers_ComponentArray\r\n
-    \       COPY\r\n        \r\n         # if (brothers.Length < 2)\r\n        PUSH,
-    __0_brothers_ComponentArray\r\n        PUSH, __12_intnl_SystemInt32\r\n        EXTERN,
+    \       PUSH, __1_intnl_UnityEngineComponentArray\r\n        PUSH, __0_siblings_ComponentArray\r\n
+    \       COPY\r\n        \r\n         # if (siblings.Length < 2)\r\n        PUSH,
+    __0_siblings_ComponentArray\r\n        PUSH, __12_intnl_SystemInt32\r\n        EXTERN,
     \"UnityEngineComponentArray.__get_Length__SystemInt32\"\r\n        PUSH, __12_intnl_SystemInt32\r\n
     \       PUSH, __2_const_intnl_SystemInt32\r\n        PUSH, __26_intnl_SystemBoolean\r\n
     \       EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\r\n
     \       PUSH, __26_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001578\r\n
     \       \r\n         # {\r\n        \r\n         # ReportFailure($\"{FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}:
-    No brother UdonBehaviour on '{handler.gameObject.name}'\");\r\n        PUSH, FAILURE_INFO_HEAD_USER_PROGRAM_ERROR\r\n
+    No sibling UdonBehaviour on '{handler.gameObject.name}'\");\r\n        PUSH, FAILURE_INFO_HEAD_USER_PROGRAM_ERROR\r\n
     \       PUSH, __1_intnl_interpolatedStr_String\r\n        COPY\r\n        PUSH,
     __1_intnl_interpolatedStr_String\r\n        PUSH, __24_const_intnl_SystemString\r\n
     \       PUSH, __13_intnl_SystemString\r\n        EXTERN, \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n
@@ -693,25 +694,25 @@ MonoBehaviour:
     0x00001304\r\n        \r\n         # return null;\r\n        PUSH, __0_const_intnl_SystemObject\r\n
     \       PUSH, __0_intnl_returnValSymbol_UdonBehaviour\r\n        COPY\r\n        PUSH,
     __0_intnl_returnTarget_UInt32 #Explicit return sequence\r\n        COPY\r\n        JUMP_INDIRECT,
-    __0_intnl_returnTarget_UInt32\r\n        \r\n         # return (UdonBehaviour)brothers[1];\r\n
-    \       PUSH, __0_brothers_ComponentArray\r\n        PUSH, __1_const_intnl_SystemInt32\r\n
+    __0_intnl_returnTarget_UInt32\r\n        \r\n         # return (UdonBehaviour)siblings[1];\r\n
+    \       PUSH, __0_siblings_ComponentArray\r\n        PUSH, __1_const_intnl_SystemInt32\r\n
     \       PUSH, __1_intnl_UnityEngineComponent\r\n        EXTERN, \"UnityEngineComponentArray.__Get__SystemInt32__UnityEngineComponent\"\r\n
     \       PUSH, __1_intnl_UnityEngineComponent\r\n        PUSH, __0_intnl_returnValSymbol_UdonBehaviour\r\n
     \       COPY\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\r\n
     \       COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        PUSH,
     __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT,
-    __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n         # bool IsBrotherHavingValue(Handler
-    handler, string name, object value)\r\n    IsBrotherHavingValue:\r\n        \r\n
+    __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n         # bool IsSiblingHavingValue(Handler
+    handler, string name, object value)\r\n    IsSiblingHavingValue:\r\n        \r\n
     \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
-    \        # var brother = GetBrotherBehavior(handler);\r\n        PUSH, __1_handler_Handler\r\n
+    \        # var sibling = GetSiblingBehavior(handler);\r\n        PUSH, __1_handler_Handler\r\n
     \       PUSH, __0_handler_Handler\r\n        COPY\r\n        PUSH, __12_const_intnl_exitJumpLoc_UInt32\r\n
     \       JUMP, 0x000013A4\r\n        PUSH, __0_intnl_returnValSymbol_UdonBehaviour\r\n
-    \       PUSH, __0_brother_UdonBehaviour\r\n        COPY\r\n        \r\n         #
-    if (brother)\r\n        PUSH, __0_brother_UdonBehaviour\r\n        PUSH, __27_intnl_SystemBoolean\r\n
+    \       PUSH, __0_sibling_UdonBehaviour\r\n        COPY\r\n        \r\n         #
+    if (sibling)\r\n        PUSH, __0_sibling_UdonBehaviour\r\n        PUSH, __27_intnl_SystemBoolean\r\n
     \       EXTERN, \"UnityEngineObject.__op_Implicit__UnityEngineObject__SystemBoolean\"\r\n
     \       PUSH, __27_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x000016A4\r\n
-    \       \r\n         # {\r\n        \r\n         # var v = brother.GetProgramVariable(name);\r\n
-    \       PUSH, __0_brother_UdonBehaviour\r\n        PUSH, __0_name_String\r\n        PUSH,
+    \       \r\n         # {\r\n        \r\n         # var v = sibling.GetProgramVariable(name);\r\n
+    \       PUSH, __0_sibling_UdonBehaviour\r\n        PUSH, __0_name_String\r\n        PUSH,
     __4_intnl_SystemObject\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__GetProgramVariable__SystemString__SystemObject\"\r\n
     \       PUSH, __4_intnl_SystemObject\r\n        PUSH, __0_v_Object\r\n        COPY\r\n
     \       \r\n         # return value.Equals(v);\r\n        PUSH, __0_value_Object\r\n
@@ -723,32 +724,32 @@ MonoBehaviour:
     \       COPY\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\r\n
     \       COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        PUSH,
     __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT,
-    __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n         # void SetValueToBrother(Handler
-    handler, string name, object value)\r\n    SetValueToBrother:\r\n        \r\n
+    __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n         # void SetValueToSibling(Handler
+    handler, string name, object value)\r\n    SetValueToSibling:\r\n        \r\n
     \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
-    \        # var brother = GetBrotherBehavior(handler);\r\n        PUSH, __2_handler_Handler\r\n
+    \        # var sibling = GetSiblingBehavior(handler);\r\n        PUSH, __2_handler_Handler\r\n
     \       PUSH, __0_handler_Handler\r\n        COPY\r\n        PUSH, __13_const_intnl_exitJumpLoc_UInt32\r\n
     \       JUMP, 0x000013A4\r\n        PUSH, __0_intnl_returnValSymbol_UdonBehaviour\r\n
-    \       PUSH, __1_brother_UdonBehaviour\r\n        COPY\r\n        \r\n         #
-    if (brother)\r\n        PUSH, __1_brother_UdonBehaviour\r\n        PUSH, __28_intnl_SystemBoolean\r\n
+    \       PUSH, __1_sibling_UdonBehaviour\r\n        COPY\r\n        \r\n         #
+    if (sibling)\r\n        PUSH, __1_sibling_UdonBehaviour\r\n        PUSH, __28_intnl_SystemBoolean\r\n
     \       EXTERN, \"UnityEngineObject.__op_Implicit__UnityEngineObject__SystemBoolean\"\r\n
     \       PUSH, __28_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001768\r\n
-    \       \r\n         # {\r\n        \r\n         # brother.SetProgramVariable(name,
-    value);\r\n        PUSH, __1_brother_UdonBehaviour\r\n        PUSH, __1_name_String\r\n
+    \       \r\n         # {\r\n        \r\n         # sibling.SetProgramVariable(name,
+    value);\r\n        PUSH, __1_sibling_UdonBehaviour\r\n        PUSH, __1_name_String\r\n
     \       PUSH, __1_value_Object\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\r\n
     \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
     \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
-    \        # object GetValueFromBrother(Handler handler, string name)\r\n    GetValueFromBrother:\r\n
+    \        # object GetValueFromSibling(Handler handler, string name)\r\n    GetValueFromSibling:\r\n
     \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
-    {\r\n        \r\n         # var brother = GetBrotherBehavior(handler);\r\n        PUSH,
+    {\r\n        \r\n         # var sibling = GetSiblingBehavior(handler);\r\n        PUSH,
     __3_handler_Handler\r\n        PUSH, __0_handler_Handler\r\n        COPY\r\n        PUSH,
     __14_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x000013A4\r\n        PUSH,
-    __0_intnl_returnValSymbol_UdonBehaviour\r\n        PUSH, __2_brother_UdonBehaviour\r\n
-    \       COPY\r\n        \r\n         # if (brother)\r\n        PUSH, __2_brother_UdonBehaviour\r\n
+    __0_intnl_returnValSymbol_UdonBehaviour\r\n        PUSH, __2_sibling_UdonBehaviour\r\n
+    \       COPY\r\n        \r\n         # if (sibling)\r\n        PUSH, __2_sibling_UdonBehaviour\r\n
     \       PUSH, __29_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineObject.__op_Implicit__UnityEngineObject__SystemBoolean\"\r\n
     \       PUSH, __29_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001818\r\n
-    \       \r\n         # {\r\n        \r\n         # return brother.GetProgramVariable(name);\r\n
-    \       PUSH, __2_brother_UdonBehaviour\r\n        PUSH, __2_name_String\r\n        PUSH,
+    \       \r\n         # {\r\n        \r\n         # return sibling.GetProgramVariable(name);\r\n
+    \       PUSH, __2_sibling_UdonBehaviour\r\n        PUSH, __2_name_String\r\n        PUSH,
     __0_intnl_returnValSymbol_Object\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__GetProgramVariable__SystemString__SystemObject\"\r\n
     \       PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\r\n        COPY\r\n
     \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n         #
@@ -885,7 +886,7 @@ MonoBehaviour:
     \       PUSH, __5_intnl_SystemObject\r\n        PUSH, __36_intnl_SystemBoolean\r\n
     \       EXTERN, \"SystemConvert.__ToBoolean__SystemObject__SystemBoolean\"\r\n
     \       PUSH, __36_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x0000220C\r\n
-    \       \r\n         # {\r\n        \r\n         # var to = GetValueFromBrother(obj,
+    \       \r\n         # {\r\n        \r\n         # var to = GetValueFromSibling(obj,
     \"EXUR_LastUsedTime\");\r\n        PUSH, __2_obj_Handler\r\n        PUSH, __3_handler_Handler\r\n
     \       COPY\r\n        PUSH, __30_const_intnl_SystemString\r\n        PUSH, __2_name_String\r\n
     \       COPY\r\n        PUSH, __20_const_intnl_exitJumpLoc_UInt32\r\n        JUMP,
@@ -1017,7 +1018,7 @@ MonoBehaviour:
     \       \r\n         # var obj = objects[i];\r\n        PUSH, objects\r\n        PUSH,
     __5_i_Int32\r\n        PUSH, __6_intnl_IwsdEXURHandler\r\n        EXTERN, \"UnityEngineComponentArray.__Get__SystemInt32__UnityEngineComponent\"\r\n
     \       PUSH, __6_intnl_IwsdEXURHandler\r\n        PUSH, __3_obj_Handler\r\n        COPY\r\n
-    \       \r\n         # if (IsBrotherHavingValue(obj, \"EXUR_Tag\", tag))\r\n        PUSH,
+    \       \r\n         # if (IsSiblingHavingValue(obj, \"EXUR_Tag\", tag))\r\n        PUSH,
     __3_obj_Handler\r\n        PUSH, __1_handler_Handler\r\n        COPY\r\n        PUSH,
     __13_const_intnl_SystemString\r\n        PUSH, __0_name_String\r\n        COPY\r\n
     \       PUSH, __0_tag_String\r\n        PUSH, __0_value_Object\r\n        COPY\r\n
@@ -1181,22 +1182,22 @@ MonoBehaviour:
     __52_intnl_SystemBoolean\r\n        PUSH, __53_intnl_SystemBoolean\r\n        EXTERN,
     \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\r\n        PUSH,
     __53_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00003084\r\n        \r\n
-    \        # {\r\n        \r\n         # var brother = GetBrotherBehavior(eventSource);\r\n
+    \        # {\r\n        \r\n         # var sibling = GetSiblingBehavior(eventSource);\r\n
     \       PUSH, __1_eventSource_Handler\r\n        PUSH, __0_handler_Handler\r\n
     \       COPY\r\n        PUSH, __35_const_intnl_exitJumpLoc_UInt32\r\n        JUMP,
     0x000013A4\r\n        PUSH, __0_intnl_returnValSymbol_UdonBehaviour\r\n        PUSH,
-    __3_brother_UdonBehaviour\r\n        COPY\r\n        \r\n         # if (brother)\r\n
-    \       PUSH, __3_brother_UdonBehaviour\r\n        PUSH, __54_intnl_SystemBoolean\r\n
+    __3_sibling_UdonBehaviour\r\n        COPY\r\n        \r\n         # if (sibling)\r\n
+    \       PUSH, __3_sibling_UdonBehaviour\r\n        PUSH, __54_intnl_SystemBoolean\r\n
     \       EXTERN, \"UnityEngineObject.__op_Implicit__UnityEngineObject__SystemBoolean\"\r\n
     \       PUSH, __54_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00003064\r\n
     \       \r\n         # {\r\n        \r\n         # var time = Networking.GetServerTimeInMilliseconds();\r\n
     \       PUSH, __17_intnl_SystemInt32\r\n        EXTERN, \"VRCSDKBaseNetworking.__GetServerTimeInMilliseconds__SystemInt32\"\r\n
     \       PUSH, __17_intnl_SystemInt32\r\n        PUSH, __0_time_Int32\r\n        COPY\r\n
-    \       \r\n         # brother.SetProgramVariable(\"EXUR_Tag\", tag);\r\n        PUSH,
-    __3_brother_UdonBehaviour\r\n        PUSH, __13_const_intnl_SystemString\r\n        PUSH,
+    \       \r\n         # sibling.SetProgramVariable(\"EXUR_Tag\", tag);\r\n        PUSH,
+    __3_sibling_UdonBehaviour\r\n        PUSH, __13_const_intnl_SystemString\r\n        PUSH,
     __1_tag_String\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\r\n
-    \       \r\n         # brother.SetProgramVariable(\"EXUR_LastUsedTime\", time);\r\n
-    \       PUSH, __3_brother_UdonBehaviour\r\n        PUSH, __30_const_intnl_SystemString\r\n
+    \       \r\n         # sibling.SetProgramVariable(\"EXUR_LastUsedTime\", time);\r\n
+    \       PUSH, __3_sibling_UdonBehaviour\r\n        PUSH, __30_const_intnl_SystemString\r\n
     \       PUSH, __0_time_Int32\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\r\n
     \       \r\n         # debug($\"set tag={tag}, time={time} name='{eventSource.gameObject.name}'\");\r\n
     \       PUSH, __43_const_intnl_SystemString\r\n        PUSH, __7_intnl_interpolatedStr_String\r\n
@@ -1240,8 +1241,8 @@ MonoBehaviour:
     for API.\r\n        \r\n         # public Handler EXUR_EventSource;\r\n        \r\n
     \        # [HideInInspector]\r\n        \r\n         # public string EXUR_EventName;\r\n
     \       \r\n         # [HideInInspector]\r\n        \r\n         # public string
-    EXUR_EventAdditionalInfo;\r\n        \r\n         # public void EXUR_RecieveEvent()\r\n
-    \   .export EXUR_RecieveEvent\r\n        \r\n    EXUR_RecieveEvent:\r\n        \r\n
+    EXUR_EventAdditionalInfo;\r\n        \r\n         # public void EXUR_ReceiveEvent()\r\n
+    \   .export EXUR_ReceiveEvent\r\n        \r\n    EXUR_ReceiveEvent:\r\n        \r\n
     \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
     \        # if (!EXUR_EventSource)\r\n        PUSH, EXUR_EventSource\r\n        PUSH,
     __55_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineObject.__op_Implicit__UnityEngineObject__SystemBoolean\"\r\n
@@ -1259,7 +1260,7 @@ MonoBehaviour:
     \       PUSH, __47_const_intnl_SystemString\r\n        PUSH, __4_message_String\r\n
     \       COPY\r\n        PUSH, __38_const_intnl_exitJumpLoc_UInt32\r\n        JUMP,
     0x00000220\r\n        JUMP, 0x00003320\r\n        \r\n         # else\r\n        \r\n
-    \        # {\r\n        \r\n         # debug(\"EXUR_RecieveEvent. \" + EXUR_EventName
+    \        # {\r\n        \r\n         # debug(\"EXUR_ReceiveEvent. \" + EXUR_EventName
     + \" from '\" + EXUR_EventSource.gameObject.name + \"'\");\r\n        PUSH, __48_const_intnl_SystemString\r\n
     \       PUSH, EXUR_EventName\r\n        PUSH, __59_intnl_SystemString\r\n        EXTERN,
     \"SystemString.__op_Addition__SystemString_SystemString__SystemString\"\r\n        PUSH,
@@ -3567,7 +3568,7 @@ MonoBehaviour:
       endSourceChar: 3326
       line: 117
       lineChar: 42
-      spanCodeSection: IsBrotherHavingValue(
+      spanCodeSection: IsSiblingHavingValue(
     - startInstruction: 2960
       endInstruction: 2959
       startSourceChar: 3326
@@ -4016,7 +4017,7 @@ MonoBehaviour:
       endSourceChar: 3917
       line: 135
       lineChar: 42
-      spanCodeSection: IsBrotherHavingValue(
+      spanCodeSection: IsSiblingHavingValue(
     - startInstruction: 3784
       endInstruction: 3783
       startSourceChar: 3917
@@ -4669,7 +4670,7 @@ MonoBehaviour:
       endSourceChar: 5203
       line: 174
       lineChar: 46
-      spanCodeSection: "\"EXUR_RecieveEvent\");\r\n\r\n                // TODO read
+      spanCodeSection: "\"EXUR_ReceiveEvent\");\r\n\r\n                // TODO read
         variable to check variable exists in user program as kind debug mode (?)\r\n
         \           }\r\n        }\r\n\r\n        "
     - startInstruction: 4860
@@ -4769,7 +4770,7 @@ MonoBehaviour:
       endSourceChar: 5419
       line: 186
       lineChar: 8
-      spanCodeSection: UdonBehaviour GetBrotherBehavior(
+      spanCodeSection: UdonBehaviour GetSiblingBehavior(
     - startInstruction: 5020
       endInstruction: 5027
       startSourceChar: 5419
@@ -4804,7 +4805,7 @@ MonoBehaviour:
       endSourceChar: 5473
       line: 188
       lineChar: 12
-      spanCodeSection: 'var brothers '
+      spanCodeSection: 'var siblings '
     - startInstruction: 5028
       endInstruction: 5027
       startSourceChar: 5473
@@ -4895,7 +4896,7 @@ MonoBehaviour:
       endSourceChar: 5557
       line: 189
       lineChar: 16
-      spanCodeSection: brothers.
+      spanCodeSection: siblings.
     - startInstruction: 5104
       endInstruction: 5127
       startSourceChar: 5557
@@ -4965,7 +4966,7 @@ MonoBehaviour:
       endSourceChar: 5686
       line: 191
       lineChar: 70
-      spanCodeSection: ': No brother UdonBehaviour on '''
+      spanCodeSection: ': No sibling UdonBehaviour on '''
     - startInstruction: 5248
       endInstruction: 5247
       startSourceChar: 5686
@@ -5056,7 +5057,7 @@ MonoBehaviour:
       endSourceChar: 5807
       line: 195
       lineChar: 34
-      spanCodeSection: brothers[
+      spanCodeSection: siblings[
     - startInstruction: 5496
       endInstruction: 5495
       startSourceChar: 5807
@@ -5077,7 +5078,7 @@ MonoBehaviour:
       endSourceChar: 5859
       line: 198
       lineChar: 8
-      spanCodeSection: bool IsBrotherHavingValue(
+      spanCodeSection: bool IsSiblingHavingValue(
     - startInstruction: 5588
       endInstruction: 5587
       startSourceChar: 5859
@@ -5126,7 +5127,7 @@ MonoBehaviour:
       endSourceChar: 5939
       line: 200
       lineChar: 12
-      spanCodeSection: 'var brother '
+      spanCodeSection: 'var sibling '
     - startInstruction: 5596
       endInstruction: 5595
       startSourceChar: 5939
@@ -5147,7 +5148,7 @@ MonoBehaviour:
       endSourceChar: 5960
       line: 200
       lineChar: 26
-      spanCodeSection: GetBrotherBehavior(
+      spanCodeSection: GetSiblingBehavior(
     - startInstruction: 5596
       endInstruction: 5651
       startSourceChar: 5960
@@ -5168,7 +5169,7 @@ MonoBehaviour:
       endSourceChar: 6009
       line: 201
       lineChar: 16
-      spanCodeSection: "brother)\r\n            "
+      spanCodeSection: "sibling)\r\n            "
     - startInstruction: 5692
       endInstruction: 5691
       startSourceChar: 6009
@@ -5224,7 +5225,7 @@ MonoBehaviour:
       endSourceChar: 6044
       line: 203
       lineChar: 24
-      spanCodeSection: brother.
+      spanCodeSection: sibling.
     - startInstruction: 5692
       endInstruction: 5691
       startSourceChar: 6044
@@ -5301,7 +5302,7 @@ MonoBehaviour:
       endSourceChar: 6198
       line: 209
       lineChar: 8
-      spanCodeSection: void SetValueToBrother(
+      spanCodeSection: void SetValueToSibling(
     - startInstruction: 5856
       endInstruction: 5855
       startSourceChar: 6198
@@ -5350,7 +5351,7 @@ MonoBehaviour:
       endSourceChar: 6278
       line: 211
       lineChar: 12
-      spanCodeSection: 'var brother '
+      spanCodeSection: 'var sibling '
     - startInstruction: 5864
       endInstruction: 5863
       startSourceChar: 6278
@@ -5371,7 +5372,7 @@ MonoBehaviour:
       endSourceChar: 6299
       line: 211
       lineChar: 26
-      spanCodeSection: GetBrotherBehavior(
+      spanCodeSection: GetSiblingBehavior(
     - startInstruction: 5864
       endInstruction: 5919
       startSourceChar: 6299
@@ -5392,7 +5393,7 @@ MonoBehaviour:
       endSourceChar: 6348
       line: 212
       lineChar: 16
-      spanCodeSection: "brother)\r\n            "
+      spanCodeSection: "sibling)\r\n            "
     - startInstruction: 5960
       endInstruction: 5959
       startSourceChar: 6348
@@ -5427,7 +5428,7 @@ MonoBehaviour:
       endSourceChar: 6375
       line: 214
       lineChar: 16
-      spanCodeSection: brother.
+      spanCodeSection: sibling.
     - startInstruction: 5960
       endInstruction: 5959
       startSourceChar: 6375
@@ -5455,7 +5456,7 @@ MonoBehaviour:
       endSourceChar: 6472
       line: 218
       lineChar: 8
-      spanCodeSection: object GetValueFromBrother(
+      spanCodeSection: object GetValueFromSibling(
     - startInstruction: 6012
       endInstruction: 6011
       startSourceChar: 6472
@@ -5497,7 +5498,7 @@ MonoBehaviour:
       endSourceChar: 6538
       line: 220
       lineChar: 12
-      spanCodeSection: 'var brother '
+      spanCodeSection: 'var sibling '
     - startInstruction: 6020
       endInstruction: 6019
       startSourceChar: 6538
@@ -5518,7 +5519,7 @@ MonoBehaviour:
       endSourceChar: 6559
       line: 220
       lineChar: 26
-      spanCodeSection: GetBrotherBehavior(
+      spanCodeSection: GetSiblingBehavior(
     - startInstruction: 6020
       endInstruction: 6075
       startSourceChar: 6559
@@ -5539,7 +5540,7 @@ MonoBehaviour:
       endSourceChar: 6608
       line: 221
       lineChar: 16
-      spanCodeSection: "brother)\r\n            "
+      spanCodeSection: "sibling)\r\n            "
     - startInstruction: 6116
       endInstruction: 6115
       startSourceChar: 6608
@@ -5574,7 +5575,7 @@ MonoBehaviour:
       endSourceChar: 6642
       line: 223
       lineChar: 23
-      spanCodeSection: brother.
+      spanCodeSection: sibling.
     - startInstruction: 6116
       endInstruction: 6115
       startSourceChar: 6642
@@ -6265,7 +6266,7 @@ MonoBehaviour:
       lineChar: 19
       spanCodeSection: "false;\r\n        }\r\n        \r\n        // Select free
         object with Least recently used (LRU) algorithm.\r\n        // This expects
-        1st brother UdonBehaviour holds GetServerTimeInMilliseconds in a variable
+        1st sibling UdonBehaviour holds GetServerTimeInMilliseconds in a variable
         named EXUR_LastUsedTime.\r\n        // This returns error string. null for
         successful case.\r\n        // tag is optional.\r\n        "
     - startInstruction: 7524
@@ -6632,7 +6633,7 @@ MonoBehaviour:
       endSourceChar: 8697
       line: 277
       lineChar: 29
-      spanCodeSection: GetValueFromBrother(
+      spanCodeSection: GetValueFromSibling(
     - startInstruction: 7832
       endInstruction: 7831
       startSourceChar: 8697
@@ -7664,7 +7665,7 @@ MonoBehaviour:
       endSourceChar: 10402
       line: 325
       lineChar: 20
-      spanCodeSection: IsBrotherHavingValue(
+      spanCodeSection: IsSiblingHavingValue(
     - startInstruction: 9588
       endInstruction: 9587
       startSourceChar: 10402
@@ -8699,7 +8700,7 @@ MonoBehaviour:
       endSourceChar: 12405
       line: 379
       lineChar: 20
-      spanCodeSection: 'var brother '
+      spanCodeSection: 'var sibling '
     - startInstruction: 11732
       endInstruction: 11731
       startSourceChar: 12405
@@ -8720,7 +8721,7 @@ MonoBehaviour:
       endSourceChar: 12426
       line: 379
       lineChar: 34
-      spanCodeSection: GetBrotherBehavior(
+      spanCodeSection: GetSiblingBehavior(
     - startInstruction: 11732
       endInstruction: 11787
       startSourceChar: 12426
@@ -8741,7 +8742,7 @@ MonoBehaviour:
       endSourceChar: 12495
       line: 380
       lineChar: 24
-      spanCodeSection: "brother)\r\n                    "
+      spanCodeSection: "sibling)\r\n                    "
     - startInstruction: 11828
       endInstruction: 11827
       startSourceChar: 12495
@@ -8832,7 +8833,7 @@ MonoBehaviour:
       endSourceChar: 12608
       line: 383
       lineChar: 24
-      spanCodeSection: brother.
+      spanCodeSection: sibling.
     - startInstruction: 11864
       endInstruction: 11863
       startSourceChar: 12608
@@ -8881,7 +8882,7 @@ MonoBehaviour:
       endSourceChar: 12678
       line: 384
       lineChar: 24
-      spanCodeSection: brother.
+      spanCodeSection: sibling.
     - startInstruction: 11896
       endInstruction: 11895
       startSourceChar: 12678
@@ -9187,7 +9188,7 @@ MonoBehaviour:
       endSourceChar: 13525
       line: 408
       lineChar: 8
-      spanCodeSection: "public void EXUR_RecieveEvent()\r\n        "
+      spanCodeSection: "public void EXUR_ReceiveEvent()\r\n        "
     - startInstruction: 12448
       endInstruction: 12447
       startSourceChar: 13525
@@ -9390,7 +9391,7 @@ MonoBehaviour:
       endSourceChar: 13843
       line: 420
       lineChar: 22
-      spanCodeSection: '"EXUR_RecieveEvent. " + '
+      spanCodeSection: '"EXUR_ReceiveEvent. " + '
     - startInstruction: 12648
       endInstruction: 12679
       startSourceChar: 13843

@@ -31,7 +31,7 @@ namespace Iwsd.EXUR {
         bool IncludeChildrenToSendEvent = false;
 
         [SerializeField]
-        bool DeavtivateWhenIdle = false;
+        bool DeactivateWhenIdle = false;
 
         // NOTE: Use Component[] instead of UdonUdonBehaviour[] because of the limitation
         // "Type referenced by 'VRCUdonUdonBehaviourArray' could not be resolved."
@@ -130,7 +130,7 @@ namespace Iwsd.EXUR {
                 aggregatedListener.SetProgramVariable("EXUR_EventSource", this);
                 aggregatedListener.SetProgramVariable("EXUR_EventName", eventName);
                 aggregatedListener.SetProgramVariable("EXUR_EventAdditionalInfo", null);
-                aggregatedListener.SendCustomEvent("EXUR_RecieveEvent");
+                aggregatedListener.SendCustomEvent("EXUR_ReceiveEvent");
             }
         }
 
@@ -185,9 +185,9 @@ namespace Iwsd.EXUR {
                     break;
 
                 case STATE_OWN_AND_IDLE:
-                    // For DeavtivateWhenIdle usecase, if set_active_true and set_using_true are incoming successively,
+                    // For DeactivateWhenIdle usecase, if set_active_true and set_using_true are incoming successively,
                     // detecting to-lost-ownership transition in Update is not done yet. So do it here.
-                    if (DeavtivateWhenIdle && !Networking.IsOwner(gameObject))
+                    if (DeactivateWhenIdle && !Networking.IsOwner(gameObject))
                     {
                         lastState = STATE_IDLE_NOT_MINE;
                         SendCallback("LostOwnershipOnIdle");
@@ -246,7 +246,7 @@ namespace Iwsd.EXUR {
         {
             // It needs to be temporary active to work Networking.IsOwner properly.
             bool temporaryActivated = false;
-            if (DeavtivateWhenIdle && !gameObject.activeSelf)
+            if (DeactivateWhenIdle && !gameObject.activeSelf)
             {
                 gameObject.SetActive(true);
                 temporaryActivated = true;
@@ -297,7 +297,7 @@ namespace Iwsd.EXUR {
                         {
                             SetSyncedUsing(false);
                             lastState = STATE_OWN_AND_IDLE;
-                            if (DeavtivateWhenIdle)
+                            if (DeactivateWhenIdle)
                             {
                                 // Do this before callback InitializedToOwn for user program to be able to know inactive.
                                 SetActiveObject(false);
@@ -331,7 +331,7 @@ namespace Iwsd.EXUR {
                             SetSyncedUsing(false);
                             SendCallback("RetrievedAfterOwnerLeftWhileUsing");
 
-                            if (DeavtivateWhenIdle)
+                            if (DeactivateWhenIdle)
                             {
                                 SetActiveObject(false);
                             }
@@ -352,7 +352,7 @@ namespace Iwsd.EXUR {
                             lastState = STATE_OWN_AND_IDLE;
                             SendCallback("RetrievedAfterOwnerLeftWhileIdle");
 
-                            if (DeavtivateWhenIdle)
+                            if (DeactivateWhenIdle)
                             {
                                 SetActiveObject(false);
                             }
@@ -433,7 +433,7 @@ namespace Iwsd.EXUR {
             assert((lastState == STATE_IDLE_NOT_MINE) || (lastState == STATE_OWN_AND_IDLE),
                    "TryToUse: Illegal state. " + lastState); 
 
-            if (DeavtivateWhenIdle)
+            if (DeactivateWhenIdle)
             {
                 SetActiveObject(true); // This must be before calling IsOwner
             }
@@ -509,7 +509,7 @@ namespace Iwsd.EXUR {
                 SendCallback("ExitUsingByRequest");
                 SendCallback("EXUR_Finalize");
 
-                if (DeavtivateWhenIdle)
+                if (DeactivateWhenIdle)
                 {
                     SetActiveObject(false);
                 }

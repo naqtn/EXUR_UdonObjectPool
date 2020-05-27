@@ -55,7 +55,7 @@ namespace Iwsd.EXUR.Demo {
                 // It can not cast "U# this" to UdonBehaviour. so by SetProgramVariable.
                 MonitorTarget.SetProgramVariable("EventListener", this);
 
-                EXUR_RecieveEvent(); // to initialize display 
+                EXUR_ReceiveEvent(); // to initialize display 
             }
             else
             {
@@ -67,7 +67,7 @@ namespace Iwsd.EXUR.Demo {
         [HideInInspector] public UdonBehaviour EXUR_EventSource;
         [HideInInspector] public string EXUR_EventName;
         [HideInInspector] public string EXUR_EventAdditionalInfo;
-        public void EXUR_RecieveEvent()
+        public void EXUR_ReceiveEvent()
         {
             if (EXUR_EventName != null)
             {

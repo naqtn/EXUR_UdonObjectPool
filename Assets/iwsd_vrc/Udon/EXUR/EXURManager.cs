@@ -172,7 +172,7 @@ namespace Iwsd.EXUR {
                 EventListener.SetProgramVariable("EXUR_EventSource", eventSource);
                 EventListener.SetProgramVariable("EXUR_EventName", eventName);
                 EventListener.SetProgramVariable("EXUR_EventAdditionalInfo", eventInfo);
-                EventListener.SendCustomEvent("EXUR_RecieveEvent");
+                EventListener.SendCustomEvent("EXUR_ReceiveEvent");
 
                 // TODO read variable to check variable exists in user program as kind debug mode (?)
             }
@@ -406,7 +406,7 @@ namespace Iwsd.EXUR {
         [HideInInspector]
         public string EXUR_EventAdditionalInfo;
 
-        public void EXUR_RecieveEvent()
+        public void EXUR_ReceiveEvent()
         {
             if (!EXUR_EventSource)
             {
@@ -418,7 +418,7 @@ namespace Iwsd.EXUR {
             }
             else
             {
-                debug("EXUR_RecieveEvent. " + EXUR_EventName + " from '" + EXUR_EventSource.gameObject.name + "'");
+                debug("EXUR_ReceiveEvent. " + EXUR_EventName + " from '" + EXUR_EventSource.gameObject.name + "'");
 
                 ReactToEvent(EXUR_EventSource, EXUR_EventName);
                 UpdateCounts();

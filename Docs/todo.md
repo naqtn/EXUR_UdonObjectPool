@@ -9,14 +9,12 @@ It's not useful for user program to use empty to describe free.
 So EXUR should accept both. (?)
 
 ### add more simplified API
-* faild to use
-* remote started to use
-* remote stopped to use
+* failed to use
 
 ### Rename event name
 * to ease to understand. and add prefix to avoid conflict.
 
-### Write testcase
+### Write test cases
 * user program error case
 
 ### disable debug log
@@ -33,7 +31,7 @@ More samples
 
 ### Make samples using from UdonGraph 
 
-### sample: without-manager ussage
+### sample: without-manager usage
 It will be useful for ownership passing management
 
 ### One object for each player case
@@ -61,6 +59,16 @@ An integer that specifies where to find pooling object.
 If there are so many pooling objects, that will be too long child list in Hierarchy view.
 So it will be useful if it's possible to bundle them in sub groups.
 
+### Acquire random one
+
+For example, it could be used for dealing cards.
+
+### Reset
+
+Master (or any client?) collects all object's ownership and let them be idle.
+
+### add pooled object with VRCInstantiation
+In the future, if VRCInstantiation becomes network supported.
 
 
 TODOs Before Release
@@ -70,17 +78,15 @@ TODOs Before Release
 
 Short "howto use" in readme:
 
-* basic ussage
+* basic usage
     * prepare object and component
         * structure
     * put your script
         * event based design
-    * call master to aquire object
+    * call master to acquire object
     * call handler to release object
     * implement listener to know error
-* advanced ussage
-    * deactivate when idle
-    * one object for each player
+* advanced usage
 
 * update introduction part of readme
 * update features list in readme
@@ -91,45 +97,18 @@ Manual:
 * method API
 * event details
     * simplified and detailed
-* Tag feature
-    * tag is a string
-    * tag is used to identify objects
-    * string.Empty means "not used". it can not be used usual value. (null is also)
-    * Sibling UdonBehavior must have certain variables
-    * it try to preserve and use identical object if possible 
-    * purge by Least recently used (LRU) algorithm
-    * user can update EXUR_LastUsedTime
-    * interface note: how to passing argument
-* ownership
-    * ownership is controled on "Pooled GameObject"
-    * Delay for safer sync variable writing
-    * handler will be pass to user program by manager event after ownership obtained.
-* IncludeChildrenToSendEvent handler option
-    * to be exact "descendant"
-    * note: child object ownership is not controled by EXUR
-* DeavtivateWhenIdle handler option
-    * pooled object when it becomes idle.
-* additional note for features
-    * synced variable free
-        * to avoid network load
-    * Try to use owned object if possible
-* DebugText
-    * optional
-    * to view internal log
-* Assignment algorithm described
-    * try to use own object first for speed
-    * random to avoid race condition
-    * Least recently used (LRU) algorithm for tag
+    * meaning of "use".
+        * Exclusively "control" the object
+        * Remote client react to the control
 * figures (svg files)
     * this is local view, not system-wide
-* internal design note
-    * Tag need synced variable. so it implemented on another UdonBehavior.
-    to let core (Handler) be synced variable free.
-    * method name prefix policy.
-    to avoid conflict.
 
+### make prefabs
+
+### make a simple sample scene
 
 ### Create package and deploy test
 Doc should be moved to inside Asset
 
 ### Research how to create "U# optional installation" release
+
