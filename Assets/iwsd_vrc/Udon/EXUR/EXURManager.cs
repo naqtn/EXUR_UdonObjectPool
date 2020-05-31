@@ -22,6 +22,9 @@ namespace Iwsd.EXUR {
         public int FreeCount;
 
 
+        const string TAG_VALUE_VAR_NAME = nameof(TaggedObject.EXUR_Tag);
+        const string TAG_TIME_VAR_NAME = nameof(TaggedObject.EXUR_LastUsedTime);
+
         const string EVENT_NAME_IN_USE_BY_SELF = "InUseBySelf";
         const string EVENT_NAME_IN_USE_BY_OTHERS = "InUseByOthers";
         const string EVENT_NAME_NO_FREE_OBJECT = "NoFreeObject";
@@ -117,7 +120,7 @@ namespace Iwsd.EXUR {
             {
                 var obj = objects[i];
                 if (obj.IsFreeOwned()
-                    && (!checkEmptyTag || IsSiblingHavingInvalidStringValue(obj, "EXUR_Tag")))
+                    && (!checkEmptyTag || IsSiblingHavingInvalidStringValue(obj, TAG_VALUE_VAR_NAME)))
                 {
                     return obj;
                 }
@@ -135,7 +138,7 @@ namespace Iwsd.EXUR {
             {
                 var obj = objects[(i + randOffset) % n];
                 if (obj.IsFreeNotOwned()
-                    && (!checkEmptyTag || IsSiblingHavingInvalidStringValue(obj, "EXUR_Tag")))
+                    && (!checkEmptyTag || IsSiblingHavingInvalidStringValue(obj, TAG_VALUE_VAR_NAME)))
                 {
                     return obj;
                 }
@@ -344,7 +347,7 @@ namespace Iwsd.EXUR {
             var n = objects.Length;
             for (int i = 0; i < n; i++) {
                 var obj = objects[i];
-                if (IsSiblingHavingValue(obj, "EXUR_Tag", tag))
+                if (IsSiblingHavingValue(obj, TAG_VALUE_VAR_NAME, tag))
                 {
                     foundCount++;
                     targetHandler = obj;
@@ -402,7 +405,7 @@ namespace Iwsd.EXUR {
                     if (sibling)
                     {
                         var time = Networking.GetServerTimeInMilliseconds();
-                        sibling.SetProgramVariable("EXUR_Tag", tag);
+                        sibling.SetProgramVariable(TAG_VALUE_VAR_NAME, tag);
                         sibling.SetProgramVariable("EXUR_LastUsedTime", time);
                         debug($"set tag={tag}, time={time} name='{eventSource.gameObject.name}'");
                     }
