@@ -2,6 +2,7 @@
 
 <!-- TOC depthfrom:2 depthto:3 orderedlist:false insertanchor:false -->
 
+- [Overview](#overview)
 - [Elements](#elements)
     - [Basic structure](#basic-structure)
     - [EXUR Manager](#exur-manager)
@@ -19,6 +20,20 @@
 - [Internal design note](#internal-design-note)
 
 <!-- /TOC -->
+
+## Overview
+
+This library provides useful functions to make synchronized objects in multi player environment.
+
+* Object pooling mechanism: Each player can use shared objects exclusively.
+* It supports both use-case "One object for each player" and "Player uses arbitrary multiple objects on demand".
+* It can reassign identical object for rejoined player (if the pool has enough capacity).
+* It efficiently assigns objects to achieve short response time. (Less ownership change process, Less chance to allocation collision)
+* For late joiner, It synchronizes each object current using state (using or idle) 
+* It provides a way for library user to detect a player who uses objects leaves the world instance.
+* It provides a way for library user to detect the world-instance-master changes.
+* Delay mechanism for synced variables. (A workaround Udon synced variable ownership problem)
+
 
 ## Elements
 
@@ -316,5 +331,10 @@ But we choose Handler because we want to be "clean" user program as much as poss
 
 
 **original concept**
+
+For "exclusive use" there is ownership mechanism on VRChat network system. 
+But networked objects are always owned by someone. 
+In other words, ownership can't express that the object is actually used or not. 
+This library adds "free or using attribute" to objects. 
 
 ![Original concept](EXUR-concept-state-diagram.svg)

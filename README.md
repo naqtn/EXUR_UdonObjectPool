@@ -1,23 +1,24 @@
 # EXUR_UdonObjectPool
-EXUR (EXclusive Use and Reusing objects) is yet another VRChat Udon object pooling library.
+EXUR (EXclusive Use and Reusing objects) is object pooling library for VRChat Udon.
 
-On VRChat, networked objects are always owned by someone. Ownership doesn't mean it is actually used. This library adds "free or using attribute" to that.
+This library provides useful funtions to make synchronized objects in multi player environment.
 
 [Demo world is available](https://vrchat.com/home/launch?worldId=wrld_c05c3ccf-32e5-4233-80f8-4f8bb0d1d0ad)
 
-
-## Functions and Features
+## Basic Functions and Features
 * It manages objects placed on the scene at startup.
-* It serves exclusive use of each object.
+* It serves exclusive use of each object for each player.
 * Player can use multiple objects concurrently.
+* And also supports "One object for each player" usecase.
 * Of course, it supports player joining and leaving.
-* Optionally it can handle "theft". (planning feature)
+* For rejoined player, It can reassign identical object.
 * Implemented with U# but UdonGraph friendly interface. (to be tested)
 
 ## Technical Features
-* Not "owner centralized" design. Each player can weakly hold objects in unused state.
-* Synced variable free. Instead, it uses CustomNetworkEvent to tell "using".
+* Synced variable free.
 * Provides various callbacks to track objects state.
+* Includes delay mechanism for synced variables. (A workarond Udon synced variable ownership problem)
+* Not "owner centralized" design. Each player can weakly hold objects in unused state.
 
 
 ## How to use (Quick start guide)
