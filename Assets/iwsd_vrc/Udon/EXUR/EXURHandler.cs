@@ -127,10 +127,10 @@ namespace Iwsd.EXUR {
             if (aggregatedListener)
             {
                 // NOTE: currently CustomEvent doesn't have argument. (VRCSDK3-UDON-2020.04.25.13.00)
-                aggregatedListener.SetProgramVariable("EXUR_EventSource", this);
-                aggregatedListener.SetProgramVariable("EXUR_EventName", eventName);
-                aggregatedListener.SetProgramVariable("EXUR_EventAdditionalInfo", null);
-                aggregatedListener.SendCustomEvent("EXUR_ReceiveEvent");
+                aggregatedListener.SetProgramVariable(nameof(ManagerListener.EXUR_EventSource), this);
+                aggregatedListener.SetProgramVariable(nameof(ManagerListener.EXUR_EventName), eventName);
+                aggregatedListener.SetProgramVariable(nameof(ManagerListener.EXUR_EventAdditionalInfo), null);
+                aggregatedListener.SendCustomEvent(nameof(ManagerListener.EXUR_ReceiveEvent));
             }
         }
 

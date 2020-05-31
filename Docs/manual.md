@@ -8,7 +8,8 @@
     - [EXUR Handler](#exur-handler)
     - [User Program](#user-program)
 - [API](#api)
-    - [Methods](#methods)
+    - [Manager Methods and Properties](#manager-methods-and-properties)
+    - [Handler Methods and Properties](#handler-methods-and-properties)
     - [Handler simplified event API](#handler-simplified-event-api)
     - [Handler detailed event API](#handler-detailed-event-api)
     - [Manager event API](#manager-event-api)
@@ -61,13 +62,15 @@ Also UdonBehaviours attached to children GameObject can be User Program.
 
 ## API
 
-### Methods
+### Manager Methods and Properties
 
-#### `Iwsd.EXUR.Manager.AcquireObject()`
+This section explains `Iwsd.EXUR.Manager` methods (custom events) and properties (program variables).
+
+#### `AcquireObject()`
 
 Request to acquire one object from the pool.
 
-#### `Iwsd.EXUR.Manager.AcquireObjectWithTag(string tag)`
+#### `AcquireObjectWithTag(string tag)`
 
 Argument program variable: `string AcquireObjectWithTag_tag`
 
@@ -77,14 +80,65 @@ If no object has specified tag, Manager assigns the tag to free object (if avail
 To use this method, pooled GameObject must be properly setup. See [Tag feature](#tag-feature) for details.
 
 
-#### `Iwsd.EXUR.Manager.AcquireObjectForEachPlayer()`
+#### `AcquireObjectForEachPlayer()`
 
 Request to acquire one object for each player.
 
 It uses Player `displayName` as a tag to select object.
 
+#### `UdonBehaviour EventListener`
+
+UdonBehaviour that is called when Manager event happens.
+
+If you need to know what happens on the pool, set your UdonBehaviour to this properly.
+See [Manager event API](#manager-event-api) for details.
+
+
+#### `int TotalCount`
+
+Total number of pooled objects.
+Intend to be readonly.
+
+#### `int FreeCount`
+
+Number of free pooled objects.
+Intend to be readonly.
+
+
+#### `UnityEngine.UI.Text DebugText`
+
+Text component for viewing internal log.
+This is for debug purpose and might be removed in future release.
+    
+
+
+### Handler Methods and Properties
+
+This section explains `Iwsd.EXUR.Handler` methods (custom events) and properties.
 
 #### `Iwsd.EXUR.Handler.ReleaseObject()`
+
+
+#### `bool IncludeChildrenToSendEvent`
+
+If true, Handler call SendCustomEvent of UdonBehaviours that are attached on children GameObjects.
+(To be exact "children" means "descendant" like `GetComponentsInChildren()`)
+
+Set with Unity inspector. Changing value at runtime is not valid.
+
+
+#### `bool DeactivateWhenIdle`
+
+If true, pooled object is deactivated when it becomes idle.
+
+Set with Unity inspector. Changing value at runtime is not valid.
+
+
+#### `UnityEngine.UI.Text DebugText`
+
+Text component for viewing internal log.
+This is for debug purpose and might be removed in future release.
+
 
 
 ### Handler simplified event API
@@ -175,7 +229,10 @@ Listener interface:
 
 Set this listener UdonBehaviour to `Iwsd.EXUR.Manager.EventListener`
 
-(TODO: describe above definition more "politely")
+For U# users: You can use `EXURManagerListener.cs` as a template of your implementation.
+
+
+(TODO: Describe above definition more "politely". Make it friendly also for UdonGraph users.)
 (TODO: explain more about aggregation of Handler events.)
 
 | EXUR_EventSource | EXUR_EventName            | EXUR_EventAdditionalInfo   | Comment                               |
@@ -210,22 +267,14 @@ This is internal specification so it will be changed.
 (Draft. TODO create sections and refine.)
 
 * ownership
-    * ownership is controlled on "Pooled GameObject"
+    * Ownership is controlled on "Pooled GameObject"
+    * Ownership of child object(s) is not controlled by EXUR
     * Delay for safer sync variable writing
     * handler will be pass to user program by manager event after ownership obtained.
     * Do not call `Networking.SetOwner` on "Pooled GameObject" if you don't understand what will happen.
-* IncludeChildrenToSendEvent handler option
-    * to be exact "children" means "descendant" (like `GetComponentsInChildren()`)
-    * note: child object ownership is not controlled by EXUR
-* DeactivateWhenIdle handler option
-    * pooled object when it becomes idle.
 * additional note for features
     * synced variable free
         * to avoid network load
-    * Try to use owned object if possible
-* DebugText
-    * optional
-    * to view internal log
 * Assignment algorithm described
     * try to use owned object first for speed
         * So previous user continues to holds ownership of released object until other client requires.

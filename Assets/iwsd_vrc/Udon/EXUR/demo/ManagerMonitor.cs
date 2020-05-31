@@ -63,7 +63,7 @@ namespace Iwsd.EXUR.Demo {
             }
         }
         
-        // implements listener interface
+        // Implements manager event API listener interface
         [HideInInspector] public UdonBehaviour EXUR_EventSource;
         [HideInInspector] public string EXUR_EventName;
         [HideInInspector] public string EXUR_EventAdditionalInfo;

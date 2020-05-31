@@ -16,7 +16,9 @@ namespace Iwsd.EXUR {
         public UdonBehaviour EventListener;
 
         // Intented to be readonly properties. (but there's no way to limit readonly aceess in Udon.)
+        [HideInInspector]
         public int TotalCount;
+        [HideInInspector]
         public int FreeCount;
 
 
@@ -169,10 +171,10 @@ namespace Iwsd.EXUR {
         {
             if (EventListener)
             {
-                EventListener.SetProgramVariable("EXUR_EventSource", eventSource);
-                EventListener.SetProgramVariable("EXUR_EventName", eventName);
-                EventListener.SetProgramVariable("EXUR_EventAdditionalInfo", eventInfo);
-                EventListener.SendCustomEvent("EXUR_ReceiveEvent");
+                EventListener.SetProgramVariable(nameof(ManagerListener.EXUR_EventSource), eventSource);
+                EventListener.SetProgramVariable(nameof(ManagerListener.EXUR_EventName), eventName);
+                EventListener.SetProgramVariable(nameof(ManagerListener.EXUR_EventAdditionalInfo), eventInfo);
+                EventListener.SendCustomEvent(nameof(ManagerListener.EXUR_ReceiveEvent));
 
                 // TODO read variable to check variable exists in user program as kind debug mode (?)
             }
