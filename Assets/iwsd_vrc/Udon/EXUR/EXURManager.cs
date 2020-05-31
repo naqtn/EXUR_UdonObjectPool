@@ -286,7 +286,7 @@ namespace Iwsd.EXUR {
         }
 
         // Select free object with Least recently used (LRU) algorithm.
-        // This expects 1st sibling UdonBehaviour holds GetServerTimeInMilliseconds in a variable named EXUR_LastUsedTime.
+        // This expects 1st sibling UdonBehaviour holds GetServerTimeInMilliseconds in a variable named TAG_TIME_VAR_NAME.
         // This returns error string. null for successful case.
         // tag is optional.
         void RecycleLeastRecentlyUsed(string newtag)
@@ -299,10 +299,10 @@ namespace Iwsd.EXUR {
                 var obj = objects[i];
                 if (obj.IsFree())
                 {
-                    var to = GetValueFromSibling(obj, "EXUR_LastUsedTime");
+                    var to = GetValueFromSibling(obj, TAG_TIME_VAR_NAME);
                     if (to == null)
                     {
-                        ReportFailure($"{FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}: Does not have EXUR_LastUsedTime variable");
+                        ReportFailure($"{FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}: Does not have a variable named {TAG_TIME_VAR_NAME}");
                         return;
                     }
                     var ti = (int)to;
@@ -406,7 +406,7 @@ namespace Iwsd.EXUR {
                     {
                         var time = Networking.GetServerTimeInMilliseconds();
                         sibling.SetProgramVariable(TAG_VALUE_VAR_NAME, tag);
-                        sibling.SetProgramVariable("EXUR_LastUsedTime", time);
+                        sibling.SetProgramVariable(TAG_TIME_VAR_NAME, time);
                         debug($"set tag={tag}, time={time} name='{eventSource.gameObject.name}'");
                     }
                     eventSource.localTagBuffer = null;
