@@ -6,6 +6,10 @@ using VRC.Udon;
 
 namespace Iwsd.EXUR {
 
+    /// <summary>EXUR Handler event listener interface.
+    /// <para> It is written as a plain C# class because U# currently (v0.17.0) doesn't support C# <c>interface</c>.
+    /// You can use this as a template of your implementation.
+    /// </summary>
     public class HandlerListener : UdonSharpBehaviour
     {
         //////////////////////////////
