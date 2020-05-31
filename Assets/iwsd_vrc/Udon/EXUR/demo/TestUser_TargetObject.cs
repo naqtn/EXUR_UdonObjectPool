@@ -46,85 +46,89 @@ namespace Iwsd.EXUR {
 
 
         // Result of initialization
-        public void InitializedToOwn()
+        public void EXUR_InitializedToOwn()
         {
             DispImage.color = MineInactiveColor;
-            log("InitializedToOwn");
+            log("EXUR_InitializedToOwn");
         }
-        public void InitializedToIdle()
+        public void EXUR_InitializedToIdle()
         {
             DispImage.color = OthersInactiveColor;
-            log("InitializedToIdle");
+            log("EXUR_InitializedToIdle");
         }
-        public void InitializedToUsing()
+        public void EXUR_InitializedToUsing()
         {
             DispImage.color = OthersActiveColor;
-            log("InitializedToUsing");
+            log("EXUR_InitializedToUsing");
         }
 
         // start-stop while not owned
-        public void StartedToUseByOthers()
+        public void EXUR_StartedBeingUsed()
         {
             DispImage.color = OthersActiveColor;
-            log("StartedToUseByOthers");
+            log("EXUR_StartedBeingUsed");
         }
-        public void StoppedUsingByOthers()
+        public void EXUR_StoppedBeingUsed()
         {
             DispImage.color = OthersInactiveColor;
-            log("StoppedUsingByOthers");
+            log("EXUR_StoppedBeingUsed");
         }
 
         // Result of start
-        public void FailedToUseByTimeout()
+        public void EXUR_FailedToUseByTimeout()
         {
             DispImage.color = WarningColor;
-            log("FailedToUseByTimeout");
+            log("EXUR_FailedToUseByTimeout");
         }
-        public void FailedToUseByRaceCondition()
+        public void EXUR_FailedToUseByRaceCondition()
         {
             DispImage.color = WarningColor;
-            log("FailedToUseByRaceCondition");
+            log("EXUR_FailedToUseByRaceCondition");
         }
-        public void EnterUsingFromWaiting()
+        public void EXUR_EnterUsingFromWaiting()
         {
             DispImage.color = MineActiveColor;
-            log("EnterUsingFromWaiting");
+            log("EXUR_EnterUsingFromWaiting");
         }
-        public void EnterUsingFromOwn()
+        public void EXUR_EnterUsingFromOwn()
         {
             DispImage.color = MineActiveColor;
-            log("EnterUsingFromOwn");
+            log("EXUR_EnterUsingFromOwn");
         }
 
         // Result of stop
-        public void ExitUsingByRequest()
+        public void EXUR_ExitUsingByRequest()
         {
             DispImage.color = MineInactiveColor;
-            log("ExitUsingByRequest");
+            log("EXUR_ExitUsingByRequest");
+        }
+        public void EXUR_TriedToReleaseNotOwnError()
+        {
+            DispImage.color = WarningColor;
+            log("EXUR_TriedToReleaseNotOwnError");
         }
 
         // Lost ownership
-        public void LostOwnershipOnUsing()
+        public void EXUR_ExitUsingByLostOwnership()
         {
             DispImage.color = OthersActiveColor;
-            log("LostOwnershipOnUsing");
+            log("EXUR_ExitUsingByLostOwnership");
         }
-        public void LostOwnershipOnIdle()
+        public void EXUR_LostOwnershipOnIdle()
         {
             DispImage.color = OthersInactiveColor;
-            log("LostOwnershipOnIdle");
+            log("EXUR_LostOwnershipOnIdle");
         }
 
-        // Retrieve by Master (see also InitializedToOwn)
-        public void RetrievedAfterOwnerLeftWhileUsing()
+        public void EXUR_RetrievedFromUsing()
         {
             DispImage.color = MineInactiveColor;
-            log("RetrievedAfterOwnerLeftWhileUsing");
+            log("EXUR_RetrievedFromUsing");
         }
-        public void RetrievedAfterOwnerLeftWhileIdle()
+        public void EXUR_RetrievedFromIdle()
         {
             DispImage.color = MineInactiveColor;
-            log("RetrievedAfterOwnerLeftWhileIdle");
+            log("EXUR_RetrievedFromIdle");
         }
     }
 }

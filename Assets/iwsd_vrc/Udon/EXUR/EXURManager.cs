@@ -94,7 +94,7 @@ namespace Iwsd.EXUR {
                     objects[n++] = h;
                 }
             }
-            
+
             if (objects.Length != n)
             {
                 var tmp = objects;
@@ -104,7 +104,7 @@ namespace Iwsd.EXUR {
                     objects[i] = tmp[i];
                 }
             }
-            
+
             TotalCount = objects.Length;
         }
 
@@ -211,7 +211,7 @@ namespace Iwsd.EXUR {
         // Accessing null variable of other UdonBehaviour becomes string.Empty on U# v0.16.2
         // https://github.com/Merlin-san/UdonSharp/issues/32
         // This issues/32 is fixed on v0.17.0
-        // 
+        //
         // This is used for tag value.
         // We should (must?) depend on user program for initial value of tag.
         // And we allow both null and empty because we suppose "strict" rule will not work well.
@@ -279,7 +279,7 @@ namespace Iwsd.EXUR {
             }
             return false;
         }
-        
+
         // Select free object with Least recently used (LRU) algorithm.
         // This expects 1st sibling UdonBehaviour holds GetServerTimeInMilliseconds in a variable named EXUR_LastUsedTime.
         // This returns error string. null for successful case.
@@ -390,7 +390,8 @@ namespace Iwsd.EXUR {
 
         void ReactToEvent(Handler eventSource, string eventName)
         {
-            if (eventName.Equals("EnterUsingFromWaiting") || eventName.Equals("EnterUsingFromOwn"))
+            if (eventName.Equals(nameof(HandlerListener.EXUR_EnterUsingFromWaiting))
+                || eventName.Equals(nameof(HandlerListener.EXUR_EnterUsingFromOwn)))
             {
                 var tag = eventSource.localTagBuffer;
                 if ((tag != null) && !tag.Equals(""))
@@ -416,7 +417,7 @@ namespace Iwsd.EXUR {
 
         // We use user callback interface also for Manager
         // to avoid circular dependencies between Manager and Handler
-        
+
         [HideInInspector] // Hide in inspector because this is public but only for API.
         public Handler EXUR_EventSource;
         [HideInInspector]

@@ -156,14 +156,13 @@ MonoBehaviour:
     \       \r\n         # Working = false;\r\n        PUSH, __1_const_intnl_SystemBoolean\r\n
     \       PUSH, Working\r\n        COPY\r\n        PUSH, __0_intnl_returnTarget_UInt32
     #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public void RetrievedAfterOwnerLeftWhileUsing()\r\n
-    \   .export RetrievedAfterOwnerLeftWhileUsing\r\n        \r\n    RetrievedAfterOwnerLeftWhileUsing:\r\n
-    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
-    {\r\n        \r\n         # transform.position = ConstraintSrcOrgPos;\r\n        PUSH,
-    __0_this_intnl_UnityEngineTransform\r\n        PUSH, ConstraintSrcOrgPos\r\n        EXTERN,
-    \"UnityEngineTransform.__set_position__UnityEngineVector3__SystemVoid\"\r\n        PUSH,
-    __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT,
-    __0_intnl_returnTarget_UInt32\r\n        \r\n.code_end\r\n"
+    \       \r\n        \r\n         # public void EXUR_RetrievedFromUsing()\r\n    .export
+    EXUR_RetrievedFromUsing\r\n        \r\n    EXUR_RetrievedFromUsing:\r\n        \r\n
+    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
+    \        # transform.position = ConstraintSrcOrgPos;\r\n        PUSH, __0_this_intnl_UnityEngineTransform\r\n
+    \       PUSH, ConstraintSrcOrgPos\r\n        EXTERN, \"UnityEngineTransform.__set_position__UnityEngineVector3__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n.code_end\r\n"
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: 6a49e8d0e7d48334cb67c6dbcaf7eab1, type: 3}
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
@@ -1783,56 +1782,56 @@ MonoBehaviour:
     - startInstruction: 1116
       endInstruction: 1123
       startSourceChar: 3090
-      endSourceChar: 3147
+      endSourceChar: 3137
       line: 98
       lineChar: 8
-      spanCodeSection: "public void RetrievedAfterOwnerLeftWhileUsing()\r\n        "
+      spanCodeSection: "public void EXUR_RetrievedFromUsing()\r\n        "
     - startInstruction: 1124
       endInstruction: 1123
-      startSourceChar: 3147
-      endSourceChar: 3162
+      startSourceChar: 3137
+      endSourceChar: 3152
       line: 99
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 1124
       endInstruction: 1123
-      startSourceChar: 3162
-      endSourceChar: 3162
+      startSourceChar: 3152
+      endSourceChar: 3152
       line: 100
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1124
       endInstruction: 1123
-      startSourceChar: 3162
-      endSourceChar: 3162
+      startSourceChar: 3152
+      endSourceChar: 3152
       line: 100
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1124
       endInstruction: 1123
-      startSourceChar: 3162
-      endSourceChar: 3162
+      startSourceChar: 3152
+      endSourceChar: 3152
       line: 100
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1124
       endInstruction: 1123
-      startSourceChar: 3162
-      endSourceChar: 3172
+      startSourceChar: 3152
+      endSourceChar: 3162
       line: 100
       lineChar: 12
       spanCodeSection: transform.
     - startInstruction: 1124
       endInstruction: 1123
-      startSourceChar: 3172
-      endSourceChar: 3183
+      startSourceChar: 3162
+      endSourceChar: 3173
       line: 100
       lineChar: 22
       spanCodeSection: 'position = '
     - startInstruction: 1124
       endInstruction: 1124
-      startSourceChar: 3183
-      endSourceChar: 3183
+      startSourceChar: 3173
+      endSourceChar: 3173
       line: 100
       lineChar: 33
       spanCodeSection: 

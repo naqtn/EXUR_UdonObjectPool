@@ -85,10 +85,10 @@ To response the situation in which no more object in the pool when your program 
   So check `EXUR_EventName` and do the response you want.
 
 Via `EXUR_ReceiveEvent` you can also react to other situation.
-Refer the [manual](Docs/manual.md#exur_recieveevent-custom-event-API) for details.
+Refer [Manager event API](Docs/manual.md#manager-event-api) section of the manual for details.
 
 
-### Further ussage
+### Further usage
 
 * One object for each player
     * Call `Iwsd.EXUR.Manager.AcquireObjectForEachPlayer()`

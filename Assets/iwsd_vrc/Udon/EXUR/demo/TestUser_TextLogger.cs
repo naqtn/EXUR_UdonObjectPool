@@ -20,103 +20,81 @@ namespace Iwsd.EXUR {
         }
 
 
-        // public void ()
-        // {
-        //     log("");
-        // }
-
-        // Result of initialization
-        public void InitializedToOwn()
+        public void EXUR_InitializedToOwn()
         {
-            log("InitializedToOwn");
+            log(nameof(HandlerListener.EXUR_InitializedToOwn));
         }
-        public void InitializedToIdle()
+        public void EXUR_InitializedToIdle()
         {
-            log("InitializedToIdle");
+            log(nameof(HandlerListener.EXUR_InitializedToIdle));
         }
-        public void InitializedToUsing()
+        public void EXUR_InitializedToUsing()
         {
-            log("InitializedToUsing");
+            log(nameof(HandlerListener.EXUR_InitializedToUsing));
         }
-
-        // start-stop while not owned
-        public void StartedToUseByOthers()
+        public void EXUR_StartedBeingUsed()
         {
-            log("StartedToUseByOthers");
+            log(nameof(HandlerListener.EXUR_StartedBeingUsed));
         }
-        public void StoppedUsingByOthers()
+        public void EXUR_StoppedBeingUsed()
         {
-            log("StoppedUsingByOthers");
+            log(nameof(HandlerListener.EXUR_StoppedBeingUsed));
         }
-
-        // Result of start
-        public void FailedToUseByTimeout()
+        public void EXUR_FailedToUseByTimeout()
         {
-            log("FailedToUseByTimeout");
+            log(nameof(HandlerListener.EXUR_FailedToUseByTimeout));
         }
-        public void FailedToUseByRaceCondition()
+        public void EXUR_FailedToUseByRaceCondition()
         {
-            log("FailedToUseByRaceCondition");
+            log(nameof(HandlerListener.EXUR_FailedToUseByRaceCondition));
         }
-        public void EnterUsingFromWaiting()
+        public void EXUR_EnterUsingFromWaiting()
         {
-            log("EnterUsingFromWaiting");
+            log(nameof(HandlerListener.EXUR_EnterUsingFromWaiting));
         }
-        public void EnterUsingFromOwn()
+        public void EXUR_EnterUsingFromOwn()
         {
-            log("EnterUsingFromOwn");
+            log(nameof(HandlerListener.EXUR_EnterUsingFromOwn));
         }
-
-        // Result of stop
-        public void ExitUsingByRequest()
+        public void EXUR_ExitUsingByRequest()
         {
-            log("ExitUsingByRequest");
+            log(nameof(HandlerListener.EXUR_ExitUsingByRequest));
         }
-
-        public void AttemptToReleaseNotOwnObjectError()
+        public void EXUR_TriedToReleaseNotOwnError()
         {
-            log("AttemptToReleaseNotOwnObjectError");
+            log(nameof(HandlerListener.EXUR_TriedToReleaseNotOwnError));
         }
-
-        // Lost ownership
-        public void LostOwnershipOnUsing()
+        public void EXUR_ExitUsingByLostOwnership()
         {
-            log("LostOwnershipOnUsing");
+            log(nameof(HandlerListener.EXUR_ExitUsingByLostOwnership));
         }
-        public void LostOwnershipOnIdle()
+        public void EXUR_LostOwnershipOnIdle()
         {
-            log("LostOwnershipOnIdle");
+            log(nameof(HandlerListener.EXUR_LostOwnershipOnIdle));
         }
-
-        // Retrieve by Master (see also InitializedToOwn)
-        public void RetrievedAfterOwnerLeftWhileUsing()
+        public void EXUR_RetrievedFromUsing()
         {
-            log("RetrievedAfterOwnerLeftWhileUsing");
+            log(nameof(HandlerListener.EXUR_RetrievedFromUsing));
         }
-        public void RetrievedAfterOwnerLeftWhileIdle()
+        public void EXUR_RetrievedFromIdle()
         {
-            log("RetrievedAfterOwnerLeftWhileIdle");
+            log(nameof(HandlerListener.EXUR_RetrievedFromIdle));
         }
-
-        // high level simplified API
         public void EXUR_Reinitialize()
         {
-            log("EXUR_Reinitialize");
-
-            log(" IsOwner=" + Networking.IsOwner(this.gameObject));  // for test TODO remove me
+            log(nameof(HandlerListener.EXUR_Reinitialize));
         }
         public void EXUR_Finalize()
         {
-            log("EXUR_Finalize");
+            log(nameof(HandlerListener.EXUR_Finalize));
         }
-
         public void EXUR_OtherPlayerAcquired()
         {
-            log("EXUR_OtherPlayerAcquired");
+            log(nameof(HandlerListener.EXUR_OtherPlayerAcquired));
         }
         public void EXUR_OtherPlayerReleased()
         {
-            log("EXUR_OtherPlayerReleased");
+            log(nameof(HandlerListener.EXUR_OtherPlayerReleased));
         }
 
 

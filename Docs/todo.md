@@ -31,6 +31,8 @@ More samples
 
 ### Make samples using from UdonGraph 
 
+### Create listener template implementation of UdonGraph 
+
 ### sample: without-manager usage
 It will be useful for ownership passing management
 
@@ -69,6 +71,8 @@ Master (or any client?) collects all object's ownership and let them be idle.
 
 ### add pooled object with VRCInstantiation
 In the future, if VRCInstantiation becomes network supported.
+
+### Cache sibling UdonBehavior for tag
 
 
 TODOs Before Release

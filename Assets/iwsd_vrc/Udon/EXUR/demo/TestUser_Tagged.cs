@@ -27,7 +27,7 @@ namespace Iwsd.EXUR {
             }
         }
 
-        public void RetrievedAfterOwnerLeftWhileUsing()
+        public void EXUR_RetrievedFromUsing()
         {
             EXUR_LastUsedTime = Networking.GetServerTimeInMilliseconds();
         }

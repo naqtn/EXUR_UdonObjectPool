@@ -1207,14 +1207,14 @@ MonoBehaviour:
     \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
     \        # void ReactToEvent(Handler eventSource, string eventName)\r\n    ReactToEvent:\r\n
     \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
-    {\r\n        \r\n         # if (eventName.Equals(\"EnterUsingFromWaiting\") ||
-    eventName.Equals(\"EnterUsingFromOwn\"))\r\n        PUSH, __1_eventName_String\r\n
-    \       PUSH, __41_const_intnl_SystemString\r\n        PUSH, __57_intnl_SystemBoolean\r\n
-    \       EXTERN, \"SystemString.__Equals__SystemString__SystemBoolean\"\r\n        PUSH,
-    __57_intnl_SystemBoolean\r\n        PUSH, __56_intnl_SystemBoolean\r\n        COPY\r\n
-    \       PUSH, __56_intnl_SystemBoolean\r\n        PUSH, __58_intnl_SystemBoolean\r\n
+    {\r\n        \r\n         # if (eventName.Equals(nameof(HandlerListener.EXUR_EnterUsingFromWaiting))\r\n
+    \       PUSH, __1_eventName_String\r\n        PUSH, __41_const_intnl_SystemString\r\n
+    \       PUSH, __57_intnl_SystemBoolean\r\n        EXTERN, \"SystemString.__Equals__SystemString__SystemBoolean\"\r\n
+    \       PUSH, __57_intnl_SystemBoolean\r\n        PUSH, __56_intnl_SystemBoolean\r\n
+    \       COPY\r\n        PUSH, __56_intnl_SystemBoolean\r\n        PUSH, __58_intnl_SystemBoolean\r\n
     \       EXTERN, \"SystemBoolean.__op_UnaryNegation__SystemBoolean__SystemBoolean\"\r\n
     \       PUSH, __58_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00002F30\r\n
+    \       \r\n         # || eventName.Equals(nameof(HandlerListener.EXUR_EnterUsingFromOwn)))\r\n
     \       PUSH, __1_eventName_String\r\n        PUSH, __42_const_intnl_SystemString\r\n
     \       PUSH, __59_intnl_SystemBoolean\r\n        EXTERN, \"SystemString.__Equals__SystemString__SystemBoolean\"\r\n
     \       PUSH, __56_intnl_SystemBoolean\r\n        PUSH, __59_intnl_SystemBoolean\r\n
@@ -8847,584 +8847,598 @@ MonoBehaviour:
       lineChar: 26
       spanCodeSection: Equals(
     - startInstruction: 11904
-      endInstruction: 11995
+      endInstruction: 11903
       startSourceChar: 12948
-      endSourceChar: 12976
+      endSourceChar: 12971
       line: 392
       lineChar: 33
-      spanCodeSection: '"EnterUsingFromWaiting") || '
+      spanCodeSection: nameof(HandlerListener.
+    - startInstruction: 11904
+      endInstruction: 11995
+      startSourceChar: 12971
+      endSourceChar: 13020
+      line: 392
+      lineChar: 56
+      spanCodeSection: "EXUR_EnterUsingFromWaiting))\r\n                || "
     - startInstruction: 11996
       endInstruction: 11995
-      startSourceChar: 12976
-      endSourceChar: 12976
-      line: 392
-      lineChar: 61
+      startSourceChar: 13020
+      endSourceChar: 13020
+      line: 393
+      lineChar: 19
       spanCodeSection: 
     - startInstruction: 11996
       endInstruction: 11995
-      startSourceChar: 12976
-      endSourceChar: 12976
-      line: 392
-      lineChar: 61
+      startSourceChar: 13020
+      endSourceChar: 13020
+      line: 393
+      lineChar: 19
       spanCodeSection: 
     - startInstruction: 11996
       endInstruction: 11995
-      startSourceChar: 12976
-      endSourceChar: 12986
-      line: 392
-      lineChar: 61
+      startSourceChar: 13020
+      endSourceChar: 13030
+      line: 393
+      lineChar: 19
       spanCodeSection: eventName.
     - startInstruction: 11996
       endInstruction: 11995
-      startSourceChar: 12986
-      endSourceChar: 12993
-      line: 392
-      lineChar: 71
+      startSourceChar: 13030
+      endSourceChar: 13037
+      line: 393
+      lineChar: 29
       spanCodeSection: Equals(
     - startInstruction: 11996
+      endInstruction: 11995
+      startSourceChar: 13037
+      endSourceChar: 13060
+      line: 393
+      lineChar: 36
+      spanCodeSection: nameof(HandlerListener.
+    - startInstruction: 11996
       endInstruction: 12095
-      startSourceChar: 12993
-      endSourceChar: 13028
-      line: 392
-      lineChar: 78
-      spanCodeSection: "\"EnterUsingFromOwn\"))\r\n            "
+      startSourceChar: 13060
+      endSourceChar: 13099
+      line: 393
+      lineChar: 59
+      spanCodeSection: "EXUR_EnterUsingFromOwn)))\r\n            "
     - startInstruction: 12096
       endInstruction: 12095
-      startSourceChar: 13028
-      endSourceChar: 13047
-      line: 393
+      startSourceChar: 13099
+      endSourceChar: 13118
+      line: 394
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 12096
       endInstruction: 12095
-      startSourceChar: 13047
-      endSourceChar: 13047
-      line: 394
+      startSourceChar: 13118
+      endSourceChar: 13118
+      line: 395
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 12096
       endInstruction: 12095
-      startSourceChar: 13047
-      endSourceChar: 13047
-      line: 394
+      startSourceChar: 13118
+      endSourceChar: 13118
+      line: 395
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 12096
       endInstruction: 12095
-      startSourceChar: 13047
-      endSourceChar: 13055
-      line: 394
+      startSourceChar: 13118
+      endSourceChar: 13126
+      line: 395
       lineChar: 16
       spanCodeSection: 'var tag '
     - startInstruction: 12096
       endInstruction: 12095
-      startSourceChar: 13055
-      endSourceChar: 13057
-      line: 394
+      startSourceChar: 13126
+      endSourceChar: 13128
+      line: 395
       lineChar: 24
       spanCodeSection: '= '
     - startInstruction: 12096
       endInstruction: 12095
-      startSourceChar: 13057
-      endSourceChar: 13057
-      line: 394
+      startSourceChar: 13128
+      endSourceChar: 13128
+      line: 395
       lineChar: 26
       spanCodeSection: 
     - startInstruction: 12096
       endInstruction: 12095
-      startSourceChar: 13057
-      endSourceChar: 13069
-      line: 394
+      startSourceChar: 13128
+      endSourceChar: 13140
+      line: 395
       lineChar: 26
       spanCodeSection: eventSource.
     - startInstruction: 12096
       endInstruction: 12167
-      startSourceChar: 13069
-      endSourceChar: 13102
-      line: 394
+      startSourceChar: 13140
+      endSourceChar: 13173
+      line: 395
       lineChar: 38
       spanCodeSection: "localTagBuffer;\r\n                "
     - startInstruction: 12168
       endInstruction: 12167
-      startSourceChar: 13102
-      endSourceChar: 13106
-      line: 395
+      startSourceChar: 13173
+      endSourceChar: 13177
+      line: 396
       lineChar: 16
       spanCodeSection: if (
     - startInstruction: 12168
       endInstruction: 12167
-      startSourceChar: 13106
-      endSourceChar: 13106
-      line: 395
+      startSourceChar: 13177
+      endSourceChar: 13177
+      line: 396
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 12168
       endInstruction: 12167
-      startSourceChar: 13106
-      endSourceChar: 13107
-      line: 395
+      startSourceChar: 13177
+      endSourceChar: 13178
+      line: 396
       lineChar: 20
       spanCodeSection: (
     - startInstruction: 12168
       endInstruction: 12167
-      startSourceChar: 13107
-      endSourceChar: 13107
-      line: 395
+      startSourceChar: 13178
+      endSourceChar: 13178
+      line: 396
       lineChar: 21
       spanCodeSection: 
     - startInstruction: 12168
       endInstruction: 12167
-      startSourceChar: 13107
-      endSourceChar: 13114
-      line: 395
+      startSourceChar: 13178
+      endSourceChar: 13185
+      line: 396
       lineChar: 21
       spanCodeSection: 'tag != '
     - startInstruction: 12168
       endInstruction: 12235
-      startSourceChar: 13114
-      endSourceChar: 13123
-      line: 395
+      startSourceChar: 13185
+      endSourceChar: 13194
+      line: 396
       lineChar: 28
       spanCodeSection: 'null) && '
     - startInstruction: 12236
       endInstruction: 12235
-      startSourceChar: 13123
-      endSourceChar: 13124
-      line: 395
+      startSourceChar: 13194
+      endSourceChar: 13195
+      line: 396
       lineChar: 37
       spanCodeSection: '!'
     - startInstruction: 12236
       endInstruction: 12235
-      startSourceChar: 13124
-      endSourceChar: 13124
-      line: 395
+      startSourceChar: 13195
+      endSourceChar: 13195
+      line: 396
       lineChar: 38
       spanCodeSection: 
     - startInstruction: 12236
       endInstruction: 12235
-      startSourceChar: 13124
-      endSourceChar: 13124
-      line: 395
+      startSourceChar: 13195
+      endSourceChar: 13195
+      line: 396
       lineChar: 38
       spanCodeSection: 
     - startInstruction: 12236
       endInstruction: 12235
-      startSourceChar: 13124
-      endSourceChar: 13128
-      line: 395
+      startSourceChar: 13195
+      endSourceChar: 13199
+      line: 396
       lineChar: 38
       spanCodeSection: tag.
     - startInstruction: 12236
       endInstruction: 12235
-      startSourceChar: 13128
-      endSourceChar: 13135
-      line: 395
+      startSourceChar: 13199
+      endSourceChar: 13206
+      line: 396
       lineChar: 42
       spanCodeSection: Equals(
     - startInstruction: 12236
       endInstruction: 12359
-      startSourceChar: 13135
-      endSourceChar: 13157
-      line: 395
+      startSourceChar: 13206
+      endSourceChar: 13228
+      line: 396
       lineChar: 49
       spanCodeSection: "\"\"))\r\n                "
     - startInstruction: 12360
       endInstruction: 12359
-      startSourceChar: 13157
-      endSourceChar: 13180
-      line: 396
+      startSourceChar: 13228
+      endSourceChar: 13251
+      line: 397
       lineChar: 16
       spanCodeSection: "{\r\n                    "
     - startInstruction: 12360
       endInstruction: 12359
-      startSourceChar: 13180
-      endSourceChar: 13180
-      line: 397
+      startSourceChar: 13251
+      endSourceChar: 13251
+      line: 398
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 12360
       endInstruction: 12359
-      startSourceChar: 13180
-      endSourceChar: 13180
-      line: 397
+      startSourceChar: 13251
+      endSourceChar: 13251
+      line: 398
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 12360
       endInstruction: 12359
-      startSourceChar: 13180
-      endSourceChar: 13192
-      line: 397
+      startSourceChar: 13251
+      endSourceChar: 13263
+      line: 398
       lineChar: 20
       spanCodeSection: 'var sibling '
     - startInstruction: 12360
       endInstruction: 12359
-      startSourceChar: 13192
-      endSourceChar: 13194
-      line: 397
+      startSourceChar: 13263
+      endSourceChar: 13265
+      line: 398
       lineChar: 32
       spanCodeSection: '= '
     - startInstruction: 12360
       endInstruction: 12359
-      startSourceChar: 13194
-      endSourceChar: 13194
-      line: 397
+      startSourceChar: 13265
+      endSourceChar: 13265
+      line: 398
       lineChar: 34
       spanCodeSection: 
     - startInstruction: 12360
       endInstruction: 12359
-      startSourceChar: 13194
-      endSourceChar: 13213
-      line: 397
+      startSourceChar: 13265
+      endSourceChar: 13284
+      line: 398
       lineChar: 34
       spanCodeSection: GetSiblingBehavior(
     - startInstruction: 12360
       endInstruction: 12415
-      startSourceChar: 13213
-      endSourceChar: 13248
-      line: 397
+      startSourceChar: 13284
+      endSourceChar: 13319
+      line: 398
       lineChar: 53
       spanCodeSection: "eventSource);\r\n                    "
     - startInstruction: 12416
       endInstruction: 12415
-      startSourceChar: 13248
-      endSourceChar: 13252
-      line: 398
+      startSourceChar: 13319
+      endSourceChar: 13323
+      line: 399
       lineChar: 20
       spanCodeSection: if (
     - startInstruction: 12416
       endInstruction: 12455
-      startSourceChar: 13252
-      endSourceChar: 13282
-      line: 398
+      startSourceChar: 13323
+      endSourceChar: 13353
+      line: 399
       lineChar: 24
       spanCodeSection: "sibling)\r\n                    "
     - startInstruction: 12456
       endInstruction: 12455
-      startSourceChar: 13282
-      endSourceChar: 13309
-      line: 399
+      startSourceChar: 13353
+      endSourceChar: 13380
+      line: 400
       lineChar: 20
       spanCodeSection: "{\r\n                        "
     - startInstruction: 12456
       endInstruction: 12455
-      startSourceChar: 13309
-      endSourceChar: 13309
-      line: 400
+      startSourceChar: 13380
+      endSourceChar: 13380
+      line: 401
       lineChar: 24
       spanCodeSection: 
     - startInstruction: 12456
       endInstruction: 12455
-      startSourceChar: 13309
-      endSourceChar: 13309
-      line: 400
+      startSourceChar: 13380
+      endSourceChar: 13380
+      line: 401
       lineChar: 24
       spanCodeSection: 
     - startInstruction: 12456
       endInstruction: 12455
-      startSourceChar: 13309
-      endSourceChar: 13318
-      line: 400
+      startSourceChar: 13380
+      endSourceChar: 13389
+      line: 401
       lineChar: 24
       spanCodeSection: 'var time '
     - startInstruction: 12456
       endInstruction: 12455
-      startSourceChar: 13318
-      endSourceChar: 13320
-      line: 400
+      startSourceChar: 13389
+      endSourceChar: 13391
+      line: 401
       lineChar: 33
       spanCodeSection: '= '
     - startInstruction: 12456
       endInstruction: 12455
-      startSourceChar: 13320
-      endSourceChar: 13320
-      line: 400
+      startSourceChar: 13391
+      endSourceChar: 13391
+      line: 401
       lineChar: 35
       spanCodeSection: 
     - startInstruction: 12456
       endInstruction: 12455
-      startSourceChar: 13320
-      endSourceChar: 13320
-      line: 400
+      startSourceChar: 13391
+      endSourceChar: 13391
+      line: 401
       lineChar: 35
       spanCodeSection: 
     - startInstruction: 12456
       endInstruction: 12455
-      startSourceChar: 13320
-      endSourceChar: 13331
-      line: 400
+      startSourceChar: 13391
+      endSourceChar: 13402
+      line: 401
       lineChar: 35
       spanCodeSection: Networking.
     - startInstruction: 12456
       endInstruction: 12491
-      startSourceChar: 13331
-      endSourceChar: 13387
-      line: 400
+      startSourceChar: 13402
+      endSourceChar: 13458
+      line: 401
       lineChar: 46
       spanCodeSection: "GetServerTimeInMilliseconds();\r\n                        "
     - startInstruction: 12492
       endInstruction: 12491
-      startSourceChar: 13387
-      endSourceChar: 13387
-      line: 401
+      startSourceChar: 13458
+      endSourceChar: 13458
+      line: 402
       lineChar: 24
       spanCodeSection: 
     - startInstruction: 12492
       endInstruction: 12491
-      startSourceChar: 13387
-      endSourceChar: 13387
-      line: 401
+      startSourceChar: 13458
+      endSourceChar: 13458
+      line: 402
       lineChar: 24
       spanCodeSection: 
     - startInstruction: 12492
       endInstruction: 12491
-      startSourceChar: 13387
-      endSourceChar: 13387
-      line: 401
+      startSourceChar: 13458
+      endSourceChar: 13458
+      line: 402
       lineChar: 24
       spanCodeSection: 
     - startInstruction: 12492
       endInstruction: 12491
-      startSourceChar: 13387
-      endSourceChar: 13395
-      line: 401
+      startSourceChar: 13458
+      endSourceChar: 13466
+      line: 402
       lineChar: 24
       spanCodeSection: sibling.
     - startInstruction: 12492
       endInstruction: 12491
-      startSourceChar: 13395
-      endSourceChar: 13414
-      line: 401
+      startSourceChar: 13466
+      endSourceChar: 13485
+      line: 402
       lineChar: 32
       spanCodeSection: SetProgramVariable(
     - startInstruction: 12492
       endInstruction: 12491
-      startSourceChar: 13414
-      endSourceChar: 13426
-      line: 401
+      startSourceChar: 13485
+      endSourceChar: 13497
+      line: 402
       lineChar: 51
       spanCodeSection: '"EXUR_Tag", '
     - startInstruction: 12492
       endInstruction: 12523
-      startSourceChar: 13426
-      endSourceChar: 13457
-      line: 401
+      startSourceChar: 13497
+      endSourceChar: 13528
+      line: 402
       lineChar: 63
       spanCodeSection: "tag);\r\n                        "
     - startInstruction: 12524
       endInstruction: 12523
-      startSourceChar: 13457
-      endSourceChar: 13457
-      line: 402
+      startSourceChar: 13528
+      endSourceChar: 13528
+      line: 403
       lineChar: 24
       spanCodeSection: 
     - startInstruction: 12524
       endInstruction: 12523
-      startSourceChar: 13457
-      endSourceChar: 13457
-      line: 402
+      startSourceChar: 13528
+      endSourceChar: 13528
+      line: 403
       lineChar: 24
       spanCodeSection: 
     - startInstruction: 12524
       endInstruction: 12523
-      startSourceChar: 13457
-      endSourceChar: 13457
-      line: 402
+      startSourceChar: 13528
+      endSourceChar: 13528
+      line: 403
       lineChar: 24
       spanCodeSection: 
     - startInstruction: 12524
       endInstruction: 12523
-      startSourceChar: 13457
-      endSourceChar: 13465
-      line: 402
+      startSourceChar: 13528
+      endSourceChar: 13536
+      line: 403
       lineChar: 24
       spanCodeSection: sibling.
     - startInstruction: 12524
       endInstruction: 12523
-      startSourceChar: 13465
-      endSourceChar: 13484
-      line: 402
+      startSourceChar: 13536
+      endSourceChar: 13555
+      line: 403
       lineChar: 32
       spanCodeSection: SetProgramVariable(
     - startInstruction: 12524
       endInstruction: 12523
-      startSourceChar: 13484
-      endSourceChar: 13505
-      line: 402
+      startSourceChar: 13555
+      endSourceChar: 13576
+      line: 403
       lineChar: 51
       spanCodeSection: '"EXUR_LastUsedTime", '
     - startInstruction: 12524
       endInstruction: 12555
-      startSourceChar: 13505
-      endSourceChar: 13537
-      line: 402
+      startSourceChar: 13576
+      endSourceChar: 13608
+      line: 403
       lineChar: 72
       spanCodeSection: "time);\r\n                        "
     - startInstruction: 12556
       endInstruction: 12555
-      startSourceChar: 13537
-      endSourceChar: 13537
-      line: 403
+      startSourceChar: 13608
+      endSourceChar: 13608
+      line: 404
       lineChar: 24
       spanCodeSection: 
     - startInstruction: 12556
       endInstruction: 12555
-      startSourceChar: 13537
-      endSourceChar: 13537
-      line: 403
+      startSourceChar: 13608
+      endSourceChar: 13608
+      line: 404
       lineChar: 24
       spanCodeSection: 
     - startInstruction: 12556
       endInstruction: 12555
-      startSourceChar: 13537
-      endSourceChar: 13543
-      line: 403
+      startSourceChar: 13608
+      endSourceChar: 13614
+      line: 404
       lineChar: 24
       spanCodeSection: debug(
     - startInstruction: 12556
       endInstruction: 12555
-      startSourceChar: 13543
-      endSourceChar: 13545
-      line: 403
+      startSourceChar: 13614
+      endSourceChar: 13616
+      line: 404
       lineChar: 30
       spanCodeSection: $"
     - startInstruction: 12556
       endInstruction: 12575
-      startSourceChar: 13545
-      endSourceChar: 13553
-      line: 403
+      startSourceChar: 13616
+      endSourceChar: 13624
+      line: 404
       lineChar: 32
       spanCodeSection: set tag=
     - startInstruction: 12576
       endInstruction: 12575
-      startSourceChar: 13553
-      endSourceChar: 13554
-      line: 403
+      startSourceChar: 13624
+      endSourceChar: 13625
+      line: 404
       lineChar: 40
       spanCodeSection: '{'
     - startInstruction: 12576
       endInstruction: 12627
-      startSourceChar: 13554
-      endSourceChar: 13558
-      line: 403
+      startSourceChar: 13625
+      endSourceChar: 13629
+      line: 404
       lineChar: 41
       spanCodeSection: tag}
     - startInstruction: 12628
       endInstruction: 12679
-      startSourceChar: 13558
-      endSourceChar: 13565
-      line: 403
+      startSourceChar: 13629
+      endSourceChar: 13636
+      line: 404
       lineChar: 45
       spanCodeSection: ', time='
     - startInstruction: 12680
       endInstruction: 12679
-      startSourceChar: 13565
-      endSourceChar: 13566
-      line: 403
+      startSourceChar: 13636
+      endSourceChar: 13637
+      line: 404
       lineChar: 52
       spanCodeSection: '{'
     - startInstruction: 12680
       endInstruction: 12755
-      startSourceChar: 13566
-      endSourceChar: 13571
-      line: 403
+      startSourceChar: 13637
+      endSourceChar: 13642
+      line: 404
       lineChar: 53
       spanCodeSection: time}
     - startInstruction: 12756
       endInstruction: 12807
-      startSourceChar: 13571
-      endSourceChar: 13578
-      line: 403
+      startSourceChar: 13642
+      endSourceChar: 13649
+      line: 404
       lineChar: 58
       spanCodeSection: ' name='''
     - startInstruction: 12808
       endInstruction: 12807
-      startSourceChar: 13578
-      endSourceChar: 13579
-      line: 403
+      startSourceChar: 13649
+      endSourceChar: 13650
+      line: 404
       lineChar: 65
       spanCodeSection: '{'
     - startInstruction: 12808
       endInstruction: 12807
-      startSourceChar: 13579
-      endSourceChar: 13579
-      line: 403
+      startSourceChar: 13650
+      endSourceChar: 13650
+      line: 404
       lineChar: 66
       spanCodeSection: 
     - startInstruction: 12808
       endInstruction: 12807
-      startSourceChar: 13579
-      endSourceChar: 13579
-      line: 403
+      startSourceChar: 13650
+      endSourceChar: 13650
+      line: 404
       lineChar: 66
       spanCodeSection: 
     - startInstruction: 12808
       endInstruction: 12807
-      startSourceChar: 13579
-      endSourceChar: 13591
-      line: 403
+      startSourceChar: 13650
+      endSourceChar: 13662
+      line: 404
       lineChar: 66
       spanCodeSection: eventSource.
     - startInstruction: 12808
       endInstruction: 12807
-      startSourceChar: 13591
-      endSourceChar: 13602
-      line: 403
+      startSourceChar: 13662
+      endSourceChar: 13673
+      line: 404
       lineChar: 78
       spanCodeSection: gameObject.
     - startInstruction: 12808
       endInstruction: 12907
-      startSourceChar: 13602
-      endSourceChar: 13607
-      line: 403
+      startSourceChar: 13673
+      endSourceChar: 13678
+      line: 404
       lineChar: 89
       spanCodeSection: name}
     - startInstruction: 12908
       endInstruction: 13015
-      startSourceChar: 13607
-      endSourceChar: 13656
-      line: 403
+      startSourceChar: 13678
+      endSourceChar: 13727
+      line: 404
       lineChar: 94
       spanCodeSection: "'\");\r\n                    }\r\n                    "
     - startInstruction: 13016
       endInstruction: 13015
-      startSourceChar: 13656
-      endSourceChar: 13656
-      line: 405
+      startSourceChar: 13727
+      endSourceChar: 13727
+      line: 406
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 13016
       endInstruction: 13015
-      startSourceChar: 13656
-      endSourceChar: 13656
-      line: 405
+      startSourceChar: 13727
+      endSourceChar: 13727
+      line: 406
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 13016
       endInstruction: 13015
-      startSourceChar: 13656
-      endSourceChar: 13656
-      line: 405
+      startSourceChar: 13727
+      endSourceChar: 13727
+      line: 406
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 13016
       endInstruction: 13015
-      startSourceChar: 13656
-      endSourceChar: 13668
-      line: 405
+      startSourceChar: 13727
+      endSourceChar: 13739
+      line: 406
       lineChar: 20
       spanCodeSection: eventSource.
     - startInstruction: 13016
       endInstruction: 13015
-      startSourceChar: 13668
-      endSourceChar: 13685
-      line: 405
+      startSourceChar: 13739
+      endSourceChar: 13756
+      line: 406
       lineChar: 32
       spanCodeSection: 'localTagBuffer = '
     - startInstruction: 13016
       endInstruction: 13067
-      startSourceChar: 13685
-      endSourceChar: 13996
-      line: 405
+      startSourceChar: 13756
+      endSourceChar: 14067
+      line: 406
       lineChar: 49
       spanCodeSection: "null;\r\n                }\r\n            }\r\n        }\r\n\r\n
         \       #endregion\r\n\r\n\r\n        //////////////////////////////\r\n        #region
@@ -9433,1438 +9447,1438 @@ MonoBehaviour:
         and Handler\r\n        \r\n        "
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 13996
-      endSourceChar: 13997
-      line: 419
+      startSourceChar: 14067
+      endSourceChar: 14068
+      line: 420
       lineChar: 8
       spanCodeSection: '['
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 13997
-      endSourceChar: 13997
-      line: 419
+      startSourceChar: 14068
+      endSourceChar: 14068
+      line: 420
       lineChar: 9
       spanCodeSection: 
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 13997
-      endSourceChar: 14092
-      line: 419
+      startSourceChar: 14068
+      endSourceChar: 14163
+      line: 420
       lineChar: 9
       spanCodeSection: "HideInInspector] // Hide in inspector because this is public
         but only for API.\r\n        public "
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 14092
-      endSourceChar: 14092
-      line: 420
+      startSourceChar: 14163
+      endSourceChar: 14163
+      line: 421
       lineChar: 15
       spanCodeSection: 
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 14092
-      endSourceChar: 14127
-      line: 420
+      startSourceChar: 14163
+      endSourceChar: 14198
+      line: 421
       lineChar: 15
       spanCodeSection: "Handler EXUR_EventSource;\r\n        "
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 14127
-      endSourceChar: 14128
-      line: 421
+      startSourceChar: 14198
+      endSourceChar: 14199
+      line: 422
       lineChar: 8
       spanCodeSection: '['
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 14128
-      endSourceChar: 14128
-      line: 421
+      startSourceChar: 14199
+      endSourceChar: 14199
+      line: 422
       lineChar: 9
       spanCodeSection: 
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 14128
-      endSourceChar: 14161
-      line: 421
+      startSourceChar: 14199
+      endSourceChar: 14232
+      line: 422
       lineChar: 9
       spanCodeSection: "HideInInspector]\r\n        public "
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 14161
-      endSourceChar: 14161
-      line: 422
+      startSourceChar: 14232
+      endSourceChar: 14232
+      line: 423
       lineChar: 15
       spanCodeSection: 
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 14161
-      endSourceChar: 14193
-      line: 422
+      startSourceChar: 14232
+      endSourceChar: 14264
+      line: 423
       lineChar: 15
       spanCodeSection: "string EXUR_EventName;\r\n        "
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 14193
-      endSourceChar: 14194
-      line: 423
+      startSourceChar: 14264
+      endSourceChar: 14265
+      line: 424
       lineChar: 8
       spanCodeSection: '['
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 14194
-      endSourceChar: 14194
-      line: 423
+      startSourceChar: 14265
+      endSourceChar: 14265
+      line: 424
       lineChar: 9
       spanCodeSection: 
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 14194
-      endSourceChar: 14227
-      line: 423
+      startSourceChar: 14265
+      endSourceChar: 14298
+      line: 424
       lineChar: 9
       spanCodeSection: "HideInInspector]\r\n        public "
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 14227
-      endSourceChar: 14227
-      line: 424
+      startSourceChar: 14298
+      endSourceChar: 14298
+      line: 425
       lineChar: 15
       spanCodeSection: 
     - startInstruction: 13068
       endInstruction: 13067
-      startSourceChar: 14227
-      endSourceChar: 14271
-      line: 424
+      startSourceChar: 14298
+      endSourceChar: 14342
+      line: 425
       lineChar: 15
       spanCodeSection: "string EXUR_EventAdditionalInfo;\r\n\r\n        "
     - startInstruction: 13068
       endInstruction: 13075
-      startSourceChar: 14271
-      endSourceChar: 14312
-      line: 426
+      startSourceChar: 14342
+      endSourceChar: 14383
+      line: 427
       lineChar: 8
       spanCodeSection: "public void EXUR_ReceiveEvent()\r\n        "
     - startInstruction: 13076
       endInstruction: 13075
-      startSourceChar: 14312
-      endSourceChar: 14327
-      line: 427
+      startSourceChar: 14383
+      endSourceChar: 14398
+      line: 428
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 13076
       endInstruction: 13075
-      startSourceChar: 14327
-      endSourceChar: 14331
-      line: 428
+      startSourceChar: 14398
+      endSourceChar: 14402
+      line: 429
       lineChar: 12
       spanCodeSection: if (
     - startInstruction: 13076
       endInstruction: 13075
-      startSourceChar: 14331
-      endSourceChar: 14332
-      line: 428
+      startSourceChar: 14402
+      endSourceChar: 14403
+      line: 429
       lineChar: 16
       spanCodeSection: '!'
     - startInstruction: 13076
       endInstruction: 13139
-      startSourceChar: 14332
-      endSourceChar: 14363
-      line: 428
+      startSourceChar: 14403
+      endSourceChar: 14434
+      line: 429
       lineChar: 17
       spanCodeSection: "EXUR_EventSource)\r\n            "
     - startInstruction: 13140
       endInstruction: 13139
-      startSourceChar: 14363
-      endSourceChar: 14382
-      line: 429
+      startSourceChar: 14434
+      endSourceChar: 14453
+      line: 430
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 13140
       endInstruction: 13139
-      startSourceChar: 14382
-      endSourceChar: 14382
-      line: 430
+      startSourceChar: 14453
+      endSourceChar: 14453
+      line: 431
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 13140
       endInstruction: 13139
-      startSourceChar: 14382
-      endSourceChar: 14382
-      line: 430
+      startSourceChar: 14453
+      endSourceChar: 14453
+      line: 431
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 13140
       endInstruction: 13139
-      startSourceChar: 14382
-      endSourceChar: 14387
-      line: 430
+      startSourceChar: 14453
+      endSourceChar: 14458
+      line: 431
       lineChar: 16
       spanCodeSection: warn(
     - startInstruction: 13140
       endInstruction: 13183
-      startSourceChar: 14387
-      endSourceChar: 14441
-      line: 430
+      startSourceChar: 14458
+      endSourceChar: 14512
+      line: 431
       lineChar: 21
       spanCodeSection: "\"null EXUR_EventSource\");\r\n            }\r\n            "
     - startInstruction: 13184
       endInstruction: 13183
-      startSourceChar: 14441
-      endSourceChar: 14446
-      line: 432
+      startSourceChar: 14512
+      endSourceChar: 14517
+      line: 433
       lineChar: 12
       spanCodeSection: 'else '
     - startInstruction: 13184
       endInstruction: 13183
-      startSourceChar: 14446
-      endSourceChar: 14450
-      line: 432
+      startSourceChar: 14517
+      endSourceChar: 14521
+      line: 433
       lineChar: 17
       spanCodeSection: if (
     - startInstruction: 13184
       endInstruction: 13183
-      startSourceChar: 14450
-      endSourceChar: 14450
-      line: 432
+      startSourceChar: 14521
+      endSourceChar: 14521
+      line: 433
       lineChar: 21
       spanCodeSection: 
     - startInstruction: 13184
       endInstruction: 13183
-      startSourceChar: 14450
-      endSourceChar: 14468
-      line: 432
+      startSourceChar: 14521
+      endSourceChar: 14539
+      line: 433
       lineChar: 21
       spanCodeSection: 'EXUR_EventName == '
     - startInstruction: 13184
       endInstruction: 13231
-      startSourceChar: 14468
-      endSourceChar: 14487
-      line: 432
+      startSourceChar: 14539
+      endSourceChar: 14558
+      line: 433
       lineChar: 39
       spanCodeSection: "null)\r\n            "
     - startInstruction: 13232
       endInstruction: 13231
-      startSourceChar: 14487
-      endSourceChar: 14506
-      line: 433
+      startSourceChar: 14558
+      endSourceChar: 14577
+      line: 434
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 13232
       endInstruction: 13231
-      startSourceChar: 14506
-      endSourceChar: 14506
-      line: 434
+      startSourceChar: 14577
+      endSourceChar: 14577
+      line: 435
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 13232
       endInstruction: 13231
-      startSourceChar: 14506
-      endSourceChar: 14506
-      line: 434
+      startSourceChar: 14577
+      endSourceChar: 14577
+      line: 435
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 13232
       endInstruction: 13231
-      startSourceChar: 14506
-      endSourceChar: 14511
-      line: 434
+      startSourceChar: 14577
+      endSourceChar: 14582
+      line: 435
       lineChar: 16
       spanCodeSection: warn(
     - startInstruction: 13232
       endInstruction: 13275
-      startSourceChar: 14511
-      endSourceChar: 14563
-      line: 434
+      startSourceChar: 14582
+      endSourceChar: 14634
+      line: 435
       lineChar: 21
       spanCodeSection: "\"null EXUR_EventName\");\r\n            }\r\n            "
     - startInstruction: 13276
       endInstruction: 13275
-      startSourceChar: 14563
-      endSourceChar: 14581
-      line: 436
+      startSourceChar: 14634
+      endSourceChar: 14652
+      line: 437
       lineChar: 12
       spanCodeSection: "else\r\n            "
     - startInstruction: 13276
       endInstruction: 13275
-      startSourceChar: 14581
-      endSourceChar: 14600
-      line: 437
+      startSourceChar: 14652
+      endSourceChar: 14671
+      line: 438
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 13276
       endInstruction: 13275
-      startSourceChar: 14600
-      endSourceChar: 14600
-      line: 438
+      startSourceChar: 14671
+      endSourceChar: 14671
+      line: 439
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 13276
       endInstruction: 13275
-      startSourceChar: 14600
-      endSourceChar: 14600
-      line: 438
+      startSourceChar: 14671
+      endSourceChar: 14671
+      line: 439
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 13276
       endInstruction: 13275
-      startSourceChar: 14600
-      endSourceChar: 14606
-      line: 438
+      startSourceChar: 14671
+      endSourceChar: 14677
+      line: 439
       lineChar: 16
       spanCodeSection: debug(
     - startInstruction: 13276
       endInstruction: 13275
-      startSourceChar: 14606
-      endSourceChar: 14606
-      line: 438
+      startSourceChar: 14677
+      endSourceChar: 14677
+      line: 439
       lineChar: 22
       spanCodeSection: 
     - startInstruction: 13276
       endInstruction: 13275
-      startSourceChar: 14606
-      endSourceChar: 14606
-      line: 438
+      startSourceChar: 14677
+      endSourceChar: 14677
+      line: 439
       lineChar: 22
       spanCodeSection: 
     - startInstruction: 13276
       endInstruction: 13275
-      startSourceChar: 14606
-      endSourceChar: 14606
-      line: 438
+      startSourceChar: 14677
+      endSourceChar: 14677
+      line: 439
       lineChar: 22
       spanCodeSection: 
     - startInstruction: 13276
       endInstruction: 13275
-      startSourceChar: 14606
-      endSourceChar: 14606
-      line: 438
+      startSourceChar: 14677
+      endSourceChar: 14677
+      line: 439
       lineChar: 22
       spanCodeSection: 
     - startInstruction: 13276
       endInstruction: 13275
-      startSourceChar: 14606
-      endSourceChar: 14630
-      line: 438
+      startSourceChar: 14677
+      endSourceChar: 14701
+      line: 439
       lineChar: 22
       spanCodeSection: '"EXUR_ReceiveEvent. " + '
     - startInstruction: 13276
       endInstruction: 13307
-      startSourceChar: 14630
-      endSourceChar: 14647
-      line: 438
+      startSourceChar: 14701
+      endSourceChar: 14718
+      line: 439
       lineChar: 46
       spanCodeSection: 'EXUR_EventName + '
     - startInstruction: 13308
       endInstruction: 13339
-      startSourceChar: 14647
-      endSourceChar: 14659
-      line: 438
+      startSourceChar: 14718
+      endSourceChar: 14730
+      line: 439
       lineChar: 63
       spanCodeSection: '" from ''" + '
     - startInstruction: 13340
       endInstruction: 13339
-      startSourceChar: 14659
-      endSourceChar: 14659
-      line: 438
+      startSourceChar: 14730
+      endSourceChar: 14730
+      line: 439
       lineChar: 75
       spanCodeSection: 
     - startInstruction: 13340
       endInstruction: 13339
-      startSourceChar: 14659
-      endSourceChar: 14659
-      line: 438
+      startSourceChar: 14730
+      endSourceChar: 14730
+      line: 439
       lineChar: 75
       spanCodeSection: 
     - startInstruction: 13340
       endInstruction: 13339
-      startSourceChar: 14659
-      endSourceChar: 14676
-      line: 438
+      startSourceChar: 14730
+      endSourceChar: 14747
+      line: 439
       lineChar: 75
       spanCodeSection: EXUR_EventSource.
     - startInstruction: 13340
       endInstruction: 13339
-      startSourceChar: 14676
-      endSourceChar: 14687
-      line: 438
+      startSourceChar: 14747
+      endSourceChar: 14758
+      line: 439
       lineChar: 92
       spanCodeSection: gameObject.
     - startInstruction: 13340
       endInstruction: 13419
-      startSourceChar: 14687
-      endSourceChar: 14694
-      line: 438
+      startSourceChar: 14758
+      endSourceChar: 14765
+      line: 439
       lineChar: 103
       spanCodeSection: 'name + '
     - startInstruction: 13420
       endInstruction: 13467
-      startSourceChar: 14694
-      endSourceChar: 14719
-      line: 438
+      startSourceChar: 14765
+      endSourceChar: 14790
+      line: 439
       lineChar: 110
       spanCodeSection: "\"'\");\r\n\r\n                "
     - startInstruction: 13468
       endInstruction: 13467
-      startSourceChar: 14719
-      endSourceChar: 14719
-      line: 440
+      startSourceChar: 14790
+      endSourceChar: 14790
+      line: 441
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 13468
       endInstruction: 13467
-      startSourceChar: 14719
-      endSourceChar: 14719
-      line: 440
+      startSourceChar: 14790
+      endSourceChar: 14790
+      line: 441
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 13468
       endInstruction: 13467
-      startSourceChar: 14719
-      endSourceChar: 14732
-      line: 440
+      startSourceChar: 14790
+      endSourceChar: 14803
+      line: 441
       lineChar: 16
       spanCodeSection: ReactToEvent(
     - startInstruction: 13468
       endInstruction: 13467
-      startSourceChar: 14732
-      endSourceChar: 14750
-      line: 440
+      startSourceChar: 14803
+      endSourceChar: 14821
+      line: 441
       lineChar: 29
       spanCodeSection: 'EXUR_EventSource, '
     - startInstruction: 13468
       endInstruction: 13563
-      startSourceChar: 14750
-      endSourceChar: 14784
-      line: 440
+      startSourceChar: 14821
+      endSourceChar: 14855
+      line: 441
       lineChar: 47
       spanCodeSection: "EXUR_EventName);\r\n                "
     - startInstruction: 13564
       endInstruction: 13563
-      startSourceChar: 14784
-      endSourceChar: 14784
-      line: 441
+      startSourceChar: 14855
+      endSourceChar: 14855
+      line: 442
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 13564
       endInstruction: 13563
-      startSourceChar: 14784
-      endSourceChar: 14784
-      line: 441
+      startSourceChar: 14855
+      endSourceChar: 14855
+      line: 442
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 13564
       endInstruction: 13579
-      startSourceChar: 14784
-      endSourceChar: 14817
-      line: 441
+      startSourceChar: 14855
+      endSourceChar: 14888
+      line: 442
       lineChar: 16
       spanCodeSection: "UpdateCounts();\r\n                "
     - startInstruction: 13580
       endInstruction: 13579
-      startSourceChar: 14817
-      endSourceChar: 14817
-      line: 442
+      startSourceChar: 14888
+      endSourceChar: 14888
+      line: 443
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 13580
       endInstruction: 13579
-      startSourceChar: 14817
-      endSourceChar: 14817
-      line: 442
+      startSourceChar: 14888
+      endSourceChar: 14888
+      line: 443
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 13580
       endInstruction: 13579
-      startSourceChar: 14817
-      endSourceChar: 14827
-      line: 442
+      startSourceChar: 14888
+      endSourceChar: 14898
+      line: 443
       lineChar: 16
       spanCodeSection: SendEvent(
     - startInstruction: 13580
       endInstruction: 13579
-      startSourceChar: 14827
-      endSourceChar: 14845
-      line: 442
+      startSourceChar: 14898
+      endSourceChar: 14916
+      line: 443
       lineChar: 26
       spanCodeSection: 'EXUR_EventSource, '
     - startInstruction: 13580
       endInstruction: 13579
-      startSourceChar: 14845
-      endSourceChar: 14861
-      line: 442
+      startSourceChar: 14916
+      endSourceChar: 14932
+      line: 443
       lineChar: 44
       spanCodeSection: 'EXUR_EventName, '
     - startInstruction: 13580
       endInstruction: 13715
-      startSourceChar: 14861
-      endSourceChar: 14935
-      line: 442
+      startSourceChar: 14932
+      endSourceChar: 15006
+      line: 443
       lineChar: 60
       spanCodeSection: "EXUR_EventAdditionalInfo); // propagate event\r\n            }\r\n
         \           "
     - startInstruction: 13716
       endInstruction: 13715
-      startSourceChar: 14935
-      endSourceChar: 14935
-      line: 444
+      startSourceChar: 15006
+      endSourceChar: 15006
+      line: 445
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 13716
       endInstruction: 13715
-      startSourceChar: 14935
-      endSourceChar: 14935
-      line: 444
+      startSourceChar: 15006
+      endSourceChar: 15006
+      line: 445
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 13716
       endInstruction: 13715
-      startSourceChar: 14935
-      endSourceChar: 14954
-      line: 444
+      startSourceChar: 15006
+      endSourceChar: 15025
+      line: 445
       lineChar: 12
       spanCodeSection: 'EXUR_EventSource = '
     - startInstruction: 13716
       endInstruction: 13735
-      startSourceChar: 14954
-      endSourceChar: 14973
-      line: 444
+      startSourceChar: 15025
+      endSourceChar: 15044
+      line: 445
       lineChar: 31
       spanCodeSection: "null;\r\n            "
     - startInstruction: 13736
       endInstruction: 13735
-      startSourceChar: 14973
-      endSourceChar: 14973
-      line: 445
+      startSourceChar: 15044
+      endSourceChar: 15044
+      line: 446
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 13736
       endInstruction: 13735
-      startSourceChar: 14973
-      endSourceChar: 14973
-      line: 445
+      startSourceChar: 15044
+      endSourceChar: 15044
+      line: 446
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 13736
       endInstruction: 13735
-      startSourceChar: 14973
-      endSourceChar: 14990
-      line: 445
+      startSourceChar: 15044
+      endSourceChar: 15061
+      line: 446
       lineChar: 12
       spanCodeSection: 'EXUR_EventName = '
     - startInstruction: 13736
       endInstruction: 13755
-      startSourceChar: 14990
-      endSourceChar: 15009
-      line: 445
+      startSourceChar: 15061
+      endSourceChar: 15080
+      line: 446
       lineChar: 29
       spanCodeSection: "null;\r\n            "
     - startInstruction: 13756
       endInstruction: 13755
-      startSourceChar: 15009
-      endSourceChar: 15009
-      line: 446
+      startSourceChar: 15080
+      endSourceChar: 15080
+      line: 447
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 13756
       endInstruction: 13755
-      startSourceChar: 15009
-      endSourceChar: 15009
-      line: 446
+      startSourceChar: 15080
+      endSourceChar: 15080
+      line: 447
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 13756
       endInstruction: 13755
-      startSourceChar: 15009
-      endSourceChar: 15036
-      line: 446
+      startSourceChar: 15080
+      endSourceChar: 15107
+      line: 447
       lineChar: 12
       spanCodeSection: 'EXUR_EventAdditionalInfo = '
     - startInstruction: 13756
       endInstruction: 13795
-      startSourceChar: 15036
-      endSourceChar: 15170
-      line: 446
+      startSourceChar: 15107
+      endSourceChar: 15241
+      line: 447
       lineChar: 39
       spanCodeSection: "null;\r\n        }\r\n\r\n        #endregion\r\n\r\n\r\n        //////////////////////////////\r\n
         \       #region Drive by system events\r\n\r\n        "
     - startInstruction: 13796
       endInstruction: 13803
-      startSourceChar: 15170
-      endSourceChar: 15192
-      line: 455
+      startSourceChar: 15241
+      endSourceChar: 15263
+      line: 456
       lineChar: 8
       spanCodeSection: "void Start()\r\n        "
     - startInstruction: 13804
       endInstruction: 13803
-      startSourceChar: 15192
-      endSourceChar: 15207
-      line: 456
+      startSourceChar: 15263
+      endSourceChar: 15278
+      line: 457
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 13804
       endInstruction: 13803
-      startSourceChar: 15207
-      endSourceChar: 15207
-      line: 457
+      startSourceChar: 15278
+      endSourceChar: 15278
+      line: 458
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 13804
       endInstruction: 13803
-      startSourceChar: 15207
-      endSourceChar: 15207
-      line: 457
+      startSourceChar: 15278
+      endSourceChar: 15278
+      line: 458
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 13804
       endInstruction: 13839
-      startSourceChar: 15207
-      endSourceChar: 15346
-      line: 457
+      startSourceChar: 15278
+      endSourceChar: 15417
+      line: 458
       lineChar: 12
       spanCodeSection: "GatherObjects();\r\n        }\r\n\r\n        #endregion\r\n\r\n\r\n
         \       //////////////////////////////\r\n        #region Public interface\r\n\r\n
         \       "
     - startInstruction: 13840
       endInstruction: 13847
-      startSourceChar: 15346
-      endSourceChar: 15374
-      line: 466
+      startSourceChar: 15417
+      endSourceChar: 15445
+      line: 467
       lineChar: 8
       spanCodeSection: 'public void AcquireObject() '
     - startInstruction: 13848
       endInstruction: 13847
-      startSourceChar: 15374
-      endSourceChar: 15389
-      line: 466
+      startSourceChar: 15445
+      endSourceChar: 15460
+      line: 467
       lineChar: 36
       spanCodeSection: "{\r\n            "
     - startInstruction: 13848
       endInstruction: 13847
-      startSourceChar: 15389
-      endSourceChar: 15389
-      line: 467
+      startSourceChar: 15460
+      endSourceChar: 15460
+      line: 468
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 13848
       endInstruction: 13847
-      startSourceChar: 15389
-      endSourceChar: 15389
-      line: 467
+      startSourceChar: 15460
+      endSourceChar: 15460
+      line: 468
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 13848
       endInstruction: 13847
-      startSourceChar: 15389
-      endSourceChar: 15389
-      line: 467
+      startSourceChar: 15460
+      endSourceChar: 15460
+      line: 468
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 13848
       endInstruction: 13847
-      startSourceChar: 15389
-      endSourceChar: 15411
-      line: 467
+      startSourceChar: 15460
+      endSourceChar: 15482
+      line: 468
       lineChar: 12
       spanCodeSection: 'Handler targetHandler '
     - startInstruction: 13848
       endInstruction: 13847
-      startSourceChar: 15411
-      endSourceChar: 15413
-      line: 467
+      startSourceChar: 15482
+      endSourceChar: 15484
+      line: 468
       lineChar: 34
       spanCodeSection: '= '
     - startInstruction: 13848
       endInstruction: 13847
-      startSourceChar: 15413
-      endSourceChar: 15413
-      line: 467
+      startSourceChar: 15484
+      endSourceChar: 15484
+      line: 468
       lineChar: 36
       spanCodeSection: 
     - startInstruction: 13848
       endInstruction: 13847
-      startSourceChar: 15413
-      endSourceChar: 15427
-      line: 467
+      startSourceChar: 15484
+      endSourceChar: 15498
+      line: 468
       lineChar: 36
       spanCodeSection: FindFreeOwned(
     - startInstruction: 13848
       endInstruction: 13903
-      startSourceChar: 15427
-      endSourceChar: 15448
-      line: 467
+      startSourceChar: 15498
+      endSourceChar: 15519
+      line: 468
       lineChar: 50
       spanCodeSection: "false);\r\n            "
     - startInstruction: 13904
       endInstruction: 13903
-      startSourceChar: 15448
-      endSourceChar: 15452
-      line: 468
+      startSourceChar: 15519
+      endSourceChar: 15523
+      line: 469
       lineChar: 12
       spanCodeSection: if (
     - startInstruction: 13904
       endInstruction: 13903
-      startSourceChar: 15452
-      endSourceChar: 15453
-      line: 468
+      startSourceChar: 15523
+      endSourceChar: 15524
+      line: 469
       lineChar: 16
       spanCodeSection: '!'
     - startInstruction: 13904
       endInstruction: 13967
-      startSourceChar: 15453
-      endSourceChar: 15481
-      line: 468
+      startSourceChar: 15524
+      endSourceChar: 15552
+      line: 469
       lineChar: 17
       spanCodeSection: "targetHandler)\r\n            "
     - startInstruction: 13968
       endInstruction: 13967
-      startSourceChar: 15481
-      endSourceChar: 15500
-      line: 469
+      startSourceChar: 15552
+      endSourceChar: 15571
+      line: 470
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 13968
       endInstruction: 13967
-      startSourceChar: 15500
-      endSourceChar: 15500
-      line: 470
+      startSourceChar: 15571
+      endSourceChar: 15571
+      line: 471
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 13968
       endInstruction: 13967
-      startSourceChar: 15500
-      endSourceChar: 15500
-      line: 470
+      startSourceChar: 15571
+      endSourceChar: 15571
+      line: 471
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 13968
       endInstruction: 13967
-      startSourceChar: 15500
-      endSourceChar: 15516
-      line: 470
+      startSourceChar: 15571
+      endSourceChar: 15587
+      line: 471
       lineChar: 16
       spanCodeSection: 'targetHandler = '
     - startInstruction: 13968
       endInstruction: 13967
-      startSourceChar: 15516
-      endSourceChar: 15516
-      line: 470
+      startSourceChar: 15587
+      endSourceChar: 15587
+      line: 471
       lineChar: 32
       spanCodeSection: 
     - startInstruction: 13968
       endInstruction: 13967
-      startSourceChar: 15516
-      endSourceChar: 15533
-      line: 470
+      startSourceChar: 15587
+      endSourceChar: 15604
+      line: 471
       lineChar: 32
       spanCodeSection: FindFreeNotOwned(
     - startInstruction: 13968
       endInstruction: 14023
-      startSourceChar: 15533
-      endSourceChar: 15571
-      line: 470
+      startSourceChar: 15604
+      endSourceChar: 15642
+      line: 471
       lineChar: 49
       spanCodeSection: "false);\r\n            }\r\n\r\n            "
     - startInstruction: 14024
       endInstruction: 14023
-      startSourceChar: 15571
-      endSourceChar: 15575
-      line: 473
+      startSourceChar: 15642
+      endSourceChar: 15646
+      line: 474
       lineChar: 12
       spanCodeSection: if (
     - startInstruction: 14024
       endInstruction: 14023
-      startSourceChar: 15575
-      endSourceChar: 15576
-      line: 473
+      startSourceChar: 15646
+      endSourceChar: 15647
+      line: 474
       lineChar: 16
       spanCodeSection: '!'
     - startInstruction: 14024
       endInstruction: 14087
-      startSourceChar: 15576
-      endSourceChar: 15604
-      line: 473
+      startSourceChar: 15647
+      endSourceChar: 15675
+      line: 474
       lineChar: 17
       spanCodeSection: "targetHandler)\r\n            "
     - startInstruction: 14088
       endInstruction: 14087
-      startSourceChar: 15604
-      endSourceChar: 15623
-      line: 474
+      startSourceChar: 15675
+      endSourceChar: 15694
+      line: 475
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 14088
       endInstruction: 14087
-      startSourceChar: 15623
-      endSourceChar: 15623
-      line: 475
+      startSourceChar: 15694
+      endSourceChar: 15694
+      line: 476
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14088
       endInstruction: 14087
-      startSourceChar: 15623
-      endSourceChar: 15623
-      line: 475
+      startSourceChar: 15694
+      endSourceChar: 15694
+      line: 476
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14088
       endInstruction: 14087
-      startSourceChar: 15623
-      endSourceChar: 15629
-      line: 475
+      startSourceChar: 15694
+      endSourceChar: 15700
+      line: 476
       lineChar: 16
       spanCodeSection: debug(
     - startInstruction: 14088
       endInstruction: 14123
-      startSourceChar: 15629
-      endSourceChar: 15680
-      line: 475
+      startSourceChar: 15700
+      endSourceChar: 15751
+      line: 476
       lineChar: 22
       spanCodeSection: "\"AcquireObject: No free object\");\r\n                "
     - startInstruction: 14124
       endInstruction: 14123
-      startSourceChar: 15680
-      endSourceChar: 15680
-      line: 476
+      startSourceChar: 15751
+      endSourceChar: 15751
+      line: 477
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14124
       endInstruction: 14123
-      startSourceChar: 15680
-      endSourceChar: 15680
-      line: 476
+      startSourceChar: 15751
+      endSourceChar: 15751
+      line: 477
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14124
       endInstruction: 14123
-      startSourceChar: 15680
-      endSourceChar: 15690
-      line: 476
+      startSourceChar: 15751
+      endSourceChar: 15761
+      line: 477
       lineChar: 16
       spanCodeSection: SendEvent(
     - startInstruction: 14124
       endInstruction: 14123
-      startSourceChar: 15690
-      endSourceChar: 15696
-      line: 476
+      startSourceChar: 15761
+      endSourceChar: 15767
+      line: 477
       lineChar: 26
       spanCodeSection: 'null, '
     - startInstruction: 14124
       endInstruction: 14123
-      startSourceChar: 15696
-      endSourceChar: 15723
-      line: 476
+      startSourceChar: 15767
+      endSourceChar: 15794
+      line: 477
       lineChar: 32
       spanCodeSection: 'EVENT_NAME_NO_FREE_OBJECT, '
     - startInstruction: 14124
       endInstruction: 14227
-      startSourceChar: 15723
-      endSourceChar: 15758
-      line: 476
+      startSourceChar: 15794
+      endSourceChar: 15829
+      line: 477
       lineChar: 59
       spanCodeSection: "null);\r\n            }\r\n            "
     - startInstruction: 14228
       endInstruction: 14227
-      startSourceChar: 15758
-      endSourceChar: 15776
-      line: 478
+      startSourceChar: 15829
+      endSourceChar: 15847
+      line: 479
       lineChar: 12
       spanCodeSection: "else\r\n            "
     - startInstruction: 14228
       endInstruction: 14227
-      startSourceChar: 15776
-      endSourceChar: 15795
-      line: 479
+      startSourceChar: 15847
+      endSourceChar: 15866
+      line: 480
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 14228
       endInstruction: 14227
-      startSourceChar: 15795
-      endSourceChar: 15795
-      line: 480
+      startSourceChar: 15866
+      endSourceChar: 15866
+      line: 481
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14228
       endInstruction: 14227
-      startSourceChar: 15795
-      endSourceChar: 15795
-      line: 480
+      startSourceChar: 15866
+      endSourceChar: 15866
+      line: 481
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14228
       endInstruction: 14227
-      startSourceChar: 15795
-      endSourceChar: 15799
-      line: 480
+      startSourceChar: 15866
+      endSourceChar: 15870
+      line: 481
       lineChar: 16
       spanCodeSection: log(
     - startInstruction: 14228
       endInstruction: 14227
-      startSourceChar: 15799
-      endSourceChar: 15799
-      line: 480
+      startSourceChar: 15870
+      endSourceChar: 15870
+      line: 481
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 14228
       endInstruction: 14227
-      startSourceChar: 15799
-      endSourceChar: 15799
-      line: 480
+      startSourceChar: 15870
+      endSourceChar: 15870
+      line: 481
       lineChar: 20
       spanCodeSection: 
     - startInstruction: 14228
       endInstruction: 14227
-      startSourceChar: 15799
-      endSourceChar: 15836
-      line: 480
+      startSourceChar: 15870
+      endSourceChar: 15907
+      line: 481
       lineChar: 20
       spanCodeSection: '"AcquireObject: selected target=''" + '
     - startInstruction: 14228
       endInstruction: 14227
-      startSourceChar: 15836
-      endSourceChar: 15836
-      line: 480
+      startSourceChar: 15907
+      endSourceChar: 15907
+      line: 481
       lineChar: 57
       spanCodeSection: 
     - startInstruction: 14228
       endInstruction: 14227
-      startSourceChar: 15836
-      endSourceChar: 15836
-      line: 480
+      startSourceChar: 15907
+      endSourceChar: 15907
+      line: 481
       lineChar: 57
       spanCodeSection: 
     - startInstruction: 14228
       endInstruction: 14227
-      startSourceChar: 15836
-      endSourceChar: 15850
-      line: 480
+      startSourceChar: 15907
+      endSourceChar: 15921
+      line: 481
       lineChar: 57
       spanCodeSection: targetHandler.
     - startInstruction: 14228
       endInstruction: 14227
-      startSourceChar: 15850
-      endSourceChar: 15861
-      line: 480
+      startSourceChar: 15921
+      endSourceChar: 15932
+      line: 481
       lineChar: 71
       spanCodeSection: gameObject.
     - startInstruction: 14228
       endInstruction: 14307
-      startSourceChar: 15861
-      endSourceChar: 15868
-      line: 480
+      startSourceChar: 15932
+      endSourceChar: 15939
+      line: 481
       lineChar: 82
       spanCodeSection: 'name + '
     - startInstruction: 14308
       endInstruction: 14355
-      startSourceChar: 15868
-      endSourceChar: 15891
-      line: 480
+      startSourceChar: 15939
+      endSourceChar: 15962
+      line: 481
       lineChar: 89
       spanCodeSection: "\"'\");\r\n                "
     - startInstruction: 14356
       endInstruction: 14355
-      startSourceChar: 15891
-      endSourceChar: 15891
-      line: 481
+      startSourceChar: 15962
+      endSourceChar: 15962
+      line: 482
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14356
       endInstruction: 14355
-      startSourceChar: 15891
-      endSourceChar: 15891
-      line: 481
+      startSourceChar: 15962
+      endSourceChar: 15962
+      line: 482
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14356
       endInstruction: 14355
-      startSourceChar: 15891
-      endSourceChar: 15891
-      line: 481
+      startSourceChar: 15962
+      endSourceChar: 15962
+      line: 482
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14356
       endInstruction: 14355
-      startSourceChar: 15891
-      endSourceChar: 15905
-      line: 481
+      startSourceChar: 15962
+      endSourceChar: 15976
+      line: 482
       lineChar: 16
       spanCodeSection: targetHandler.
     - startInstruction: 14356
       endInstruction: 14399
-      startSourceChar: 15905
-      endSourceChar: 15956
-      line: 481
+      startSourceChar: 15976
+      endSourceChar: 16027
+      line: 482
       lineChar: 30
       spanCodeSection: "TryToUse();\r\n            }\r\n        }\r\n\r\n\r\n        "
     - startInstruction: 14400
       endInstruction: 14399
-      startSourceChar: 15956
-      endSourceChar: 15957
-      line: 486
+      startSourceChar: 16027
+      endSourceChar: 16028
+      line: 487
       lineChar: 8
       spanCodeSection: '['
     - startInstruction: 14400
       endInstruction: 14399
-      startSourceChar: 15957
-      endSourceChar: 15957
-      line: 486
+      startSourceChar: 16028
+      endSourceChar: 16028
+      line: 487
       lineChar: 9
       spanCodeSection: 
     - startInstruction: 14400
       endInstruction: 14399
-      startSourceChar: 15957
-      endSourceChar: 16042
-      line: 486
+      startSourceChar: 16028
+      endSourceChar: 16113
+      line: 487
       lineChar: 9
       spanCodeSection: "HideInInspector] // Hide in inspector because this is a part
         of API.\r\n        public "
     - startInstruction: 14400
       endInstruction: 14399
-      startSourceChar: 16042
-      endSourceChar: 16042
-      line: 487
+      startSourceChar: 16113
+      endSourceChar: 16113
+      line: 488
       lineChar: 15
       spanCodeSection: 
     - startInstruction: 14400
       endInstruction: 14399
-      startSourceChar: 16042
-      endSourceChar: 16086
-      line: 487
+      startSourceChar: 16113
+      endSourceChar: 16157
+      line: 488
       lineChar: 15
       spanCodeSection: "string AcquireObjectWithTag_tag;\r\n\r\n        "
     - startInstruction: 14400
       endInstruction: 14407
-      startSourceChar: 16086
-      endSourceChar: 16130
-      line: 489
+      startSourceChar: 16157
+      endSourceChar: 16201
+      line: 490
       lineChar: 8
       spanCodeSection: "public void AcquireObjectWithTag()\r\n        "
     - startInstruction: 14408
       endInstruction: 14407
-      startSourceChar: 16130
-      endSourceChar: 16145
-      line: 490
+      startSourceChar: 16201
+      endSourceChar: 16216
+      line: 491
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 14408
       endInstruction: 14407
-      startSourceChar: 16145
-      endSourceChar: 16145
-      line: 491
+      startSourceChar: 16216
+      endSourceChar: 16216
+      line: 492
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 14408
       endInstruction: 14407
-      startSourceChar: 16145
-      endSourceChar: 16145
-      line: 491
+      startSourceChar: 16216
+      endSourceChar: 16216
+      line: 492
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 14408
       endInstruction: 14407
-      startSourceChar: 16145
-      endSourceChar: 16145
-      line: 491
+      startSourceChar: 16216
+      endSourceChar: 16216
+      line: 492
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 14408
       endInstruction: 14407
-      startSourceChar: 16145
-      endSourceChar: 16156
-      line: 491
+      startSourceChar: 16216
+      endSourceChar: 16227
+      line: 492
       lineChar: 12
       spanCodeSection: 'string tag '
     - startInstruction: 14408
       endInstruction: 14407
-      startSourceChar: 16156
-      endSourceChar: 16158
-      line: 491
+      startSourceChar: 16227
+      endSourceChar: 16229
+      line: 492
       lineChar: 23
       spanCodeSection: '= '
     - startInstruction: 14408
       endInstruction: 14427
-      startSourceChar: 16158
-      endSourceChar: 16256
-      line: 491
+      startSourceChar: 16229
+      endSourceChar: 16327
+      line: 492
       lineChar: 25
       spanCodeSection: "AcquireObjectWithTag_tag;\r\n\r\n            // Usual tag
         value must not be null nor \"\".\r\n            "
     - startInstruction: 14428
       endInstruction: 14427
-      startSourceChar: 16256
-      endSourceChar: 16260
-      line: 494
+      startSourceChar: 16327
+      endSourceChar: 16331
+      line: 495
       lineChar: 12
       spanCodeSection: if (
     - startInstruction: 14428
       endInstruction: 14427
-      startSourceChar: 16260
-      endSourceChar: 16260
-      line: 494
+      startSourceChar: 16331
+      endSourceChar: 16331
+      line: 495
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14428
       endInstruction: 14427
-      startSourceChar: 16260
-      endSourceChar: 16267
-      line: 494
+      startSourceChar: 16331
+      endSourceChar: 16338
+      line: 495
       lineChar: 16
       spanCodeSection: 'tag == '
     - startInstruction: 14428
       endInstruction: 14475
-      startSourceChar: 16267
-      endSourceChar: 16286
-      line: 494
+      startSourceChar: 16338
+      endSourceChar: 16357
+      line: 495
       lineChar: 23
       spanCodeSection: "null)\r\n            "
     - startInstruction: 14476
       endInstruction: 14475
-      startSourceChar: 16286
-      endSourceChar: 16305
-      line: 495
+      startSourceChar: 16357
+      endSourceChar: 16376
+      line: 496
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 14476
       endInstruction: 14475
-      startSourceChar: 16305
-      endSourceChar: 16305
-      line: 496
+      startSourceChar: 16376
+      endSourceChar: 16376
+      line: 497
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14476
       endInstruction: 14475
-      startSourceChar: 16305
-      endSourceChar: 16305
-      line: 496
+      startSourceChar: 16376
+      endSourceChar: 16376
+      line: 497
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14476
       endInstruction: 14475
-      startSourceChar: 16305
-      endSourceChar: 16319
-      line: 496
+      startSourceChar: 16376
+      endSourceChar: 16390
+      line: 497
       lineChar: 16
       spanCodeSection: ReportFailure(
     - startInstruction: 14476
       endInstruction: 14475
-      startSourceChar: 16319
-      endSourceChar: 16321
-      line: 496
+      startSourceChar: 16390
+      endSourceChar: 16392
+      line: 497
       lineChar: 30
       spanCodeSection: $"
     - startInstruction: 14476
       endInstruction: 14475
-      startSourceChar: 16321
-      endSourceChar: 16322
-      line: 496
+      startSourceChar: 16392
+      endSourceChar: 16393
+      line: 497
       lineChar: 32
       spanCodeSection: '{'
     - startInstruction: 14476
       endInstruction: 14495
-      startSourceChar: 16322
-      endSourceChar: 16359
-      line: 496
+      startSourceChar: 16393
+      endSourceChar: 16430
+      line: 497
       lineChar: 33
       spanCodeSection: FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}
     - startInstruction: 14496
       endInstruction: 14611
-      startSourceChar: 16359
-      endSourceChar: 16415
-      line: 496
+      startSourceChar: 16430
+      endSourceChar: 16486
+      line: 497
       lineChar: 70
       spanCodeSection: ": Specified tag was null\");\r\n            }\r\n            "
     - startInstruction: 14612
       endInstruction: 14611
-      startSourceChar: 16415
-      endSourceChar: 16420
-      line: 498
+      startSourceChar: 16486
+      endSourceChar: 16491
+      line: 499
       lineChar: 12
       spanCodeSection: 'else '
     - startInstruction: 14612
       endInstruction: 14611
-      startSourceChar: 16420
-      endSourceChar: 16424
-      line: 498
+      startSourceChar: 16491
+      endSourceChar: 16495
+      line: 499
       lineChar: 17
       spanCodeSection: if (
     - startInstruction: 14612
       endInstruction: 14611
-      startSourceChar: 16424
-      endSourceChar: 16424
-      line: 498
+      startSourceChar: 16495
+      endSourceChar: 16495
+      line: 499
       lineChar: 21
       spanCodeSection: 
     - startInstruction: 14612
       endInstruction: 14611
-      startSourceChar: 16424
-      endSourceChar: 16424
-      line: 498
+      startSourceChar: 16495
+      endSourceChar: 16495
+      line: 499
       lineChar: 21
       spanCodeSection: 
     - startInstruction: 14612
       endInstruction: 14611
-      startSourceChar: 16424
-      endSourceChar: 16428
-      line: 498
+      startSourceChar: 16495
+      endSourceChar: 16499
+      line: 499
       lineChar: 21
       spanCodeSection: tag.
     - startInstruction: 14612
       endInstruction: 14611
-      startSourceChar: 16428
-      endSourceChar: 16435
-      line: 498
+      startSourceChar: 16499
+      endSourceChar: 16506
+      line: 499
       lineChar: 25
       spanCodeSection: Equals(
     - startInstruction: 14612
       endInstruction: 14659
-      startSourceChar: 16435
-      endSourceChar: 16453
-      line: 498
+      startSourceChar: 16506
+      endSourceChar: 16524
+      line: 499
       lineChar: 32
       spanCodeSection: "\"\"))\r\n            "
     - startInstruction: 14660
       endInstruction: 14659
-      startSourceChar: 16453
-      endSourceChar: 16472
-      line: 499
+      startSourceChar: 16524
+      endSourceChar: 16543
+      line: 500
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 14660
       endInstruction: 14659
-      startSourceChar: 16472
-      endSourceChar: 16472
-      line: 500
+      startSourceChar: 16543
+      endSourceChar: 16543
+      line: 501
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14660
       endInstruction: 14659
-      startSourceChar: 16472
-      endSourceChar: 16472
-      line: 500
+      startSourceChar: 16543
+      endSourceChar: 16543
+      line: 501
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14660
       endInstruction: 14659
-      startSourceChar: 16472
-      endSourceChar: 16486
-      line: 500
+      startSourceChar: 16543
+      endSourceChar: 16557
+      line: 501
       lineChar: 16
       spanCodeSection: ReportFailure(
     - startInstruction: 14660
       endInstruction: 14659
-      startSourceChar: 16486
-      endSourceChar: 16488
-      line: 500
+      startSourceChar: 16557
+      endSourceChar: 16559
+      line: 501
       lineChar: 30
       spanCodeSection: $"
     - startInstruction: 14660
       endInstruction: 14659
-      startSourceChar: 16488
-      endSourceChar: 16489
-      line: 500
+      startSourceChar: 16559
+      endSourceChar: 16560
+      line: 501
       lineChar: 32
       spanCodeSection: '{'
     - startInstruction: 14660
       endInstruction: 14679
-      startSourceChar: 16489
-      endSourceChar: 16526
-      line: 500
+      startSourceChar: 16560
+      endSourceChar: 16597
+      line: 501
       lineChar: 33
       spanCodeSection: FAILURE_INFO_HEAD_USER_PROGRAM_ERROR}
     - startInstruction: 14680
       endInstruction: 14795
-      startSourceChar: 16526
-      endSourceChar: 16590
-      line: 500
+      startSourceChar: 16597
+      endSourceChar: 16661
+      line: 501
       lineChar: 70
       spanCodeSection: ": Specified tag was empty string\");\r\n            }\r\n
         \           "
     - startInstruction: 14796
       endInstruction: 14795
-      startSourceChar: 16590
-      endSourceChar: 16608
-      line: 502
+      startSourceChar: 16661
+      endSourceChar: 16679
+      line: 503
       lineChar: 12
       spanCodeSection: "else\r\n            "
     - startInstruction: 14796
       endInstruction: 14795
-      startSourceChar: 16608
-      endSourceChar: 16627
-      line: 503
+      startSourceChar: 16679
+      endSourceChar: 16698
+      line: 504
       lineChar: 12
       spanCodeSection: "{\r\n                "
     - startInstruction: 14796
       endInstruction: 14795
-      startSourceChar: 16627
-      endSourceChar: 16627
-      line: 504
+      startSourceChar: 16698
+      endSourceChar: 16698
+      line: 505
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14796
       endInstruction: 14795
-      startSourceChar: 16627
-      endSourceChar: 16627
-      line: 504
+      startSourceChar: 16698
+      endSourceChar: 16698
+      line: 505
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14796
       endInstruction: 14795
-      startSourceChar: 16627
-      endSourceChar: 16631
-      line: 504
+      startSourceChar: 16698
+      endSourceChar: 16702
+      line: 505
       lineChar: 16
       spanCodeSection: log(
     - startInstruction: 14796
       endInstruction: 14795
-      startSourceChar: 16631
-      endSourceChar: 16633
-      line: 504
+      startSourceChar: 16702
+      endSourceChar: 16704
+      line: 505
       lineChar: 20
       spanCodeSection: $"
     - startInstruction: 14796
       endInstruction: 14815
-      startSourceChar: 16633
-      endSourceChar: 16659
-      line: 504
+      startSourceChar: 16704
+      endSourceChar: 16730
+      line: 505
       lineChar: 22
       spanCodeSection: AcquireObjectWithTag Tag='
     - startInstruction: 14816
       endInstruction: 14815
-      startSourceChar: 16659
-      endSourceChar: 16660
-      line: 504
+      startSourceChar: 16730
+      endSourceChar: 16731
+      line: 505
       lineChar: 48
       spanCodeSection: '{'
     - startInstruction: 14816
       endInstruction: 14867
-      startSourceChar: 16660
-      endSourceChar: 16664
-      line: 504
+      startSourceChar: 16731
+      endSourceChar: 16735
+      line: 505
       lineChar: 49
       spanCodeSection: tag}
     - startInstruction: 14868
       endInstruction: 14975
-      startSourceChar: 16664
-      endSourceChar: 16686
-      line: 504
+      startSourceChar: 16735
+      endSourceChar: 16757
+      line: 505
       lineChar: 53
       spanCodeSection: "'\");\r\n                "
     - startInstruction: 14976
       endInstruction: 14975
-      startSourceChar: 16686
-      endSourceChar: 16686
-      line: 505
+      startSourceChar: 16757
+      endSourceChar: 16757
+      line: 506
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14976
       endInstruction: 14975
-      startSourceChar: 16686
-      endSourceChar: 16686
-      line: 505
+      startSourceChar: 16757
+      endSourceChar: 16757
+      line: 506
       lineChar: 16
       spanCodeSection: 
     - startInstruction: 14976
       endInstruction: 14975
-      startSourceChar: 16686
-      endSourceChar: 16711
-      line: 505
+      startSourceChar: 16757
+      endSourceChar: 16782
+      line: 506
       lineChar: 16
       spanCodeSection: AcquireObjectWithTagImpl(
     - startInstruction: 14976
       endInstruction: 15031
-      startSourceChar: 16711
-      endSourceChar: 16754
-      line: 505
+      startSourceChar: 16782
+      endSourceChar: 16825
+      line: 506
       lineChar: 41
       spanCodeSection: "tag);\r\n            }\r\n        }\r\n\r\n        "
     - startInstruction: 15032
       endInstruction: 15039
-      startSourceChar: 16754
-      endSourceChar: 16804
-      line: 509
+      startSourceChar: 16825
+      endSourceChar: 16875
+      line: 510
       lineChar: 8
       spanCodeSection: "public void AcquireObjectForEachPlayer()\r\n        "
     - startInstruction: 15040
       endInstruction: 15039
-      startSourceChar: 16804
-      endSourceChar: 16819
-      line: 510
+      startSourceChar: 16875
+      endSourceChar: 16890
+      line: 511
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 15040
       endInstruction: 15039
-      startSourceChar: 16819
-      endSourceChar: 16819
-      line: 511
+      startSourceChar: 16890
+      endSourceChar: 16890
+      line: 512
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 15040
       endInstruction: 15039
-      startSourceChar: 16819
-      endSourceChar: 16819
-      line: 511
+      startSourceChar: 16890
+      endSourceChar: 16890
+      line: 512
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 15040
       endInstruction: 15039
-      startSourceChar: 16819
-      endSourceChar: 16846
-      line: 511
+      startSourceChar: 16890
+      endSourceChar: 16917
+      line: 512
       lineChar: 12
       spanCodeSection: 'AcquireObjectWithTag_tag = '
     - startInstruction: 15040
       endInstruction: 15039
-      startSourceChar: 16846
-      endSourceChar: 16846
-      line: 511
+      startSourceChar: 16917
+      endSourceChar: 16917
+      line: 512
       lineChar: 39
       spanCodeSection: 
     - startInstruction: 15040
       endInstruction: 15039
-      startSourceChar: 16846
-      endSourceChar: 16846
-      line: 511
+      startSourceChar: 16917
+      endSourceChar: 16917
+      line: 512
       lineChar: 39
       spanCodeSection: 
     - startInstruction: 15040
       endInstruction: 15039
-      startSourceChar: 16846
-      endSourceChar: 16857
-      line: 511
+      startSourceChar: 16917
+      endSourceChar: 16928
+      line: 512
       lineChar: 39
       spanCodeSection: Networking.
     - startInstruction: 15040
       endInstruction: 15039
-      startSourceChar: 16857
-      endSourceChar: 16869
-      line: 511
+      startSourceChar: 16928
+      endSourceChar: 16940
+      line: 512
       lineChar: 50
       spanCodeSection: LocalPlayer.
     - startInstruction: 15040
       endInstruction: 15079
-      startSourceChar: 16869
-      endSourceChar: 16895
-      line: 511
+      startSourceChar: 16940
+      endSourceChar: 16966
+      line: 512
       lineChar: 62
       spanCodeSection: "displayName;\r\n            "
     - startInstruction: 15080
       endInstruction: 15079
-      startSourceChar: 16895
-      endSourceChar: 16895
-      line: 512
+      startSourceChar: 16966
+      endSourceChar: 16966
+      line: 513
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 15080
       endInstruction: 15079
-      startSourceChar: 16895
-      endSourceChar: 16895
-      line: 512
+      startSourceChar: 16966
+      endSourceChar: 16966
+      line: 513
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 15080
       endInstruction: 15080
-      startSourceChar: 16895
-      endSourceChar: 16895
-      line: 512
+      startSourceChar: 16966
+      endSourceChar: 16966
+      line: 513
       lineChar: 12
       spanCodeSection: 
   hasInteractEvent: 0

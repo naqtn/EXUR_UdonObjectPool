@@ -32,18 +32,19 @@ MonoBehaviour:
     \   __11_const_intnl_SystemString: %SystemString, null\r\n    __12_const_intnl_SystemString:
     %SystemString, null\r\n    __13_const_intnl_SystemString: %SystemString, null\r\n
     \   __14_const_intnl_SystemString: %SystemString, null\r\n    __15_const_intnl_SystemString:
-    %SystemString, null\r\n    __2_const_intnl_SystemString: %SystemString, null\r\n
-    \   __3_const_intnl_SystemString: %SystemString, null\r\n    __4_const_intnl_SystemString:
-    %SystemString, null\r\n    __5_const_intnl_SystemString: %SystemString, null\r\n
-    \   __6_const_intnl_SystemString: %SystemString, null\r\n    __7_const_intnl_SystemString:
-    %SystemString, null\r\n    __8_const_intnl_SystemString: %SystemString, null\r\n
-    \   __9_const_intnl_SystemString: %SystemString, null\r\n    __0_const_intnl_SystemType:
-    %SystemType, null\r\n    __0_const_intnl_IwsdEXURHandler: %VRCUdonUdonBehaviour,
-    null\r\n    __0_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __0_const_intnl_SystemUInt32:
-    %SystemUInt32, null\r\n    __1_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __10_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __11_const_intnl_exitJumpLoc_UInt32:
-    %SystemUInt32, null\r\n    __12_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
-    null\r\n    __13_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __2_const_intnl_exitJumpLoc_UInt32:
+    %SystemString, null\r\n    __16_const_intnl_SystemString: %SystemString, null\r\n
+    \   __2_const_intnl_SystemString: %SystemString, null\r\n    __3_const_intnl_SystemString:
+    %SystemString, null\r\n    __4_const_intnl_SystemString: %SystemString, null\r\n
+    \   __5_const_intnl_SystemString: %SystemString, null\r\n    __6_const_intnl_SystemString:
+    %SystemString, null\r\n    __7_const_intnl_SystemString: %SystemString, null\r\n
+    \   __8_const_intnl_SystemString: %SystemString, null\r\n    __9_const_intnl_SystemString:
+    %SystemString, null\r\n    __0_const_intnl_SystemType: %SystemType, null\r\n    __0_const_intnl_IwsdEXURHandler:
+    %VRCUdonUdonBehaviour, null\r\n    __0_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __0_const_intnl_SystemUInt32: %SystemUInt32, null\r\n    __1_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __10_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __11_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __12_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __13_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __14_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __2_const_intnl_exitJumpLoc_UInt32:
     %SystemUInt32, null\r\n    __3_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
     null\r\n    __4_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __5_const_intnl_exitJumpLoc_UInt32:
     %SystemUInt32, null\r\n    __6_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
@@ -125,134 +126,143 @@ MonoBehaviour:
     DebugText\r\n        PUSH, __0_s_String\r\n        EXTERN, \"UnityEngineUIText.__set_text__SystemString__SystemVoid\"\r\n
     \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
     \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
-    \        # public void InitializedToOwn()\r\n    .export InitializedToOwn\r\n
-    \       \r\n    InitializedToOwn:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \        # public void EXUR_InitializedToOwn()\r\n    .export EXUR_InitializedToOwn\r\n
+    \       \r\n    EXUR_InitializedToOwn:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
     \       \r\n         # {\r\n        \r\n         # DispImage.color = MineInactiveColor;\r\n
     \       PUSH, DispImage\r\n        PUSH, MineInactiveColor\r\n        EXTERN,
     \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n        \r\n
-    \        # log(\"InitializedToOwn\");\r\n        PUSH, __2_const_intnl_SystemString\r\n
+    \        # log(\"EXUR_InitializedToOwn\");\r\n        PUSH, __2_const_intnl_SystemString\r\n
     \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __0_const_intnl_exitJumpLoc_UInt32\r\n
     \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public void InitializedToIdle()\r\n    .export
-    InitializedToIdle\r\n        \r\n    InitializedToIdle:\r\n        \r\n        PUSH,
-    __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n         #
-    DispImage.color = OthersInactiveColor;\r\n        PUSH, DispImage\r\n        PUSH,
-    OthersInactiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
-    \       \r\n         # log(\"InitializedToIdle\");\r\n        PUSH, __3_const_intnl_SystemString\r\n
-    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __1_const_intnl_exitJumpLoc_UInt32\r\n
-    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
-    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public void InitializedToUsing()\r\n    .export
-    InitializedToUsing\r\n        \r\n    InitializedToUsing:\r\n        \r\n        PUSH,
-    __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n         #
-    DispImage.color = OthersActiveColor;\r\n        PUSH, DispImage\r\n        PUSH,
-    OthersActiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
-    \       \r\n         # log(\"InitializedToUsing\");\r\n        PUSH, __4_const_intnl_SystemString\r\n
-    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __2_const_intnl_exitJumpLoc_UInt32\r\n
-    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
-    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public void StartedToUseByOthers()\r\n    .export
-    StartedToUseByOthers\r\n        \r\n    StartedToUseByOthers:\r\n        \r\n
-    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
-    \        # DispImage.color = OthersActiveColor;\r\n        PUSH, DispImage\r\n
-    \       PUSH, OthersActiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
-    \       \r\n         # log(\"StartedToUseByOthers\");\r\n        PUSH, __5_const_intnl_SystemString\r\n
-    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __3_const_intnl_exitJumpLoc_UInt32\r\n
-    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
-    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public void StoppedUsingByOthers()\r\n    .export
-    StoppedUsingByOthers\r\n        \r\n    StoppedUsingByOthers:\r\n        \r\n
+    \       \r\n        \r\n         # public void EXUR_InitializedToIdle()\r\n    .export
+    EXUR_InitializedToIdle\r\n        \r\n    EXUR_InitializedToIdle:\r\n        \r\n
     \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
     \        # DispImage.color = OthersInactiveColor;\r\n        PUSH, DispImage\r\n
     \       PUSH, OthersInactiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
-    \       \r\n         # log(\"StoppedUsingByOthers\");\r\n        PUSH, __6_const_intnl_SystemString\r\n
-    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __4_const_intnl_exitJumpLoc_UInt32\r\n
+    \       \r\n         # log(\"EXUR_InitializedToIdle\");\r\n        PUSH, __3_const_intnl_SystemString\r\n
+    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __1_const_intnl_exitJumpLoc_UInt32\r\n
     \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public void FailedToUseByTimeout()\r\n    .export
-    FailedToUseByTimeout\r\n        \r\n    FailedToUseByTimeout:\r\n        \r\n
-    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
-    \        # DispImage.color = WarningColor;\r\n        PUSH, DispImage\r\n        PUSH,
-    WarningColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
-    \       \r\n         # log(\"FailedToUseByTimeout\");\r\n        PUSH, __7_const_intnl_SystemString\r\n
-    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __5_const_intnl_exitJumpLoc_UInt32\r\n
-    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
-    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public void FailedToUseByRaceCondition()\r\n
-    \   .export FailedToUseByRaceCondition\r\n        \r\n    FailedToUseByRaceCondition:\r\n
-    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
-    {\r\n        \r\n         # DispImage.color = WarningColor;\r\n        PUSH, DispImage\r\n
-    \       PUSH, WarningColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
-    \       \r\n         # log(\"FailedToUseByRaceCondition\");\r\n        PUSH, __8_const_intnl_SystemString\r\n
-    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __6_const_intnl_exitJumpLoc_UInt32\r\n
-    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
-    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public void EnterUsingFromWaiting()\r\n    .export
-    EnterUsingFromWaiting\r\n        \r\n    EnterUsingFromWaiting:\r\n        \r\n
-    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
-    \        # DispImage.color = MineActiveColor;\r\n        PUSH, DispImage\r\n        PUSH,
-    MineActiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
-    \       \r\n         # log(\"EnterUsingFromWaiting\");\r\n        PUSH, __9_const_intnl_SystemString\r\n
-    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __7_const_intnl_exitJumpLoc_UInt32\r\n
-    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
-    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public void EnterUsingFromOwn()\r\n    .export
-    EnterUsingFromOwn\r\n        \r\n    EnterUsingFromOwn:\r\n        \r\n        PUSH,
-    __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n         #
-    DispImage.color = MineActiveColor;\r\n        PUSH, DispImage\r\n        PUSH,
-    MineActiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
-    \       \r\n         # log(\"EnterUsingFromOwn\");\r\n        PUSH, __10_const_intnl_SystemString\r\n
-    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __8_const_intnl_exitJumpLoc_UInt32\r\n
-    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
-    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public void ExitUsingByRequest()\r\n    .export
-    ExitUsingByRequest\r\n        \r\n    ExitUsingByRequest:\r\n        \r\n        PUSH,
-    __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n         #
-    DispImage.color = MineInactiveColor;\r\n        PUSH, DispImage\r\n        PUSH,
-    MineInactiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
-    \       \r\n         # log(\"ExitUsingByRequest\");\r\n        PUSH, __11_const_intnl_SystemString\r\n
-    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __9_const_intnl_exitJumpLoc_UInt32\r\n
-    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
-    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public void LostOwnershipOnUsing()\r\n    .export
-    LostOwnershipOnUsing\r\n        \r\n    LostOwnershipOnUsing:\r\n        \r\n
+    \       \r\n        \r\n         # public void EXUR_InitializedToUsing()\r\n    .export
+    EXUR_InitializedToUsing\r\n        \r\n    EXUR_InitializedToUsing:\r\n        \r\n
     \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
     \        # DispImage.color = OthersActiveColor;\r\n        PUSH, DispImage\r\n
     \       PUSH, OthersActiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
-    \       \r\n         # log(\"LostOwnershipOnUsing\");\r\n        PUSH, __12_const_intnl_SystemString\r\n
-    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __10_const_intnl_exitJumpLoc_UInt32\r\n
+    \       \r\n         # log(\"EXUR_InitializedToUsing\");\r\n        PUSH, __4_const_intnl_SystemString\r\n
+    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __2_const_intnl_exitJumpLoc_UInt32\r\n
     \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public void LostOwnershipOnIdle()\r\n    .export
-    LostOwnershipOnIdle\r\n        \r\n    LostOwnershipOnIdle:\r\n        \r\n        PUSH,
-    __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n         #
-    DispImage.color = OthersInactiveColor;\r\n        PUSH, DispImage\r\n        PUSH,
-    OthersInactiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
-    \       \r\n         # log(\"LostOwnershipOnIdle\");\r\n        PUSH, __13_const_intnl_SystemString\r\n
+    \       \r\n        \r\n         # public void EXUR_StartedBeingUsed()\r\n    .export
+    EXUR_StartedBeingUsed\r\n        \r\n    EXUR_StartedBeingUsed:\r\n        \r\n
+    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
+    \        # DispImage.color = OthersActiveColor;\r\n        PUSH, DispImage\r\n
+    \       PUSH, OthersActiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
+    \       \r\n         # log(\"EXUR_StartedBeingUsed\");\r\n        PUSH, __5_const_intnl_SystemString\r\n
+    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __3_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public void EXUR_StoppedBeingUsed()\r\n    .export
+    EXUR_StoppedBeingUsed\r\n        \r\n    EXUR_StoppedBeingUsed:\r\n        \r\n
+    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
+    \        # DispImage.color = OthersInactiveColor;\r\n        PUSH, DispImage\r\n
+    \       PUSH, OthersInactiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
+    \       \r\n         # log(\"EXUR_StoppedBeingUsed\");\r\n        PUSH, __6_const_intnl_SystemString\r\n
+    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __4_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public void EXUR_FailedToUseByTimeout()\r\n
+    \   .export EXUR_FailedToUseByTimeout\r\n        \r\n    EXUR_FailedToUseByTimeout:\r\n
+    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
+    {\r\n        \r\n         # DispImage.color = WarningColor;\r\n        PUSH, DispImage\r\n
+    \       PUSH, WarningColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
+    \       \r\n         # log(\"EXUR_FailedToUseByTimeout\");\r\n        PUSH, __7_const_intnl_SystemString\r\n
+    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __5_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public void EXUR_FailedToUseByRaceCondition()\r\n
+    \   .export EXUR_FailedToUseByRaceCondition\r\n        \r\n    EXUR_FailedToUseByRaceCondition:\r\n
+    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
+    {\r\n        \r\n         # DispImage.color = WarningColor;\r\n        PUSH, DispImage\r\n
+    \       PUSH, WarningColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
+    \       \r\n         # log(\"EXUR_FailedToUseByRaceCondition\");\r\n        PUSH,
+    __8_const_intnl_SystemString\r\n        PUSH, __0_s_String\r\n        COPY\r\n
+    \       PUSH, __6_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x00000268\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public void EXUR_EnterUsingFromWaiting()\r\n    .export EXUR_EnterUsingFromWaiting\r\n
+    \       \r\n    EXUR_EnterUsingFromWaiting:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       \r\n         # {\r\n        \r\n         # DispImage.color = MineActiveColor;\r\n
+    \       PUSH, DispImage\r\n        PUSH, MineActiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
+    \       \r\n         # log(\"EXUR_EnterUsingFromWaiting\");\r\n        PUSH, __9_const_intnl_SystemString\r\n
+    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __7_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public void EXUR_EnterUsingFromOwn()\r\n    .export
+    EXUR_EnterUsingFromOwn\r\n        \r\n    EXUR_EnterUsingFromOwn:\r\n        \r\n
+    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
+    \        # DispImage.color = MineActiveColor;\r\n        PUSH, DispImage\r\n        PUSH,
+    MineActiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
+    \       \r\n         # log(\"EXUR_EnterUsingFromOwn\");\r\n        PUSH, __10_const_intnl_SystemString\r\n
+    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __8_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public void EXUR_ExitUsingByRequest()\r\n    .export
+    EXUR_ExitUsingByRequest\r\n        \r\n    EXUR_ExitUsingByRequest:\r\n        \r\n
+    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
+    \        # DispImage.color = MineInactiveColor;\r\n        PUSH, DispImage\r\n
+    \       PUSH, MineInactiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
+    \       \r\n         # log(\"EXUR_ExitUsingByRequest\");\r\n        PUSH, __11_const_intnl_SystemString\r\n
+    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __9_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public void EXUR_TriedToReleaseNotOwnError()\r\n
+    \   .export EXUR_TriedToReleaseNotOwnError\r\n        \r\n    EXUR_TriedToReleaseNotOwnError:\r\n
+    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
+    {\r\n        \r\n         # DispImage.color = WarningColor;\r\n        PUSH, DispImage\r\n
+    \       PUSH, WarningColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
+    \       \r\n         # log(\"EXUR_TriedToReleaseNotOwnError\");\r\n        PUSH,
+    __12_const_intnl_SystemString\r\n        PUSH, __0_s_String\r\n        COPY\r\n
+    \       PUSH, __10_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x00000268\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public void EXUR_ExitUsingByLostOwnership()\r\n    .export EXUR_ExitUsingByLostOwnership\r\n
+    \       \r\n    EXUR_ExitUsingByLostOwnership:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       \r\n         # {\r\n        \r\n         # DispImage.color = OthersActiveColor;\r\n
+    \       PUSH, DispImage\r\n        PUSH, OthersActiveColor\r\n        EXTERN,
+    \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n        \r\n
+    \        # log(\"EXUR_ExitUsingByLostOwnership\");\r\n        PUSH, __13_const_intnl_SystemString\r\n
     \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __11_const_intnl_exitJumpLoc_UInt32\r\n
     \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
     epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
-    \       \r\n        \r\n         # public void RetrievedAfterOwnerLeftWhileUsing()\r\n
-    \   .export RetrievedAfterOwnerLeftWhileUsing\r\n        \r\n    RetrievedAfterOwnerLeftWhileUsing:\r\n
+    \       \r\n        \r\n         # public void EXUR_LostOwnershipOnIdle()\r\n
+    \   .export EXUR_LostOwnershipOnIdle\r\n        \r\n    EXUR_LostOwnershipOnIdle:\r\n
     \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
-    {\r\n        \r\n         # DispImage.color = MineInactiveColor;\r\n        PUSH,
-    DispImage\r\n        PUSH, MineInactiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
-    \       \r\n         # log(\"RetrievedAfterOwnerLeftWhileUsing\");\r\n        PUSH,
-    __14_const_intnl_SystemString\r\n        PUSH, __0_s_String\r\n        COPY\r\n
-    \       PUSH, __12_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x00000268\r\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
-    \        # public void RetrievedAfterOwnerLeftWhileIdle()\r\n    .export RetrievedAfterOwnerLeftWhileIdle\r\n
-    \       \r\n    RetrievedAfterOwnerLeftWhileIdle:\r\n        \r\n        PUSH,
-    __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n         #
-    DispImage.color = MineInactiveColor;\r\n        PUSH, DispImage\r\n        PUSH,
-    MineInactiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
-    \       \r\n         # log(\"RetrievedAfterOwnerLeftWhileIdle\");\r\n        PUSH,
-    __15_const_intnl_SystemString\r\n        PUSH, __0_s_String\r\n        COPY\r\n
-    \       PUSH, __13_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x00000268\r\n
-    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
-    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n.code_end\r\n"
+    {\r\n        \r\n         # DispImage.color = OthersInactiveColor;\r\n        PUSH,
+    DispImage\r\n        PUSH, OthersInactiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
+    \       \r\n         # log(\"EXUR_LostOwnershipOnIdle\");\r\n        PUSH, __14_const_intnl_SystemString\r\n
+    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __12_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public void EXUR_RetrievedFromUsing()\r\n    .export
+    EXUR_RetrievedFromUsing\r\n        \r\n    EXUR_RetrievedFromUsing:\r\n        \r\n
+    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
+    \        # DispImage.color = MineInactiveColor;\r\n        PUSH, DispImage\r\n
+    \       PUSH, MineInactiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
+    \       \r\n         # log(\"EXUR_RetrievedFromUsing\");\r\n        PUSH, __15_const_intnl_SystemString\r\n
+    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __13_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public void EXUR_RetrievedFromIdle()\r\n    .export
+    EXUR_RetrievedFromIdle\r\n        \r\n    EXUR_RetrievedFromIdle:\r\n        \r\n
+    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
+    \        # DispImage.color = MineInactiveColor;\r\n        PUSH, DispImage\r\n
+    \       PUSH, MineInactiveColor\r\n        EXTERN, \"UnityEngineUIImage.__set_color__UnityEngineColor__SystemVoid\"\r\n
+    \       \r\n         # log(\"EXUR_RetrievedFromIdle\");\r\n        PUSH, __16_const_intnl_SystemString\r\n
+    \       PUSH, __0_s_String\r\n        COPY\r\n        PUSH, __14_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000268\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n.code_end\r\n"
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: 5351a0d7bcf40344381c3ad9069c47e4, type: 3}
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
@@ -934,1182 +944,1265 @@ MonoBehaviour:
     - startInstruction: 700
       endInstruction: 707
       startSourceChar: 1182
-      endSourceChar: 1222
+      endSourceChar: 1227
       line: 48
       lineChar: 8
-      spanCodeSection: "public void InitializedToOwn()\r\n        "
+      spanCodeSection: "public void EXUR_InitializedToOwn()\r\n        "
     - startInstruction: 708
       endInstruction: 707
-      startSourceChar: 1222
-      endSourceChar: 1237
+      startSourceChar: 1227
+      endSourceChar: 1242
       line: 49
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 708
       endInstruction: 707
-      startSourceChar: 1237
-      endSourceChar: 1237
+      startSourceChar: 1242
+      endSourceChar: 1242
       line: 50
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 708
       endInstruction: 707
-      startSourceChar: 1237
-      endSourceChar: 1237
+      startSourceChar: 1242
+      endSourceChar: 1242
       line: 50
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 708
       endInstruction: 707
-      startSourceChar: 1237
-      endSourceChar: 1237
+      startSourceChar: 1242
+      endSourceChar: 1242
       line: 50
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 708
       endInstruction: 707
-      startSourceChar: 1237
-      endSourceChar: 1247
+      startSourceChar: 1242
+      endSourceChar: 1252
       line: 50
       lineChar: 12
       spanCodeSection: DispImage.
     - startInstruction: 708
       endInstruction: 707
-      startSourceChar: 1247
-      endSourceChar: 1255
+      startSourceChar: 1252
+      endSourceChar: 1260
       line: 50
       lineChar: 22
       spanCodeSection: 'color = '
     - startInstruction: 708
       endInstruction: 731
-      startSourceChar: 1255
-      endSourceChar: 1287
+      startSourceChar: 1260
+      endSourceChar: 1292
       line: 50
       lineChar: 30
       spanCodeSection: "MineInactiveColor;\r\n            "
     - startInstruction: 732
       endInstruction: 731
-      startSourceChar: 1287
-      endSourceChar: 1287
+      startSourceChar: 1292
+      endSourceChar: 1292
       line: 51
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 732
       endInstruction: 731
-      startSourceChar: 1287
-      endSourceChar: 1287
+      startSourceChar: 1292
+      endSourceChar: 1292
       line: 51
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 732
       endInstruction: 731
-      startSourceChar: 1287
-      endSourceChar: 1291
+      startSourceChar: 1292
+      endSourceChar: 1296
       line: 51
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 732
       endInstruction: 787
-      startSourceChar: 1291
-      endSourceChar: 1332
+      startSourceChar: 1296
+      endSourceChar: 1342
       line: 51
       lineChar: 16
-      spanCodeSection: "\"InitializedToOwn\");\r\n        }\r\n        "
+      spanCodeSection: "\"EXUR_InitializedToOwn\");\r\n        }\r\n        "
     - startInstruction: 788
       endInstruction: 795
-      startSourceChar: 1332
-      endSourceChar: 1373
+      startSourceChar: 1342
+      endSourceChar: 1388
       line: 53
       lineChar: 8
-      spanCodeSection: "public void InitializedToIdle()\r\n        "
+      spanCodeSection: "public void EXUR_InitializedToIdle()\r\n        "
     - startInstruction: 796
       endInstruction: 795
-      startSourceChar: 1373
-      endSourceChar: 1388
+      startSourceChar: 1388
+      endSourceChar: 1403
       line: 54
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 796
       endInstruction: 795
-      startSourceChar: 1388
-      endSourceChar: 1388
+      startSourceChar: 1403
+      endSourceChar: 1403
       line: 55
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 796
       endInstruction: 795
-      startSourceChar: 1388
-      endSourceChar: 1388
+      startSourceChar: 1403
+      endSourceChar: 1403
       line: 55
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 796
       endInstruction: 795
-      startSourceChar: 1388
-      endSourceChar: 1388
+      startSourceChar: 1403
+      endSourceChar: 1403
       line: 55
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 796
       endInstruction: 795
-      startSourceChar: 1388
-      endSourceChar: 1398
+      startSourceChar: 1403
+      endSourceChar: 1413
       line: 55
       lineChar: 12
       spanCodeSection: DispImage.
     - startInstruction: 796
       endInstruction: 795
-      startSourceChar: 1398
-      endSourceChar: 1406
+      startSourceChar: 1413
+      endSourceChar: 1421
       line: 55
       lineChar: 22
       spanCodeSection: 'color = '
     - startInstruction: 796
       endInstruction: 819
-      startSourceChar: 1406
-      endSourceChar: 1440
+      startSourceChar: 1421
+      endSourceChar: 1455
       line: 55
       lineChar: 30
       spanCodeSection: "OthersInactiveColor;\r\n            "
     - startInstruction: 820
       endInstruction: 819
-      startSourceChar: 1440
-      endSourceChar: 1440
+      startSourceChar: 1455
+      endSourceChar: 1455
       line: 56
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 820
       endInstruction: 819
-      startSourceChar: 1440
-      endSourceChar: 1440
+      startSourceChar: 1455
+      endSourceChar: 1455
       line: 56
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 820
       endInstruction: 819
-      startSourceChar: 1440
-      endSourceChar: 1444
+      startSourceChar: 1455
+      endSourceChar: 1459
       line: 56
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 820
       endInstruction: 875
-      startSourceChar: 1444
-      endSourceChar: 1486
+      startSourceChar: 1459
+      endSourceChar: 1506
       line: 56
       lineChar: 16
-      spanCodeSection: "\"InitializedToIdle\");\r\n        }\r\n        "
+      spanCodeSection: "\"EXUR_InitializedToIdle\");\r\n        }\r\n        "
     - startInstruction: 876
       endInstruction: 883
-      startSourceChar: 1486
-      endSourceChar: 1528
+      startSourceChar: 1506
+      endSourceChar: 1553
       line: 58
       lineChar: 8
-      spanCodeSection: "public void InitializedToUsing()\r\n        "
+      spanCodeSection: "public void EXUR_InitializedToUsing()\r\n        "
     - startInstruction: 884
       endInstruction: 883
-      startSourceChar: 1528
-      endSourceChar: 1543
+      startSourceChar: 1553
+      endSourceChar: 1568
       line: 59
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 884
       endInstruction: 883
-      startSourceChar: 1543
-      endSourceChar: 1543
+      startSourceChar: 1568
+      endSourceChar: 1568
       line: 60
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 884
       endInstruction: 883
-      startSourceChar: 1543
-      endSourceChar: 1543
+      startSourceChar: 1568
+      endSourceChar: 1568
       line: 60
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 884
       endInstruction: 883
-      startSourceChar: 1543
-      endSourceChar: 1543
+      startSourceChar: 1568
+      endSourceChar: 1568
       line: 60
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 884
       endInstruction: 883
-      startSourceChar: 1543
-      endSourceChar: 1553
+      startSourceChar: 1568
+      endSourceChar: 1578
       line: 60
       lineChar: 12
       spanCodeSection: DispImage.
     - startInstruction: 884
       endInstruction: 883
-      startSourceChar: 1553
-      endSourceChar: 1561
+      startSourceChar: 1578
+      endSourceChar: 1586
       line: 60
       lineChar: 22
       spanCodeSection: 'color = '
     - startInstruction: 884
       endInstruction: 907
-      startSourceChar: 1561
-      endSourceChar: 1593
+      startSourceChar: 1586
+      endSourceChar: 1618
       line: 60
       lineChar: 30
       spanCodeSection: "OthersActiveColor;\r\n            "
     - startInstruction: 908
       endInstruction: 907
-      startSourceChar: 1593
-      endSourceChar: 1593
+      startSourceChar: 1618
+      endSourceChar: 1618
       line: 61
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 908
       endInstruction: 907
-      startSourceChar: 1593
-      endSourceChar: 1593
+      startSourceChar: 1618
+      endSourceChar: 1618
       line: 61
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 908
       endInstruction: 907
-      startSourceChar: 1593
-      endSourceChar: 1597
+      startSourceChar: 1618
+      endSourceChar: 1622
       line: 61
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 908
       endInstruction: 963
-      startSourceChar: 1597
-      endSourceChar: 1681
+      startSourceChar: 1622
+      endSourceChar: 1711
       line: 61
       lineChar: 16
-      spanCodeSection: "\"InitializedToUsing\");\r\n        }\r\n\r\n        // start-stop
-        while not owned\r\n        "
+      spanCodeSection: "\"EXUR_InitializedToUsing\");\r\n        }\r\n\r\n        //
+        start-stop while not owned\r\n        "
     - startInstruction: 964
       endInstruction: 971
-      startSourceChar: 1681
-      endSourceChar: 1725
+      startSourceChar: 1711
+      endSourceChar: 1756
       line: 65
       lineChar: 8
-      spanCodeSection: "public void StartedToUseByOthers()\r\n        "
+      spanCodeSection: "public void EXUR_StartedBeingUsed()\r\n        "
     - startInstruction: 972
       endInstruction: 971
-      startSourceChar: 1725
-      endSourceChar: 1740
+      startSourceChar: 1756
+      endSourceChar: 1771
       line: 66
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 972
       endInstruction: 971
-      startSourceChar: 1740
-      endSourceChar: 1740
+      startSourceChar: 1771
+      endSourceChar: 1771
       line: 67
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 972
       endInstruction: 971
-      startSourceChar: 1740
-      endSourceChar: 1740
+      startSourceChar: 1771
+      endSourceChar: 1771
       line: 67
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 972
       endInstruction: 971
-      startSourceChar: 1740
-      endSourceChar: 1740
+      startSourceChar: 1771
+      endSourceChar: 1771
       line: 67
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 972
       endInstruction: 971
-      startSourceChar: 1740
-      endSourceChar: 1750
+      startSourceChar: 1771
+      endSourceChar: 1781
       line: 67
       lineChar: 12
       spanCodeSection: DispImage.
     - startInstruction: 972
       endInstruction: 971
-      startSourceChar: 1750
-      endSourceChar: 1758
+      startSourceChar: 1781
+      endSourceChar: 1789
       line: 67
       lineChar: 22
       spanCodeSection: 'color = '
     - startInstruction: 972
       endInstruction: 995
-      startSourceChar: 1758
-      endSourceChar: 1790
+      startSourceChar: 1789
+      endSourceChar: 1821
       line: 67
       lineChar: 30
       spanCodeSection: "OthersActiveColor;\r\n            "
     - startInstruction: 996
       endInstruction: 995
-      startSourceChar: 1790
-      endSourceChar: 1790
+      startSourceChar: 1821
+      endSourceChar: 1821
       line: 68
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 996
       endInstruction: 995
-      startSourceChar: 1790
-      endSourceChar: 1790
+      startSourceChar: 1821
+      endSourceChar: 1821
       line: 68
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 996
       endInstruction: 995
-      startSourceChar: 1790
-      endSourceChar: 1794
+      startSourceChar: 1821
+      endSourceChar: 1825
       line: 68
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 996
       endInstruction: 1051
-      startSourceChar: 1794
-      endSourceChar: 1839
+      startSourceChar: 1825
+      endSourceChar: 1871
       line: 68
       lineChar: 16
-      spanCodeSection: "\"StartedToUseByOthers\");\r\n        }\r\n        "
+      spanCodeSection: "\"EXUR_StartedBeingUsed\");\r\n        }\r\n        "
     - startInstruction: 1052
       endInstruction: 1059
-      startSourceChar: 1839
-      endSourceChar: 1883
+      startSourceChar: 1871
+      endSourceChar: 1916
       line: 70
       lineChar: 8
-      spanCodeSection: "public void StoppedUsingByOthers()\r\n        "
+      spanCodeSection: "public void EXUR_StoppedBeingUsed()\r\n        "
     - startInstruction: 1060
       endInstruction: 1059
-      startSourceChar: 1883
-      endSourceChar: 1898
+      startSourceChar: 1916
+      endSourceChar: 1931
       line: 71
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 1060
       endInstruction: 1059
-      startSourceChar: 1898
-      endSourceChar: 1898
+      startSourceChar: 1931
+      endSourceChar: 1931
       line: 72
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1060
       endInstruction: 1059
-      startSourceChar: 1898
-      endSourceChar: 1898
+      startSourceChar: 1931
+      endSourceChar: 1931
       line: 72
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1060
       endInstruction: 1059
-      startSourceChar: 1898
-      endSourceChar: 1898
+      startSourceChar: 1931
+      endSourceChar: 1931
       line: 72
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1060
       endInstruction: 1059
-      startSourceChar: 1898
-      endSourceChar: 1908
+      startSourceChar: 1931
+      endSourceChar: 1941
       line: 72
       lineChar: 12
       spanCodeSection: DispImage.
     - startInstruction: 1060
       endInstruction: 1059
-      startSourceChar: 1908
-      endSourceChar: 1916
+      startSourceChar: 1941
+      endSourceChar: 1949
       line: 72
       lineChar: 22
       spanCodeSection: 'color = '
     - startInstruction: 1060
       endInstruction: 1083
-      startSourceChar: 1916
-      endSourceChar: 1950
+      startSourceChar: 1949
+      endSourceChar: 1983
       line: 72
       lineChar: 30
       spanCodeSection: "OthersInactiveColor;\r\n            "
     - startInstruction: 1084
       endInstruction: 1083
-      startSourceChar: 1950
-      endSourceChar: 1950
+      startSourceChar: 1983
+      endSourceChar: 1983
       line: 73
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1084
       endInstruction: 1083
-      startSourceChar: 1950
-      endSourceChar: 1950
+      startSourceChar: 1983
+      endSourceChar: 1983
       line: 73
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1084
       endInstruction: 1083
-      startSourceChar: 1950
-      endSourceChar: 1954
+      startSourceChar: 1983
+      endSourceChar: 1987
       line: 73
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 1084
       endInstruction: 1139
-      startSourceChar: 1954
-      endSourceChar: 2029
+      startSourceChar: 1987
+      endSourceChar: 2063
       line: 73
       lineChar: 16
-      spanCodeSection: "\"StoppedUsingByOthers\");\r\n        }\r\n\r\n        //
+      spanCodeSection: "\"EXUR_StoppedBeingUsed\");\r\n        }\r\n\r\n        //
         Result of start\r\n        "
     - startInstruction: 1140
       endInstruction: 1147
-      startSourceChar: 2029
-      endSourceChar: 2073
+      startSourceChar: 2063
+      endSourceChar: 2112
       line: 77
       lineChar: 8
-      spanCodeSection: "public void FailedToUseByTimeout()\r\n        "
+      spanCodeSection: "public void EXUR_FailedToUseByTimeout()\r\n        "
     - startInstruction: 1148
       endInstruction: 1147
-      startSourceChar: 2073
-      endSourceChar: 2088
+      startSourceChar: 2112
+      endSourceChar: 2127
       line: 78
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 1148
       endInstruction: 1147
-      startSourceChar: 2088
-      endSourceChar: 2088
+      startSourceChar: 2127
+      endSourceChar: 2127
       line: 79
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1148
       endInstruction: 1147
-      startSourceChar: 2088
-      endSourceChar: 2088
+      startSourceChar: 2127
+      endSourceChar: 2127
       line: 79
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1148
       endInstruction: 1147
-      startSourceChar: 2088
-      endSourceChar: 2088
+      startSourceChar: 2127
+      endSourceChar: 2127
       line: 79
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1148
       endInstruction: 1147
-      startSourceChar: 2088
-      endSourceChar: 2098
+      startSourceChar: 2127
+      endSourceChar: 2137
       line: 79
       lineChar: 12
       spanCodeSection: DispImage.
     - startInstruction: 1148
       endInstruction: 1147
-      startSourceChar: 2098
-      endSourceChar: 2106
+      startSourceChar: 2137
+      endSourceChar: 2145
       line: 79
       lineChar: 22
       spanCodeSection: 'color = '
     - startInstruction: 1148
       endInstruction: 1171
-      startSourceChar: 2106
-      endSourceChar: 2133
+      startSourceChar: 2145
+      endSourceChar: 2172
       line: 79
       lineChar: 30
       spanCodeSection: "WarningColor;\r\n            "
     - startInstruction: 1172
       endInstruction: 1171
-      startSourceChar: 2133
-      endSourceChar: 2133
+      startSourceChar: 2172
+      endSourceChar: 2172
       line: 80
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1172
       endInstruction: 1171
-      startSourceChar: 2133
-      endSourceChar: 2133
+      startSourceChar: 2172
+      endSourceChar: 2172
       line: 80
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1172
       endInstruction: 1171
-      startSourceChar: 2133
-      endSourceChar: 2137
+      startSourceChar: 2172
+      endSourceChar: 2176
       line: 80
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 1172
       endInstruction: 1227
-      startSourceChar: 2137
-      endSourceChar: 2182
+      startSourceChar: 2176
+      endSourceChar: 2226
       line: 80
       lineChar: 16
-      spanCodeSection: "\"FailedToUseByTimeout\");\r\n        }\r\n        "
+      spanCodeSection: "\"EXUR_FailedToUseByTimeout\");\r\n        }\r\n        "
     - startInstruction: 1228
       endInstruction: 1235
-      startSourceChar: 2182
-      endSourceChar: 2232
+      startSourceChar: 2226
+      endSourceChar: 2281
       line: 82
       lineChar: 8
-      spanCodeSection: "public void FailedToUseByRaceCondition()\r\n        "
+      spanCodeSection: "public void EXUR_FailedToUseByRaceCondition()\r\n        "
     - startInstruction: 1236
       endInstruction: 1235
-      startSourceChar: 2232
-      endSourceChar: 2247
+      startSourceChar: 2281
+      endSourceChar: 2296
       line: 83
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 1236
       endInstruction: 1235
-      startSourceChar: 2247
-      endSourceChar: 2247
+      startSourceChar: 2296
+      endSourceChar: 2296
       line: 84
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1236
       endInstruction: 1235
-      startSourceChar: 2247
-      endSourceChar: 2247
+      startSourceChar: 2296
+      endSourceChar: 2296
       line: 84
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1236
       endInstruction: 1235
-      startSourceChar: 2247
-      endSourceChar: 2247
+      startSourceChar: 2296
+      endSourceChar: 2296
       line: 84
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1236
       endInstruction: 1235
-      startSourceChar: 2247
-      endSourceChar: 2257
+      startSourceChar: 2296
+      endSourceChar: 2306
       line: 84
       lineChar: 12
       spanCodeSection: DispImage.
     - startInstruction: 1236
       endInstruction: 1235
-      startSourceChar: 2257
-      endSourceChar: 2265
+      startSourceChar: 2306
+      endSourceChar: 2314
       line: 84
       lineChar: 22
       spanCodeSection: 'color = '
     - startInstruction: 1236
       endInstruction: 1259
-      startSourceChar: 2265
-      endSourceChar: 2292
+      startSourceChar: 2314
+      endSourceChar: 2341
       line: 84
       lineChar: 30
       spanCodeSection: "WarningColor;\r\n            "
     - startInstruction: 1260
       endInstruction: 1259
-      startSourceChar: 2292
-      endSourceChar: 2292
+      startSourceChar: 2341
+      endSourceChar: 2341
       line: 85
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1260
       endInstruction: 1259
-      startSourceChar: 2292
-      endSourceChar: 2292
+      startSourceChar: 2341
+      endSourceChar: 2341
       line: 85
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1260
       endInstruction: 1259
-      startSourceChar: 2292
-      endSourceChar: 2296
+      startSourceChar: 2341
+      endSourceChar: 2345
       line: 85
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 1260
       endInstruction: 1315
-      startSourceChar: 2296
-      endSourceChar: 2347
+      startSourceChar: 2345
+      endSourceChar: 2401
       line: 85
       lineChar: 16
-      spanCodeSection: "\"FailedToUseByRaceCondition\");\r\n        }\r\n        "
+      spanCodeSection: "\"EXUR_FailedToUseByRaceCondition\");\r\n        }\r\n        "
     - startInstruction: 1316
       endInstruction: 1323
-      startSourceChar: 2347
-      endSourceChar: 2392
+      startSourceChar: 2401
+      endSourceChar: 2451
       line: 87
       lineChar: 8
-      spanCodeSection: "public void EnterUsingFromWaiting()\r\n        "
+      spanCodeSection: "public void EXUR_EnterUsingFromWaiting()\r\n        "
     - startInstruction: 1324
       endInstruction: 1323
-      startSourceChar: 2392
-      endSourceChar: 2407
+      startSourceChar: 2451
+      endSourceChar: 2466
       line: 88
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 1324
       endInstruction: 1323
-      startSourceChar: 2407
-      endSourceChar: 2407
+      startSourceChar: 2466
+      endSourceChar: 2466
       line: 89
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1324
       endInstruction: 1323
-      startSourceChar: 2407
-      endSourceChar: 2407
+      startSourceChar: 2466
+      endSourceChar: 2466
       line: 89
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1324
       endInstruction: 1323
-      startSourceChar: 2407
-      endSourceChar: 2407
+      startSourceChar: 2466
+      endSourceChar: 2466
       line: 89
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1324
       endInstruction: 1323
-      startSourceChar: 2407
-      endSourceChar: 2417
+      startSourceChar: 2466
+      endSourceChar: 2476
       line: 89
       lineChar: 12
       spanCodeSection: DispImage.
     - startInstruction: 1324
       endInstruction: 1323
-      startSourceChar: 2417
-      endSourceChar: 2425
+      startSourceChar: 2476
+      endSourceChar: 2484
       line: 89
       lineChar: 22
       spanCodeSection: 'color = '
     - startInstruction: 1324
       endInstruction: 1347
-      startSourceChar: 2425
-      endSourceChar: 2455
+      startSourceChar: 2484
+      endSourceChar: 2514
       line: 89
       lineChar: 30
       spanCodeSection: "MineActiveColor;\r\n            "
     - startInstruction: 1348
       endInstruction: 1347
-      startSourceChar: 2455
-      endSourceChar: 2455
+      startSourceChar: 2514
+      endSourceChar: 2514
       line: 90
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1348
       endInstruction: 1347
-      startSourceChar: 2455
-      endSourceChar: 2455
+      startSourceChar: 2514
+      endSourceChar: 2514
       line: 90
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1348
       endInstruction: 1347
-      startSourceChar: 2455
-      endSourceChar: 2459
+      startSourceChar: 2514
+      endSourceChar: 2518
       line: 90
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 1348
       endInstruction: 1403
-      startSourceChar: 2459
-      endSourceChar: 2505
+      startSourceChar: 2518
+      endSourceChar: 2569
       line: 90
       lineChar: 16
-      spanCodeSection: "\"EnterUsingFromWaiting\");\r\n        }\r\n        "
+      spanCodeSection: "\"EXUR_EnterUsingFromWaiting\");\r\n        }\r\n        "
     - startInstruction: 1404
       endInstruction: 1411
-      startSourceChar: 2505
-      endSourceChar: 2546
+      startSourceChar: 2569
+      endSourceChar: 2615
       line: 92
       lineChar: 8
-      spanCodeSection: "public void EnterUsingFromOwn()\r\n        "
+      spanCodeSection: "public void EXUR_EnterUsingFromOwn()\r\n        "
     - startInstruction: 1412
       endInstruction: 1411
-      startSourceChar: 2546
-      endSourceChar: 2561
+      startSourceChar: 2615
+      endSourceChar: 2630
       line: 93
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 1412
       endInstruction: 1411
-      startSourceChar: 2561
-      endSourceChar: 2561
+      startSourceChar: 2630
+      endSourceChar: 2630
       line: 94
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1412
       endInstruction: 1411
-      startSourceChar: 2561
-      endSourceChar: 2561
+      startSourceChar: 2630
+      endSourceChar: 2630
       line: 94
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1412
       endInstruction: 1411
-      startSourceChar: 2561
-      endSourceChar: 2561
+      startSourceChar: 2630
+      endSourceChar: 2630
       line: 94
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1412
       endInstruction: 1411
-      startSourceChar: 2561
-      endSourceChar: 2571
+      startSourceChar: 2630
+      endSourceChar: 2640
       line: 94
       lineChar: 12
       spanCodeSection: DispImage.
     - startInstruction: 1412
       endInstruction: 1411
-      startSourceChar: 2571
-      endSourceChar: 2579
+      startSourceChar: 2640
+      endSourceChar: 2648
       line: 94
       lineChar: 22
       spanCodeSection: 'color = '
     - startInstruction: 1412
       endInstruction: 1435
-      startSourceChar: 2579
-      endSourceChar: 2609
+      startSourceChar: 2648
+      endSourceChar: 2678
       line: 94
       lineChar: 30
       spanCodeSection: "MineActiveColor;\r\n            "
     - startInstruction: 1436
       endInstruction: 1435
-      startSourceChar: 2609
-      endSourceChar: 2609
+      startSourceChar: 2678
+      endSourceChar: 2678
       line: 95
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1436
       endInstruction: 1435
-      startSourceChar: 2609
-      endSourceChar: 2609
+      startSourceChar: 2678
+      endSourceChar: 2678
       line: 95
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1436
       endInstruction: 1435
-      startSourceChar: 2609
-      endSourceChar: 2613
+      startSourceChar: 2678
+      endSourceChar: 2682
       line: 95
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 1436
       endInstruction: 1491
-      startSourceChar: 2613
-      endSourceChar: 2684
+      startSourceChar: 2682
+      endSourceChar: 2758
       line: 95
       lineChar: 16
-      spanCodeSection: "\"EnterUsingFromOwn\");\r\n        }\r\n\r\n        // Result
-        of stop\r\n        "
+      spanCodeSection: "\"EXUR_EnterUsingFromOwn\");\r\n        }\r\n\r\n        //
+        Result of stop\r\n        "
     - startInstruction: 1492
       endInstruction: 1499
-      startSourceChar: 2684
-      endSourceChar: 2726
+      startSourceChar: 2758
+      endSourceChar: 2805
       line: 99
       lineChar: 8
-      spanCodeSection: "public void ExitUsingByRequest()\r\n        "
+      spanCodeSection: "public void EXUR_ExitUsingByRequest()\r\n        "
     - startInstruction: 1500
       endInstruction: 1499
-      startSourceChar: 2726
-      endSourceChar: 2741
+      startSourceChar: 2805
+      endSourceChar: 2820
       line: 100
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 1500
       endInstruction: 1499
-      startSourceChar: 2741
-      endSourceChar: 2741
+      startSourceChar: 2820
+      endSourceChar: 2820
       line: 101
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1500
       endInstruction: 1499
-      startSourceChar: 2741
-      endSourceChar: 2741
+      startSourceChar: 2820
+      endSourceChar: 2820
       line: 101
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1500
       endInstruction: 1499
-      startSourceChar: 2741
-      endSourceChar: 2741
+      startSourceChar: 2820
+      endSourceChar: 2820
       line: 101
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1500
       endInstruction: 1499
-      startSourceChar: 2741
-      endSourceChar: 2751
+      startSourceChar: 2820
+      endSourceChar: 2830
       line: 101
       lineChar: 12
       spanCodeSection: DispImage.
     - startInstruction: 1500
       endInstruction: 1499
-      startSourceChar: 2751
-      endSourceChar: 2759
+      startSourceChar: 2830
+      endSourceChar: 2838
       line: 101
       lineChar: 22
       spanCodeSection: 'color = '
     - startInstruction: 1500
       endInstruction: 1523
-      startSourceChar: 2759
-      endSourceChar: 2791
+      startSourceChar: 2838
+      endSourceChar: 2870
       line: 101
       lineChar: 30
       spanCodeSection: "MineInactiveColor;\r\n            "
     - startInstruction: 1524
       endInstruction: 1523
-      startSourceChar: 2791
-      endSourceChar: 2791
+      startSourceChar: 2870
+      endSourceChar: 2870
       line: 102
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1524
       endInstruction: 1523
-      startSourceChar: 2791
-      endSourceChar: 2791
+      startSourceChar: 2870
+      endSourceChar: 2870
       line: 102
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1524
       endInstruction: 1523
-      startSourceChar: 2791
-      endSourceChar: 2795
+      startSourceChar: 2870
+      endSourceChar: 2874
       line: 102
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 1524
       endInstruction: 1579
-      startSourceChar: 2795
-      endSourceChar: 2867
+      startSourceChar: 2874
+      endSourceChar: 2922
       line: 102
       lineChar: 16
-      spanCodeSection: "\"ExitUsingByRequest\");\r\n        }\r\n\r\n        // Lost
-        ownership\r\n        "
+      spanCodeSection: "\"EXUR_ExitUsingByRequest\");\r\n        }\r\n        "
     - startInstruction: 1580
       endInstruction: 1587
-      startSourceChar: 2867
-      endSourceChar: 2911
-      line: 106
+      startSourceChar: 2922
+      endSourceChar: 2976
+      line: 104
       lineChar: 8
-      spanCodeSection: "public void LostOwnershipOnUsing()\r\n        "
+      spanCodeSection: "public void EXUR_TriedToReleaseNotOwnError()\r\n        "
     - startInstruction: 1588
       endInstruction: 1587
-      startSourceChar: 2911
-      endSourceChar: 2926
-      line: 107
+      startSourceChar: 2976
+      endSourceChar: 2991
+      line: 105
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 1588
       endInstruction: 1587
-      startSourceChar: 2926
-      endSourceChar: 2926
-      line: 108
+      startSourceChar: 2991
+      endSourceChar: 2991
+      line: 106
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1588
       endInstruction: 1587
-      startSourceChar: 2926
-      endSourceChar: 2926
-      line: 108
+      startSourceChar: 2991
+      endSourceChar: 2991
+      line: 106
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1588
       endInstruction: 1587
-      startSourceChar: 2926
-      endSourceChar: 2926
-      line: 108
+      startSourceChar: 2991
+      endSourceChar: 2991
+      line: 106
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1588
       endInstruction: 1587
-      startSourceChar: 2926
-      endSourceChar: 2936
-      line: 108
+      startSourceChar: 2991
+      endSourceChar: 3001
+      line: 106
       lineChar: 12
       spanCodeSection: DispImage.
     - startInstruction: 1588
       endInstruction: 1587
-      startSourceChar: 2936
-      endSourceChar: 2944
-      line: 108
+      startSourceChar: 3001
+      endSourceChar: 3009
+      line: 106
       lineChar: 22
       spanCodeSection: 'color = '
     - startInstruction: 1588
       endInstruction: 1611
-      startSourceChar: 2944
-      endSourceChar: 2976
-      line: 108
+      startSourceChar: 3009
+      endSourceChar: 3036
+      line: 106
       lineChar: 30
-      spanCodeSection: "OthersActiveColor;\r\n            "
+      spanCodeSection: "WarningColor;\r\n            "
     - startInstruction: 1612
       endInstruction: 1611
-      startSourceChar: 2976
-      endSourceChar: 2976
-      line: 109
+      startSourceChar: 3036
+      endSourceChar: 3036
+      line: 107
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1612
       endInstruction: 1611
-      startSourceChar: 2976
-      endSourceChar: 2976
-      line: 109
+      startSourceChar: 3036
+      endSourceChar: 3036
+      line: 107
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1612
       endInstruction: 1611
-      startSourceChar: 2976
-      endSourceChar: 2980
-      line: 109
+      startSourceChar: 3036
+      endSourceChar: 3040
+      line: 107
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 1612
       endInstruction: 1667
-      startSourceChar: 2980
-      endSourceChar: 3025
-      line: 109
+      startSourceChar: 3040
+      endSourceChar: 3124
+      line: 107
       lineChar: 16
-      spanCodeSection: "\"LostOwnershipOnUsing\");\r\n        }\r\n        "
+      spanCodeSection: "\"EXUR_TriedToReleaseNotOwnError\");\r\n        }\r\n\r\n
+        \       // Lost ownership\r\n        "
     - startInstruction: 1668
       endInstruction: 1675
-      startSourceChar: 3025
-      endSourceChar: 3068
+      startSourceChar: 3124
+      endSourceChar: 3177
       line: 111
       lineChar: 8
-      spanCodeSection: "public void LostOwnershipOnIdle()\r\n        "
+      spanCodeSection: "public void EXUR_ExitUsingByLostOwnership()\r\n        "
     - startInstruction: 1676
       endInstruction: 1675
-      startSourceChar: 3068
-      endSourceChar: 3083
+      startSourceChar: 3177
+      endSourceChar: 3192
       line: 112
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 1676
       endInstruction: 1675
-      startSourceChar: 3083
-      endSourceChar: 3083
+      startSourceChar: 3192
+      endSourceChar: 3192
       line: 113
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1676
       endInstruction: 1675
-      startSourceChar: 3083
-      endSourceChar: 3083
+      startSourceChar: 3192
+      endSourceChar: 3192
       line: 113
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1676
       endInstruction: 1675
-      startSourceChar: 3083
-      endSourceChar: 3083
+      startSourceChar: 3192
+      endSourceChar: 3192
       line: 113
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1676
       endInstruction: 1675
-      startSourceChar: 3083
-      endSourceChar: 3093
+      startSourceChar: 3192
+      endSourceChar: 3202
       line: 113
       lineChar: 12
       spanCodeSection: DispImage.
     - startInstruction: 1676
       endInstruction: 1675
-      startSourceChar: 3093
-      endSourceChar: 3101
+      startSourceChar: 3202
+      endSourceChar: 3210
       line: 113
       lineChar: 22
       spanCodeSection: 'color = '
     - startInstruction: 1676
       endInstruction: 1699
-      startSourceChar: 3101
-      endSourceChar: 3135
+      startSourceChar: 3210
+      endSourceChar: 3242
       line: 113
       lineChar: 30
-      spanCodeSection: "OthersInactiveColor;\r\n            "
+      spanCodeSection: "OthersActiveColor;\r\n            "
     - startInstruction: 1700
       endInstruction: 1699
-      startSourceChar: 3135
-      endSourceChar: 3135
+      startSourceChar: 3242
+      endSourceChar: 3242
       line: 114
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1700
       endInstruction: 1699
-      startSourceChar: 3135
-      endSourceChar: 3135
+      startSourceChar: 3242
+      endSourceChar: 3242
       line: 114
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1700
       endInstruction: 1699
-      startSourceChar: 3135
-      endSourceChar: 3139
+      startSourceChar: 3242
+      endSourceChar: 3246
       line: 114
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 1700
       endInstruction: 1755
-      startSourceChar: 3139
-      endSourceChar: 3244
+      startSourceChar: 3246
+      endSourceChar: 3300
       line: 114
       lineChar: 16
-      spanCodeSection: "\"LostOwnershipOnIdle\");\r\n        }\r\n\r\n        // Retrieve
-        by Master (see also InitializedToOwn)\r\n        "
+      spanCodeSection: "\"EXUR_ExitUsingByLostOwnership\");\r\n        }\r\n        "
     - startInstruction: 1756
       endInstruction: 1763
-      startSourceChar: 3244
-      endSourceChar: 3301
-      line: 118
+      startSourceChar: 3300
+      endSourceChar: 3348
+      line: 116
       lineChar: 8
-      spanCodeSection: "public void RetrievedAfterOwnerLeftWhileUsing()\r\n        "
+      spanCodeSection: "public void EXUR_LostOwnershipOnIdle()\r\n        "
     - startInstruction: 1764
       endInstruction: 1763
-      startSourceChar: 3301
-      endSourceChar: 3316
-      line: 119
+      startSourceChar: 3348
+      endSourceChar: 3363
+      line: 117
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 1764
       endInstruction: 1763
-      startSourceChar: 3316
-      endSourceChar: 3316
-      line: 120
+      startSourceChar: 3363
+      endSourceChar: 3363
+      line: 118
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1764
       endInstruction: 1763
-      startSourceChar: 3316
-      endSourceChar: 3316
-      line: 120
+      startSourceChar: 3363
+      endSourceChar: 3363
+      line: 118
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1764
       endInstruction: 1763
-      startSourceChar: 3316
-      endSourceChar: 3316
-      line: 120
+      startSourceChar: 3363
+      endSourceChar: 3363
+      line: 118
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1764
       endInstruction: 1763
-      startSourceChar: 3316
-      endSourceChar: 3326
-      line: 120
+      startSourceChar: 3363
+      endSourceChar: 3373
+      line: 118
       lineChar: 12
       spanCodeSection: DispImage.
     - startInstruction: 1764
       endInstruction: 1763
-      startSourceChar: 3326
-      endSourceChar: 3334
-      line: 120
+      startSourceChar: 3373
+      endSourceChar: 3381
+      line: 118
       lineChar: 22
       spanCodeSection: 'color = '
     - startInstruction: 1764
       endInstruction: 1787
-      startSourceChar: 3334
-      endSourceChar: 3366
-      line: 120
+      startSourceChar: 3381
+      endSourceChar: 3415
+      line: 118
       lineChar: 30
-      spanCodeSection: "MineInactiveColor;\r\n            "
+      spanCodeSection: "OthersInactiveColor;\r\n            "
     - startInstruction: 1788
       endInstruction: 1787
-      startSourceChar: 3366
-      endSourceChar: 3366
-      line: 121
+      startSourceChar: 3415
+      endSourceChar: 3415
+      line: 119
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1788
       endInstruction: 1787
-      startSourceChar: 3366
-      endSourceChar: 3366
-      line: 121
+      startSourceChar: 3415
+      endSourceChar: 3415
+      line: 119
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1788
       endInstruction: 1787
-      startSourceChar: 3366
-      endSourceChar: 3370
-      line: 121
+      startSourceChar: 3415
+      endSourceChar: 3419
+      line: 119
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 1788
       endInstruction: 1843
-      startSourceChar: 3370
-      endSourceChar: 3428
-      line: 121
+      startSourceChar: 3419
+      endSourceChar: 3470
+      line: 119
       lineChar: 16
-      spanCodeSection: "\"RetrievedAfterOwnerLeftWhileUsing\");\r\n        }\r\n        "
+      spanCodeSection: "\"EXUR_LostOwnershipOnIdle\");\r\n        }\r\n\r\n        "
     - startInstruction: 1844
       endInstruction: 1851
-      startSourceChar: 3428
-      endSourceChar: 3484
-      line: 123
+      startSourceChar: 3470
+      endSourceChar: 3517
+      line: 122
       lineChar: 8
-      spanCodeSection: "public void RetrievedAfterOwnerLeftWhileIdle()\r\n        "
+      spanCodeSection: "public void EXUR_RetrievedFromUsing()\r\n        "
     - startInstruction: 1852
       endInstruction: 1851
-      startSourceChar: 3484
-      endSourceChar: 3499
-      line: 124
+      startSourceChar: 3517
+      endSourceChar: 3532
+      line: 123
       lineChar: 8
       spanCodeSection: "{\r\n            "
     - startInstruction: 1852
       endInstruction: 1851
-      startSourceChar: 3499
-      endSourceChar: 3499
-      line: 125
+      startSourceChar: 3532
+      endSourceChar: 3532
+      line: 124
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1852
       endInstruction: 1851
-      startSourceChar: 3499
-      endSourceChar: 3499
-      line: 125
+      startSourceChar: 3532
+      endSourceChar: 3532
+      line: 124
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1852
       endInstruction: 1851
-      startSourceChar: 3499
-      endSourceChar: 3499
-      line: 125
+      startSourceChar: 3532
+      endSourceChar: 3532
+      line: 124
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1852
       endInstruction: 1851
-      startSourceChar: 3499
-      endSourceChar: 3509
-      line: 125
+      startSourceChar: 3532
+      endSourceChar: 3542
+      line: 124
       lineChar: 12
       spanCodeSection: DispImage.
     - startInstruction: 1852
       endInstruction: 1851
-      startSourceChar: 3509
-      endSourceChar: 3517
-      line: 125
+      startSourceChar: 3542
+      endSourceChar: 3550
+      line: 124
       lineChar: 22
       spanCodeSection: 'color = '
     - startInstruction: 1852
       endInstruction: 1875
-      startSourceChar: 3517
-      endSourceChar: 3549
-      line: 125
+      startSourceChar: 3550
+      endSourceChar: 3582
+      line: 124
       lineChar: 30
       spanCodeSection: "MineInactiveColor;\r\n            "
     - startInstruction: 1876
       endInstruction: 1875
-      startSourceChar: 3549
-      endSourceChar: 3549
-      line: 126
+      startSourceChar: 3582
+      endSourceChar: 3582
+      line: 125
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1876
       endInstruction: 1875
-      startSourceChar: 3549
-      endSourceChar: 3549
-      line: 126
+      startSourceChar: 3582
+      endSourceChar: 3582
+      line: 125
       lineChar: 12
       spanCodeSection: 
     - startInstruction: 1876
       endInstruction: 1875
-      startSourceChar: 3549
-      endSourceChar: 3553
-      line: 126
+      startSourceChar: 3582
+      endSourceChar: 3586
+      line: 125
       lineChar: 12
       spanCodeSection: log(
     - startInstruction: 1876
-      endInstruction: 1876
-      startSourceChar: 3553
-      endSourceChar: 3553
-      line: 126
+      endInstruction: 1931
+      startSourceChar: 3586
+      endSourceChar: 3634
+      line: 125
+      lineChar: 16
+      spanCodeSection: "\"EXUR_RetrievedFromUsing\");\r\n        }\r\n        "
+    - startInstruction: 1932
+      endInstruction: 1939
+      startSourceChar: 3634
+      endSourceChar: 3680
+      line: 127
+      lineChar: 8
+      spanCodeSection: "public void EXUR_RetrievedFromIdle()\r\n        "
+    - startInstruction: 1940
+      endInstruction: 1939
+      startSourceChar: 3680
+      endSourceChar: 3695
+      line: 128
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 1940
+      endInstruction: 1939
+      startSourceChar: 3695
+      endSourceChar: 3695
+      line: 129
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1940
+      endInstruction: 1939
+      startSourceChar: 3695
+      endSourceChar: 3695
+      line: 129
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1940
+      endInstruction: 1939
+      startSourceChar: 3695
+      endSourceChar: 3695
+      line: 129
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1940
+      endInstruction: 1939
+      startSourceChar: 3695
+      endSourceChar: 3705
+      line: 129
+      lineChar: 12
+      spanCodeSection: DispImage.
+    - startInstruction: 1940
+      endInstruction: 1939
+      startSourceChar: 3705
+      endSourceChar: 3713
+      line: 129
+      lineChar: 22
+      spanCodeSection: 'color = '
+    - startInstruction: 1940
+      endInstruction: 1963
+      startSourceChar: 3713
+      endSourceChar: 3745
+      line: 129
+      lineChar: 30
+      spanCodeSection: "MineInactiveColor;\r\n            "
+    - startInstruction: 1964
+      endInstruction: 1963
+      startSourceChar: 3745
+      endSourceChar: 3745
+      line: 130
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1964
+      endInstruction: 1963
+      startSourceChar: 3745
+      endSourceChar: 3745
+      line: 130
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1964
+      endInstruction: 1963
+      startSourceChar: 3745
+      endSourceChar: 3749
+      line: 130
+      lineChar: 12
+      spanCodeSection: log(
+    - startInstruction: 1964
+      endInstruction: 1964
+      startSourceChar: 3749
+      endSourceChar: 3749
+      line: 130
       lineChar: 16
       spanCodeSection: 
   hasInteractEvent: 1

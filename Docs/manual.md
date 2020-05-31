@@ -11,7 +11,7 @@
     - [Methods](#methods)
     - [Handler simplified event API](#handler-simplified-event-api)
     - [Handler detailed event API](#handler-detailed-event-api)
-    - [EXURReceiveEvent custom event API](#exurrecieveevent-custom-event-api)
+    - [Manager event API](#manager-event-api)
     - [ManagerFailure details](#managerfailure-details)
 - [Feature details](#feature-details)
     - [Tag feature](#tag-feature)
@@ -21,7 +21,7 @@
 
 ## Elements
 
-### Basic structure 
+### Basic structure
 
 ![Objects and components structure](EXUR-object-component-structure.svg)
 
@@ -91,13 +91,15 @@ It uses Player `displayName` as a tag to select object.
 
 User Programs that placed on each pooled GameObject can react for these events if you implement these custom event.
 
-| Category       | Custom-Event Name        | Comment                                        |
+| Category       | Custom-Event Name        | Meaning                                        |
 |----------------|--------------------------|------------------------------------------------|
 | Simplified API |                          |                                                |
 |                | EXUR_Reinitialize        | Called when you can use the object             |
 |                | EXUR_Finalize            | Called when you should end to use and clean up |
 |                | EXUR_OtherPlayerAcquired | Called when other player started to use        |
 |                | EXUR_OtherPlayerReleased | Called when other player stopped to use        |
+
+NOTE: `EXUR_OtherPlayerAcquired` is also happens when joining if the object is currently used by other player.
 
 
 ![Simplified state diagram](EXUR-simplified-state-diagram.svg)
@@ -111,30 +113,31 @@ If you want to know more detailed state transition, use these custom event.
 You can use simplified and detailed events together.
 (actually simplified events are "combined" aliases.)
 
+For U# users: You can use `EXURHandlerListener.cs` as a template of your implementation.
 
-| Category                   | Custom-Event Name                 | Comment                                    | Simplified to |
-|----------------------------|-----------------------------------|--------------------------------------------|---------------|
-| Result of initialization   |                                   | Spontaneous transition after Start         |               |
-|                            | InitializedToOwn                  |                                            |               |
-|                            | InitializedToIdle                 |                                            |               |
-|                            | InitializedToUsing                |                                            | 3             |
-| Transition while not owned |                                   | Another players start and stop using       |               |
-|                            | StartedToUseByOthers              |                                            | 3             |
-|                            | StoppedUsingByOthers              |                                            | 4             |
-| Result of start request    |                                   | Happens after acquire request               |               |
-|                            | FailedToUseByTimeout              |                                            |               |
-|                            | FailedToUseByRaceCondition        |                                            | 3             |
-|                            | EnterUsingFromWaiting             |                                            | 1             |
-|                            | EnterUsingFromOwn                 |                                            | 1             |
-| Result of stop request     |                                   | Happens after release request             |               |
-|                            | ExitUsingByRequest                |                                            | 2             |
-|                            | AttemptToReleaseNotOwnObjectError |                                            |               |
-| Might happen while own     |                                   |                                            |               |
-|                            | LostOwnershipOnUsing              |                                            | 2, 3          |
-|                            | LostOwnershipOnIdle               |                                            |               |
-| Retrieve by Master         |                                   | (InitializedToOwn is not categorized here) |               |
-|                            | RetrievedAfterOwnerLeftWhileUsing |                                            |               |
-|                            | RetrievedAfterOwnerLeftWhileIdle  |                                            |               |
+| Category                   | Custom-Event Name               | Comment                                                 | Simplified to |
+|----------------------------|---------------------------------|---------------------------------------------------------|---------------|
+| Result of initialization   |                                 | Spontaneous transition after Start                      |               |
+|                            | EXUR_InitializedToOwn           |                                                         |               |
+|                            | EXUR_InitializedToIdle          |                                                         |               |
+|                            | EXUR_InitializedToUsing         | Don't confuse this "Using" with "Using by local player" | 3             |
+| Transition while not owned |                                 | Another players start and stop using                    |               |
+|                            | EXUR_StartedBeingUsed           |                                                         | 3             |
+|                            | EXUR_StoppedBeingUsed           |                                                         | 4             |
+| Result of start request    |                                 | Happens after acquire request                           |               |
+|                            | EXUR_FailedToUseByTimeout       |                                                         |               |
+|                            | EXUR_FailedToUseByRaceCondition |                                                         | 3             |
+|                            | EXUR_EnterUsingFromWaiting      |                                                         | 1             |
+|                            | EXUR_EnterUsingFromOwn          |                                                         | 1             |
+| Result of stop request     |                                 | Happens after release request                           |               |
+|                            | EXUR_ExitUsingByRequest         |                                                         | 2             |
+|                            | EXUR_TriedToReleaseNotOwnError  | Happens if the object is not in appropriate state       |               |
+| Losing ownership           |                                 |                                                         |               |
+|                            | EXUR_ExitUsingByLostOwnership   | Happens while using                                     | 2 and 3       |
+|                            | EXUR_LostOwnershipOnIdle        | Happens while idle                                      |               |
+| Retrieve by Master         |                                 | (EXUR_InitializedToOwn is not categorized here)         |               |
+|                            | EXUR_RetrievedFromUsing         |                                                         |               |
+|                            | EXUR_RetrievedFromIdle          |                                                         |               |
 
 
 Simplified column value
@@ -149,8 +152,16 @@ Simplified column value
 
 ![Detailed state diagram](EXUR-detailed-state-diagram.svg)
 
+NOTE:
+This state diagram is not from system-wide view.
+It is from the point of view of a player (or "of a client").
+Let us suppose that there's one object and two players X and Y are joining the world.
+In VRChat, networked object is always owned by someone.
+If X has ownership, the state of the object is "Own but Idle" from the point of view of player X.
+At same time, it is "Idle" for player Y.
 
-### EXUR_ReceiveEvent custom event API
+
+### Manager event API
 
 Listener interface:
 
@@ -159,13 +170,13 @@ Listener interface:
         [HideInInspector] public string EXUR_EventAdditionalInfo;
         public void EXUR_ReceiveEvent()
         {
-            // your code 
+            // your code
         }
 
 Set this listener UdonBehaviour to `Iwsd.EXUR.Manager.EventListener`
 
 (TODO: describe above definition more "politely")
-
+(TODO: explain more about aggregation of Handler events.)
 
 | EXUR_EventSource | EXUR_EventName            | EXUR_EventAdditionalInfo   | Comment                               |
 |------------------|---------------------------|----------------------------|---------------------------------------|
@@ -202,6 +213,7 @@ This is internal specification so it will be changed.
     * ownership is controlled on "Pooled GameObject"
     * Delay for safer sync variable writing
     * handler will be pass to user program by manager event after ownership obtained.
+    * Do not call `Networking.SetOwner` on "Pooled GameObject" if you don't understand what will happen.
 * IncludeChildrenToSendEvent handler option
     * to be exact "children" means "descendant" (like `GetComponentsInChildren()`)
     * note: child object ownership is not controlled by EXUR
@@ -231,7 +243,7 @@ This is internal specification so it will be changed.
     * First sibling (second in the GameObject) UdonBehaviour must have program variables:
         * `[UdonSynced] string EXUR_Tag`
         * `[UdonSynced] int EXUR_LastUsedTime`
-* EXUR library try to preserve and use identical object if possible 
+* EXUR library try to preserve and use identical object if possible
 * If no room for new acquired object, old object will be purge with Least recently used (LRU) algorithm
     * User can update EXUR_LastUsedTime. (Of course it should be done on owner client.)
 * interface note: how to passing argument
@@ -250,7 +262,7 @@ But we choose Handler because we want to be "clean" user program as much as poss
 
 **method name prefix policy**
 
-* (i.e. custom event name) 
+* (i.e. custom event name)
 * to avoid conflict on user program.
 
 

@@ -107,7 +107,7 @@ namespace Iwsd.EXUR {
             {
                 eventListeners = GetComponents(typeof(UdonBehaviour));
             }
-            
+
             aggregatedListener = (UdonBehaviour)transform.parent.GetComponent(typeof(UdonBehaviour));
         }
 
@@ -145,17 +145,17 @@ namespace Iwsd.EXUR {
 
         public void set_active_true()
         {
-            debug("recieve set_active_true.");
+            debug("receive set_active_true.");
             this.gameObject.SetActive(true);
         }
-        
+
         public void set_active_false()
         {
-            debug("recieve set_active_false.");
+            debug("receive set_active_false.");
             this.gameObject.SetActive(false);
         }
-        
-        
+
+
         void SetSyncedUsing(bool b)
         {
             var eventName = b? "set_using_true": "set_using_false";
@@ -167,47 +167,47 @@ namespace Iwsd.EXUR {
             switch (lastState) {
                 case STATE_WAITING_OWNER_RESPONCE:
                     lastState = STATE_USED_BY_OTHERS;
-                    SendCallback("InitializedToUsing");
-                    SendCallback("EXUR_OtherPlayerAcquired");
+                    SendCallback(nameof(HandlerListener.EXUR_InitializedToUsing));
+                    SendCallback(nameof(HandlerListener.EXUR_OtherPlayerAcquired));
                     break;
 
                 case STATE_IDLE_NOT_MINE:
                     lastState = STATE_USED_BY_OTHERS;
-                    SendCallback("StartedToUseByOthers");
-                    SendCallback("EXUR_OtherPlayerAcquired");
+                    SendCallback(nameof(HandlerListener.EXUR_StartedBeingUsed));
+                    SendCallback(nameof(HandlerListener.EXUR_OtherPlayerAcquired));
                     break;
 
                 case STATE_WAITING_OWNERSHIP:
                     // Failed to start to use. Maybe it was race condition.
                     lastState = STATE_USED_BY_OTHERS;
-                    SendCallback("FailedToUseByRaceCondition");
-                    SendCallback("EXUR_OtherPlayerAcquired");
+                    SendCallback(nameof(HandlerListener.EXUR_FailedToUseByRaceCondition));
+                    SendCallback(nameof(HandlerListener.EXUR_OtherPlayerAcquired));
                     break;
 
                 case STATE_OWN_AND_IDLE:
-                    // For DeactivateWhenIdle usecase, if set_active_true and set_using_true are incoming successively,
-                    // detecting to-lost-ownership transition in Update is not done yet. So do it here.
+                    // For DeactivateWhenIdle usecase, set_active_true and set_using_true could be incoming successively.
+                    // If so, detecting to-lost-ownership transition in Update is not done yet. Then do it here.
                     if (DeactivateWhenIdle && !Networking.IsOwner(gameObject))
                     {
                         lastState = STATE_IDLE_NOT_MINE;
-                        SendCallback("LostOwnershipOnIdle");
+                        SendCallback(nameof(HandlerListener.EXUR_LostOwnershipOnIdle));
                         lastState = STATE_USED_BY_OTHERS;
-                        SendCallback("StartedToUseByOthers");
+                        SendCallback(nameof(HandlerListener.EXUR_StartedBeingUsed));
                     }
                     else
                     {
                         // Locally initiated STATE_OWN_AND_IDLE => STATE_OWN_AND_USING is done before calling here.
-                        
+
                         // If it falls into here, it's an incoming unexpected set_using_true message.
                         // Maybe it means receiving set_using_true before lost-ownership comes
                         // when other player is switching to use.
                         // If so, it is communication message ordering issue between SetOwner and SendCustomNetworkEvent.
                         // It's weired but not actual problem. Probably we can resolve it in a way introduce new waiting state.
-                        // But we are not sure if it really happens. So, we put assert here to investigae for now.
+                        // But we are not sure if it really happens. So, we put assert here to investigate for now.
                         assert(false, "!!!!!!!! set_using_true on STATE_OWN_AND_IDLE !!!!!!!!");
                     }
                     break;
-                    
+
                 default:
                     // empty
                     break;
@@ -219,15 +219,15 @@ namespace Iwsd.EXUR {
             switch (lastState) {
                 case STATE_WAITING_OWNER_RESPONCE:
                     lastState = STATE_IDLE_NOT_MINE;
-                    SendCallback("InitializedToIdle");
+                    SendCallback(nameof(HandlerListener.EXUR_InitializedToIdle));
                     break;
 
                 case STATE_USED_BY_OTHERS:
                     // This is for bystanders.
                     // Locally initiated STATE_USED_BY_OTHERS => STATE_OWN_AND_IDLE must be done before calling here.
                     lastState = STATE_IDLE_NOT_MINE;
-                    SendCallback("StoppedUsingByOthers");
-                    SendCallback("EXUR_OtherPlayerReleased");
+                    SendCallback(nameof(HandlerListener.EXUR_StoppedBeingUsed));
+                    SendCallback(nameof(HandlerListener.EXUR_OtherPlayerReleased));
                     break;
 
                 default:
@@ -260,9 +260,9 @@ namespace Iwsd.EXUR {
                 if (temporaryActivated) // when gameObject was inactive
                 {
                     // Respond "it's inactive". It sends only when inactive because initial state is active.
-                    // Call SetActiveObject before calling SetSyncedUsing for user script 
-                    // to know inactive state when InitializedToIdle event.
-                    SetActiveObject(false); 
+                    // Call SetActiveObject before calling SetSyncedUsing for user script
+                    // to know inactive state when EXUR_InitializedToIdle event.
+                    SetActiveObject(false);
                 }
                 SetSyncedUsing(lastState == STATE_OWN_AND_USING);
             }
@@ -277,7 +277,7 @@ namespace Iwsd.EXUR {
         // NOTE: Instead of OnOwnershipTransfer, we use Networking.IsOwner to examine ownership.
         // Because OnOwnershipTransfer fires only for the previous owner. (VRCSDK3-UDON-2020.05.12.10.33)
         // https://vrchat.canny.io/vrchat-udon-closed-alpha-feedback/p/request-change-onownershiptransfer-behaviour
-        
+
         void CheckImplicitTransition()
         {
             switch (lastState)
@@ -299,10 +299,10 @@ namespace Iwsd.EXUR {
                             lastState = STATE_OWN_AND_IDLE;
                             if (DeactivateWhenIdle)
                             {
-                                // Do this before callback InitializedToOwn for user program to be able to know inactive.
+                                // Do this before callback EXUR_InitializedToOwn for user program to be able to know inactive.
                                 SetActiveObject(false);
                             }
-                            SendCallback("InitializedToOwn");
+                            SendCallback(nameof(HandlerListener.EXUR_InitializedToOwn));
                         }
                         else
                         {
@@ -326,10 +326,10 @@ namespace Iwsd.EXUR {
                     {
                         if (Networking.IsMaster)
                         {
-                            // Previous owner left from the world instance. So master shelters it.
+                            // Previous owner left from the world instance probably. So master shelters it.
                             lastState = STATE_OWN_AND_IDLE; // This state change must be before SetSyncedUsing
                             SetSyncedUsing(false);
-                            SendCallback("RetrievedAfterOwnerLeftWhileUsing");
+                            SendCallback(nameof(HandlerListener.EXUR_RetrievedFromUsing));
 
                             if (DeactivateWhenIdle)
                             {
@@ -350,7 +350,7 @@ namespace Iwsd.EXUR {
                         if (Networking.IsMaster)
                         {
                             lastState = STATE_OWN_AND_IDLE;
-                            SendCallback("RetrievedAfterOwnerLeftWhileIdle");
+                            SendCallback(nameof(HandlerListener.EXUR_RetrievedFromIdle));
 
                             if (DeactivateWhenIdle)
                             {
@@ -376,8 +376,8 @@ namespace Iwsd.EXUR {
                             SetSyncedUsing(true);
 
                             lastState = STATE_OWN_AND_USING;
-                            SendCallback("EnterUsingFromWaiting");
-                            SendCallback("EXUR_Reinitialize");
+                            SendCallback(nameof(HandlerListener.EXUR_EnterUsingFromWaiting));
+                            SendCallback(nameof(HandlerListener.EXUR_Reinitialize));
                         }
                     }
                     else
@@ -387,7 +387,7 @@ namespace Iwsd.EXUR {
                         {
                             // timeout when lose in getting ownership when race condition.
                             lastState = STATE_IDLE_NOT_MINE;
-                            SendCallback("FailedToUseByTimeout");
+                            SendCallback(nameof(HandlerListener.EXUR_FailedToUseByTimeout));
                         }
                     }
                     break;
@@ -397,9 +397,9 @@ namespace Iwsd.EXUR {
                     {
                         // Theft by others.
                         lastState = STATE_USED_BY_OTHERS;
-                        SendCallback("LostOwnershipOnUsing");
-                        SendCallback("EXUR_Finalize");
-                        SendCallback("EXUR_OtherPlayerAcquired");
+                        SendCallback(nameof(HandlerListener.EXUR_ExitUsingByLostOwnership));
+                        SendCallback(nameof(HandlerListener.EXUR_Finalize));
+                        SendCallback(nameof(HandlerListener.EXUR_OtherPlayerAcquired));
                     }
                     break;
 
@@ -408,7 +408,7 @@ namespace Iwsd.EXUR {
                     {
                         // Other player started to use
                         lastState = STATE_IDLE_NOT_MINE;
-                        SendCallback("LostOwnershipOnIdle");
+                        SendCallback(nameof(HandlerListener.EXUR_LostOwnershipOnIdle));
                     }
                     break;
 
@@ -431,21 +431,21 @@ namespace Iwsd.EXUR {
             log("TryToUse: state=" + lastState);
 
             assert((lastState == STATE_IDLE_NOT_MINE) || (lastState == STATE_OWN_AND_IDLE),
-                   "TryToUse: Illegal state. " + lastState); 
+                   "TryToUse: Illegal state. " + lastState);
 
             if (DeactivateWhenIdle)
             {
                 SetActiveObject(true); // This must be before calling IsOwner
             }
-            
+
             if (Networking.IsOwner(this.gameObject))
             {
                 assert(lastState == STATE_OWN_AND_IDLE, "TryToUse: Ownership mismatched with state=" + lastState);
 
                 lastState = STATE_OWN_AND_USING;
                 SetSyncedUsing(true);
-                SendCallback("EnterUsingFromOwn");
-                SendCallback("EXUR_Reinitialize");
+                SendCallback(nameof(HandlerListener.EXUR_EnterUsingFromOwn));
+                SendCallback(nameof(HandlerListener.EXUR_Reinitialize));
             }
             else
             {
@@ -506,8 +506,8 @@ namespace Iwsd.EXUR {
                 // continue to keep ownership
                 lastState = STATE_OWN_AND_IDLE; // This state change must be before SetSyncedUsing
                 SetSyncedUsing(false);
-                SendCallback("ExitUsingByRequest");
-                SendCallback("EXUR_Finalize");
+                SendCallback(nameof(HandlerListener.EXUR_ExitUsingByRequest));
+                SendCallback(nameof(HandlerListener.EXUR_Finalize));
 
                 if (DeactivateWhenIdle)
                 {
@@ -517,7 +517,7 @@ namespace Iwsd.EXUR {
             else
             {
                 warn("ReleaseObject on not STATE_OWN_AND_USING. ignore");
-                SendCallback("AttemptToReleaseNotOwnObjectError");
+                SendCallback(nameof(HandlerListener.EXUR_TriedToReleaseNotOwnError));
             }
         }
 
